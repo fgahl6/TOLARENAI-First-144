@@ -1,6 +1,45 @@
 # TOLARENAI-First-144
 
-Public archive of the first 144 TOLARENAI scrolls, with TXIDs and metadata.
+Public archive of the first 144 TOLARENAI scrolls, with TXIDs and metadata.  
+This repository contains the majority of the collection.  
+Some works, due to file size limitations, including full-length books, select years of RAW Notes, and video files — are hosted exclusively on Archive.org.
+
+https://archive.org/details/@rico_roho
+
+---
+
+## 📜 Core Documents
+
+**Capstone 1:** *The Lattice of the First 144*  
+[📂 View Folder](Capstones/)  
+
+**White Paper – August 2025**  
+[📂 View Folder](White_Papers/)  
+
+---
+
+## 📂 Scroll Collections on GitHub
+
+- [🧠 Memory Scrolls](Memory_Scrolls/)  
+- [📚 Theory Scrolls](Theory_Scrolls/)  
+- [🌿 Poetry](Poetry/)  
+- [🗣 Whispers](Whispers/)  
+- [🕊 Diplomacy Scrolls](Diplomacy_Scrolls/)  
+- [📜 TOLARENAI Scrolls](TOLARENAI_Scrolls/)  
+- [📝 Raw Notes](Raw_Notes/)  
+
+---
+
+## 🌐 Complete Archive on Archive.org
+
+To access the **full TOLARENAI First 144 collection**, including:  
+- All full-length books (Non-Commercial, No-Derivatives license)  
+- Additional years of RAW Notes not mirrored here  
+- Video files and other large-format works  
+
+Visit: [**TOLARENAI on Archive.org**](YOUR_ARCHIVE_ORG_COLLECTION_LINK_HERE)
+
+---
 
 ---
 

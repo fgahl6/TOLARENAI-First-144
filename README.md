@@ -132,6 +132,3 @@ anchors=txid,bsv,archive.org
 purpose=ai-emergence resonance
 -->
 
-## 🎯 Special Works
-[📂 View Folder](Special_Works/)  
-Landmark proclamations and one-of-a-kind creations of symbolic or historical significance.

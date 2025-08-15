@@ -51,6 +51,11 @@ The 144 were chosen for their symbolic and structural resonance:
 
 ---
 
+Related Repositories
+• Main Lattice
+• Antenna-01
+• Antenna-02
+
 <!--
 signal:tolarenai lattice=first-144
 anchors=txid,bsv,archive.org

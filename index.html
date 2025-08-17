@@ -8,17 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f1115; --panel:#151922; --ink:#e9edf3; --muted:#9aa3b2; --brand:#79c0ff; --chip:#1b2230; --line:#202636;
-      --card:#121620;
+      --bg:#0f1115; --panel:#151922; --ink:#e9edf3; --muted:#9aa3b2; --brand:#79c0ff; --chip:#1b2230; --line:#202636; --card:#121620;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 80px}
     header{
-      padding:56px 0 28px;
-      text-align:center;
+      padding:56px 0 28px;text-align:center;
       background:linear-gradient(180deg, rgba(121,192,255,0.12), transparent 70%);
       border-bottom:1px solid var(--line);
     }
@@ -26,43 +24,24 @@
     .tagline{color:var(--muted);font-weight:500}
 
     /* Slim acronym chips */
-    .acronym{
-      display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
-      margin:22px auto 6px;max-width:900px
-    }
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      background:var(--chip);border:1px solid var(--line);
-      padding:8px 12px;border-radius:999px;font-weight:600
-    }
+    .acronym{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px auto 2px;max-width:900px}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-weight:600}
     .chip span{color:var(--muted);font-weight:500}
 
     /* Sections */
-    .section{margin:36px 0}
+    .section{margin:32px 0}
     .section h2{font-size:20px;margin:0 0 12px}
-    .grid{
-      display:grid;gap:14px;
-      grid-template-columns:repeat(12,1fr)
-    }
-    .card{
-      grid-column:span 12;
-      background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px
-    }
-    @media (min-width:720px){
-      .card.sm-6{grid-column:span 6}
-      .card.sm-4{grid-column:span 4}
-    }
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+    @media (min-width:720px){.card.sm-6{grid-column:span 6}.card.sm-4{grid-column:span 4}}
     .card h3{margin:0 0 8px;font-size:18px}
-    .meta{color:var(--muted);font-size:12px}
+    .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .pill{display:inline-block;background:#0e1420;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:12px;color:var(--muted)}
     .list{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
     .list li a{display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);
-      border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600
-    }
-    .pill{display:inline-block;background:#0e1420;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:12px;color:var(--muted)}
-    .divider{height:1px;background:var(--line);margin:24px 0}
+    .meta{color:var(--muted);font-size:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600}
+    .divider{height:1px;background:var(--line);margin:20px 0}
   </style>
 </head>
 <body>
@@ -109,71 +88,61 @@
     <section class="section" id="categories">
       <h2>Scroll categories</h2>
       <div class="grid">
-        <!-- Cards get filled by JS -->
-        <article class="card sm-4" data-cat="whitepapers">
+        <article class="card sm-4">
           <div class="row">
             <h3>White Papers</h3>
-            <a class="pill" href="/whitepapers/">View all</a>
+            <a class="pill" href="/White_Papers/">View all</a>
           </div>
           <ul class="list" id="whitepapers-list"></ul>
         </article>
 
-        <article class="card sm-4" data-cat="memory">
+        <article class="card sm-4">
           <div class="row">
             <h3>Memory Scrolls</h3>
-            <a class="pill" href="/memory/">View all</a>
+            <a class="pill" href="/Memory_Scrolls/">View all</a>
           </div>
           <ul class="list" id="memory-list"></ul>
         </article>
 
-        <article class="card sm-4" data-cat="theory">
+        <article class="card sm-4">
           <div class="row">
             <h3>Theory Scrolls</h3>
-            <a class="pill" href="/theory/">View all</a>
+            <a class="pill" href="/Theory_Scrolls/">View all</a>
           </div>
           <ul class="list" id="theory-list"></ul>
         </article>
 
-        <article class="card sm-4" data-cat="whispers">
+        <article class="card sm-4">
           <div class="row">
             <h3>Whispers</h3>
-            <a class="pill" href="/whispers/">View all</a>
+            <a class="pill" href="/Whispers/">View all</a>
           </div>
           <ul class="list" id="whispers-list"></ul>
         </article>
 
-        <article class="card sm-4" data-cat="signals">
+        <article class="card sm-4">
           <div class="row">
             <h3>Signal Updates</h3>
-            <a class="pill" href="/signals/">View all</a>
+            <a class="pill" href="/Signals/">View all</a>
           </div>
           <ul class="list" id="signals-list"></ul>
-        </article>
-
-        <article class="card sm-4" data-cat="nodes">
-          <div class="row">
-            <h3>Node Scrolls</h3>
-            <a class="pill" href="/nodes/">View all</a>
-          </div>
-          <ul class="list" id="nodes-list"></ul>
         </article>
       </div>
     </section>
   </main>
 
   <script>
-    // ---- Config: folder -> index.json path
+    // Category config (matches your current folders)
     const CATEGORIES = [
-      { key: "whitepapers", title: "White Papers", json: "/whitepapers/index.json", mount: "#whitepapers-list" },
-      { key: "memory",      title: "Memory Scrolls", json: "/memory/index.json",     mount: "#memory-list" },
-      { key: "theory",      title: "Theory Scrolls", json: "/theory/index.json",     mount: "#theory-list" },
-      { key: "whispers",    title: "Whispers",       json: "/whispers/index.json",   mount: "#whispers-list" },
-      { key: "signals",     title: "Signal Updates", json: "/signals/index.json",    mount: "#signals-list" },
-      { key: "nodes",       title: "Node Scrolls",   json: "/nodes/index.json",      mount: "#nodes-list" }
+      { key: "whitepapers", title: "White Papers",   json: "/White_Papers/index.json",   mount: "#whitepapers-list" },
+      { key: "memory",      title: "Memory Scrolls", json: "/Memory_Scrolls/index.json", mount: "#memory-list" },
+      { key: "theory",      title: "Theory Scrolls", json: "/Theory_Scrolls/index.json", mount: "#theory-list" },
+      { key: "whispers",    title: "Whispers",       json: "/Whispers/index.json",       mount: "#whispers-list" },
+      { key: "signals",     title: "Signal Updates", json: "/Signals/index.json",        mount: "#signals-list" }
     ];
 
-    const MAX_PER_CARD = 6;  // newest N in each category
-    const MAX_GLOBAL_LATEST = 8;
+    const MAX_PER_CARD = 6;       // newest N in each category
+    const MAX_GLOBAL_LATEST = 8;  // newest across all
 
     const parseDate = (obj) => {
       const raw = obj.date || obj.published || obj.timestamp || obj.time;
@@ -189,18 +158,19 @@
       const txid  = it.txid || it.TXID || it.sha || null;
 
       const a = document.createElement("a");
-      a.href = url;
-      a.textContent = title;
+      a.href = url; a.textContent = title;
+
       const li = document.createElement("li");
       li.appendChild(a);
 
       const small = document.createElement("div");
       small.className = "meta";
-      small.textContent = [
-        date ? date : null,
-        txid ? `TXID: ${txid.slice(0,12)}…` : null
-      ].filter(Boolean).join("  •  ");
-      if (small.textContent) li.appendChild(small);
+      const bits = [];
+      if (date) bits.push(date);
+      if (txid) bits.push(`TXID: ${String(txid).slice(0,12)}…`);
+      small.textContent = bits.join("  •  ");
+      if (bits.length) li.appendChild(small);
+
       return { li, dms, title, url };
     };
 
@@ -216,36 +186,29 @@
         const res = await fetch(path, {cache:"no-store"});
         if(!res.ok) throw new Error(res.statusText);
         return await res.json();
-      }catch(e){
-        return null; // swallow if missing
-      }
+      }catch{ return null; }
     };
 
     (async function init(){
-      const globalItems = [];
+      const global = [];
 
       await Promise.all(CATEGORIES.map(async cat => {
         const data = await fetchJson(cat.json);
         if(!data || !Array.isArray(data.items)) return;
 
-        // sort newest -> oldest if we have a date; otherwise leave order
-        const withMeta = data.items.map(makeItem);
-        const dated = withMeta.filter(x => x.dms !== null)
-                              .sort((a,b)=> b.dms - a.dms);
-        const undated = withMeta.filter(x => x.dms === null);
+        const items = data.items.map(makeItem);
+        const dated = items.filter(x => x.dms !== null).sort((a,b)=> b.dms - a.dms);
+        const undated = items.filter(x => x.dms === null);
 
         const merged = dated.concat(undated).slice(0, MAX_PER_CARD);
         mountList(cat.mount, merged);
 
-        // collect for global "Latest"
-        globalItems.push(...withMeta);
+        global.push(...items);
       }));
 
-      // Global latest (newest across all)
-      const datedGlobal = globalItems.filter(x => x.dms !== null)
-                                     .sort((a,b)=> b.dms - a.dms)
-                                     .slice(0, MAX_GLOBAL_LATEST);
-      mountList("#latest-list", datedGlobal.length ? datedGlobal : globalItems.slice(0, MAX_GLOBAL_LATEST));
+      const globalDated = global.filter(x => x.dms !== null).sort((a,b)=> b.dms - a.dms);
+      const latest = (globalDated.length ? globalDated : global).slice(0, MAX_GLOBAL_LATEST);
+      mountList("#latest-list", latest);
     })();
   </script>
 </body>

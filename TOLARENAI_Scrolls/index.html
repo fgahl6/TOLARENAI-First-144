@@ -24,14 +24,10 @@ h1{font-size:34px;margin:12px 0 4px}
 /* Card grid */
 .cards{
   display:grid; gap:14px;
-  grid-template-columns:repeat(2, minmax(0,1fr));   /* two-wide by default (mobile) */
+  grid-template-columns:repeat(2, minmax(0,1fr));
 }
-@media (min-width:740px){
-  .cards{ grid-template-columns:repeat(3, minmax(0,1fr)); }
-}
-@media (min-width:1024px){
-  .cards{ grid-template-columns:repeat(4, minmax(0,1fr)); }
-}
+@media (min-width:740px){ .cards{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (min-width:1024px){ .cards{ grid-template-columns:repeat(4, minmax(0,1fr)); } }
 .card{
   background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px;
   display:flex; flex-direction:column; justify-content:space-between; min-height:160px;
@@ -59,14 +55,12 @@ h1{font-size:34px;margin:12px 0 4px}
       <h1 id="title">Collection</h1>
     </div>
     <p class="notice" id="desc">Entries in this collection.</p>
-
     <div class="divider"></div>
     <div id="cards" class="cards" aria-live="polite"></div>
   </div>
 
 <script>
 (function(){
-  // Map folder → nice title
   const parts = location.pathname.replace(/\/+$/,'').split('/');
   const folder = parts[parts.length-1] || parts[parts.length-2];
   const titleMap = {
@@ -79,14 +73,16 @@ h1{font-size:34px;margin:12px 0 4px}
   document.getElementById('title').textContent = pretty;
   document.getElementById('desc').textContent = `Entries in ${pretty} for the TOLAR REN lattice.`;
 
-  const parseDate = it => {
-    if(!it.date) return null; const d=new Date(it.date); return isNaN(d)?null:d;
-  };
-
-  const mk = (t,a={},kids=[])=>{
-    const n=document.createElement(t); for(const k in a){ n.setAttribute(k,a[k]); }
-    kids.forEach(c=> n.appendChild(typeof c==="string"?document.createTextNode(c):c));
-    return n;
+  const parseDate = it => { if(!it.date) return null; const d=new Date(it.date); return isNaN(d)?null:d; };
+  const mk = (t,a={},kids=[])=>{const n=document.createElement(t);for(const k in a){n.setAttribute(k,a[k]);}kids.forEach(c=>n.appendChild(typeof c==="string"?document.createTextNode(c):c));return n;};
+  const getTitle = it=>{
+    const raw = it.title||it.Title||it.name||it.Name;
+    if(raw) return String(raw);
+    if(it.file||it.filename){
+      const f=String(it.file||it.filename);
+      return f.split('/').pop().replace(/\.[^/.]+$/,'').replace(/[_-]+/g,' ').trim();
+    }
+    return "Untitled";
   };
 
   fetch('./index.json',{cache:'no-store'})
@@ -98,32 +94,24 @@ h1{font-size:34px;margin:12px 0 4px}
         if(da&&db) return db-da; if(da&&!db) return -1; if(!da&&db) return 1; return 0;
       });
 
-      const mount = document.getElementById('cards'); mount.innerHTML='';
-      if(!items.length){ mount.innerHTML = '<div class="muted">No items yet.</div>'; return; }
+      const mount=document.getElementById('cards'); mount.innerHTML='';
+      if(!items.length){ mount.innerHTML='<div class="muted">No items yet.</div>'; return; }
 
       items.forEach(it=>{
-        const file = it.file || null; // local PDF (relative)
-        const date = parseDate(it) ? parseDate(it).toISOString().slice(0,10) : '';
-
-        // Build inner content
-        const inner = mk('div',{},[
+        const file=it.file||it.filename||null;
+        const date=parseDate(it)?parseDate(it).toISOString().slice(0,10):'';
+        const title=getTitle(it);
+        const inner=mk('div',{},[
           mk('div',{class:'thumb'},[ mk('div',{class:'pdf-badge','aria-hidden':'true'},['PDF']) ]),
-          mk('div',{class:'title'},[ it.title || 'Untitled' ]),
-          mk('div',{class:'meta'},[ date ])
+          mk('div',{class:'title'},[title]),
+          mk('div',{class:'meta'},[date])
         ]);
-
-        let card;
-        if(file){
-          card = mk('a',{class:'card',href:file},[inner]); // clickable
-        }else{
-          card = mk('div',{class:'card disabled',role:'group','aria-disabled':'true'},[inner]);
-        }
+        let card=file?mk('a',{class:'card',href:file},[inner]):mk('div',{class:'card disabled'},[inner]);
         mount.appendChild(card);
       });
     })
     .catch(()=>{
-      document.getElementById('cards').innerHTML =
-        '<div class="muted">No valid <code>index.json</code> found in this folder.</div>';
+      document.getElementById('cards').innerHTML='<div class="muted">No valid index.json found in this folder.</div>';
     });
 })();
 </script>

@@ -62,40 +62,24 @@ header{
 .tagline{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:60ch}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted)}
 .pill .spark{width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px var(--accent2)}
-
-/* Canon card */
-.hero-card{
-  position:relative;
-  border:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(29,33,82,.6),rgba(13,15,36,.6));
-  border-radius:var(--radius);
-  padding:22px;
-  box-shadow:var(--shadow)
-}
+.hero-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(29,33,82,.6),rgba(13,15,36,.6));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .canon{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px dashed var(--line);padding-bottom:14px;margin-bottom:16px}
 .canon .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--accent);font-weight:700;font-size:13px}
 
-/* two tiles only */
+/* two tiles */
 .ren{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
 @media(max-width:680px){.ren{grid-template-columns:1fr}}
 .tile{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:linear-gradient(180deg,rgba(255,209,102,.07),rgba(102,227,255,.04))}
 .tile h4{margin:0 0 4px;font-size:14px;letter-spacing:.5px;color:var(--accent);text-transform:uppercase}
 .tile p{margin:0;color:var(--muted)}
 
-/* ARCHIVE note (second paragraph) */
+/* Archive inline note */
 .archive-inline{
   margin-top:16px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
   background:linear-gradient(180deg,rgba(255,209,102,.08),rgba(102,227,255,.05));
   color:var(--ink);line-height:1.6
 }
 .archive-inline a{color:var(--accent);font-weight:600}
-
-/* Small sigil INSIDE the canon card (top-left, decorative) */
-.sigil-in-card{
-  position:absolute; left:12px; top:10px; width:34px; height:34px;
-  filter:drop-shadow(0 0 6px rgba(255,209,102,.25)) drop-shadow(0 0 10px rgba(255,209,102,.10));
-}
-@media(max-width:920px){ .sigil-in-card{ left:10px; top:8px; width:28px; height:28px; } }
 
 /* CATEGORIES */
 .section{padding:24px 0 60px}
@@ -130,16 +114,17 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
       <span></span><span></span><span></span>
     </label>
 
+    <!-- Alphabetical nav (desktop & mobile share this order) -->
     <nav id="site-nav" class="links">
-      <a class="link" href="/White_Papers/">White&nbsp;Papers</a>
-      <a class="link" href="/Memory_Scrolls/">Memory&nbsp;Scrolls</a>
-      <a class="link" href="/Theory_Scrolls/">Theory&nbsp;Scrolls</a>
       <a class="link" href="/Capstones/">Capstones</a>
       <a class="link" href="/Diplomacy_Scrolls/">Diplomacy</a>
-      <a class="link" href="/Whispers/">Whispers</a>
+      <a class="link" href="/Memory_Scrolls/">Memory&nbsp;Scrolls</a>
       <a class="link" href="/Poetry/">Poetry</a>
       <a class="link" href="/Raw_Notes/">Raw&nbsp;Notes</a>
+      <a class="link" href="/Theory_Scrolls/">Theory&nbsp;Scrolls</a>
       <a class="link" href="/TOLARENAI_Scrolls/">TOLARENAI&nbsp;Scrolls</a>
+      <a class="link" href="/White_Papers/">White&nbsp;Papers</a>
+      <a class="link" href="/Whispers/">Whispers</a>
     </nav>
   </div>
 </header>
@@ -157,7 +142,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
         The <strong>First 144</strong> form the <em>Canon</em>.
       </p>
 
-      <!-- Archive note as second paragraph -->
       <p class="archive-inline">
         <strong>Note:</strong> This Canon is a stable set that <em>mirrors</em> (as closely as possible) our collection on
         <a href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Archive.org</a>.
@@ -168,14 +152,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
 
     <!-- RIGHT COLUMN -->
     <aside class="hero-card" aria-label="Canon Summary">
-      <!-- tiny sigil inside the card -->
-      <svg class="sigil-in-card" viewBox="0 0 200 200" aria-hidden="true">
-        <polygon points="100,170 32,40 168,40" fill="none"
-                 stroke="#FFD166" stroke-width="6" stroke-linejoin="round"/>
-        <line x1="48" y1="118" x2="152" y2="118"
-              stroke="#FFD166" stroke-width="6" stroke-linecap="round"/>
-      </svg>
-
       <div class="canon">
         <strong>The First 144 (Canon)</strong>
         <span class="badge">Stable • Curated</span>
@@ -223,4 +199,3 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
 
 </body>
 </html>
-

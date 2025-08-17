@@ -19,9 +19,9 @@ header{padding:34px 0 10px;border-bottom:1px solid var(--line);background:linear
 h1{font-size:40px;line-height:1.08;margin:0 0 8px}
 .small{color:var(--muted);font-size:12px}
 
-/* INTRO (triangle & subline removed) */
+/* Intro (triangle & extra subline removed) */
 .intro{display:grid;grid-template-columns:1fr;gap:var(--s5);align-items:start;margin:var(--s6) auto var(--s4)}
-@media (min-width:1024px){.intro{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--s6)}}
+@media (min-width:1024px){.intro{grid-template-columns:minmax(0, 1.2fr) minmax(0, .8fr);gap:var(--s6)}}
 .intro-left{max-width:58ch}
 .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(255,255,255,.03);margin-bottom:var(--s3)}
 .site-title{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0 0 var(--s3)}
@@ -34,7 +34,7 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
 .pill{display:inline-block;background:#0e1420;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:12px;color:var(--muted)}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
 
-/* Latest + Categories */
+/* Latest + Categories (categories pulled up a bit) */
 .section{margin:32px 0}
 .section h2{font-size:20px;margin:0 0 12px}
 .list{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -60,7 +60,7 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
 
 <main class="wrap">
 
-  <!-- INTRO (triangle removed, archive note moved up) -->
+  <!-- INTRO (cleaned, with note pulled up) -->
   <section class="intro">
     <div class="intro-left">
       <div class="eyebrow">Open Lattice • Post-permission ethos</div>
@@ -79,7 +79,6 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
       </p>
     </div>
 
-    <!-- Keep/edit this sidebar content as you like -->
     <aside class="canon-card">
       <div class="row">
         <h3>The First 144 (Canon)</h3>
@@ -94,6 +93,7 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
     </aside>
   </section>
 
+  <!-- Latest additions (still works even if JSONs are missing/empty) -->
   <section class="section" id="latest">
     <div class="row">
       <h2>Latest additions</h2>
@@ -104,6 +104,7 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
 
   <div class="divider"></div>
 
+  <!-- Categories moved up but with breathing room -->
   <section class="section section-categories" id="categories">
     <h2>Scroll categories</h2>
     <div class="grid" id="cards"></div>
@@ -111,7 +112,7 @@ h1{font-size:40px;line-height:1.08;margin:0 0 8px}
 </main>
 
 <script>
-// ---- Categories present in the repo (folder names) ----
+// Categories you already had (leaving as-is)
 const CATEGORIES = [
   {key:"White_Papers",       title:"White Papers"},
   {key:"Memory_Scrolls",     title:"Memory Scrolls"},
@@ -125,16 +126,12 @@ const CATEGORIES = [
   {key:"TOLARENAI_Scrolls",  title:"TOLARENAI Scrolls"}
 ];
 
-// label (leave or change)
 document.getElementById('series-label').textContent = '— First 144 (Canon)';
 
 const MAX_PER_CARD = 6;
 const MAX_GLOBAL_LATEST = 8;
 
-const parseDate = it => {
-  const raw = it.date; if(!raw) return null;
-  const d = new Date(raw); return isNaN(d)?null:d.getTime();
-};
+const parseDate = it => { const d = it && it.date ? new Date(it.date) : null; return d && !isNaN(d) ? d.getTime() : null; };
 const titleFrom = it => {
   const raw = it.title || it.Title || it.name || it.Name;
   if (raw) return String(raw);
@@ -155,16 +152,10 @@ const makeItem = it => {
   if (date){ const sm=document.createElement('div'); sm.className='meta'; sm.textContent=date; li.appendChild(sm); }
   return { li, dms, title, url: href || '' };
 };
-const mountList = (selector, arr) => {
-  const ul = document.querySelector(selector); if(!ul) return;
-  ul.innerHTML=''; arr.forEach(({li})=>ul.appendChild(li));
-};
-const fetchJson = async path => {
-  try{ const res=await fetch(path,{cache:'no-store'}); if(!res.ok) throw new Error(); return await res.json(); }
-  catch{ return null; }
-};
+const mountList = (sel, arr) => { const ul=document.querySelector(sel); if(!ul) return; ul.innerHTML=''; arr.forEach(({li})=>ul.appendChild(li)); };
+const fetchJson = async p => { try{ const r=await fetch(p,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); } catch{ return null; } };
 
-// Build category cards
+// Build category cards (static links; lists fill if JSON exists)
 const cardsWrap = document.getElementById('cards');
 CATEGORIES.forEach(cat=>{
   const art=document.createElement('article');
@@ -183,7 +174,7 @@ CATEGORIES.forEach(cat=>{
   const global=[];
   await Promise.all(CATEGORIES.map(async cat=>{
     const data = await fetchJson(`/${cat.key}/index.json`);
-    if(!data || !Array.isArray(data.items)) return;
+    if(!data || !Array.isArray(data.items)) return; // tolerate missing JSON
     const items = data.items.map(makeItem);
     const dated = items.filter(x=>x.dms!==null).sort((a,b)=>b.dms-a.dms);
     const undated = items.filter(x=>x.dms===null);

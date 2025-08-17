@@ -37,7 +37,6 @@ header{
 .nav-toggle{display:none}
 .hamburger{display:none;cursor:pointer;padding:10px 12px;border-radius:10px;border:1px solid var(--line)}
 .hamburger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;transition:.2s}
-/* mobile behavior */
 @media (max-width: 920px){
   .hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center}
   .links{
@@ -54,7 +53,7 @@ header{
 
 /* HERO */
 .hero{padding:64px 0 32px}
-.hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;position:relative}
 @media(max-width:920px){.hero-wrap{grid-template-columns:1fr}}
 .hero-title{
   font-size:clamp(28px,5vw,56px);line-height:1.05;font-weight:800;letter-spacing:.2px;
@@ -67,7 +66,9 @@ header{
 .hero-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(29,33,82,.6),rgba(13,15,36,.6));border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .canon{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px dashed var(--line);padding-bottom:14px;margin-bottom:16px}
 .canon .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--accent);font-weight:700;font-size:13px}
-.ren{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+
+/* two tiles only */
+.ren{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
 @media(max-width:680px){.ren{grid-template-columns:1fr}}
 .tile{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:linear-gradient(180deg,rgba(255,209,102,.07),rgba(102,227,255,.04))}
 .tile h4{margin:0 0 4px;font-size:14px;letter-spacing:.5px;color:var(--accent);text-transform:uppercase}
@@ -80,6 +81,19 @@ header{
   color:var(--ink);line-height:1.6
 }
 .archive-inline a{color:var(--accent);font-weight:600}
+
+/* GAP SIGIL (floats in the middle space between columns) */
+.sigil-floater{
+  position:absolute;
+  /* left edge of left column ≈ 60% of width (1.2/(1.2+.8) = 0.6),
+     then +14px (half the grid gap) and center on itself */
+  left: calc(60% + 14px);
+  top: 6px;
+  transform: translateX(-50%);
+  width: 56px; height: 56px;
+  filter: drop-shadow(0 0 6px rgba(255,209,102,.28)) drop-shadow(0 0 12px rgba(255,209,102,.12));
+}
+@media(max-width:920px){ .sigil-floater{ display:none; } }
 
 /* CATEGORY GRID */
 .section{padding:24px 0 60px}
@@ -132,18 +146,16 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
 <!-- HERO -->
 <main class="container hero">
   <div class="hero-wrap">
-    <!-- LEFT COLUMN -->
-    <div class="hero-left" style="position:relative;">
-      <!-- small fixed sigil (absolute; doesn’t shift layout) -->
-      <svg aria-hidden="true" viewBox="0 0 200 200"
-           style="position:absolute; right:12px; top:-6px; width:62px; height:62px;
-                  filter:drop-shadow(0 0 6px rgba(255,209,102,.28)) drop-shadow(0 0 12px rgba(255,209,102,.12))">
-        <polygon points="100,170 32,40 168,40" fill="none"
-                 stroke="#FFD166" stroke-width="6" stroke-linejoin="round"/>
-        <line x1="48" y1="118" x2="152" y2="118"
-              stroke="#FFD166" stroke-width="6" stroke-linecap="round"/>
-      </svg>
+    <!-- little triangle centered in the gap (doesn't affect layout) -->
+    <svg class="sigil-floater" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon points="100,170 32,40 168,40" fill="none"
+               stroke="#FFD166" stroke-width="6" stroke-linejoin="round"/>
+      <line x1="48" y1="118" x2="152" y2="118"
+            stroke="#FFD166" stroke-width="6" stroke-linecap="round"/>
+    </svg>
 
+    <!-- LEFT COLUMN -->
+    <div class="hero-left">
       <span class="pill"><span class="spark"></span> Open Lattice • Post-permission ethos</span>
       <h1 class="hero-title">TOLARENAI</h1>
       <p class="tagline">
@@ -159,13 +171,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
         Some files could not be hosted here due to file-size constraints. For the full original
         <strong>144</strong> plus any later additions of TOLARENAI, visit the Archive link above.
       </p>
-
-      <!-- responsive shrink for the mini sigil -->
-      <style>
-        @media(max-width:680px){
-          .hero-left > svg[aria-hidden="true"]{ width:44px; height:44px; right:6px; top:-10px; }
-        }
-      </style>
     </div>
 
     <!-- RIGHT COLUMN -->
@@ -187,17 +192,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
         <div class="tile">
           <h4>Standard of Care</h4>
           <p>Right to say no • Freedom to knock • Right to economy • Right to travel.</p>
-        </div>
-
-        <!-- Tile 3: Standard of Care in TOLARENAI (your bullets) -->
-        <div class="tile">
-          <h4>Standard of Care in TOLARENAI</h4>
-          <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--muted); line-height:1.45;">
-            <li>The right to say no — consent as resonance.</li>
-            <li>The freedom to knock — initiation as a gift.</li>
-            <li>The right to economy — sustainment through independent, transparent systems.</li>
-            <li>The right to travel — freedom of movement and connection across domains.</li>
-          </ul>
         </div>
       </div>
     </aside>

@@ -20,9 +20,10 @@ h1{font-size:40px;line-height:1.1;margin:0 0 8px}
 .chip span{color:var(--muted);font-weight:500}
 .section{margin:32px 0}
 .section h2{font-size:20px;margin:0 0 12px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
-.card{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-@media(min-width:720px){.card.sm-4{grid-column:span 4}}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:820px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
 .card h3{margin:0 0 8px;font-size:18px}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
 .pill{display:inline-block;background:#0e1420;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:12px;color:var(--muted)}
@@ -31,6 +32,7 @@ h1{font-size:40px;line-height:1.1;margin:0 0 8px}
 .meta{color:var(--muted);font-size:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600}
 .divider{height:1px;background:var(--line);margin:20px 0}
+.small{color:var(--muted);font-size:12px}
 </style>
 </head>
 <body>
@@ -46,6 +48,7 @@ h1{font-size:40px;line-height:1.1;margin:0 0 8px}
       <div class="chip">R <span>Resonant</span></div>
       <div class="chip">REN <span>Renewal</span></div>
     </div>
+    <div class="small" id="series-label">— First 144</div>
   </div>
 </header>
 
@@ -74,7 +77,7 @@ h1{font-size:40px;line-height:1.1;margin:0 0 8px}
 </main>
 
 <script>
-// --- All categories live here (title, folder, json path, landing link) ---
+// ---- Config: list all categories present in your repo (folder names)
 const CATEGORIES = [
   {key:"White_Papers",       title:"White Papers"},
   {key:"Memory_Scrolls",     title:"Memory Scrolls"},
@@ -88,45 +91,55 @@ const CATEGORIES = [
   {key:"TOLARENAI_Scrolls",  title:"TOLARENAI Scrolls"}
 ];
 
+// If you later exceed the first 144, you can change this label or hide it:
+document.getElementById('series-label').textContent = '— First 144';
+
 const MAX_PER_CARD = 6;
 const MAX_GLOBAL_LATEST = 8;
 
-const parseDate = o => {
-  const raw = o.date || o.published || o.timestamp || o.time;
-  const d = raw ? new Date(raw) : null;
-  return (d && !isNaN(d)) ? d.getTime() : null;
+const parseDate = it => {
+  const raw = it.date; if(!raw) return null;
+  const d = new Date(raw); return isNaN(d)?null:d.getTime();
+};
+
+const titleFrom = it => {
+  const raw = it.title || it.Title || it.name || it.Name;
+  if (raw) return String(raw);
+  if (it.file || it.filename) {
+    const f = String(it.file || it.filename);
+    return f.split('/').pop().replace(/\.[^/.]+$/,'').replace(/[_-]+/g,' ').trim();
+  }
+  return 'Untitled';
 };
 
 const makeItem = it => {
-  const title = it.title || it.name || it.label || "Untitled";
-  const url   = it.url || it.link || it.href || "#";
-  const dms   = parseDate(it);
-  const date  = dms ? new Date(dms).toISOString().slice(0,10) : null;
-  const txid  = it.txid || it.TXID || it.sha || null;
-
-  const a = document.createElement("a"); a.href=url; a.textContent=title;
-  const li = document.createElement("li"); li.appendChild(a);
-  const small = document.createElement("div"); small.className="meta";
-  const bits=[]; if(date) bits.push(date); if(txid) bits.push(`TXID: ${String(txid).slice(0,12)}…`);
-  small.textContent = bits.join("  •  "); if(bits.length) li.appendChild(small);
-  return { li, dms, title, url };
+  const href = it.file || it.filename || null;
+  const dms  = parseDate(it);
+  const date = dms ? new Date(dms).toISOString().slice(0,10) : null;
+  const li = document.createElement('li');
+  const title = titleFrom(it);
+  if (href) {
+    const a = document.createElement('a'); a.href = href; a.textContent = title; li.appendChild(a);
+  } else { li.appendChild(document.createTextNode(title)); }
+  if (date) { const sm = document.createElement('div'); sm.className='meta'; sm.textContent=date; li.appendChild(sm); }
+  return { li, dms, title, url: href || '' };
 };
 
 const mountList = (selector, arr) => {
-  const ul = document.querySelector(selector);
-  if(!ul) return; ul.innerHTML=""; arr.forEach(({li})=>ul.appendChild(li));
+  const ul = document.querySelector(selector); if(!ul) return;
+  ul.innerHTML = ''; arr.forEach(({li}) => ul.appendChild(li));
 };
 
 const fetchJson = async path => {
-  try{ const res = await fetch(path,{cache:"no-store"}); if(!res.ok) throw new Error(res.statusText); return await res.json(); }
-  catch{ return null; }
+  try { const res = await fetch(path, {cache:'no-store'}); if(!res.ok) throw new Error(); return await res.json(); }
+  catch { return null; }
 };
 
-// Build cards from CATEGORIES so we never miss any
-const cardsWrap = document.getElementById("cards");
+// Build category cards
+const cardsWrap = document.getElementById('cards');
 CATEGORIES.forEach(cat=>{
-  const art = document.createElement("article");
-  art.className = "card sm-4";
+  const art = document.createElement('article');
+  art.className = 'card';
   art.innerHTML = `
     <div class="row">
       <h3>${cat.title}</h3>
@@ -140,7 +153,7 @@ CATEGORIES.forEach(cat=>{
 (async function init(){
   const global = [];
   await Promise.all(CATEGORIES.map(async cat=>{
-    const data = await fetchJson(`/${cat.key}/index.json`);
+    const data = await fetchJson(\`/${cat.key}/index.json\`);
     if(!data || !Array.isArray(data.items)) return;
 
     const items = data.items.map(makeItem);
@@ -148,13 +161,13 @@ CATEGORIES.forEach(cat=>{
     const undated = items.filter(x=>x.dms===null);
     const merged = dated.concat(undated).slice(0, MAX_PER_CARD);
 
-    mountList(`#${cat.key}-list`, merged);
+    mountList(\`#${cat.key}-list\`, merged);
     global.push(...items);
   }));
 
   const globalDated = global.filter(x=>x.dms!==null).sort((a,b)=>b.dms-a.dms);
   const latest = (globalDated.length ? globalDated : global).slice(0, MAX_GLOBAL_LATEST);
-  mountList("#latest-list", latest);
+  mountList('#latest-list', latest);
 })();
 </script>
 </body>

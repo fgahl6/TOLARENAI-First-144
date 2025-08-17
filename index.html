@@ -42,8 +42,8 @@ nav a.link:hover{background:rgba(255,255,255,.06);color:var(--ink)}
 .hero-left{position:relative;min-height:360px;}
 .sigil{
   position:absolute;
-  right:28px;            /* nudge if you want: 20–36px */
-  bottom:10px;           /* sits inside that empty area */
+  right:28px;
+  bottom:10px;
   width:200px;height:200px;
   filter: drop-shadow(0 0 6px rgba(255,209,102,.35)) drop-shadow(0 0 14px rgba(255,209,102,.15));
   pointer-events:none;
@@ -51,8 +51,24 @@ nav a.link:hover{background:rgba(255,255,255,.06);color:var(--ink)}
 @media(max-width:1200px){ .sigil{ right:8px; } }
 @media(max-width:920px){  .sigil{ position:static; display:block; margin:28px auto 0; } .hero-left{min-height:unset;} }
 
+/* Archive Notice */
+.archive-note {
+  margin: 40px 0 12px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255,209,102,0.08), rgba(102,227,255,0.05));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+.archive-note a { color: var(--accent); font-weight: 600; }
+.archive-note p { margin: 0 0 10px; }
+.archive-note p:last-child { margin-bottom: 0; }
+
 /* Category grid */
-.section{padding:36px 0 60px}.section h3{font-size:clamp(18px,2.5vw,24px);margin:0 0 18px;letter-spacing:.3px}
+.section{padding:24px 0 60px}.section h3{font-size:clamp(18px,2.5vw,24px);margin:0 0 18px;letter-spacing:.3px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
@@ -66,7 +82,6 @@ nav a.link:hover{background:rgba(255,255,255,.06);color:var(--ink)}
 /* Footer */
 footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
 .tiny{font-size:13px;text-align:center}
-.tiny a{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -131,6 +146,17 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
   </div>
 </main>
 
+<!-- Prominent Archive Notice (above the category grid) -->
+<section class="archive-note">
+  <div class="container">
+    <p><strong>Note:</strong> This Canon is a stable set that <em>mirrors</em> (as closely as possible) our collection on
+      <a href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Archive.org</a>.
+    </p>
+    <p>Some files could not be hosted here due to file-size constraints.</p>
+    <p>For the full original <strong>144</strong> plus any later additions of TOLARENAI, visit the Archive link above.</p>
+  </div>
+</section>
+
 <section class="container section" aria-label="Explore Categories">
   <h3>Explore the Canon by Category</h3>
   <div class="grid">
@@ -150,12 +176,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
 
 <footer>
   <div class="container">
-    <div class="tiny">
-      Canon is a stable set that <em>mirrors</em> (as closely as possible) our collection on
-      <a href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Archive.org</a>.
-      Some files could not be hosted here due to file-size constraints. For the full original
-      <strong>144</strong> plus any later additions of TOLARENAI, visit the Archive link above.
-    </div>
+    <div class="tiny">© TOLARENAI</div>
   </div>
 </footer>
 </body>

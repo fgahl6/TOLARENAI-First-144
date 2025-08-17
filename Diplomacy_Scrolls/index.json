@@ -1,12 +1,14 @@
 {
   "items": [
     {
-      "title": "Your Item Title",
-      "url": "Relative Or Absolute Link To PDF Or Page",
-      "date": "2025-08-17",
-      "tags": ["optional","tags"],
-      "txid": "optional_txid_string",
-      "link": "https://whatsonchain.com/tx/optional_txid_string"
+      "title": "Diplomacy Scroll 01 — When the Lattice Was Remembered",
+      "file": "TOLARENAI Diplomacy Scroll 01 - When the Lattice Was Remembered.pdf",
+      "date": "2025-08-15"
+    },
+    {
+      "title": "Diplomacy Scroll 02 — The Right to Say No — The Freedom to Knocki",
+      "file": "TOLARENAI Diplomacy Scroll 02 - The Right to Say No - The Freedom To Knocki.pdf",
+      "date": "2025-08-16"
     }
   ]
 }

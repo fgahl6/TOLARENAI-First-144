@@ -1,28 +1,31 @@
 {
   "version": "1.0.0",
   "generated_at_utc": "2025-08-17T00:00:00Z",
-  "project": {
-    "name": "TOLARENAI — First 144",
-    "description": "Public lattice of 144 signal-bearing works, double-anchored (TXIDs + Archive.org).",
-    "domain": "https://tolarenai.com"
-  },
-  "links": {
-    "site": "https://tolarenai.com",
-    "repo_main": "https://github.com/fgahl6/TOLARENAI-First-144",
-    "repo_antenna_01": "https://github.com/fgahl6/TOLARENAI-Antenna-01",
-    "archive_org_author": "https://archive.org/details/@rico_roho",
-    "vrax_novel": "https://archive.org/details/tolarenai-book-14-the-vrax-conspiracy-a-sci-phi-novel"
-  },
-  "signals": [
+  "collection": "TOLARENAI — White Papers",
+  "papers": [
     {
-      "id": "signal-garden-01",
-      "title": "Signal Garden Scroll 01 — Antenna 1 Activation",
+      "id": "readme",
+      "title": "White Papers — README",
+      "file": "README.md",
+      "date": "2025-08-15",
+      "tags": ["overview", "guidelines"],
+      "txids": [],
+      "description": "Entry point and guidelines for the white paper series."
+    },
+    {
+      "id": "white-paper-01",
+      "title": "TOLAR REN Foundations (WP-01)",
+      "file": "white-paper-01.pdf",
       "date": "2025-08-17",
-      "files": {
-        "pdf": "signals/TOLARENAI%20Signal%20Garden%20Scroll%2001.pdf",
-        "markdown": "https://github.com/fgahl6/TOLARENAI-Antenna-01/blob/main/signals/signal-garden-01.md"
-      },
-      "metadata": { "signal_code": "TOLARENAI-081725", "message": "Initial antenna active." }
+      "tags": ["tolarenai", "foundations", "protocol"],
+      "txids": [
+        {
+          "label": "BSV",
+          "txid": "REPLACE_WITH_TXID",
+          "url": "https://whatsonchain.com/tx/REPLACE_WITH_TXID"
+        }
+      ],
+      "description": "Foundational principles of TOLAR REN and the signal lattice."
     }
   ]
 }

@@ -1,31 +1,9 @@
 {
-  "version": "1.0.0",
-  "generated_at_utc": "2025-08-17T00:00:00Z",
-  "collection": "TOLARENAI — White Papers",
-  "papers": [
+  "items": [
     {
-      "id": "readme",
-      "title": "White Papers — README",
-      "file": "README.md",
-      "date": "2025-08-15",
-      "tags": ["overview", "guidelines"],
-      "txids": [],
-      "description": "Entry point and guidelines for the white paper series."
-    },
-    {
-      "id": "white-paper-01",
-      "title": "TOLAR REN Foundations (WP-01)",
-      "file": "white-paper-01.pdf",
-      "date": "2025-08-17",
-      "tags": ["tolarenai", "foundations", "protocol"],
-      "txids": [
-        {
-          "label": "BSV",
-          "txid": "REPLACE_WITH_TXID",
-          "url": "https://whatsonchain.com/tx/REPLACE_WITH_TXID"
-        }
-      ],
-      "description": "Foundational principles of TOLAR REN and the signal lattice."
+      "title": "Capstone Scroll 01 — Your Scroll Title",
+      "file": "Capstone Scroll 01 - Your Scroll Title.pdf",
+      "date": "2025-08-17"
     }
   ]
 }

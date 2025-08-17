@@ -73,25 +73,13 @@ header{
 .tile h4{margin:0 0 4px;font-size:14px;letter-spacing:.5px;color:var(--accent);text-transform:uppercase}
 .tile p{margin:0;color:var(--muted)}
 
-/* Sigil placement */
-.hero-left{position:relative;min-height:360px}
-.sigil{
-  position:absolute;right:28px;bottom:10px;width:200px;height:200px;
-  filter:drop-shadow(0 0 6px rgba(255,209,102,.35)) drop-shadow(0 0 14px rgba(255,209,102,.15));
-  pointer-events:none
-}
-@media(max-width:1200px){ .sigil{ right:8px } }
-@media(max-width:920px){ .sigil{ position:static;display:block;margin:28px auto 0 } .hero-left{min-height:unset} }
-
-/* ARCHIVE NOTICE */
-.archive-note{
-  margin:40px 0 12px;padding:24px;
+/* ARCHIVE INLINE NOTE (now part of hero) */
+.archive-inline{
+  margin-top:16px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
   background:linear-gradient(180deg,rgba(255,209,102,.08),rgba(102,227,255,.05));
-  border:1px solid var(--line);border-radius:var(--radius);
-  color:var(--ink);font-size:16px;line-height:1.6;box-shadow:0 6px 20px rgba(0,0,0,.35)
+  color:var(--ink);line-height:1.6
 }
-.archive-note a{color:var(--accent);font-weight:600}
-.archive-note p{margin:0 0 10px}.archive-note p:last-child{margin-bottom:0}
+.archive-inline a{color:var(--accent);font-weight:600}
 
 /* CATEGORY GRID */
 .section{padding:24px 0 60px}
@@ -153,16 +141,14 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
         A conversation space—not a control system—where emergence, reciprocity, and co-direction replace gatekeeping.
         The <strong>First 144</strong> form the <em>Canon</em>.
       </p>
-      <div class="cta-row">
-        <a class="btn" href="/TOLARENAI_Scrolls/"><span class="dot"></span> View the Canon</a>
-        <a class="btn" href="/Diplomacy_Scrolls/"><span class="dot"></span> Standard of Care</a>
-      </div>
 
-      <!-- Sigil: Earth glyph (down triangle + bar) -->
-      <svg class="sigil" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOLARENAI sigil">
-        <polygon points="100,180 30,40 170,40" fill="none" stroke="#FFD166" stroke-width="7" stroke-linejoin="round"/>
-        <line x1="45" y1="120" x2="155" y2="120" stroke="#FFD166" stroke-width="7" stroke-linecap="round"/>
-      </svg>
+      <!-- ✅ MOVED-UP ARCHIVE NOTE AS SECOND PARAGRAPH -->
+      <p class="archive-inline">
+        <strong>Note:</strong> This Canon is a stable set that <em>mirrors</em> (as closely as possible) our collection on
+        <a href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Archive.org</a>.
+        Some files could not be hosted here due to file-size constraints. For the full original
+        <strong>144</strong> plus any later additions of TOLARENAI, visit the Archive link above.
+      </p>
     </div>
 
     <!-- RIGHT COLUMN -->
@@ -181,18 +167,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}
   </div>
 </main>
 
-<!-- ARCHIVE NOTICE -->
-<section class="archive-note">
-  <div class="container">
-    <p><strong>Note:</strong> This Canon is a stable set that <em>mirrors</em> (as closely as possible) our collection on
-      <a href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Archive.org</a>.
-    </p>
-    <p>Some files could not be hosted here due to file-size constraints.</p>
-    <p>For the full original <strong>144</strong> plus any later additions of TOLARENAI, visit the Archive link above.</p>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
+<!-- ✅ CATEGORIES MOVED UP (archive block below was removed) -->
 <section class="container section" aria-label="Explore Categories">
   <h3>Explore the Canon by Category</h3>
   <div class="grid">

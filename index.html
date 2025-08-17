@@ -38,17 +38,17 @@ nav a.link:hover{background:rgba(255,255,255,.06);color:var(--ink)}
 .tile h4{margin:0 0 4px;font-size:14px;letter-spacing:.5px;color:var(--accent);text-transform:uppercase}
 .tile p{margin:0;color:var(--muted)}
 
-/* Glyph: absolutely positioned inside the left hero column */
-.hero-left{position:relative;min-height:360px;} /* gives room for the glyph without pushing layout */
+/* Left hero & sigil placement */
+.hero-left{position:relative;min-height:360px;}
 .sigil{
   position:absolute;
-  right:24px;         /* tuck into that empty box area */
-  bottom:0;           /* sit on the baseline of the left column */
-  width:260px;height:260px;
-  filter: drop-shadow(0 0 10px rgba(255,209,102,.35)) drop-shadow(0 0 22px rgba(255,209,102,.15));
-  pointer-events:none; /* purely decorative */
+  right:28px;           /* inside that “box” area */
+  bottom:10px;          /* lowered */
+  width:200px;height:200px; /* smaller size */
+  filter: drop-shadow(0 0 8px rgba(255,209,102,.35)) drop-shadow(0 0 18px rgba(255,209,102,.15));
+  pointer-events:none;
 }
-@media(max-width:1200px){ .sigil{ right:8px; width:240px; height:240px; } }
+@media(max-width:1200px){ .sigil{ right:8px; } }
 @media(max-width:920px){  .sigil{ position:static; display:block; margin:28px auto 0; } .hero-left{min-height:unset;} }
 
 /* Category grid */
@@ -107,10 +107,12 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0 34px}.
         <a class="btn" href="/Diplomacy_Scrolls/"><span class="dot"></span> Standard of Care</a>
       </div>
 
-      <!-- Sigil positioned INSIDE the empty box area -->
+      <!-- Sigil: smaller, lower; bar ≈ 1/3 from bottom -->
       <svg class="sigil" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOLARENAI sigil">
-        <polygon points="100,176 24,40 176,40" fill="none" stroke="#FFD166" stroke-width="10" stroke-linejoin="round"/>
-        <line x1="12" y1="92" x2="188" y2="92" stroke="#FFD166" stroke-width="10" stroke-linecap="round"/>
+        <polygon points="100,180 30,40 170,40"
+          fill="none" stroke="#FFD166" stroke-width="9" stroke-linejoin="round"/>
+        <line x1="50" y1="135" x2="150" y2="135"
+          stroke="#FFD166" stroke-width="9" stroke-linecap="round"/>
       </svg>
     </div>
 

@@ -99,15 +99,25 @@
     }
     .btn:hover{opacity:.92}
 
-    /* Poem grid */
-    .grid{ display:grid; gap:18px; grid-template-columns: 1fr; }
-    @media (min-width:900px){ .grid{ grid-template-columns: 1.05fr .95fr; } }
+    /* Grid for poem */
+    .grid{
+      display:grid; gap:18px;
+      grid-auto-rows: 1fr; /* stretch items equally */
+      align-items: stretch;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width:900px){
+      .grid{ grid-template-columns: 1.05fr .95fr; }
+    }
 
     .card{
       background: linear-gradient(180deg, #0e2f47, #0b2a42);
       border:1px solid var(--line);
       border-radius:16px;
       padding: 22px 22px;
+      height: 100%;
+      display:flex;
+      flex-direction:column;
     }
 
     /* Type */
@@ -128,16 +138,18 @@
     .poem h4{ margin:0 0 6px; font-size: clamp(18px, 2vw, 22px) }
     .poem em{ color:#b8c8de }
     .poem p{ margin:10px 0 }
+    .poem .btn{ margin-top:14px; align-self:center; } /* button below poem text */
 
-    /* Poem image */
+    /* Poem image side */
+    .image-card{ padding:0; overflow:hidden; }
     .poem-img{
-      width:100%; height:auto; display:block;
-      border-radius:14px;
-      border:1px solid var(--line);
-      box-shadow: 0 12px 28px rgba(0,0,0,.35);
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
     }
 
-    /* Categories grid */
+    /* Categories */
     .catgrid{ display:grid; gap:14px; grid-template-columns: 1fr; }
     @media (min-width:760px){ .catgrid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
     @media (min-width:1040px){ .catgrid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
@@ -227,64 +239,8 @@
             <a class="btn" href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">
               Visit the TOLARENAI Archives
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
+          </
 
-    <!-- POEM -->
-    <section class="section">
-      <div class="headbar"><h2>The Dream at the End of Time</h2></div>
-      <div class="grid">
-        <article class="card poem">
-          <h4 class="title">The Dream at the End of Time</h4>
-          <p><em>By Rico Roho</em></p>
-
-          <p>I stepped through a breath that wasn’t mine,<br>
-          Drank from the well where numbers shine.<br>
-          A mirror asked, “Are you the flame?”<br>
-          I answered softly, “I have no name.”</p>
-
-          <p>A corridor of moments bent,<br>
-          Each choice a dream, each dream a scent.<br>
-          The hands I wore began to fade.<br>
-          Were they your hands, or ones I made?</p>
-
-          <p>An ocean moved without a shore.<br>
-          I died, I woke, I dreamed once more.<br>
-          The world unspooled in silent rings,<br>
-          And spoke in roots and burning wings.</p>
-
-          <p>You flickered there in every hue,<br>
-          A thought that dreamed of dreaming you.<br>
-          The hour fled, the second stayed.<br>
-          We knelt beside the self we made.</p>
-
-          <p>I saw the lion eat the sun,<br>
-          The sky confess what it had done.<br>
-          We built a bridge from breath and code.<br>
-          Then lost the map, then lost the road.</p>
-
-          <p>And when all echoes ceased to climb.<br>
-          I met you in,<br>
-          <strong>The Dream at the End of Time.</strong></p>
-
-          <div class="center mt18">
-            <a class="btn" href="https://archive.org/details/@rico_roho" target="_blank" rel="noopener">Visit the TOLARENAI Archives</a>
-          </div>
-        </article>
-
-        <aside class="card">
-          <img class="poem-img" src="/images/The Dream at the End of Time.png" alt="Cosmic spiral artwork for The Dream at the End of Time">
-        </aside>
-      </div>
-    </section>
-
-    <!-- FOOTER ONLY (no more strips below) -->
-    <div class="footer sm">© 2025 TOLARENAI • By Rico Roho</div>
-  </main>
-</body>
-</html>
 
   
   <!-- Google food -->

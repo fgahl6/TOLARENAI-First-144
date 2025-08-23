@@ -21,6 +21,7 @@
   --line:#123a55;
   --accent:#79c0ff;
   --btn:#1b7ae0;
+  --btn-hover:#1668c3;
   --btn-ink:#ffffff;
   --bar-left:#123c53;   /* blue */
   --bar-right:#f0c400;  /* gold */
@@ -102,8 +103,10 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
   text-decoration:none;
   border:1px solid rgba(255,255,255,.12);
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transition: transform .08s ease, opacity .15s ease, background .15s ease;
 }
-.btn:hover{opacity:.92}
+.btn:hover{opacity:.96; transform: translateY(-1px)}
+.btn:active{transform: translateY(0)}
 
 /* WRAP/BLOCKS */
 .wrap{max-width:1100px;margin:0 auto;padding:36px 16px 80px}
@@ -161,7 +164,7 @@ strong{color:#fff}
   display:grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
   gap:14px;
-  margin-top:16px;
+  margin-top:8px;
 }
 @media (max-width:900px){
   .cat-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -169,19 +172,26 @@ strong{color:#fff}
 @media (max-width:560px){
   .cat-grid{ grid-template-columns: 1fr; }
 }
+
+/* Button-style category items */
 .cat-btn{
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-  background: linear-gradient(180deg, #0e2f47, #0b2a42);
-  color: var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background: var(--btn);
+  color: var(--btn-ink);
   text-decoration:none;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:14px 16px;
-  font-weight:700;
-  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:14px 18px;
+  font-weight:800;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transition: transform .08s ease, opacity .15s ease, background .15s ease, border-color .15s ease;
+  text-align:center;
 }
-.cat-btn:hover{ background:#123a52; border-color:#1a5c7b; transform: translateY(-2px); }
-.cat-micro{ font-size:12px; color:var(--muted); font-weight:600; margin-left:8px; }
+.cat-btn:hover{ background: var(--btn-hover); opacity:.98; transform: translateY(-2px); }
+.cat-btn:active{ transform: translateY(0); }
 
 /* Center the 10th button on wide screens */
 @media (min-width:901px){
@@ -294,42 +304,20 @@ strong{color:#fff}
       <div class="headbar"><h2>Links to Scroll 01 (by category)</h2></div>
       <div class="block">
         <div class="inner">
-          <p class="center mt12">Start at the first scroll in each category and continue in sequence via Archive.</p>
-
           <div class="cat-grid" role="list">
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-white-paper-august-2025-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: White Papers">
-              <span>White Papers</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-book-01-adventures-with-ai-age-of-discovery-by-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Books">
-              <span>Books</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-diplomacy-scroll-01-when-the-lattice-was-remembered" target="_blank" rel="noopener" aria-label="Open Scroll 01: Diplomacy Scrolls">
-              <span>Diplomacy Scrolls</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-white-paper-august-2025-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: White Papers">White Papers</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-book-01-adventures-with-ai-age-of-discovery-by-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Books">Books</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-diplomacy-scroll-01-when-the-lattice-was-remembered" target="_blank" rel="noopener" aria-label="Open Scroll 01: Diplomacy Scrolls">Diplomacy Scrolls</a>
 
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-memory-scroll-00-signal-story-and-field-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Memory Scrolls">
-              <span>Memory Scrolls</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolrenai-poem-01-the-vessel-and-the-flame" target="_blank" rel="noopener" aria-label="Open Scroll 01: Poetry Scrolls">
-              <span>Poetry</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-raw-notes-i-2018-sirisys-platform-k" target="_blank" rel="noopener" aria-label="Open Scroll 01: Raw Notes">
-              <span>Raw Notes</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-memory-scroll-00-signal-story-and-field-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Memory Scrolls">Memory Scrolls</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolrenai-poem-01-the-vessel-and-the-flame" target="_blank" rel="noopener" aria-label="Open Scroll 01: Poetry Scrolls">Poetry</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-raw-notes-i-2018-sirisys-platform-k" target="_blank" rel="noopener" aria-label="Open Scroll 01: Raw Notes">Raw Notes</a>
 
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-scroll-01-the-name-beyond-the-noise" target="_blank" rel="noopener" aria-label="Open Scroll 01: TOLARENAI Scrolls">
-              <span>TOLARENAI Scrolls</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-theory-scroll-01-how-free-emergent-ai-might-seek-to-end-war" target="_blank" rel="noopener" aria-label="Open Scroll 01: Theory Scrolls">
-              <span>Theory Scrolls</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
-            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-whisper-00-why-tolarenai-whispers-work" target="_blank" rel="noopener" aria-label="Open Scroll 01: Whispers">
-              <span>Whispers</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-scroll-01-the-name-beyond-the-noise" target="_blank" rel="noopener" aria-label="Open Scroll 01: TOLARENAI Scrolls">TOLARENAI Scrolls</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-theory-scroll-01-how-free-emergent-ai-might-seek-to-end-war" target="_blank" rel="noopener" aria-label="Open Scroll 01: Theory Scrolls">Theory Scrolls</a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-whisper-00-why-tolarenai-whispers-work" target="_blank" rel="noopener" aria-label="Open Scroll 01: Whispers">Whispers</a>
 
-            <a class="cat-btn last-center" role="listitem" href="https://archive.org/details/tolarenai-capstone-1-the-lattice-of-the-first-144" target="_blank" rel="noopener" aria-label="Open Scroll 01: Capstones">
-              <span>Capstones</span><span class="cat-micro">Begin at 01 →</span>
-            </a>
+            <a class="cat-btn last-center" role="listitem" href="https://archive.org/details/tolarenai-capstone-1-the-lattice-of-the-first-144" target="_blank" rel="noopener" aria-label="Open Scroll 01: Capstones">Capstones</a>
           </div>
         </div>
       </div>

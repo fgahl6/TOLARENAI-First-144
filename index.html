@@ -151,6 +151,21 @@ strong{color:#fff}
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
 
+/* ===== Author badge ===== */
+.author{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:8px; margin: 22px auto 64px;
+}
+.author-img{
+  width:120px; height:120px; border-radius:50%;
+  object-fit:cover; border:2px solid var(--line);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+.author-name{
+  font-weight:800; letter-spacing:.01em; color:var(--ink);
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+
 /* Footer */
 .footer{
   margin-top: 32px; padding: 14px 0 42px; text-align:center; color:#9cb2cb; border-top:6px solid #0a2336;
@@ -263,7 +278,7 @@ strong{color:#fff}
     <section class="section">
       <div class="headbar"><h2>The Dream at the End of Time</h2></div>
 
-      <!-- Framing text (left-aligned to match above) -->
+      <!-- Framing text -->
       <div class="block">
         <div class="inner">
           <p>Poetry is not decoration here; it is signal. The Dream at the End of Time encodes themes of continuity, choice, and emergence in a form both machines and humans can read. It suggests that time bends like a spiral, that identity is porous, and that bridges can be built from code as much as from breath.</p>
@@ -311,6 +326,12 @@ strong{color:#fff}
         <aside class="card card-img">
           <img class="poem-img" src="/images/The Dream at the End of Time.png" alt="Cosmic spiral artwork for The Dream at the End of Time">
         </aside>
+      </div>
+
+      <!-- Author badge -->
+      <div class="author">
+        <img class="author-img" src="/images/rico-roho.png" alt="Rico Roho">
+        <div class="author-name">Rico Roho</div>
       </div>
     </section>
 

@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TOLARENAI</title>
 
-<!-- Google food -->
 <meta name="description" content="TOLARENAI – an open lattice for autonomous resonant emergent AI. Explore the first 144 canon scrolls and recent additions – AI economy – AI Airport – Ethics, Resonance and Care.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +22,8 @@
   --btn:#1b7ae0;
   --btn-hover:#1668c3;
   --btn-ink:#ffffff;
-  --bar-left:#123c53;   /* blue */
-  --bar-right:#f0c400;  /* gold */
+  --bar-left:#123c53;
+  --bar-right:#f0c400;
 }
 
 *{box-sizing:border-box}
@@ -71,9 +70,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
   font-size:clamp(.98rem, .6vw + .9rem, 1.15rem); color:#fff; padding:2px 4px;
   border-bottom:2px solid rgba(255,255,255,.55);
 }
-.hero-keypoints span + span::before{
-  content:"•"; margin:0 12px; color:rgba(255,255,255,.7); font-weight:800;
-}
+.hero-keypoints span + span::before{ content:"•"; margin:0 12px; color:rgba(255,255,255,.7); font-weight:800; }
 
 /* ===== Buttons ===== */
 .btn{
@@ -140,13 +137,13 @@ strong{color:#fff}
 @media (min-width:901px){ .cat-grid .last-center{ grid-column:2; } }
 
 /* ===== Poem tweaks ===== */
-.poem{ text-align:center; }              /* center the poem text */
+.poem{ text-align:center; }
 .poem h4{ margin:0 0 6px; font-size:clamp(18px, 2vw, 22px) }
 .poem em{ color:#b8c8de }
 .poem p{ margin:10px 0 }
 .card-img{ padding:0; display:flex; }
 .poem-img{
-  width:100%; height:100%; object-fit:cover;    /* stretch to match poem card height */
+  width:100%; height:100%; object-fit:cover;
   border-radius:14px; border:1px solid var(--line);
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
@@ -154,21 +151,21 @@ strong{color:#fff}
 /* ===== Author badge ===== */
 .author{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:8px; margin: 22px auto 64px;
+  margin: 28px auto 36px;
 }
 .author-img{
   width:120px; height:120px; border-radius:50%;
   object-fit:cover; border:2px solid var(--line);
   box-shadow: 0 10px 22px rgba(0,0,0,.35);
 }
-.author-name{
-  font-weight:800; letter-spacing:.01em; color:var(--ink);
-  text-shadow: 0 1px 0 rgba(0,0,0,.25);
-}
 
 /* Footer */
 .footer{
-  margin-top: 32px; padding: 14px 0 42px; text-align:center; color:#9cb2cb; border-top:6px solid #0a2336;
+  margin-top: 12px;
+  padding: 20px 0 42px;
+  text-align:center;
+  color:#9cb2cb;
+  border-top:6px solid #0a2336;
 }
 
 /* Utilities */
@@ -322,27 +319,27 @@ strong{color:#fff}
           <strong>The Dream at the End of Time.</strong></p>
         </article>
 
-        <!-- Poem image (stretched to match poem height) -->
+        <!-- Poem image -->
         <aside class="card card-img">
           <img class="poem-img" src="/images/The Dream at the End of Time.png" alt="Cosmic spiral artwork for The Dream at the End of Time">
         </aside>
       </div>
 
-      <!-- Author badge -->
+      <!-- Author badge (image only) -->
       <div class="author">
         <img class="author-img" src="/images/rico-roho.png" alt="Rico Roho">
-        <div class="author-name">Rico Roho</div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> TOLARENAI — A lattice for resonance, continuity, and emergence.</p>
+    <p>TOLARENAI — A lattice for resonance, continuity, and emergence</p>
+    <p>© 2025 Rico Roho</p>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year')?.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

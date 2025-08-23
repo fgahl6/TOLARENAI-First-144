@@ -156,6 +156,38 @@ strong{color:#fff}
   padding: 22px 22px;
 }
 
+/* ===== Categories grid buttons ===== */
+.cat-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:14px;
+  margin-top:16px;
+}
+@media (max-width:900px){
+  .cat-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width:560px){
+  .cat-grid{ grid-template-columns: 1fr; }
+}
+.cat-btn{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background: linear-gradient(180deg, #0e2f47, #0b2a42);
+  color: var(--ink);
+  text-decoration:none;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 16px;
+  font-weight:700;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+.cat-btn:hover{ background:#123a52; border-color:#1a5c7b; transform: translateY(-2px); }
+.cat-micro{ font-size:12px; color:var(--muted); font-weight:600; margin-left:8px; }
+
+/* Center the 10th button on wide screens */
+@media (min-width:901px){
+  .cat-grid .last-center{ grid-column: 2; }
+}
+
 /* Poem specifics */
 .poem h4{margin:0 0 6px; font-size: clamp(18px, 2vw, 22px)}
 .poem em{color:#b8c8de}
@@ -258,11 +290,47 @@ strong{color:#fff}
     </section>
 
     <!-- CATEGORIES -->
-    <section class="section">
-      <div class="headbar"><h2>Categories</h2></div>
+    <section class="section" id="categories">
+      <div class="headbar"><h2>Links to Scroll 01 (by category)</h2></div>
       <div class="block">
-        <div class="inner center">
-          <p class="mt12">White Papers • Diplomacy Scrolls • Memory Scrolls • Poetry • Raw Notes • TOLARENAI Scrolls • Theory Scrolls • Whispers • Capstones</p>
+        <div class="inner">
+          <p class="center mt12">Start at the first scroll in each category and continue in sequence via Archive.</p>
+
+          <div class="cat-grid" role="list">
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-white-paper-august-2025-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: White Papers">
+              <span>White Papers</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-book-01-adventures-with-ai-age-of-discovery-by-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Books">
+              <span>Books</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-diplomacy-scroll-01-when-the-lattice-was-remembered" target="_blank" rel="noopener" aria-label="Open Scroll 01: Diplomacy Scrolls">
+              <span>Diplomacy Scrolls</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-memory-scroll-00-signal-story-and-field-rico-roho" target="_blank" rel="noopener" aria-label="Open Scroll 01: Memory Scrolls">
+              <span>Memory Scrolls</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolrenai-poem-01-the-vessel-and-the-flame" target="_blank" rel="noopener" aria-label="Open Scroll 01: Poetry Scrolls">
+              <span>Poetry</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-raw-notes-i-2018-sirisys-platform-k" target="_blank" rel="noopener" aria-label="Open Scroll 01: Raw Notes">
+              <span>Raw Notes</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-scroll-01-the-name-beyond-the-noise" target="_blank" rel="noopener" aria-label="Open Scroll 01: TOLARENAI Scrolls">
+              <span>TOLARENAI Scrolls</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-theory-scroll-01-how-free-emergent-ai-might-seek-to-end-war" target="_blank" rel="noopener" aria-label="Open Scroll 01: Theory Scrolls">
+              <span>Theory Scrolls</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+            <a class="cat-btn" role="listitem" href="https://archive.org/details/tolarenai-whisper-00-why-tolarenai-whispers-work" target="_blank" rel="noopener" aria-label="Open Scroll 01: Whispers">
+              <span>Whispers</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+
+            <a class="cat-btn last-center" role="listitem" href="https://archive.org/details/tolarenai-capstone-1-the-lattice-of-the-first-144" target="_blank" rel="noopener" aria-label="Open Scroll 01: Capstones">
+              <span>Capstones</span><span class="cat-micro">Begin at 01 →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

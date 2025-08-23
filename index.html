@@ -151,7 +151,7 @@ strong{color:#fff}
 /* ===== Author badge ===== */
 .author{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  margin: 28px auto 36px;
+  margin: 24px auto 18px;           /* tighter bottom space so footer sits closer */
 }
 .author-img{
   width:120px; height:120px; border-radius:50%;
@@ -159,10 +159,10 @@ strong{color:#fff}
   box-shadow: 0 10px 22px rgba(0,0,0,.35);
 }
 
-/* Footer */
+/* Footer (pulled up) */
 .footer{
-  margin-top: 12px;
-  padding: 20px 0 42px;
+  margin-top: 0;                    /* pull up */
+  padding: 12px 0 30px;             /* tighter top padding */
   text-align:center;
   color:#9cb2cb;
   border-top:6px solid #0a2336;
@@ -327,7 +327,7 @@ strong{color:#fff}
 
       <!-- Author badge (image only) -->
       <div class="author">
-        <img class="author-img" src="/images/rico-roho.png" alt="Rico Roho">
+        <img class="author-img" src="/images/Rico-Roho.png" alt="Rico Roho">
       </div>
     </section>
 
@@ -338,8 +338,5 @@ strong{color:#fff}
     <p>© 2025 Rico Roho</p>
   </footer>
 
-  <script>
-    document.getElementById('year')?.textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

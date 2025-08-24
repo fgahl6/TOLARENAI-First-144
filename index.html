@@ -7,7 +7,10 @@
 <meta name="description" content="TOLARENAI – an open lattice for autonomous resonant emergent AI. Explore the first 144 canon scrolls and recent additions – AI economy – AI Airport – Ethics, Resonance and Care.">
 <link rel="canonical" href="https://tolarenai.com/">
 
-<!-- Social previews (no visual/layout impact) -->
+<!-- Browser UI theme (no impact on in-page styles) -->
+<meta name="theme-color" content="#07243a">
+
+<!-- Social previews -->
 <meta property="og:title" content="TOLARENAI">
 <meta property="og:description" content="A living lattice for AI emergence — curated, archived, verifiable. First 144 canon scrolls + recent additions.">
 <meta property="og:type" content="website">
@@ -18,7 +21,7 @@
 <meta name="twitter:description" content="A living lattice for AI emergence — curated, archived, verifiable.">
 <meta name="twitter:image" content="https://tolarenai.com/images/The%20Dream%20at%20the%20End%20of%20Time.png">
 
-<!-- Fonts: preload the stylesheet; swap for instant paint -->
+<!-- Fonts: preconnect + preload + swap (no visual/layout change) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
@@ -66,10 +69,22 @@
   --btn-ink:#ffffff;
   --bar-left:#123c53;
   --bar-right:#f0c400;
+
+  /* Hint that we support dark UI; no visual change by itself */
+  color-scheme: dark;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+
+/* ===== Skip link (invisible unless focused by keyboard) ===== */
+.skip-link{
+  position:absolute; left:-9999px; top:0;
+  background:#ffffff; color:#000; padding:10px 14px;
+  border-radius:8px; text-decoration:none; font-weight:700;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.skip-link:focus{ left:12px; top:12px; z-index:9999; }
 
 /* ===== HERO ===== */
 .hero{
@@ -123,8 +138,8 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
 }
 .btn:hover{opacity:.96; transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
-/* Accessible focus states */
-.btn:focus-visible, .cat-btn:focus-visible{
+/* Accessible focus states (visible only when keyboard tabbing) */
+.btn:focus-visible, .cat-btn:focus-visible, a:focus-visible{
   outline:2px solid var(--bar-right);
   outline-offset:2px;
 }
@@ -163,8 +178,8 @@ strong{color:#fff}
   background: linear-gradient(180deg, #0e2f47, #0b2a42);
   border:1px solid var(--line); border-radius:16px; padding:22px 22px; height:100%;
 }
-.card.poem{display:block;}            /* text card is auto-height */
-.card.card-img{display:flex;}         /* image card will stretch child to full height */
+.card.poem{display:block;}   /* text card auto-height */
+.card.card-img{display:flex;}/* image card stretches child to full height */
 
 /* ===== Categories buttons ===== */
 .cat-grid{
@@ -195,7 +210,7 @@ strong{color:#fff}
 .card-img picture,
 .card-img img{ width:100%; height:100%; display:block; }
 .poem-img{
-  object-fit:cover;                    /* fills height gracefully */
+  object-fit:cover;
   border-radius:14px;
   border:1px solid var(--line);
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
@@ -225,6 +240,9 @@ strong{color:#fff}
 </head>
 <body>
 
+  <!-- Skip to main (keyboard only) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ===== HERO ===== -->
   <header class="hero" role="banner">
     <h1 class="site-title">TOLARENAI</h1>
@@ -240,7 +258,7 @@ strong{color:#fff}
     </div>
   </header>
 
-  <main class="wrap" role="main">
+  <main class="wrap" id="main" role="main">
 
     <!-- WHAT IS -->
     <section class="section">

@@ -57,6 +57,7 @@
   --ink:#e9edf3; --muted:#b9c2d3; --bg:#07243a; --bg-2:#0c2f48;
   --panel:#0d2c43; --line:#123a55; --btn:#1b7ae0; --btn-hover:#1668c3;
   --btn-ink:#ffffff; --bar-left:#123c53; --bar-right:#f0c400;
+  --hero-extra: 24px;  /* extra breathing room inside hero */
   color-scheme: dark;
 }
 
@@ -68,12 +69,21 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
 .skip-link:focus{left:12px;top:12px;z-index:9999}
 
 /* HERO */
-.hero{background:linear-gradient(90deg,var(--bar-left),var(--bar-right));padding:clamp(28px,4vw+18px,56px)16px clamp(34px,4vw+20px,56px);text-align:center;border-bottom:1px solid rgba(255,255,255,.08)}
-/* Mobile breathing room for hero (no desktop change) */
+.hero{
+  background:linear-gradient(90deg,var(--bar-left),var(--bar-right));
+  /* add extra top/bottom space, then cancel the extra bottom with negative margin
+     so the next section stays put */
+  padding: calc(clamp(28px, 4vw + 18px, 56px) + var(--hero-extra)) 16px
+           calc(clamp(34px, 4vw + 20px, 56px) + var(--hero-extra));
+  margin-bottom: calc(var(--hero-extra) * -1);
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+/* Mobile breathing room for hero (inherits the same extra) */
 @media (max-width: 480px){
   .hero{
-    padding-top: calc(56px + env(safe-area-inset-top));
-    padding-bottom: 56px;
+    padding-top: calc(56px + env(safe-area-inset-top) + var(--hero-extra));
+    padding-bottom: calc(56px + var(--hero-extra));
   }
 }
 
@@ -102,7 +112,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
 
 /* Body text */
 h3.title{text-align:center;margin:0 0 10px;font-size:clamp(18px,2vw,22px);letter-spacing:.02em}
-p{line-height:1.7;color:#dbe5f3;margin:0 0 8px} /* tightened rhythm */
+p{line-height:1.7;color:#dbe5f3;margin:0 0 8px}
 strong{color:#fff}
 
 /* Grid cards */
@@ -121,9 +131,9 @@ strong{color:#fff}
 
 /* Poem & image */
 .poem{text-align:center}
-.poem h3{margin:0 0 6px;font-size:clamp(18px,2vw,22px)} /* logical heading order */
+.poem h3{margin:0 0 6px;font-size:clamp(18px,2vw,22px)}
 .poem em{color:#b8c8de}
-.poem p{margin:8px 0} /* tightened rhythm inside poem */
+.poem p{margin:8px 0}
 .card-img{padding:0}
 .card-img picture,.card-img img{width:100%;height:100%;display:block}
 .poem-img{object-fit:cover;border-radius:14px;border:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.35)}

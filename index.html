@@ -7,8 +7,18 @@
 
 <meta name="description" content="TOLARENAI – an open lattice for autonomous resonant emergent AI. Explore the first 144 canon scrolls and recent additions – AI economy – AI Airport – Ethics, Resonance and Care.">
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Favicons (no layout impact) -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/images/favicon-256.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
 
 <style>
 :root{
@@ -134,16 +144,22 @@ strong{color:#fff}
 .cat-btn:hover{ background:var(--btn-hover); opacity:.98; transform:translateY(-2px); }
 @media (min-width:901px){ .cat-grid .last-center{ grid-column:2; } }
 
-/* ===== Poem tweaks ===== */
+/* ===== Poem tweaks (CLS + lazy support, no visual changes) ===== */
 .poem{ text-align:center; }
 .poem h4{ margin:0 0 6px; font-size:clamp(18px, 2vw, 22px) }
 .poem em{ color:#b8c8de }
 .poem p{ margin:10px 0 }
 .card-img{ padding:0; display:flex; }
+
+/* Reserve image space to prevent layout shift */
 .poem-img{
-  width:100%; height:100%; object-fit:cover;
-  border-radius:14px; border:1px solid var(--line);
+  width:100%;
+  height:auto;
+  aspect-ratio: 3 / 4;                     /* keeps the box steady before the image arrives */
+  border-radius:14px;
+  border:1px solid var(--line);
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  contain-intrinsic-size: auto 600px;      /* safety fallback */
 }
 
 /* ===== Author badge ===== */
@@ -152,7 +168,8 @@ strong{color:#fff}
   margin: 56px auto 56px; /* visually centered between poem and footer */
 }
 .author-img{
-  width:120px; height:120px; border-radius:50%;
+  width:120px; height:120px;               /* fixed size prevents shift */
+  border-radius:50%;
   object-fit:cover; border:2px solid var(--line);
   box-shadow: 0 10px 22px rgba(0,0,0,.35);
 }
@@ -304,15 +321,30 @@ strong{color:#fff}
           <strong>The Dream at the End of Time.</strong></p>
         </article>
 
-        <!-- Poem image -->
+        <!-- Poem image (lazy, CLS-safe; looks identical) -->
         <aside class="card card-img">
-          <img class="poem-img" src="/images/The Dream at the End of Time.png" alt="Cosmic spiral artwork for The Dream at the End of Time">
+          <picture>
+            <!-- Optional future WebP; safe to keep even if missing -->
+            <source type="image/webp" srcset="/images/The Dream at the End of Time.webp">
+            <img
+              class="poem-img"
+              src="/images/The Dream at the End of Time.png"
+              alt="Cosmic spiral artwork for The Dream at the End of Time"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low">
+          </picture>
         </aside>
       </div>
 
       <!-- Author badge (image only) -->
       <div class="author">
-        <img class="author-img" src="/images/Rico-Roho.png" alt="Rico Roho">
+        <img
+          class="author-img"
+          src="/images/Rico-Roho.png"
+          alt="Rico Roho"
+          loading="lazy"
+          decoding="async">
       </div>
     </section>
 

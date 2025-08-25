@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- build: 2025-08-24 restored / commit: <yesterdays-short-hash> -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -237,7 +238,7 @@ strong{color:#fff}
     </div></div>
   </section>
 
-  <!-- POEM -->
+  <!-- POEM (unchanged) -->
   <section class="section">
     <div class="headbar"><h2>The Dream at the End of Time</h2></div>
 
@@ -302,7 +303,16 @@ strong{color:#fff}
 <footer class="footer" role="contentinfo">
   <p>TOLARENAI — A lattice for resonance, continuity, and emergence</p>
   <p>© 2025 Rico Roho</p>
+  <div id="ver" hidden>build 2025-08-24 / commit <yesterdays-short-hash></div>
 </footer>
+
+<script>
+  // Reveal version marker with ?debug=1
+  if (new URLSearchParams(location.search).has('debug')) {
+    const el = document.getElementById('ver');
+    if (el) el.hidden = false;
+  }
+</script>
 
 </body>
 </html>

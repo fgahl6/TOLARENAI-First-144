@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- build: 2025-08-26 16:55 EDT / commit: fd358ba -->
+<!-- build: 2025-08-26 14:38 EDT / commit: ec7386c -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -102,8 +102,9 @@
 <style>
 :root{
   --ink:#e9edf3; --muted:#b9c2d3; --bg:#07243a; --bg-2:#0c2f48;
-  --panel:#0d2c43; --line:#123a55; --btn:#1b7ae0; --btn-hover:#1668c3;
-  --btn-ink:#ffffff; --bar-left:#123c53; --bar-right:#f0c400;
+  --panel:#0d2c43; --line:#123a55;
+  --btn:#1b7ae0; --btn-hover:#1668c3; --btn-ink:#ffffff;
+  --bar-left:#123c53; --bar-right:#f0c400;
   --hero-extra: 24px;
   color-scheme: dark;
 }
@@ -160,33 +161,42 @@ h3.title{text-align:center;margin:0 0 10px;font-size:clamp(18px,2vw,22px);letter
 p{line-height:1.7;color:#dbe5f3;margin:0 0 8px}
 strong{color:#fff}
 
-/* CATEGORY GRID + BUTTONS (restored + robust) */
+/* CATEGORY GRID + BUTTONS (3-wide desktop, Capstones centered) */
 .cat-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;   /* phone */
   gap: 12px;
+}
+@media (min-width:640px){
+  .cat-grid{ grid-template-columns: repeat(2, 1fr); } /* small tablets */
+}
+@media (min-width:900px){
+  .cat-grid{ grid-template-columns: repeat(3, 1fr); } /* desktop = three-wide */
 }
 .cat-btn{
   display:block;
   text-align:center;
   padding:14px 16px;
   border-radius:12px;
-  background:linear-gradient(180deg,#0e2f47,#0b2a42);
-  border:1px solid var(--line);
+  /* bluer treatment */
+  background:linear-gradient(180deg,#145ea8,#114c86);
+  border:1px solid #0e3f70;
   box-shadow:0 6px 16px rgba(0,0,0,.22);
-  color:var(--ink);
+  color:#ffffff;
   font-weight:800;
   text-decoration:none;
   letter-spacing:.02em;
-  transition:transform .08s ease, box-shadow .12s ease, background .12s ease;
+  transition:transform .08s ease, box-shadow .12s ease, filter .12s ease;
   user-select:none;
 }
-.cat-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
+.cat-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.28);filter:brightness(1.06)}
 .cat-btn:active{transform:translateY(0)}
 .cat-btn:focus-visible{outline:2px solid var(--bar-right);outline-offset:2px}
-.cat-btn.last-center{
-  justify-self:center;
-  width:100%;
+
+/* Place the last button (Capstones) at bottom center on desktop */
+.cat-btn.last-center{justify-self:center}
+@media (min-width:900px){
+  .cat-btn.last-center{grid-column:2} /* column 2 of 3 ⇒ centered */
 }
 
 /* Grid, cards, poem, image, author, footer */

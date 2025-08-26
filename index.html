@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- build: 2025-08-26 17:02 EDT / commit: ac96565 -->
+<!-- build: 2025-08-26 16:20 EDT / commit: ec7386c-3wide-capstones-fullwidth -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="https://tolarenai.com/images/The%20Dream%20at%20the%20End%20of%20Time.png">
 <meta name="twitter:image:alt" content="Cosmic spiral and solar face artwork for The Dream at the End of Time">
 
-<!-- Fonts: preconnect + preload + swap -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
@@ -55,7 +55,7 @@
 }
 </script>
 
-<!-- WebPage JSON-LD (keyword-forward) -->
+<!-- WebPage JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,7 +81,7 @@
 }
 </script>
 
-<!-- DefinedTerm JSON-LD pointing to the glossary page -->
+<!-- DefinedTerm JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,14 +113,14 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
 .skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.3)}
 .skip-link:focus{left:12px;top:12px;z-index:9999}
 
-/* A11y helper for hidden-but-available text/links */
+/* A11y helper */
 .sr-only{
-  position:absolute!important; width:1px!important; height:1px!important;
-  padding:0!important; margin:-1px!important; overflow:hidden!important;
-  clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important;
+  position:absolute!important;width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;
 }
 
-/* Stealth link (looks like normal text/bold) */
+/* Stealth link */
 .stealth{color:inherit;text-decoration:none}
 
 /* HERO */
@@ -129,14 +129,11 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
   padding: calc(clamp(28px, 4vw + 18px, 56px) + var(--hero-extra)) 16px
            calc(clamp(34px, 4vw + 20px, 56px) + var(--hero-extra));
   margin-bottom: calc(var(--hero-extra) * -1);
-  text-align:center;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  text-align:center;border-bottom:1px solid rgba(255,255,255,.08);
 }
 @media (max-width: 480px){
-  .hero{
-    padding-top: calc(56px + env(safe-area-inset-top) + var(--hero-extra));
-    padding-bottom: calc(56px + var(--hero-extra));
-  }
+  .hero{padding-top: calc(56px + env(safe-area-inset-top) + var(--hero-extra));
+        padding-bottom: calc(56px + var(--hero-extra));}
 }
 .site-title{font-size:clamp(42px,6vw,84px);font-weight:800;letter-spacing:.18em;line-height:.95;margin:0 0 6px;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.15)}
 .site-slogan{margin:10px auto 10px;font-size:clamp(18px,2.1vw,26px);color:#f4f7fb;font-weight:600;max-width:72ch}
@@ -161,7 +158,7 @@ h3.title{text-align:center;margin:0 0 10px;font-size:clamp(18px,2vw,22px);letter
 p{line-height:1.7;color:#dbe5f3;margin:0 0 8px}
 strong{color:#fff}
 
-/* CATEGORY GRID + BUTTONS (3-wide desktop, Capstones centered) */
+/* CATEGORY GRID + BUTTONS (3-wide desktop, Capstones full width & centered column) */
 .cat-grid{
   display:grid;
   grid-template-columns: 1fr;   /* phone */
@@ -178,8 +175,7 @@ strong{color:#fff}
   text-align:center;
   padding:14px 16px;
   border-radius:12px;
-  /* bluer treatment */
-  background:linear-gradient(180deg,#145ea8,#114c86);
+  background:linear-gradient(180deg,#145ea8,#114c86); /* bluer */
   border:1px solid #0e3f70;
   box-shadow:0 6px 16px rgba(0,0,0,.22);
   color:#ffffff;
@@ -193,10 +189,9 @@ strong{color:#fff}
 .cat-btn:active{transform:translateY(0)}
 .cat-btn:focus-visible{outline:2px solid var(--bar-right);outline-offset:2px}
 
-/* Place the last button (Capstones) at bottom center on desktop */
-.cat-btn.last-center{justify-self:center}
+/* Center the last button in column 2 on desktop, same width as others */
 @media (min-width:900px){
-  .cat-btn.last-center{grid-column:2} /* column 2 of 3 ⇒ centered */
+  .cat-btn.last-center{grid-column:2;}
 }
 
 /* Grid, cards, poem, image, author, footer */

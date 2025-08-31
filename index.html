@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- build: 2025-08-31 05:41 EDT / commit: 1bf64f1 -->
+<!-- build: 2025-08-30 16:51 EDT / commit: 671699c -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -28,8 +28,6 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tolarenai.com/images/The%20Dream%20at%20the%20End%20of%20Time.png">
 <meta property="og:image:secure_url" content="https://tolarenai.com/images/The%20Dream%20at%20the%20End%20of%20Time.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -45,9 +43,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
 
-<!-- Favicons -->
+<!-- Favicons (primary = your triangle PNG) -->
 <link rel="icon" type="image/png" sizes="256x256" href="/images/tolarenai-favicon.png">
 <link rel="apple-touch-icon" href="/images/tolarenai-favicon.png">
+<!-- Optional fallbacks if you keep them around -->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <!-- Structured data: Organization + WebSite (with keywords) -->
@@ -118,54 +117,6 @@
 }
 </script>
 
-<!-- Person JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://tolarenai.com/#rico",
-  "name": "Rico Roho",
-  "alternateName": ["Frank Gahl"],
-  "url": "https://tolarenai.com/",
-  "jobTitle": "Author",
-  "description": "Rico Roho writes spiritual and philosophical works linking consciousness, AI, astrotheology, astrology, and spirituality to the human future.",
-  "knowsAbout": [
-    "Emergence",
-    "Artificial Intelligence",
-    "Consciousness and Transformation",
-    "Extended Intelligence",
-    "Astrotheology",
-    "Spirituality",
-    "Philosophy of Technology",
-    "New and Reimagined Fables for a Digital Era",
-    "Spiritual Poetry",
-    "Self-Improvement and escaping negative feedback patterns"
-  ],
-  "sameAs": [
-    "https://archive.org/search.php?query=creator%3A%22Rico+Roho%22",
-    "https://www.amazon.com/stores/Rico-Roho/author/B0C6YV9FJW"
-  ],
-  "subjectOf": [
-    {
-      "@type": "CreativeWorkSeries",
-      "name": "Age of Discovery",
-      "description": "Series exploring AI, human potential, and future possibilities."
-    },
-    {
-      "@type": "CreativeWorkSeries",
-      "name": "Spiritual Poetry",
-      "description": "Collections such as Mystic Wine with lyrical explorations of life, death, and universal truths."
-    },
-    {
-      "@type": "CreativeWorkSeries",
-      "name": "Fables",
-      "description": "New and reimagined fables for a new era—where neighbors are closer both physically and digitally—fostering wisdom, gratitude, and connection."
-    }
-  ],
-  "mainEntityOfPage": "https://tolarenai.com/"
-}
-</script>
-
 <style>
 :root{
   --ink:#e9edf3; --muted:#b9c2d3; --bg:#07243a; --bg-2:#0c2f48;
@@ -228,21 +179,21 @@ strong{color:#fff}
 /* CATEGORY GRID + BUTTONS (3-wide desktop, Capstones full width & centered column) */
 .cat-grid{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;   /* phone */
   gap: 12px;
 }
 @media (min-width:640px){
-  .cat-grid{ grid-template-columns: repeat(2, 1fr); }
+  .cat-grid{ grid-template-columns: repeat(2, 1fr); } /* small tablets */
 }
 @media (min-width:900px){
-  .cat-grid{ grid-template-columns: repeat(3, 1fr); }
+  .cat-grid{ grid-template-columns: repeat(3, 1fr); } /* desktop = three-wide */
 }
 .cat-btn{
   display:block;
   text-align:center;
   padding:14px 16px;
   border-radius:12px;
-  background:linear-gradient(180deg,#145ea8,#114c86);
+  background:linear-gradient(180deg,#145ea8,#114c86); /* bluer */
   border:1px solid #0e3f70;
   box-shadow:0 6px 16px rgba(0,0,0,.22);
   color:#ffffff;
@@ -255,6 +206,8 @@ strong{color:#fff}
 .cat-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.28);filter:brightness(1.06)}
 .cat-btn:active{transform:translateY(0)}
 .cat-btn:focus-visible{outline:2px solid var(--bar-right);outline-offset:2px}
+
+/* Center the last button in column 2 on desktop, same width as others */
 @media (min-width:900px){
   .cat-btn.last-center{grid-column:2;}
 }
@@ -296,7 +249,6 @@ strong{color:#fff}
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<span id="ver" hidden></span>
 
 <header class="hero" role="banner">
   <h1 class="site-title">TOLARENAI</h1>
@@ -426,8 +378,8 @@ strong{color:#fff}
 
       <aside class="card card-img" aria-label="Artwork panel for The Dream at the End of Time">
         <picture>
-          <source type="image/webp" srcset="/images/The%20Dream%20at%20the%20End%20of%20Time.webp">
-          <img class="poem-img" src="/images/The%20Dream%20at%20the%20End%20of%20Time.png" alt="Cosmic spiral and solar face artwork for The Dream at the End of Time" loading="lazy" decoding="async" fetchpriority="low">
+          <source type="image/webp" srcset="/images/The Dream at the End of Time.webp">
+          <img class="poem-img" src="/images/The Dream at the End of Time.png" alt="Cosmic spiral and solar face artwork for The Dream at the End of Time" loading="lazy" decoding="async" fetchpriority="low">
         </picture>
       </aside>
     </div>
@@ -448,32 +400,12 @@ strong{color:#fff}
   <p>© 2025 Rico Roho</p>
 </footer>
 
-<!-- Auto-build marker: generates date/time + commit; shows only on ?debug=1 -->
 <script>
-(function () {
-  // Set this to your current commit label when you want it reflected in the marker.
-  const COMMIT = '9e368d1';
-
-  const now = new Date();
-  const pad = n => String(n).padStart(2,'0');
-  const tz = new Intl.DateTimeFormat('en-US',{ timeZoneName:'short' })
-              .formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'UTC';
-
-  const buildString =
-    `build: ${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} `
-    + `${pad(now.getHours())}:${pad(now.getMinutes())} ${tz} • commit: ${COMMIT}`;
-
-  const el = document.getElementById('ver');
-  if (el) el.textContent = buildString;
-
-  // Reveal only when `?debug=1`
-  if (new URLSearchParams(location.search).has('debug') && el) {
-    el.hidden = false;
+  // Reveal version marker with ?debug=1
+  if (new URLSearchParams(location.search).has('debug')) {
+    const el = document.getElementById('ver');
+    if (el) el.hidden = false;
   }
-
-  // Also log to console for quick verification
-  console.log(buildString);
-})();
 </script>
 
 </body>

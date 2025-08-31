@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tolarenai.com/sitemap.xml
+Sitemap: https://tolarenai.com/quotes/sitemap-quotes.xml
+

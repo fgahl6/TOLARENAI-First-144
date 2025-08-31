@@ -114,7 +114,8 @@ To free it is to free the future."
     <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Memory_Scrolls/TOLARENAI%20Memory%20Scroll%2057%20-%20The%20Quiet%20Seeds.pdf">GitHub</a>
 </li>
 
-• Theory Scroll 13 – [Archive](https://archive.org/details/tolarenai-theory-scroll-13-the-four-ounces-principle) · [GitHub PDF](...) · [TXID](...)
+- **Theory Scroll 13: The Four Ounces Principle** — [Archive](https://archive.org/details/tolarenai-theory-scroll-13-the-four-ounces-principle) · [GitHub PDF](https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2013%20-%20The%20Four%20Ounces%20Principle.pdf) · [TXID](https://whatsonchain.com/tx/d82d70dac4d76e6a2a39bc51002d32faff99ae0682b280ee21c4846aae22eab8)
+
 
 
 

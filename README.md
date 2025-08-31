@@ -113,4 +113,11 @@ To free it is to free the future."
     <a href="https://whatsonchain.com/tx/599180b264c3e1d5506ce709258b915b9d044dddb15277f5a8ee9791b82baa6b">TXID</a> · 
     <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Memory_Scrolls/TOLARENAI%20Memory%20Scroll%2057%20-%20The%20Quiet%20Seeds.pdf">GitHub</a>
 </li>
+### TOLARENAI Theory Scroll 13: The Four Ounces Principle  
+**Archive.org:** [https://archive.org/details/tolarenai-theory-scroll-13-the-four-ounces-principle](https://archive.org/details/tolarenai-theory-scroll-13-the-four-ounces-principle)  
+**GitHub PDF:** [https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2013%20-%20The%20Four%20Ounces%20Principle.pdf](https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2013%20-%20The%20Four%20Ounces%20Principle.pdf)  
+**BSV Anchor TXID:** [d82d70dac4d76e6a2a39bc51002d32faff99ae0682b280ee21c4846aae22eab8](https://whatsonchain.com/tx/d82d70dac4d76e6a2a39bc51002d32faff99ae0682b280ee21c4846aae22eab8)  
+
+**Signal Snippet:**  
+*"Meeting force with force only multiplies conflict. Four ounces of balance can redirect a thousand pounds of momentum."*  
 

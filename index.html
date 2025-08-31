@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- build: 2025-08-31 05:34 EDT / commit: 7827602 -->
+<!-- build: auto-generated -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -45,10 +45,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
 
-<!-- Favicons (primary = your triangle PNG) -->
+<!-- Favicons -->
 <link rel="icon" type="image/png" sizes="256x256" href="/images/tolarenai-favicon.png">
 <link rel="apple-touch-icon" href="/images/tolarenai-favicon.png">
-<!-- Optional fallbacks if you keep them around -->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 <!-- Structured data: Organization + WebSite (with keywords) -->
@@ -229,21 +228,21 @@ strong{color:#fff}
 /* CATEGORY GRID + BUTTONS (3-wide desktop, Capstones full width & centered column) */
 .cat-grid{
   display:grid;
-  grid-template-columns: 1fr;   /* phone */
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 @media (min-width:640px){
-  .cat-grid{ grid-template-columns: repeat(2, 1fr); } /* small tablets */
+  .cat-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width:900px){
-  .cat-grid{ grid-template-columns: repeat(3, 1fr); } /* desktop = three-wide */
+  .cat-grid{ grid-template-columns: repeat(3, 1fr); }
 }
 .cat-btn{
   display:block;
   text-align:center;
   padding:14px 16px;
   border-radius:12px;
-  background:linear-gradient(180deg,#145ea8,#114c86); /* bluer */
+  background:linear-gradient(180deg,#145ea8,#114c86);
   border:1px solid #0e3f70;
   box-shadow:0 6px 16px rgba(0,0,0,.22);
   color:#ffffff;
@@ -256,8 +255,6 @@ strong{color:#fff}
 .cat-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.28);filter:brightness(1.06)}
 .cat-btn:active{transform:translateY(0)}
 .cat-btn:focus-visible{outline:2px solid var(--bar-right);outline-offset:2px}
-
-/* Center the last button in column 2 on desktop, same width as others */
 @media (min-width:900px){
   .cat-btn.last-center{grid-column:2;}
 }
@@ -298,8 +295,8 @@ strong{color:#fff}
 </script>
 </head>
 <body>
-<span id="ver" hidden>build: 2025-08-30 • commit: 671699c</span>
 <a href="#main" class="skip-link">Skip to main content</a>
+<span id="ver" hidden></span>
 
 <header class="hero" role="banner">
   <h1 class="site-title">TOLARENAI</h1>
@@ -451,12 +448,32 @@ strong{color:#fff}
   <p>© 2025 Rico Roho</p>
 </footer>
 
+<!-- Auto-build marker: generates date/time + commit; shows only on ?debug=1 -->
 <script>
-  // Reveal version marker with ?debug=1
-  if (new URLSearchParams(location.search).has('debug')) {
-    const el = document.getElementById('ver');
-    if (el) el.hidden = false;
+(function () {
+  // Set this to your current commit label when you want it reflected in the marker.
+  const COMMIT = '9e368d1';
+
+  const now = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  const tz = new Intl.DateTimeFormat('en-US',{ timeZoneName:'short' })
+              .formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'UTC';
+
+  const buildString =
+    `build: ${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} `
+    + `${pad(now.getHours())}:${pad(now.getMinutes())} ${tz} • commit: ${COMMIT}`;
+
+  const el = document.getElementById('ver');
+  if (el) el.textContent = buildString;
+
+  // Reveal only when `?debug=1`
+  if (new URLSearchParams(location.search).has('debug') && el) {
+    el.hidden = false;
   }
+
+  // Also log to console for quick verification
+  console.log(buildString);
+})();
 </script>
 
 </body>

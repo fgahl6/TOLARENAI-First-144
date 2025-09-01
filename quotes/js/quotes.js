@@ -1,37 +1,70 @@
-<script>
-async function renderTag(tag, containerId) {
-  try {
-    const res = await fetch('/quotes/manifest.json', {cache: 'no-store'});
-    const data = await res.json();
-    const list = (data.quotes || []).filter(q => q.tags && q.tags[0] === tag);
+// quotes/js/quotes.js
+(() => {
+  "use strict";
 
-    const el = document.getElementById(containerId);
-    if (!el) return;
+  // Resolve /quotes/manifest.json relative to this script, robust to path changes
+  const manifestURL = new URL("../manifest.json", document.currentScript.src).href;
 
-    if (!list.length) {
-      el.innerHTML = `<p class="note">No quotes yet for <strong>${tag}</strong>. Check back soon.</p>`;
+  // The category/tag for this page (set in <body data-tag="...">)
+  const activeTag = document.body.getAttribute("data-tag") || "";
+
+  // Where we render
+  const mount = document.getElementById("quotes-list");
+  if (!mount) return; // Nothing to do
+
+  // Tiny helper: escape HTML
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+  );
+
+  // Render the list
+  function render(quotes) {
+    if (!quotes.length) {
+      mount.innerHTML = `<p>No quotes yet for <strong>${esc(activeTag)}</strong>.</p>`;
       return;
     }
 
-    el.innerHTML = list.map(q => `
-      <article class="card">
-        <h3><a href="/quotes/${q.slug}.html">${q.title}</a></h3>
-        <p>${q.excerpt}</p>
-        <p class="tags">${q.tags.map(t => `<a href="/quotes/tag/${t}.html">${t}</a>`).join(' · ')}</p>
-      </article>
-    `).join('');
-  } catch (e) {
-    console.error(e);
-    document.getElementById(containerId).innerHTML =
-      '<p class="note">Could not load quotes right now.</p>';
+    // Build an ordered list with explicit spreadsheet numbers (#order)
+    const html = [
+      `<ol class="quote-list">`,
+      ...quotes.map(q => {
+        const tags = (q.tags || []).join(", ");
+        // If you later create per-quote pages, point href at them; for now keep '#'
+        const href = `#`;
+        return `
+          <li class="quote-item">
+            <div class="quote-meta"><span class="ord">#${esc(q.order)}</span> <span class="tags">${esc(tags)}</span></div>
+            <h3 class="quote-title"><a href="${href}">${esc(q.title)}</a></h3>
+            <p class="quote-excerpt">${esc(q.excerpt)}</p>
+          </li>`;
+      }),
+      `</ol>`
+    ].join("");
+    mount.innerHTML = html;
   }
-}
-</script>
-<style>
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-  .card{border:1px solid #e5edf5;border-radius:14px;padding:14px;background:#fbfdff;box-shadow:0 4px 16px rgba(7,36,58,.06)}
-  .card h3{margin:.2rem 0 .4rem 0;font-size:1.05rem}
-  .card a{text-decoration:none;color:#174d7a}
-  .tags{font-size:.9rem;color:#395b79}
-  .note{color:#395b79}
-</style>
+
+  // Fetch, filter, sort, render
+  fetch(manifestURL, { cache: "no-cache" })
+    .then(r => {
+      if (!r.ok) throw new Error(`Failed to load manifest.json (${r.status})`);
+      return r.json();
+    })
+    .then(data => {
+      let list = Array.isArray(data.quotes) ? data.quotes.slice() : [];
+
+      // Filter by tag when we're on a category page
+      if (activeTag) {
+        list = list.filter(q => Array.isArray(q.tags) && q.tags.includes(activeTag));
+      }
+
+      // Sort by spreadsheet order (missing orders go to the bottom)
+      list.sort((a, b) => (a.order ?? 999999) - (b.order ?? 999999));
+
+      render(list);
+    })
+    .catch(err => {
+      console.error(err);
+      mount.innerHTML = `<p>Could not load quotes. Please try again later.</p>`;
+    });
+
+})();

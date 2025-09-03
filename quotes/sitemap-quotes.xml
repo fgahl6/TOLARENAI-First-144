@@ -15,8 +15,15 @@
     <priority>0.80</priority>
   </url>
 
-  <url>
+ <url>
   <loc>https://fgahl6.github.io/TOLARENAI-First-144/quotes/003-ai-economy-the-ai-economy-is-an-ecology.html</loc>
+  <lastmod>2025-09-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+ <url>
+  <loc>https://fgahl6.github.io/TOLARENAI-First-144/quotes/004-ai-airport-the-ai-airport-is-not-a.html</loc>
   <lastmod>2025-09-03</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>

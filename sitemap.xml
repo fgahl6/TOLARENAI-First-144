@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Sitemap last updated: 2025-09-04 -->
+
   <!-- Main site -->
   <url>
     <loc>https://tolarenai.com/</loc>
@@ -54,6 +56,22 @@
     <loc>https://tolarenai.com/quotes/in-one-possible-variant-of-the-upcoming-era-ei-software-will-come-to.html</loc>
     <lastmod>2025-08-31</lastmod>
     <priority>0.5</priority>
+  </url>
+
+  <!-- Books index -->
+  <url>
+    <loc>https://tolarenai.com/Books/</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Lattice additions index -->
+  <url>
+    <loc>https://tolarenai.com/additions/</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Include this only if the page exists -->

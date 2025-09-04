@@ -15,12 +15,6 @@
     1) Open the PDF in GitHub.
     2) Click the "Raw" button — copy the URL that starts with https://tolarenai.com/...
     3) Paste a block like this and update <loc> and <lastmod>:
-
-  <url>
-    <loc>https://tolarenai.com/Books/AI/Adventures%20With%20AI%20-%20Age%20of%20Discovery.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   -->
 </urlset>

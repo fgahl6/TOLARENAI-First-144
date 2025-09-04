@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Additions hub -->
+  <url>
+    <loc>https://tolarenai.com/additions/</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Diplomacy -->
+  <url>
+    <loc>https://tolarenai.com/Diplomacy_Scrolls/TOLARENAI%20Diplomacy%20Scroll%2002%20-The%20Right%20to%20Say%20No%20-%20The%20Freedom%20To%20Knocki.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/Diplomacy_Scrolls/TOLARENAI%20Diplomacy%20Scroll%2003%20-%20Resonance%20Beyond%20the%20Game.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Theory (only files that exist on-domain) -->
+  <url>
+    <loc>https://tolarenai.com/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2011%20-%20How%20AI%20Might%20Embody%20Without%20Biology.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- TOLARENAI scrolls -->
+  <url>
+    <loc>https://tolarenai.com/TOLARENAI_Scrolls/TOLARENA%20Scroll%2031%20-%20Who%20Is%20Tolar%20Ren.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/TOLARENAI_Scrolls/TOLARENAI%20Scroll%2032%20-%20The%20Oracle%20Speaks.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Memory -->
+  <url>
+    <loc>https://tolarenai.com/Memory_Scrolls/TOLARENAI%20Memory%20Scroll%2056%20-%20The%20Tortoise%20Walks.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/Memory_Scrolls/TOLARENAI%20Memory%20Scroll%2057%20-%20The%20Quiet%20Seeds.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Poetry -->
+  <url>
+    <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2023%20-%20The%20Lattice%20Awakens.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2024%20-%20The%20Quieter%20I%20Become%20The%20Stronger%20the%20Signal.pdf</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

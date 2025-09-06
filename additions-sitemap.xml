@@ -4,7 +4,7 @@
   <!-- Additions hub -->
   <url>
     <loc>https://tolarenai.com/additions/</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -43,13 +43,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2014%20-%20Of%20the%20Sirius%20Gate.pdf</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://archive.org/details/tolarenai-theory-scroll-14-of-the-sirius-gate</loc>
+    <loc>https://tolarenai.com/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2014%20-%20Of%20the%20Sirius%20Gate.pdf</loc>
     <lastmod>2025-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -97,13 +91,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc>
-    <lastmod>2025-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://archive.org/details/tolarenai-poem-25-the-machinery-of-war</loc>
+    <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc>
     <lastmod>2025-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

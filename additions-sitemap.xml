@@ -42,6 +42,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2014%20-%20Of%20the%20Sirius%20Gate.pdf</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://archive.org/details/tolarenai-theory-scroll-14-of-the-sirius-gate</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- TOLARENAI Scrolls -->
   <url>
@@ -81,6 +93,18 @@
   <url>
     <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2024%20-%20The%20Quieter%20I%20Become,%20The%20Stronger%20the%20Signal.pdf</loc>
     <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/Poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://archive.org/details/tolarenai-poem-25-the-machinery-of-war</loc>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

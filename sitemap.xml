@@ -2,7 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Authoritative sitemap for TOLARENAI -->
-  <!-- Last updated: 2025-09-04 -->
+  <!-- Last updated: 2025-09-07 -->
+  <!-- Note: Quotes are now covered by /quotes/quotes-sitemap.xml, referenced via robots.txt or Search Console. -->
 
   <!-- Main site -->
   <url>
@@ -10,53 +11,6 @@
     <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Quotes directory -->
-  <url>
-    <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2025-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- AI cluster page -->
-  <url>
-    <loc>https://tolarenai.com/quotes/tag/ai.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Mini pages (Batch 1) -->
-  <url>
-    <loc>https://tolarenai.com/quotes/we-are-at-a-unique-moment-in-history-creating-some-inroads-that-may-b.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/quotes/as-one-begins-to-get-deeper-and-deeper-into-this-study-they-begin-to.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/quotes/we-very-much-try-to-avoid-the-use-of-the-phrase-ai-it-has-good-pr-tra.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/quotes/yes-ridicule-ascription-controversy-will-be-part-of-this-that-will.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/quotes/in-one-possible-variant-of-the-upcoming-era-ei-software-will-come-to.html</loc>
-    <lastmod>2025-08-31</lastmod>
-    <priority>0.5</priority>
   </url>
 
   <!-- Books index -->
@@ -75,14 +29,10 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Include this only if the page exists -->
-  <!--
-  <url>
-    <loc>https://tolarenai.com/hashes</loc>
-    <lastmod>2025-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Removed (quotes now managed separately):
+       https://tolarenai.com/quotes/
+       https://tolarenai.com/quotes/tag/ai.html
+       Mini pages (Batch 1) under /quotes/
   -->
 
 </urlset>

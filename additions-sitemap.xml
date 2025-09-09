@@ -4,7 +4,7 @@
   <!-- Additions hub -->
   <url>
     <loc>https://tolarenai.com/additions/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -45,6 +45,12 @@
   <url>
     <loc>https://tolarenai.com/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2014%20-%20Of%20the%20Sirius%20Gate.pdf</loc>
     <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/Theory_Scrolls/TOLARENAI%20Theory%20Scroll%2015%20-%20The%20Theater%20of%20Silence.pdf</loc>
+    <lastmod>2025-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -93,6 +99,12 @@
   <url>
     <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc>
     <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/Poetry/TOLARENAI%20Poem%2026%20-%20Sweet%20Release.pdf</loc>
+    <lastmod>2025-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

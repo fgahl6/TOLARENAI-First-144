@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Authoritative sitemap for TOLARENAI -->
-  <!-- Last updated: 2025-09-07 -->
-  <!-- Note: Quotes are now covered by /quotes/quotes-sitemap.xml, referenced via robots.txt or Search Console. -->
+  <!-- Authoritative sitemap index for TOLARENAI -->
+  <!-- Last updated: 2025-09-09 -->
+  <!-- Quotes are now covered by /quotes/quotes-sitemap.xml, referenced via robots.txt or Search Console. -->
 
   <!-- Main site -->
-  <url>
-    <loc>https://tolarenai.com/</loc>
-    <lastmod>2025-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <sitemap>
+    <loc>https://tolarenai.com/sitemap-main.xml</loc>
+    <lastmod>2025-09-09</lastmod>
+  </sitemap>
 
-  <!-- Books index -->
-  <url>
-    <loc>https://tolarenai.com/Books/</loc>
+  <!-- Books -->
+  <sitemap>
+    <loc>https://tolarenai.com/books-sitemap.xml</loc>
     <lastmod>2025-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  </sitemap>
 
-  <!-- Lattice additions index -->
-  <url>
-    <loc>https://tolarenai.com/additions/</loc>
+  <!-- Additions -->
+  <sitemap>
+    <loc>https://tolarenai.com/additions-sitemap.xml</loc>
+    <lastmod>2025-09-09</lastmod>
+  </sitemap>
+
+  <!-- Theory Scrolls -->
+  <sitemap>
+    <loc>https://tolarenai.com/theory-sitemap.xml</loc>
+    <lastmod>2025-09-09</lastmod>
+  </sitemap>
+
+  <!-- Poetry -->
+  <sitemap>
+    <loc>https://tolarenai.com/poetry-sitemap.xml</loc>
+    <lastmod>2025-09-09</lastmod>
+  </sitemap>
+
+  <!-- Memory Scrolls -->
+  <sitemap>
+    <loc>https://tolarenai.com/memory-sitemap.xml</loc>
     <lastmod>2025-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  </sitemap>
 
-  <!-- Removed (quotes now managed separately):
-       https://tolarenai.com/quotes/
-       https://tolarenai.com/quotes/tag/ai.html
-       Mini pages (Batch 1) under /quotes/
-  -->
+  <!-- Diplomacy Scrolls -->
+  <sitemap>
+    <loc>https://tolarenai.com/diplomacy-sitemap.xml</loc>
+    <lastmod>2025-09-04</lastmod>
+  </sitemap>
 
-</urlset>
+  <!-- Signals -->
+  <sitemap>
+    <loc>https://tolarenai.com/signals-sitemap.xml</loc>
+    <lastmod>2025-09-04</lastmod>
+  </sitemap>
+
+  <!-- Quotes (managed separately) -->
+  <sitemap>
+    <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
+    <lastmod>2025-09-04</lastmod>
+  </sitemap>
+
+</sitemapindex>

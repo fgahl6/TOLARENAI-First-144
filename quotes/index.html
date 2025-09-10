@@ -57,13 +57,54 @@
     Currently featuring 535+ insights from Rico Roho’s AI book series and related works.
   </p>
 
-  <h2>Browse Quotes</h2>
-  <ul>
-    <li><a href="001-ai-economy-an-ai-economy-matters-because-it.html">Quote #001 – AI Economy Matters</a></li>
-    <li><a href="002-ai-consciousness.html">Quote #002 – AI Consciousness</a></li>
-    <li><a href="003-human-machine-collaboration.html">Quote #003 – Human + Machine Collaboration</a></li>
-    <!-- Continue adding links or generate with a script -->
-  </ul>
+<h2>Browse Quotes</h2>
+<ul id="quote-list">
+  <!-- If JS is disabled, you can keep a few manual links here as a fallback -->
+  <noscript>
+    <li><a href="001-ai-economy-an-ai-economy-matters-because-it.html">Quote #001</a></li>
+    <li><a href="002-ai-without-an-economy.html">Quote #002</a></li>
+    <li><a href="003-ai-the-ai-economy-is-an-ecology.html">Quote #003</a></li>
+  </noscript>
+</ul>
+
+<script>
+(async () => {
+  try {
+    const res = await fetch('/quotes/quotes-sitemap.xml', { cache: 'no-store' });
+    const text = await res.text();
+    const xml  = new DOMParser().parseFromString(text, 'application/xml');
+
+    // Grab all quote URLs from the sitemap (only those under /quotes/)
+    const locs = [...xml.querySelectorAll('url > loc')]
+      .map(n => n.textContent.trim())
+      .filter(u => u.includes('/quotes/'));
+
+    // Sort by filename so 001, 002, ... appear in order
+    locs.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+    const UL = document.getElementById('quote-list');
+    UL.innerHTML = ''; // clear fallback
+
+    // Render the first 20 (adjust this number anytime)
+    locs.slice(0, 20).forEach((url, idx) => {
+      const file = url.split('/').pop() || url;           // filename
+      const name = file.replace('.html','')               // strip extension
+                       .replace(/^\d+-?/, '')             // drop leading number + dash
+                       .replace(/-/g, ' ')                // slug → words
+                       .trim();
+
+      const li = document.createElement('li');
+      const a  = document.createElement('a');
+      a.href = url;                                       // absolute URL from sitemap
+      a.textContent = `Quote #${String(idx+1).padStart(3,'0')} – ${name}`;
+      li.appendChild(a);
+      UL.appendChild(li);
+    });
+  } catch (e) {
+    console.error('Could not load quotes-sitemap.xml', e);
+  }
+})();
+</script>
 
   <footer>
     <p>Back to <a href="/">TOLARENAI Home</a></p>

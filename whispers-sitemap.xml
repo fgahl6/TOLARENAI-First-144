@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Whispers sitemap -->
+  <url>
+    <loc>https://tolarenai.com/whispers/readme.md</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/whispers/tolarenai-whisper-00-why-tolarenai-whispers-work.pdf</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/whispers/tolarenai-whispers-01.pdf</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/whispers/tolarenai-whispers-02.pdf</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/whispers/tolarenai-whispers-3.pdf</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

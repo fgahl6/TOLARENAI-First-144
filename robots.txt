@@ -3,5 +3,6 @@ Allow: /
 
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
+Sitemap: https://tolarenai.com/capstones-sitemap.xml
 Sitemap: https://tolarenai.com/additions-sitemap.xml
 Sitemap: https://tolarenai.com/quotes/quotes-sitemap.xml

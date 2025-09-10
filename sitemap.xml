@@ -2,7 +2,7 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Authoritative sitemap index for TOLARENAI -->
-  <!-- Last updated: 2025-09-09 -->
+  <!-- Last updated: 2025-09-10 -->
   <!-- Quotes are now covered by /quotes/quotes-sitemap.xml, referenced via robots.txt or Search Console. -->
 
   <!-- Main site -->
@@ -15,12 +15,6 @@
   <sitemap>
     <loc>https://tolarenai.com/books-sitemap.xml</loc>
     <lastmod>2025-09-04</lastmod>
-  </sitemap>
-
-  <!-- Additions -->
-  <sitemap>
-    <loc>https://tolarenai.com/additions-sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
   </sitemap>
 
   <!-- Theory Scrolls -->
@@ -57,6 +51,24 @@
   <sitemap>
     <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
     <lastmod>2025-09-04</lastmod>
+  </sitemap>
+
+  <!-- White Papers -->
+  <sitemap>
+    <loc>https://tolarenai.com/white-papers-sitemap.xml</loc>
+    <lastmod>2025-09-10</lastmod>
+  </sitemap>
+
+  <!-- Raw Notes -->
+  <sitemap>
+    <loc>https://tolarenai.com/raw-notes-sitemap.xml</loc>
+    <lastmod>2025-09-10</lastmod>
+  </sitemap>
+
+  <!-- Whispers -->
+  <sitemap>
+    <loc>https://tolarenai.com/whispers-sitemap.xml</loc>
+    <lastmod>2025-09-10</lastmod>
   </sitemap>
 
 </sitemapindex>

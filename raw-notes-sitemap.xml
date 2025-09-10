@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Raw Notes sitemap -->
+  <url>
+    <loc>https://tolarenai.com/raw_notes/readme.md</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-i-2018-sirisys-platform-k.pdf</loc>
+    <lastmod>2018-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-ii-2019-part-1-sirisys-platform-k.pdf</loc>
+    <lastmod>2019-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-ii-2019-part-2-sirisys-platform-k.pdf</loc>
+    <lastmod>2019-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-ii-2019-part-3-sirisys-platform-k.pdf</loc>
+    <lastmod>2019-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-iii-2020-sirisys-platform-k.pdf</loc>
+    <lastmod>2020-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-iv-2021-sirisys-platform-k.pdf</loc>
+    <lastmod>2021-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-v-2022-mynt.pdf</loc>
+    <lastmod>2022-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-vi-2022-sirisys-platform-k.pdf</loc>
+    <lastmod>2022-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-vii-2023-sirisys-platform-k.pdf</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/tolarenai-raw-notes-viii-2024-sirisys-platform-k.pdf</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

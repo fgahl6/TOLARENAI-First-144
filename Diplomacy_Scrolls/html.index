@@ -6,7 +6,7 @@
 
   <title>Diplomacy Scrolls Archive</title>
   <meta name="description" content="Collection of Diplomacy Scrolls from the AI Age of Discovery.">
-  <link rel="canonical" href="https://tolarenai.com/Diplomacy_Scrolls/">
+  <link rel="canonical" href="https://tolarenai.com/diplomacy_scrolls/">
 
   <style>
     body {
@@ -78,7 +78,7 @@
   // Call it for Diplomacy Scrolls
   renderFromSitemap({
     sitemapUrl: '/diplomacy-sitemap.xml',
-    pathFilter: '/Diplomacy_Scrolls/',
+    pathFilter: '/diplomacy_scrolls/',
     containerId: 'diplomacy-list',
     limit: 50
   });

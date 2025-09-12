@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- White Papers sitemap -->
+  <!-- White Papers hub -->
   <url>
-    <loc>https://tolarenai.com/white_papers/readme.md</loc>
-    <lastmod>2025-08-20</lastmod>
+    <loc>https://tolarenai.com/white_papers/</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
+  <!-- White Paper PDF -->
   <url>
-    <loc>https://tolarenai.com/white_papers/tolarenai-white-paper-august-2025-rico-roho.pdf</loc>
-    <lastmod>2025-08-20</lastmod>
+    <loc>https://tolarenai.com/white_papers/TOLARENAI%20WHITE%20PAPER%20-%20August%202025%20-%20Rico%20Roho.pdf</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Optional: read.me file -->
+  <url>
+    <loc>https://tolarenai.com/white_papers/read.me</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

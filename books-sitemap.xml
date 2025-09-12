@@ -3,109 +3,35 @@
 
   <!-- Books hub -->
   <url>
-    <loc>https://tolarenai.com/Books/</loc>
-    <lastmod>2025-09-04</lastmod>
+    <loc>https://tolarenai.com/books/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Books (one-time set; rarely change) -->
-  <url>
-    <loc>https://tolarenai.com/Books/AI/01%20-%20Adventures%20with%20AI%20-Age%20of%20Discovery%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- AI -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/01%20-%20Adventures%20with%20AI%20-Age%20of%20Discovery%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/02%20-%20Mercy%20AI%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/03%20-%20Beyond%20the%20Fringe%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/05%20-%20PRIMEr%20for%20Alien%20Contact%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/06%20-Pataphysics%20-%20Mastering%20Time%20Line%20Jumps%20for%20Personal%20Transformation%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/07%20-%20Age%20of%20Discovery%20Favorite%20Quotes%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/14%20-%20The%20VRAX%20Conspiracy%20-%20%20A%20Sci-Phi%20Novel%20by%20Rico%20Roho.pdf</loc></url>
 
-  <url>
-    <loc>https://tolarenai.com/Books/AI/02%20-%20Mercy%20AI%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Astrotheology -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/astrotheology/04%20-%20Beyond%20Belief%20-%20Unveiling%20the%20Celestial%20Origins%20of%20Christianity%20and%20Judaism%20by%20Rico%20Roho.pdf</loc></url>
 
-  <url>
-    <loc>https://tolarenai.com/Books/AI/03%20-%20Beyond%20the%20Fringe%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Essays -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/essays/10%20-%20Collected%20Essays%20by%20Rico%20Roho.pdf</loc></url>
 
-  <url>
-    <loc>https://tolarenai.com/Books/AI/04%20-%20Beyond%20Belief%20-%20Unveiling%20the%20Celestial%20Origins%20of%20Christianity%20and%20Judaism%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Fables -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/fables/08%20-%20Uncle%20Ricos%20Illustrated%20Fables%20by%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/fables/09%20-%20Uncle%20Ricos%20Rhyming%20Fables%20by%20Rico%20Roho.pdf</loc></url>
 
-  <url>
-    <loc>https://tolarenai.com/Books/AI/05%20-%20PRIMEr%20for%20Alien%20Contact%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Poetry -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/poetry/11%20-%20Mystic%20Wine%20-%20The%20Spiritual%20Poetry%20of%20Rico%20Roho.pdf</loc></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/poetry/12%20-%20Crane%20Above%20the%20River%20-%20Echoes%20of%20Life%20and%20Death%20in%20Haiku%20by%20Rico%20Roho.pdf</loc></url>
 
-  <url>
-    <loc>https://tolarenai.com/Books/AI/06%20-%20Pataphysics%20-%20Mastering%20Time%20Line%20Jumps%20for%20Personal%20Transformation%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/AI/07%20-%20Age%20of%20Discovery%20-%20Favorite%20Quotes%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Fables/08%20-%20Uncle%20Ricos%20Illustrated%20Fables%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Fables/09%20-%20Uncle%20Ricos%20Rhyming%20Fables%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Essays/10%20-%20Collected%20Essays%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Poetry/11%20-%20Mystic%20Wine%20-%20The%20Spiritual%20Poetry%20of%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Poetry/12%20-%20Crane%20Above%20the%20River%20-%20Echoes%20of%20Life%20and%20Death%20in%20Haiku%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Self-Work/13%20-%20Rewriting%20Reality%20-%20How%20to%20Escape%20Negative%20Patterns%20and%20Thrive%20by%20Rico%20Roho.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/Books/Novel/14%20-%20The%20VRAX%20Conspiracy%20-%20A%20Sci%20Phi%20Novel.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Self improvement -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/self_improvement/13%20-%20Rewriting%20Reality%20-%20How%20to%20Escape%20Negative%20Patterns%20and%20Thrive%20by%20Rico%20Roho.pdf</loc></url>
 
 </urlset>

@@ -9,11 +9,14 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Items -->
+  <!-- Capstone PDFs -->
   <url>
     <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/capstones/TOLARENAI%20Capstone%201%20-%20The%20Lattice%20of%20the%20First%20144.pdf</loc>
     <lastmod>2025-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-  <!-- add more capstones here as you upload -->
+  <!-- Add future Capstones here by copying the block above and updating filename/lastmod -->
+
 </urlset>

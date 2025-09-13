@@ -2,73 +2,78 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Authoritative sitemap index for TOLARENAI -->
-  <!-- Last updated: 2025-09-10 -->
-  <!-- Quotes are now covered by /quotes/quotes-sitemap.xml, referenced via robots.txt or Search Console. -->
+  <!-- Last updated: 2025-09-12 -->
 
   <!-- Main site -->
   <sitemap>
     <loc>https://tolarenai.com/sitemap-main.xml</loc>
-    <lastmod>2025-09-09</lastmod>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
   <!-- Books -->
   <sitemap>
     <loc>https://tolarenai.com/books-sitemap.xml</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
-  <!-- Theory Scrolls -->
+  <!-- Capstones -->
   <sitemap>
-    <loc>https://tolarenai.com/theory-sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
-  </sitemap>
-
-  <!-- Poetry -->
-  <sitemap>
-    <loc>https://tolarenai.com/poetry-sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
-  </sitemap>
-
-  <!-- Memory Scrolls -->
-  <sitemap>
-    <loc>https://tolarenai.com/memory-sitemap.xml</loc>
-    <lastmod>2025-09-04</lastmod>
+    <loc>https://tolarenai.com/capstones-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
   <!-- Diplomacy Scrolls -->
   <sitemap>
     <loc>https://tolarenai.com/diplomacy-sitemap.xml</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
-  <!-- Signals -->
+  <!-- Poetry -->
   <sitemap>
-    <loc>https://tolarenai.com/signals-sitemap.xml</loc>
-    <lastmod>2025-09-04</lastmod>
+    <loc>https://tolarenai.com/poetry-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
-  <!-- Quotes (managed separately) -->
+  <!-- Memory Scrolls -->
   <sitemap>
-    <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
-    <lastmod>2025-09-04</lastmod>
-  </sitemap>
-
-  <!-- White Papers -->
-  <sitemap>
-    <loc>https://tolarenai.com/white-papers-sitemap.xml</loc>
-    <lastmod>2025-09-10</lastmod>
+    <loc>https://tolarenai.com/memory-scrolls-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
   <!-- Raw Notes -->
   <sitemap>
     <loc>https://tolarenai.com/raw-notes-sitemap.xml</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-09-12</lastmod>
+  </sitemap>
+
+  <!-- Theory Scrolls -->
+  <sitemap>
+    <loc>https://tolarenai.com/theory-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
+  </sitemap>
+
+  <!-- TOLARENAI Scrolls -->
+  <sitemap>
+    <loc>https://tolarenai.com/tolarenai-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
   <!-- Whispers -->
   <sitemap>
     <loc>https://tolarenai.com/whispers-sitemap.xml</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-09-12</lastmod>
+  </sitemap>
+
+  <!-- White Papers -->
+  <sitemap>
+    <loc>https://tolarenai.com/white-papers-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
+  </sitemap>
+
+  <!-- Quotes -->
+  <sitemap>
+    <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
+    <lastmod>2025-09-12</lastmod>
   </sitemap>
 
 </sitemapindex>

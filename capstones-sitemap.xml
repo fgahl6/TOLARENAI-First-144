@@ -1,71 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Capstones Archive</title>
-  <meta name="description" content="Auto-updating archive of Capstones.">
-  <link rel="canonical" href="https://tolarenai.com/capstones/">
-  <style>
-    body { font-family: Georgia, serif; margin: 2rem auto; max-width: 800px; line-height: 1.6; color: #222; }
-    h1 { text-align: center; margin-bottom: 1rem; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 0.5rem 0; }
-    a { color: #0645ad; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 3rem; font-size: .9rem; text-align: center; color: #555; }
-  </style>
-</head>
-<body>
-  <h1>Capstones</h1>
-  <p class="intro">This list updates automatically from the sitemap.</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <h2>Browse</h2>
-  <ul id="capstones-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
+  <url>
+    <loc>https://tolarenai.com/capstones/index.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/capstones/TOLARENAI%20Capstone%201%20-%20The%20Lattice%20of%20the%20First%20144.pdf</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <script>
-  async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 100 }) {
-    try {
-      const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
-      const xml  = new DOMParser().parseFromString(text, 'application/xml');
-      const items = [...xml.querySelectorAll('url')].map(u => ({
-        loc: u.querySelector('loc')?.textContent.trim() || '',
-        lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-      })).filter(x => x.loc.includes(pathFilter) && /\.pdf$/i.test(x.loc));
-
-      items.sort((a,b)=>a.loc.localeCompare(b.loc,undefined,{numeric:true,sensitivity:'base'}));
-
-      const UL = document.getElementById(containerId); 
-      UL.innerHTML='';
-      items.slice(0, limit).forEach(it=>{
-        const li=document.createElement('li'), a=document.createElement('a');
-        const file = it.loc.split('/').pop() || '';
-        const nice = decodeURIComponent(file)
-          .replace(/\.(pdf|md|html)$/i,'')
-          .replace(/-/g,' ')
-          .replace(/\s+/g,' ')
-          .trim();
-        a.href=it.loc; 
-        a.textContent = nice;
-        li.appendChild(a);
-        if(it.lastmod){
-          const s=document.createElement('small');
-          s.style.marginLeft='.5rem';
-          s.textContent=`(${it.lastmod})`;
-          li.appendChild(s);
-        }
-        UL.appendChild(li);
-      });
-    } catch(e){ console.error('Sitemap load failed:', e); }
-  }
-  renderFromSitemap({
-    sitemapUrl: '/capstones-sitemap.xml',
-    pathFilter: '/capstones/',
-    containerId: 'capstones-list',
-    limit: 100
-  });
-  </script>
-
-  <footer><p>Back to <a href="/">TOLARENAI Home</a></p></footer>
-</body>
-</html>
+</urlset>

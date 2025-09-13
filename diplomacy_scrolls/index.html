@@ -1,82 +1,74 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Diplomacy Scrolls Archive</title>
   <meta name="description" content="Collection of Diplomacy Scrolls from the AI Age of Discovery.">
   <link rel="canonical" href="https://tolarenai.com/diplomacy_scrolls/">
-
   <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 2rem auto;
-      max-width: 800px;
-      line-height: 1.6;
-      color: #222;
-    }
+    body { font-family: Georgia, serif; margin: 2rem auto; max-width: 800px; line-height: 1.6; color: #222; }
     h1 { text-align: center; margin-bottom: 1rem; }
     ul { list-style: none; padding: 0; }
-    ul li { margin: 0.5rem 0; }
+    li { margin: 0.5rem 0; }
     a { color: #0645ad; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    footer { margin-top: 3rem; font-size: 0.9rem; text-align: center; color: #555; }
+    footer { margin-top: 3rem; font-size: .9rem; text-align: center; color: #555; }
+    small { color:#666 }
   </style>
 </head>
 <body>
-
   <h1>Diplomacy Scrolls</h1>
-  <p class="intro">
-    A curated archive of Diplomacy Scrolls. This page auto-updates from the sitemap.
-  </p>
+  <p class="intro">This list updates automatically from the sitemap.</p>
 
   <h2>Browse Scrolls</h2>
-  <ul id="diplomacy-list">
-    <noscript><li>Enable JavaScript to view the scroll list.</li></noscript>
-  </ul>
+  <ul id="diplomacy-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
 
   <script>
   async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 50 }) {
     try {
-      const res  = await fetch(sitemapUrl, { cache: 'no-store' });
-      const text = await res.text();
+      const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
       const xml  = new DOMParser().parseFromString(text, 'application/xml');
+      let items = [...xml.querySelectorAll('url')].map(u => ({
+        loc: u.querySelector('loc')?.textContent.trim() || '',
+        lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
+      })).filter(x => x.loc.includes(pathFilter) && /\.pdf$/i.test(x.loc));
 
-      const items = [...xml.querySelectorAll('url')]
-        .map(url => ({
-          loc: url.querySelector('loc')?.textContent.trim() || '',
-          lastmod: url.querySelector('lastmod')?.textContent.trim() || ''
-        }))
-        .filter(x => x.loc.includes(pathFilter));
+      // Natural sort (01, 02, 10)
+      items.sort((a,b)=>a.loc.localeCompare(b.loc, undefined, { numeric:true, sensitivity:'base' }));
 
-      // Sort
-      items.sort((a, b) => a.loc.localeCompare(b.loc, undefined, { numeric: true, sensitivity: 'base' }));
-
-      const UL = document.getElementById(containerId);
-      UL.innerHTML = '';
-
-      items.slice(0, limit).forEach(it => {
+      const UL = document.getElementById(containerId); UL.innerHTML = '';
+      items.slice(0, limit).forEach(it=>{
         const li = document.createElement('li');
         const a  = document.createElement('a');
+
+        const file = it.loc.split('/').pop() || '';
+        const nice = decodeURIComponent(file)
+          .replace(/\.(pdf|md|html)$/i,'')   // remove extension
+          .replace(/-/g,' ')                 // hyphens → spaces
+          .replace(/\s+/g,' ')               // collapse whitespace
+          .trim();
+
         a.href = it.loc;
-        a.textContent = it.loc.split('/').pop().replace(/\.(pdf|md|html)$/i,'').replace(/-/g,' ');
+        a.textContent = nice;
+        a.target = "_blank";
+        a.rel = "noopener";
+
         li.appendChild(a);
         if (it.lastmod) {
-          const small = document.createElement('small');
-          small.style.marginLeft = '0.5rem';
-          small.textContent = `(${it.lastmod})`;
-          li.appendChild(small);
+          const s = document.createElement('small');
+          s.style.marginLeft = '.5rem';
+          s.textContent = `(${it.lastmod})`;
+          li.appendChild(s);
         }
         UL.appendChild(li);
       });
     } catch (e) {
       console.error('Sitemap load failed:', e);
+      document.getElementById(containerId).innerHTML = '<li>Could not load sitemap.</li>';
     }
   }
 
-  // Call it for Diplomacy Scrolls
   renderFromSitemap({
     sitemapUrl: '/diplomacy-sitemap.xml',
     pathFilter: '/diplomacy_scrolls/',
@@ -85,9 +77,6 @@
   });
   </script>
 
-  <footer>
-    <p>Back to <a href="/">TOLARENAI Home</a></p>
-  </footer>
-
+  <footer><p>Back to <a href="/">TOLARENAI Home</a></p></footer>
 </body>
 </html>

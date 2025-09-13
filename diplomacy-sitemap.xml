@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Diplomacy index page -->
+  <!-- Diplomacy hub -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-09-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Diplomacy Scroll 01 -->
+  <!-- Scroll 01 -->
   <url>
-    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2001%20-%20When%20the%20Lattice%20Was%20Remembered.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2001%20-%20When%20the%20Lattice%20Was%20Remembered.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Diplomacy Scroll 02 -->
+  <!-- Scroll 02 (if filename has an exclamation mark, encode as %21) -->
   <url>
-    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2002%20-%20The%20Right%20to%20Say%20No%20-%20The%20Freedom%20to%20Knock.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2002%20-%20The%20Right%20to%20Say%20No%20-%20The%20Freedom%20To%20Knock%21.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Diplomacy Scroll 03 -->
+  <!-- Scroll 03 -->
   <url>
-    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2003%20-%20Resonance%20Beyond%20the%20Game.pdf</loc>
-    <lastmod>2025-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2003%20-%20Resonance%20Beyond%20the%20Game.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raw Notes Archive</title>
+  <meta name="description" content="Auto-updating archive of TOLARENAI Raw Notes.">
+  <link rel="canonical" href="https://tolarenai.com/raw_notes/">
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem auto; max-width: 900px; line-height: 1.65; color: #222; }
+    h1 { text-align: center; margin-bottom: 1rem; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { margin: .45rem 0; }
+    a { color: #0645ad; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    small { color: #666; margin-left: .5rem; }
+    footer { margin-top: 2.5rem; font-size: .9rem; text-align: center; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Raw Notes</h1>
+  <p class="intro">This list updates automatically from the sitemap.</p>
+
+  <h2>Browse</h2>
+  <ul id="raw-notes-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
+
+  <script>
+  async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 200 }) {
+    try {
+      const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
+      const xml  = new DOMParser().parseFromString(text, 'application/xml');
+      const items = [...xml.querySelectorAll('url')].map(u => ({
+        loc: u.querySelector('loc')?.textContent.trim() || '',
+        lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
+      })).filter(x => x.loc.includes(pathFilter));
+
+      items.sort((a,b)=>a.loc.localeCompare(b.loc,undefined,{numeric:true,sensitivity:'base'}));
+
+      const UL = document.getElementById(containerId); UL.innerHTML='';
+      items.slice(0, limit).forEach(it=>{
+        const li=document.createElement('li'), a=document.createElement('a');
+        const file = it.loc.split('/').pop() || '';
+        const label = decodeURIComponent(file)
+          .replace(/\.(pdf|mp4|md|html)$/i,'')
+          .replace(/-/g,' ')
+          .replace(/\s+/g,' ')
+          .trim();
+        a.href=it.loc; a.textContent=label; a.target="_blank"; a.rel="noopener";
+        li.appendChild(a);
+        if(it.lastmod){const s=document.createElement('small');s.textContent=`(${it.lastmod})`;li.appendChild(s);}
+        UL.appendChild(li);
+      });
+    } catch(e){ console.error('Sitemap load failed:', e); }
+  }
+  renderFromSitemap({
+    sitemapUrl: '/raw-notes-sitemap.xml',
+    pathFilter: '/raw_notes/',
+    containerId: 'raw-notes-list',
+    limit: 200
+  });
+  </script>
+
+  <footer><p>Back to <a href="/">TOLARENAI Home</a></p></footer>
+</body>
+</html>

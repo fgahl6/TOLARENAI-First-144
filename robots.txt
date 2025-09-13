@@ -8,5 +8,6 @@ Sitemap: https://tolarenai.com/diplomacy-sitemap.xml
 Sitemap: https://tolarenai.com/poetry-sitemap.xml
 Sitemap: https://tolarenai.com/quotes/quotes-sitemap.xml
 Sitemap: https://tolarenai.com/raw-notes-sitemap.xml
+Sitemap: https://tolarenai.com/theory-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml

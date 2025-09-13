@@ -1,60 +1,27 @@
-#!/usr/bin/env node
+name: Build Capstones Sitemap
 
-// Build a simple, valid XML sitemap for /capstones
-// NOTE: This script prints ONLY XML to stdout. No debug logs!
+on:
+  workflow_dispatch:
 
-const fs = require("fs");
-const path = require("path");
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-const BASE = "https://tolarenai.com";      // public site base
-const WEB_DIR = "capstones";                // web folder name
-const ABS_DIR = path.join(process.cwd(), WEB_DIR);
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-// Collect files we want to include (pdf, html, md). Skip hidden files.
-function listFiles(dir) {
-  return fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter((d) => d.isFile())
-    .map((d) => d.name)
-    .filter((n) => !n.startsWith("."))
-    .filter((n) => /\.(pdf|html|md)$/i.test(n));
-}
+      - name: Run sitemap builder
+        run: node scripts/build-capstones-sitemap.js > capstones-sitemap.xml
 
-const files = listFiles(ABS_DIR);
-
-// YYYY-MM-DD
-const today = new Date().toISOString().slice(0, 10);
-
-// Encode a single path segment (filenames) for URLs
-function enc(name) {
-  // encodeURIComponent but keep forward slashes if ever present
-  return encodeURIComponent(name).replace(/%2F/gi, "/");
-}
-
-// Create one <url> entry
-function urlEntry(loc, lastmod) {
-  return [
-    "  <url>",
-    `    <loc>${loc}</loc>`,
-    `    <lastmod>${lastmod}</lastmod>`,
-    "    <changefreq>yearly</changefreq>",
-    "  </url>",
-  ].join("\n");
-}
-
-// Build entries
-const entries = files
-  .map((name) => {
-    const loc = `${BASE}/${WEB_DIR}/${enc(name)}`;
-    return urlEntry(loc, today);
-  })
-  .join("\n");
-
-// Output ONLY valid XML
-const xml =
-  `<?xml version="1.0" encoding="UTF-8"?>\n` +
-  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  `${entries}\n` +
-  `</urlset>\n`;
-
-process.stdout.write(xml);
+      - name: Commit sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add capstones-sitemap.xml
+          git commit -m "update capstones sitemap" || echo "No changes"
+          git push

@@ -9,27 +9,27 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Whispers PDFs (GitHub blob links; exact filenames, spaces encoded) -->
+  <!-- Whispers PDFs -->
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/whispers/TOLARENAI%20Whisper%2000%20-%20Why%20TOLARENAI%20Whispers%20Work.pdf</loc>
+    <loc>https://tolarenai.com/whispers/TOLARENAI%20Whisper%2000%20-%20Why%20TOLARENAI%20Whispers%20Work.pdf</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/whispers/TOLARENAI%20Whispers%2001.pdf</loc>
+    <loc>https://tolarenai.com/whispers/TOLARENAI%20Whispers%2001.pdf</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/whispers/TOLARENAI%20Whispers%2002.pdf</loc>
+    <loc>https://tolarenai.com/whispers/TOLARENAI%20Whispers%2002.pdf</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/whispers/TOLARENAI%20Whispers%203.pdf</loc>
+    <loc>https://tolarenai.com/whispers/TOLARENAI%20Whispers%203.pdf</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

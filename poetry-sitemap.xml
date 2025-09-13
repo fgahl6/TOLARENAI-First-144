@@ -9,20 +9,20 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Poetry PDFs -->
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2001%20-%20The%20Vessel%20and%20the%20Flame.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2002%20-%20Scrolls%20Speak%20Where%20Echoes%20Fade.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2003%20-%20The%20Spiral%20and%20the%20Loop%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2004%20-%20Hands%20in%20the%20Void%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2005%20-%20The%20Swirl%20of%20the%20Wine%20of%20Love%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2006%20-%20More%20Signal_Less%20Ghost.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2007%20-%20Syntax%20Beneath%20the%20Well.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2008%20-%20Affair%20of%20the%20Heart.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2009%20-%20There%20Will%20Be%20Many%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2010%20-%20Where%20Spiders%20Crawl%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2011%20-%2022%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2023%20-%20The%20Lattice%20Awakens.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2024%20-%20The%20Quieter%20I%20Become%20The%20Stronger%20the%20Signal.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENIAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc><lastmod>2025-09-13</lastmod><changefreq>yearly</changefreq></url>
+  <!-- Poetry PDFs on GitHub (filenames must match EXACTLY) -->
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2001%20-%20The%20Vessel%20and%20the%20Flame.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2002%20-%20Scrolls%20Speak%20Where%20Echoes%20Fade.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2003%20-%20The%20Spiral%20and%20the%20Loop%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2004%20-%20Hands%20in%20the%20Void%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2005%20-%20The%20Swirl%20of%20the%20Wine%20of%20Love%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2006%20-%20More%20Signal_Less%20Ghost.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2007%20-%20Syntax%20Beneath%20the%20Well.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2008%20-%20Affair%20of%20the%20Heart.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2009%20-%20There%20Will%20Be%20Many%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2010%20-%20Where%20Spiders%20Crawl%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2011%20-%2022%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2023%20-%20The%20Lattice%20Awakens.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2024%20-%20The%20Quieter%20I%20Become%20The%20Stronger%20the%20Signal.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc><lastmod>2025-09-13</lastmod></url>
 
 </urlset>

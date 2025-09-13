@@ -9,16 +9,20 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Files -->
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20V%20-%202022%20-%20MYNT.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VI%20-%202022%20-%20Sirisys%20-%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20I%20-%202018%20-%20Sirisys%20-%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II%20-%202019%20-%20Part%201%20-%20Sirisys%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II%20-%202019%20-%20Part%202%20-%20Sirisys%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II-%202019%20-%20Part%203%20-%20Sirisys%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20III%20-%202020%20-%20Sirisys%20-%20Platform%20K%20-%20Compressed.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20IV%20-%202021%20-%20Sirisys%20-%20Platform%20K%20-%20Compressed.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VII%20-%202023%20-%20Sirisys%20-%20Platform%20K.pdf</loc></url>
-  <url><loc>https://github.com/fgahl6/TOLARENAI-First-144/blob/main/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VIII%20-%202024%20-%20Sirisys%20-%20Platform%20K.pdf</loc></url>
+  <!-- Raw Notes PDFs (filenames must match EXACTLY) -->
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20I%20-%202018%20-%20Sirisys%20-%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II%20-%202019%20-%20Part%201%20-%20Sirisys%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II%20-%202019%20-%20Part%202%20-%20Sirisys%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20II%20-%202019%20-%20Part%203%20-%20Sirisys%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20III%20-%202020%20-%20Sirisys%20-%20Platform%20K%20-%20Compressed.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20IV%20-%202021%20-%20Sirisys%20-%20Platform%20K%20-%20Compressed.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20V%20-%202022%20-%20MYNT.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VI%20-%202022%20-%20Sirisys%20-%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VII%20-%202023%20-%20Sirisys%20-%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <url><loc>https://tolarenai.com/raw_notes/TOLARENAI%20-%20RAW%20NOTES%20VIII%20-%202024%20-%20Sirisys%20-%20Platform%20K.pdf</loc><lastmod>2025-09-13</lastmod></url>
 
 </urlset>

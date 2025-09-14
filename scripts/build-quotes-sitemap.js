@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 /**
- * Build a valid XML sitemap for /quotes.
- * Outputs to quotes/sitemap-quotes.xml
+ * Build a valid XML sitemap for /quotes
+ * Outputs to quotes/quotes-sitemap.xml
  */
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-// ===== Edit per section =====
+// ===== Section config =====
 const BASE = "https://tolarenai.com";
-const WEB_DIR = "quotes";                     // folder to scan
-const OUT_FILE = "quotes/sitemap-quotes.xml"; // write sitemap inside /quotes
-// ============================
+const WEB_DIR = "quotes";
+const OUT_FILE = "quotes/quotes-sitemap.xml"; // <- align with robots.txt
+// ==========================
 
 const ABS_DIR = path.join(process.cwd(), WEB_DIR);
-const EXTS = /\.(html)$/i; // quotes are html-only
+const EXTS = /\.(html)$/i;
 
 if (!fs.existsSync(ABS_DIR)) {
   console.error(`Missing folder: ${ABS_DIR}`);
@@ -41,7 +41,6 @@ function enc(name) {
   return encodeURIComponent(name).replace(/%2F/gi, "/");
 }
 
-// Optional hub entry for /quotes/
 const hubLoc = `${BASE}/${WEB_DIR}/`;
 const hubMod = new Date().toISOString().slice(0,10);
 const entries = [];
@@ -50,8 +49,8 @@ entries.push([
   "  <url>",
   `    <loc>${hubLoc}</loc>`,
   `    <lastmod>${hubMod}</lastmod>`,
-  "    <changefreq>weekly</changefreq>",
-  "    <priority>0.8</priority>",
+  "    <changefreq>monthly</changefreq>",
+  "    <priority>0.80</priority>",
   "  </url>"
 ].join("\n"));
 
@@ -63,8 +62,8 @@ for (const name of files) {
     "  <url>",
     `    <loc>${loc}</loc>`,
     `    <lastmod>${lastmod}</lastmod>`,
-    "    <changefreq>yearly</changefreq>",
-    "    <priority>0.6</priority>",
+    "    <changefreq>monthly</changefreq>",
+    "    <priority>0.80</priority>",
     "  </url>"
   ].join("\n"));
 }
@@ -80,7 +79,8 @@ const xml = [
 if (require.main === module) {
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, xml, "utf8");
-  process.stdout.write(xml);
+  // helpful log
+  console.log(`Wrote ${OUT_FILE} with ${files.length + 1} URLs`);
 }
 
 module.exports = { xml };

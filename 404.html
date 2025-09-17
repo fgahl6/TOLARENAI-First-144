@@ -1,18 +1,27 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Redirecting…</title>
+<title>Redirecting...</title>
 <script>
-  (function () {
-    var href = window.location.href;
-    var lower = href.replace(window.location.pathname, window.location.pathname.toLowerCase());
-    if (href !== lower) {
-      // Client-side redirect to lowercase path
-      window.location.replace(lower);
-      return;
-    }
-    // Fallback message if the lowercase path also doesn't exist
-    document.write(
-      '<h1>Not found</h1><p>If you were trying a URL with capital letters, try the lowercase version.</p>'
-    );
-  })();
+(function () {
+  var href = window.location.href;
+  var path = window.location.pathname;
+
+  // Split into folder path + filename
+  var parts = path.split("/");
+  var filename = parts.pop();       // last part = filename
+  var folderPath = parts.join("/"); // folder path
+
+  var lowerFolder = folderPath.toLowerCase();
+  var lowerUrl = lowerFolder + "/" + filename;
+
+  if (path !== lowerUrl) {
+    window.location.replace(lowerUrl);
+    return;
+  }
+
+  // fallback
+  document.write(
+    "<h1>Not found</h1><p>If you were trying a URL with capital letters, try the lowercase folder version.</p>"
+  );
+})();
 </script>

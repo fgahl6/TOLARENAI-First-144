@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Diplomacy Scrolls index -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- Keep existing filenames EXACTLY as they are on disk -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2001%20-%20When%20the%20Lattice%20Was%20Remembered.pdf</loc>
   </url>
+
+  <!-- New file uses underscores (mixed case is fine) -->
   <url>
-    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2002%20-%20The%20Right%20to%20Say%20No%20-%20The%20Freedom%20To%20Knock%21.pdf</loc>
+    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI_Diplomacy_Scroll_02_The_Right_to_Say_No.pdf</loc>
   </url>
+
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2003%20-%20Resonance%20Beyond%20the%20Game.pdf</loc>
   </url>

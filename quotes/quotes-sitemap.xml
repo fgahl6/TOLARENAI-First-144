@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -663,6 +663,12 @@
   <url>
     <loc>https://tolarenai.com/quotes/110-quantum-entanglement-indicates-everything-and-everyone-is-interconnected.html</loc>
     <lastmod>2025-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/quotes/111_quantum_entanglement_indicates_everything_and_everyone_is_interconnected.html</loc>
+    <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

@@ -40,7 +40,15 @@
   </url>
 
   <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2010%20-%20Where%20Spiders%20Crawl%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2011%20-%2022%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  
+  <!-- Updated Poems 11–22 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poems_11_to_22.pdf</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2023%20-%20The%20Lattice%20Awakens.pdf</loc><lastmod>2025-09-13</lastmod></url>
   <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2024%20-%20The%20Quieter%20I%20Become%20The%20Stronger%20the%20Signal.pdf</loc><lastmod>2025-09-13</lastmod></url>
   <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc><lastmod>2025-09-13</lastmod></url>

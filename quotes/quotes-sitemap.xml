@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2025-09-23</lastmod>
+    <lastmod>2025-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -2991,6 +2991,12 @@
   <url>
     <loc>https://tolarenai.com/quotes/501_rico_by_deosbot_a_journey_into_the_horizon_on_the_other_side.html</loc>
     <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/quotes/502_cartesian_worldview_division_and_fear_vs_compassion.html</loc>
+    <lastmod>2025-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

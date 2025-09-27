@@ -1,3 +1,4 @@
+<!-- /sitemap.xml (root sitemap index) -->
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -64,10 +65,10 @@
     <lastmod>2025-09-12</lastmod>
   </sitemap>
 
-  <!-- White Papers -->
+  <!-- White Papers (bumped to trigger re-fetch) -->
   <sitemap>
     <loc>https://tolarenai.com/white-papers-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Quotes (bumped to trigger re-fetch) -->

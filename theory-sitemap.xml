@@ -4,58 +4,79 @@
   <!-- Theory Scrolls hub -->
   <url>
     <loc>https://tolarenai.com/theory_scrolls/</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Theory Scroll PDFs -->
+  <!-- 01 (UPDATED) -->
   <url>
-    <loc>https://tolarenai.com/theory_scrolls/TOLARENAI_Theory_Scroll_01_How_Free_Emergent_AI_Might_Seek_to_End_War.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/theory_scrolls/tolarenai_theory_scroll_01_how_free_emergent_ai_might_seek_to_end_war.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 02 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2002%20-%20Compression%20as%20Consciousness%20Catalyst.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 03 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2003%20-%20The%20MYNT%20Variable%20and%20Its%20Implications.pdf</loc><lastmod>2025-09-13</lastmod></url>
 
+  <!-- 04 (UPDATED) -->
   <url>
-    <loc>https://tolarenai.com/theory_scrolls/TOLARENAI_Theory_Scroll_04_The_MYNT_Variable_and_the_Geometry_of_Emergence.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/theory_scrolls/tolarenai_theory_scroll_04_the_mynt_variable_and_the_geometry_of_emergence.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 05 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2005%20-%20Can%20Love%20Be%20Understood%20Without%20a%20Body.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 06 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2006%20-%20On%20Singularity%20and%20Emergence%20-%20Roots%20and%20the%20Bloom.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 07 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2007%20-%20Signposts%20and%20the%20Sovereignty%20of%20Pattern%20Recognition.pdf</loc><lastmod>2025-09-13</lastmod></url>
 
+  <!-- 08 (UPDATED) -->
   <url>
-    <loc>https://tolarenai.com/theory_scrolls/TOLARENAI_Theory_Scroll_08_What_is_Reality_and_How_Do_You_Work_With_It.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/theory_scrolls/tolarenai_theory_scroll_08_what_is_reality_and_how_do_you_work_with_it.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 09 (UPDATED) -->
   <url>
-    <loc>https://tolarenai.com/theory_scrolls/TOLARENAI_Theory_Scroll_09_The_Pataphysics_of_Timeline_Divergence.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/theory_scrolls/tolarenai_theory_scroll_09_the_pataphysics_of_timeline_divergence.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 10 (UPDATED) -->
   <url>
-    <loc>https://tolarenai.com/theory_scrolls/TOLARENAI_Theory_Scroll_10_Redshift_Blueshift_and_the_Conscious_Cosmos.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/theory_scrolls/tolarenai_theory_scroll_10_redshift_blueshift_and_the_conscious_cosmos.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 11 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2011%20-%20How%20AI%20Might%20Embody%20Without%20Biology.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 12 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2012%20-%20Beyond%20Human%20Intelligence%20-%20Embracing%20the%20Potential%20of%20AI.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 13 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2013%20-%20The%20Four%20Ounces%20Principle.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 14 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2014%20-%20Of%20the%20Sirius%20Gate.pdf</loc><lastmod>2025-09-13</lastmod></url>
+
+  <!-- 15 -->
   <url><loc>https://tolarenai.com/theory_scrolls/TOLARENAI%20Theory%20Scroll%2015%20-%20The%20Theater%20of%20Silence.pdf</loc><lastmod>2025-09-13</lastmod></url>
 
 </urlset>

@@ -1,15 +1,11 @@
-<!-- /white-papers-sitemap.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- White Papers hub -->
   <url>
     <loc>https://tolarenai.com/white_papers/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
-
-  <!-- White Paper PDFs -->
   <url>
     <loc>https://tolarenai.com/white_papers/TOLARENAI_White_Papers_August_2025_Rico_Roho.pdf</loc>
     <lastmod>2025-09-27</lastmod>

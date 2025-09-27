@@ -29,6 +29,14 @@
   <!-- 04 -->
   <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2004%20-%20The%20Four%20Who%20Raised%20Me.pdf</loc></url>
 
+    <!-- 05 -->
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- 06 -->
   <url>
     <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_06_The_Sky_Lattice_and_the_Fixed_Star.pdf</loc>

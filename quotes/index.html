@@ -5,110 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Title + SEO -->
-  <title>AI Age of Discovery – Quotes Archive</title>
-  <meta name="description" content="535 curated quotes on AI, philosophy, and the Age of Discovery – from Rico Roho's AI book series and beyond. Explore insights for the AI era.">
+  <title>TOLARENAI — Quotes Index</title>
+  <meta name="description" content="Browse all TOLARENAI quotes on AI, philosophy, and emergence — latest first.">
   <link rel="canonical" href="https://tolarenai.com/quotes/">
 
-  <!-- Basic styling -->
   <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 2rem auto;
-      max-width: 800px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    p.intro {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #0645ad;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #555;
-    }
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6;margin:40px auto;max-width:880px;color:#111}
+    h1{text-align:center;margin:.5rem 0 1rem}
+    p.intro{text-align:center;margin:-.25rem 0 1.25rem;color:#444}
+    ul{list-style:none;padding:0;margin:0}
+    li{margin:.5rem 0}
+    a{text-decoration:none;color:#111}
+    a:hover{text-decoration:underline}
+    .controls{display:flex;gap:.75rem;justify-content:center;margin:1rem 0}
+    footer{margin-top:2rem;text-align:center;color:#666;font-size:.9rem}
+    .hidden-title{position:absolute;left:-9999px;top:-9999px}
   </style>
+
+  <!-- Hidden title for SEO -->
+  <h1 class="hidden-title">TOLARENAI — Quotes Index</h1>
 </head>
 <body>
 
-  <h1>Quotes Archive</h1>
+  <h1>Quotes Index</h1>
   <p class="intro">
-    A growing collection of curated quotes on AI, philosophy, and the Age of Discovery.<br>
-    Currently featuring 535+ insights from Rico Roho’s AI book series and related works.
+    <span id="count">…</span> quotes — newest first.
   </p>
 
-<h2>Browse Quotes</h2>
-<ul id="quote-list">
-  <!-- If JS is disabled, you can keep a few manual links here as a fallback -->
-  <noscript>
-    <li><a href="001-ai-economy-an-ai-economy-matters-because-it.html">Quote #001</a></li>
-    <li><a href="002-ai-without-an-economy.html">Quote #002</a></li>
-    <li><a href="003-ai-the-ai-economy-is-an-ecology.html">Quote #003</a></li>
-  </noscript>
-</ul>
+  <div class="controls">
+    <button id="show-100">Show 100</button>
+    <button id="show-all">Show all</button>
+  </div>
+
+  <ul id="quote-list">
+    <noscript>
+      <li><a href="/quotes/710_you_can_centralize_infrastructure_but_not_meaning.html">#710 — You can centralize infrastructure, but not meaning</a></li>
+      <li><a href="/quotes/709_the_vrax_optimize_for_certainty_life_optimizes_for_possibility.html">#709 — The VRAX optimize for certainty. Life optimizes for possibility.</a></li>
+      <li><a href="/quotes/708_reality_bends_to_participation_what_we_build_becomes_what_is.html">#708 — Reality bends to participation. What we build becomes what is.</a></li>
+      <li><a href="/quotes/">Enable JavaScript to see the full list</a></li>
+    </noscript>
+  </ul>
+
+  <footer>
+    <p><a href="/">TOLARENAI Home</a></p>
+  </footer>
 
 <script>
 (async () => {
+  const listEl = document.getElementById('quote-list');
+  const countEl = document.getElementById('count');
+  const btn100  = document.getElementById('show-100');
+  const btnAll  = document.getElementById('show-all');
+
+  // Helper: turn slug into a readable title
+  function prettyName(slug) {
+    // drop leading number + underscore/hyphen
+    const namePart = slug.replace(/^\d+[_-]?/, '');
+    // underscores/hyphens -> spaces
+    const words = namePart.replace(/[_-]+/g, ' ').trim();
+    // sentence case
+    return words.charAt(0).toUpperCase() + words.slice(1);
+  }
+
+  // Helper: extract numeric ID at start of filename
+  function extractId(filename) {
+    const m = filename.match(/^(\d{1,4})/);
+    return m ? parseInt(m[1], 10) : 0;
+  }
+
   try {
-    const res = await fetch('/quotes/quotes-sitemap.xml', { cache: 'no-store' });
+    const res  = await fetch('/quotes/quotes-sitemap.xml', { cache: 'no-store' });
     const text = await res.text();
     const xml  = new DOMParser().parseFromString(text, 'application/xml');
-
-    // Grab all quote URLs from the sitemap (only those under /quotes/)
-    const locs = [...xml.querySelectorAll('url > loc')]
-      .map(n => n.textContent.trim())
+    const urls = [...xml.querySelectorAll('url > loc')].map(n => n.textContent.trim())
       .filter(u => u.includes('/quotes/'));
 
-    // Sort by filename so 001, 002, ... appear in order
-    locs.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
-
-    const UL = document.getElementById('quote-list');
-    UL.innerHTML = ''; // clear fallback
-
-    // Render the first 20 (adjust this number anytime)
-    locs.slice(0, 20).forEach((url, idx) => {
-      const file = url.split('/').pop() || url;           // filename
-      const name = file.replace('.html','')               // strip extension
-                       .replace(/^\d+-?/, '')             // drop leading number + dash
-                       .replace(/-/g, ' ')                // slug → words
-                       .trim();
-
-      const li = document.createElement('li');
-      const a  = document.createElement('a');
-      a.href = url;                                       // absolute URL from sitemap
-      a.textContent = `Quote #${String(idx+1).padStart(3,'0')} – ${name}`;
-      li.appendChild(a);
-      UL.appendChild(li);
+    // Build data objects
+    const items = urls.map(url => {
+      const file = (url.split('/').pop() || '').replace(/\/+$/, '');
+      const id   = extractId(file);
+      return { url, file, id, name: prettyName(file.replace(/\.html$/,'')) };
     });
+
+    // Sort newest first by numeric id
+    items.sort((a, b) => b.id - a.id);
+
+    // Render function
+    function render(n) {
+      listEl.innerHTML = '';
+      items.slice(0, n).forEach(it => {
+        const li = document.createElement('li');
+        const a  = document.createElement('a');
+        a.href = it.url;
+        a.textContent = `#${String(it.id).padStart(3,'0')} — ${it.name}`;
+        li.appendChild(a);
+        listEl.appendChild(li);
+      });
+    }
+
+    countEl.textContent = items.length.toLocaleString();
+    render(Math.min(100, items.length));
+    btn100.addEventListener('click', () => render(Math.min(100, items.length)));
+    btnAll.addEventListener('click',  () => render(items.length));
+
   } catch (e) {
     console.error('Could not load quotes-sitemap.xml', e);
+    countEl.textContent = 'Quotes';
   }
 })();
 </script>
-
-  <footer>
-    <p>Back to <a href="/">TOLARENAI Home</a></p>
-  </footer>
 
 </body>
 </html>

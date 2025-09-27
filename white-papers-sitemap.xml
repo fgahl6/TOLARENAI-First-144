@@ -9,12 +9,12 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- White Papers intro/read page -->
+  <!-- White Papers overview page -->
   <url>
     <loc>https://tolarenai.com/white_papers/read.html</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- August 2025 White Paper PDF -->

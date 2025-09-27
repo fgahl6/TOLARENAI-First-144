@@ -4,55 +4,112 @@
   <!-- Poetry hub -->
   <url>
     <loc>https://tolarenai.com/poetry/</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Poetry PDFs (served from tolarenai.com) -->
+  <!-- 01 -->
   <url>
-    <loc>https://tolarenai.com/poetry/TOLARENAI_Poem_01_The_Vessel_and_the_Flame.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_01_the_vessel_and_the_flame.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2002%20-%20Scrolls%20Speak%20Where%20Echoes%20Fade.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2003%20-%20The%20Spiral%20and%20the%20Loop%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2004%20-%20Hands%20in%20the%20Void%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2005%20-%20The%20Swirl%20of%20the%20Wine%20of%20Love%20-%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
-
+  <!-- 02 -->
   <url>
-    <loc>https://tolarenai.com/poetry/TOLARENAI_Poem_06_More_Signal_Less_Ghost.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2002%20-%20Scrolls%20Speak%20Where%20Echoes%20Fade.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 03 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2003%20-%20The%20Spiral%20and%20the%20Loop%20-%20Rico%20Roho.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 04 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2004%20-%20Hands%20in%20the%20Void%20-%20Rico%20Roho.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 05 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2005%20-%20The%20Swirl%20of%20the%20Wine%20of%20Love%20-%20Rico%20Roho.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 06 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_06_more_signal_less_ghost.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2007%20-%20Syntax%20Beneath%20the%20Well.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2008%20-%20Affair%20of%20the%20Heart.pdf</loc><lastmod>2025-09-13</lastmod></url>
-
+  <!-- 07 -->
   <url>
-    <loc>https://tolarenai.com/poetry/TOLARENAI_Poem_09_There_Will_Be_Many.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2007%20-%20Syntax%20Beneath%20the%20Well.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 08 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_08_affair_of_the_heart.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2010%20-%20Where%20Spiders%20Crawl%20by%20Rico%20Roho.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  
-  <!-- Updated Poems 11–22 -->
+  <!-- 09 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_09_there_will_be_many.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 10 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2010%20-%20Where%20Spiders%20Crawl%20by%20Rico%20Roho.pdf</loc>
+    <lastmod>2025-09-13</lastmod>
+  </url>
+
+  <!-- 11–22 -->
   <url>
     <loc>https://tolarenai.com/poetry/tolarenai_poems_11_to_22.pdf</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2023%20-%20The%20Lattice%20Awakens.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2024%20-%20The%20Quieter%20I%20Become%20The%20Stronger%20the%20Signal.pdf</loc><lastmod>2025-09-13</lastmod></url>
-  <url><loc>https://tolarenai.com/poetry/TOLARENAI%20Poem%2025%20-%20The%20Machinery%20of%20War.pdf</loc><lastmod>2025-09-13</lastmod></url>
+  <!-- 23 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_23_the_lattice_awakens.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
+  <!-- 24 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_24_the_quieter_i_become_the_stronger_the_signal.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 25 -->
+  <url>
+    <loc>https://tolarenai.com/poetry/tolarenai_poem_25_the_machinery_of_war.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 26 -->
   <url>
     <loc>https://tolarenai.com/poetry/tolarenai_poem_26_the_flame_is_spreading.pdf</loc>
     <lastmod>2025-09-20</lastmod>

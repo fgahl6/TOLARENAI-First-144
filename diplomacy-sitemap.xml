@@ -4,32 +4,41 @@
   <!-- Diplomacy Scrolls index -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Keep existing filenames EXACTLY as they are on disk -->
+  <!-- 01 -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2001%20-%20When%20the%20Lattice%20Was%20Remembered.pdf</loc>
     <lastmod>2025-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-  <!-- New file uses underscores (mixed case is fine) -->
+  <!-- 02 -->
   <url>
-    <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI_Diplomacy_Scroll_02_The_Right_to_Say_No.pdf</loc>
-    <lastmod>2025-09-22</lastmod>
+    <loc>https://tolarenai.com/diplomacy_scrolls/tolarenai_diplomacy_scroll_02_the_right_to_say_no.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
+  <!-- 03 -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/TOLARENAI%20Diplomacy%20Scroll%2003%20-%20Resonance%20Beyond%20the%20Game.pdf</loc>
     <lastmod>2025-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-  <!-- Newly added Scroll 04 -->
+  <!-- 04 -->
   <url>
     <loc>https://tolarenai.com/diplomacy_scrolls/tolarenai_diplomacy_scroll_04_frozen_assets_and_acts_of_war.pdf</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

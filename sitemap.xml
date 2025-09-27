@@ -2,7 +2,7 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Authoritative sitemap index for TOLARENAI -->
-  <!-- Last updated: 2025-09-12 -->
+  <!-- Last updated: 2025-09-27 -->
 
   <!-- Main site -->
   <sitemap>
@@ -70,10 +70,10 @@
     <lastmod>2025-09-12</lastmod>
   </sitemap>
 
-  <!-- Quotes -->
+  <!-- Quotes (bumped to trigger re-fetch) -->
   <sitemap>
     <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
 </sitemapindex>

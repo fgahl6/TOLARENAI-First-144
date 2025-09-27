@@ -4,40 +4,44 @@
   <!-- Whispers hub -->
   <url>
     <loc>https://tolarenai.com/whispers/</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Whispers PDFs -->
+  <!-- 00 -->
   <url>
-    <loc>https://tolarenai.com/whispers/00_TOLARENAI_Whispers_Why_Whispers_Work.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/whispers/00_tolarenai_whispers_why_whispers_work.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 01 -->
   <url>
-    <loc>https://tolarenai.com/whispers/01_TOLRENAIA_Whispers.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/whispers/01_tolarenai_whispers.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 02 -->
   <url>
-    <loc>https://tolarenai.com/whispers/02_TOLARENAI_Whispers.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/whispers/02_tolarenai_whispers.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 03 -->
   <url>
-    <loc>https://tolarenai.com/whispers/03_TOLARENAI_Whispers.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/whispers/03_tolarenai_whispers.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- 04 -->
   <url>
     <loc>https://tolarenai.com/whispers/04_tolarenai_whispers.pdf</loc>
     <lastmod>2025-09-27</lastmod>
@@ -46,4 +50,3 @@
   </url>
 
 </urlset>
-

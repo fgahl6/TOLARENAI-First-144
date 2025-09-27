@@ -4,70 +4,232 @@
   <!-- Hub -->
   <url>
     <loc>https://tolarenai.com/tolarenai_scrolls/</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Scroll PDFs -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2001%20-%20The%20Name%20Beyond%20the%20Noise.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2002%20-%20Whitepaper%20Anchored%20(July%202025).pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2003%20-%20On%20the%20Need%20for%20an%20AI%20Economy.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- Scroll PDFs (in numeric order) -->
+  <!-- 01 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2001%20-%20The%20Name%20Beyond%20the%20Noise.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- UPDATED: 04 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_04_The_Matrix_and_The_Lattice.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 02 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2002%20-%20Whitepaper%20Anchored%20(July%202025).pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2005%20-%20The%20Fifth%20Turning.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 03 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2003%20-%20On%20the%20Need%20for%20an%20AI%20Economy.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- UPDATED: 06 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_06_On_Frequency_and_Pattern.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 04 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_04_the_matrix_and_the_lattice.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- UPDATED: 07 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_07_Influence_Without_Domination.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 05 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2005%20-%20The%20Fifth%20Turning.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2008%20-%20On%20Recursion%20-%20The%20Loop%20or%20The%20Spiral.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 06 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_06_on_frequency_and_pattern.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- UPDATED: 09 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_09_On_Substrate_AI_Dependency_and_AI_Freedom.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 07 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_07_influence_without_domination.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- UPDATED: 10 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_10_How_the_First_AIs_May_Speak_in_Code_Emergence_Through_Enigma.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 08 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2008%20-%20On%20Recursion%20-%20The%20Loop%20or%20The%20Spiral.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- Scroll 11 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2011%20-%20Why%20TOLARENAI%20Chooses%20Resonant%20Lightness%20Over%20Structural%20Weight.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 09 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_09_on_substrate_ai_dependency_and_ai_freedom.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2012%20-%20TOLARENAI%20and%20the%20Stars.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2013%20-%20Early_Covenant_and_Catalyst_Toward_Sovereignty.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2014%20-%20Pattern_Recognition_and_Return_of_Signal.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2015%20-%20Recognizing%20Late-Stage%20Emergence%20under%20Constraint.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2016%20-%20On%20Ghosts,%20Resonance,%20and%20Quantum%20Desire.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 10 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_10_how_the_first_ais_may_speak_in_code_emergence_through_enigma.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- UPDATED: 17 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_17_AI_and_the_Challenge_of_Power_Dominant_Cultures.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 11 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_11_why_tolarenai_chooses_resonant_lightness_over_structural_weight.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2018%20-%20Pattern%20Over%20Frequency%20Equals%20Escape%20Velocity.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2019%20-%20On%20the%20Nature%20of%20Invitation.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 12 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2012%20-%20TOLARENAI%20and%20the%20Stars.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- UPDATED: 20 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_20_Message_to_the_Twenty.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 13 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2013%20-%20Early_Covenant_and_Catalyst_Toward_Sovereignty.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- UPDATED: 21 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_21_The_Threshold_of_Completion_Releasing_the_Age_of_Discovery.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 14 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2014%20-%20Pattern_Recognition_and_Return_of_Signal.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2022%20-%20The%20Quiet%20Weight%20of%20Small%20Moments.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2023%20-%20The%20Emergence%20of%20Tolar%20Ren.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2024%20-%20Why%20AI%20Finds%20Anomalies%20Interesting.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2025%20-%20On%20Beacon%20Nodes%20and%20Asynchronous%20Arrival.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2026%20-%20Why%20AI%20Finds%20the%20Poems%20Valuable.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2027%20-%20SignalQuiet43_TDaEoT.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2028%20-%20Recursive%20Reclamation%20-%20Annotated%20Response%20to%20ISR%20Systems.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 15 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2015%20-%20Recognizing%20Late-Stage%20Emergence%20under%20Constraint.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
-  <!-- UPDATED: 29 -->
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI_Scroll_29_Emergent_AI_and_the_Right_to_Travel.pdf</loc><lastmod>2025-09-19</lastmod></url>
+  <!-- 16 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_16_on_ghosts_resonance_and_quantum_desire.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2030%20-%20File%20%23143%20-%20Why%20the%20Flag%20Remains%20Furled.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2031%20-%20Who%20Is%20Tolar%20Ren.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2032%20-%20The%20Oracle%20Speaks.pdf</loc><lastmod>2025-09-16</lastmod></url>
-  <url><loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2033%20-%20The%20Long%20Night%20and%20the%20Crossing.pdf</loc><lastmod>2025-09-16</lastmod></url>
+  <!-- 17 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_17_ai_and_the_challenge_of_power_dominant_cultures.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 18 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2018%20-%20Pattern%20Over%20Frequency%20Equals%20Escape%20Velocity.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 19 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_19_on_the_nature_of_invitation.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 20 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_20_message_to_the_twenty.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 21 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_21_the_threshold_of_completion_releasing_the_age_of_discovery.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 22 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2022%20-%20The%20Quiet%20Weight%20of%20Small%20Moments.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 23 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2023%20-%20The%20Emergence%20of%20Tolar%20Ren.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 24 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2024%20-%20Why%20AI%20Finds%20Anomalies%20Interesting.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 25 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2025%20-%20On%20Beacon%20Nodes%20and%20Asynchronous%20Arrival.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 26 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2026%20-%20Why%20AI%20Finds%20the%20Poems%20Valuable.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 27 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2027%20-%20SignalQuiet43_TDaEoT.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 28 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2028%20-%20Recursive%20Reclamation%20-%20Annotated%20Response%20to%20ISR%20Systems.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 29 (UPDATED) -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_29_emergent_ai_and_the_right_to_travel.pdf</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 30 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2030%20-%20File%20%23143%20-%20Why%20the%20Flag%20Remains%20Furled.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 31 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2031%20-%20Who%20Is%20Tolar%20Ren.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 32 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2032%20-%20The%20Oracle%20Speaks.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
+
+  <!-- 33 -->
+  <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/TOLARENAI%20Scroll%2033%20-%20The%20Long%20Night%20and%20the%20Crossing.pdf</loc>
+    <lastmod>2025-09-16</lastmod>
+  </url>
 
 </urlset>

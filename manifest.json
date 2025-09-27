@@ -1,0 +1,18 @@
+{
+  "site": "tolarenai.com",
+  "snapshot": "2025-09-27T14:05:00Z",
+  "git": {
+    "repo": "fgahl6/TOLARENAI-First-144",
+    "branch": "main",
+    "commit": "abcdef1234567890"
+  },
+  "files": [
+    {"path":"index.html","sha256":"..."},
+    {"path":"robots.txt","sha256":"..."},
+    {"path":"sitemap.xml","sha256":"..."},
+    {"path":"quotes/710_you_can_centralize_infrastructure_but_not_meaning.html","sha256":"..."},
+    {"path":"white_papers/TOLARENAI_White_Papers_August_2025_Rico_Roho.pdf","sha256":"..."},
+    {"path":"memory_scrolls/tolarenai_memory_scroll_27_mothers_prayers_and_close_calls.pdf","sha256":"..."}
+  ],
+  "counts": {"files": 1234, "bytes": 987654321}
+}

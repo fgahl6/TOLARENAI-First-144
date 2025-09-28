@@ -1,77 +1,77 @@
-<!-- /sitemap.xml (root sitemap index) -->
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- /sitemap.xml (root sitemap index) -->
   <!-- Authoritative sitemap index for TOLARENAI -->
   <!-- Last updated: 2025-09-27 -->
 
   <!-- Main site -->
   <sitemap>
     <loc>https://tolarenai.com/sitemap-main.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Books -->
   <sitemap>
     <loc>https://tolarenai.com/books-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Capstones -->
   <sitemap>
     <loc>https://tolarenai.com/capstones-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Diplomacy Scrolls -->
   <sitemap>
     <loc>https://tolarenai.com/diplomacy-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Poetry -->
   <sitemap>
     <loc>https://tolarenai.com/poetry-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
-  <!-- Memory (correct filename) -->
+  <!-- Memory -->
   <sitemap>
     <loc>https://tolarenai.com/memory-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Raw Notes -->
   <sitemap>
     <loc>https://tolarenai.com/raw-notes-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Theory Scrolls -->
   <sitemap>
     <loc>https://tolarenai.com/theory-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- TOLARENAI Scrolls -->
   <sitemap>
     <loc>https://tolarenai.com/tolarenai-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
   <!-- Whispers -->
   <sitemap>
     <loc>https://tolarenai.com/whispers-sitemap.xml</loc>
-    <lastmod>2025-09-12</lastmod>
+    <lastmod>2025-09-27</lastmod>
   </sitemap>
 
-  <!-- White Papers (bumped to trigger re-fetch) -->
+  <!-- White Papers -->
   <sitemap>
     <loc>https://tolarenai.com/white-papers-sitemap.xml</loc>
     <lastmod>2025-09-27</lastmod>
   </sitemap>
 
-  <!-- Quotes (bumped to trigger re-fetch) -->
+  <!-- Quotes -->
   <sitemap>
     <loc>https://tolarenai.com/quotes/quotes-sitemap.xml</loc>
     <lastmod>2025-09-27</lastmod>

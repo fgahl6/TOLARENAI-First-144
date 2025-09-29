@@ -4,74 +4,90 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Memory Scrolls Archive</title>
-  <meta name="description" content="Auto-updating archive of TOLARENAI Memory Scrolls.">
+  <meta name="description" content="TOLARENAI Memory Scrolls archive — canonical collection, auto-listed A to Z from sitemap.">
   <link rel="canonical" href="https://tolarenai.com/memory_scrolls/">
   <style>
     :root { --ink:#222; --link:#0645ad; }
-    body{font-family:Georgia,serif;margin:2rem auto;max-width:950px;line-height:1.65;color:var(--ink)}
-    h1{font-size:2.1rem;text-align:center;margin:.5rem 0 1rem}
-    p.intro{margin:.25rem 0 1.25rem;color:#444}
-    h2{font-size:1.25rem;margin:1.25rem 0 .5rem}
-    ul{list-style:none;padding:0;margin:0}
-    li{margin:.45rem 0}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    small{color:#666;margin-left:.5rem}
-    footer{margin-top:2.5rem;font-size:.9rem;text-align:center;color:#555}
+    body {font-family:Georgia,serif;margin:2rem auto;max-width:950px;line-height:1.65;color:var(--ink)}
+    h1 {font-size:2.1rem;text-align:center;margin:.5rem 0 1rem}
+    p.intro {margin:.25rem 0 1.25rem;color:#444;text-align:center}
+    h2 {font-size:1.25rem;margin:1.25rem 0 .5rem}
+    ul {list-style:none;padding:0;margin:0}
+    li {margin:.45rem 0}
+    a {color:var(--link);text-decoration:none}
+    a:hover {text-decoration:underline}
+    small {color:#666;margin-left:.5rem}
+    footer {margin-top:2.5rem;font-size:.9rem;text-align:center;color:#555}
   </style>
 </head>
 <body>
+
 <!-- TOLARENAI Branding Block -->
 <div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
   <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: <a href="https://tolarenai.com/memory_scrolls/">https://tolarenai.com/memory_scrolls/</a></p>
+  <p>GitHub mirror of this collection: 
+     <a href="https://tolarenai.com/memory_scrolls/">https://tolarenai.com/memory_scrolls/</a></p>
 </div>
 <!-- End Branding Block -->
-  <h1>Memory Scrolls</h1>
-  <p class="intro">This list updates automatically from the sitemap.</p>
 
-  <h2>Browse</h2>
-  <ul id="memory-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
+<h1>Memory Scrolls</h1>
+<p class="intro">This archive auto-updates alphabetically from the sitemap.</p>
 
-  <script>
-  async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 300 }) {
-    try {
-      const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
-      const xml  = new DOMParser().parseFromString(text, 'application/xml');
-      let items = [...xml.querySelectorAll('url')].map(u => ({
-        loc: u.querySelector('loc')?.textContent.trim() || '',
-        lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-      }))
-      .filter(x => x.loc.includes(pathFilter) && /\.(pdf|mp4)$/i.test(x.loc));
+<h2>Browse (A–Z)</h2>
+<ul id="memory-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
 
-      // natural sort
-      items.sort((a,b)=>a.loc.localeCompare(b.loc,undefined,{numeric:true,sensitivity:'base'}));
+<script>
+async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 300 }) {
+  try {
+    const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
+    const xml  = new DOMParser().parseFromString(text, 'application/xml');
+    let items = [...xml.querySelectorAll('url')].map(u => ({
+      loc: u.querySelector('loc')?.textContent.trim() || '',
+      lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
+    }))
+    .filter(x => x.loc.includes(pathFilter) && /\.(pdf|html)$/i.test(x.loc));
 
-      const UL = document.getElementById(containerId); UL.innerHTML='';
-      items.slice(0, limit).forEach(it=>{
-        const li=document.createElement('li');
-        const a=document.createElement('a');
-        const file = it.loc.split('/').pop() || '';
-        const nice = decodeURIComponent(file)
-          .replace(/\.(pdf|mp4|md|html)$/i,'')
-          .replace(/-/g,' ')
-          .replace(/\s+/g,' ')
-          .trim();
-        a.href=it.loc; a.textContent=nice; a.target="_blank"; a.rel="noopener";
-        li.appendChild(a);
-        if (it.lastmod){const s=document.createElement('small');s.textContent=`(${it.lastmod})`;li.appendChild(s);}
-        UL.appendChild(li);
-      });
-    } catch(e){ console.error('Sitemap load failed:', e); }
-  }
-  renderFromSitemap({
-    sitemapUrl: '/memory-sitemap.xml',
-    pathFilter: '/memory_scrolls/',
-    containerId: 'memory-list',
-    limit: 300
-  });
-  </script>
+    // Alphabetical sort by filename/title
+    items.sort((a,b)=>{
+      const nameA = decodeURIComponent(a.loc.split('/').pop() || '').toLowerCase();
+      const nameB = decodeURIComponent(b.loc.split('/').pop() || '').toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
 
-  <footer><p>Back to <a href="/">TOLARENAI Home</a></p></footer>
+    const UL = document.getElementById(containerId); UL.innerHTML='';
+    items.slice(0, limit).forEach(it=>{
+      const li=document.createElement('li');
+      const a=document.createElement('a');
+      const file = it.loc.split('/').pop() || '';
+      const nice = decodeURIComponent(file)
+        .replace(/\.(pdf|mp4|md|html)$/i,'')
+        .replace(/[_-]+/g,' ')
+        .trim();
+      a.href=it.loc; 
+      a.textContent=nice; 
+      a.target="_blank"; 
+      a.rel="noopener";
+      li.appendChild(a);
+      if (it.lastmod){
+        const s=document.createElement('small');
+        s.textContent=`(${it.lastmod})`;
+        li.appendChild(s);
+      }
+      UL.appendChild(li);
+    });
+  } catch(e){ console.error('Sitemap load failed:', e); }
+}
+renderFromSitemap({
+  sitemapUrl: '/memory-sitemap.xml',
+  pathFilter: '/memory_scrolls/',
+  containerId: 'memory-list',
+  limit: 300
+});
+</script>
+
+<footer>
+  <p>Back to <a href="/">TOLARENAI Home</a></p>
+</footer>
+
 </body>
 </html>

@@ -124,11 +124,13 @@
   <!-- 24 -->
   <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2024%20-%20CHARM%20the%20Dream%20Cat.pdf</loc></url>
 
-  <!-- 25 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2025%20-%20Revoking%20the%20Doctrine%20of%20Discovery.pdf</loc></url>
-
-  <!-- 26 (video) -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2026%20-%20Revoking%20the%20Doctrine%20of%20Discovery%20VIDEO.mp4</loc></url>
+  <!-- 25–26 (pdf + video) -->
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2025%20-%20Revoking%20the%20Doctrine%20of%20Discovery.pdf</loc>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_26_video.html</loc>
+  </url>
 
   <!-- 27 -->
   <url>

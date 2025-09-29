@@ -46,7 +46,12 @@
   </url>
 
   <!-- 07 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2007%20-%20The%20Bird%20Who%20Taught%20Me%20Consequence.pdf</loc></url>
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_07_the_bird_who_taught_me_consequences.pdf</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- 08 -->
   <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory_Scroll_08_The%20Mannequin%20and%20the%20Mirror%20(Rico%20Roho%20-%20Frank%20Gahl).pdf</loc></url>

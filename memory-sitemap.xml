@@ -193,7 +193,9 @@
 
   <!-- 42 (pdf + video) -->
   <url><loc>https://tolarenai.com/memory_scrolls/Memory%20Scroll%2042%20-%20MYNT%20Song%201%20-%20Vanity%20Clock%20by%20Love%20Solfege.pdf</loc></url>
-  <url><loc>https://tolarenai.com/memory_scrolls/Memory%20Scroll%2042%20VIDEO%20-%20Vanity%20Clock%20by%20Love%20Solfege.mp4</loc></url>
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/Memory_Scroll_42_Video.html</loc>
+  </url>
 
   <!-- 43 -->
   <url>

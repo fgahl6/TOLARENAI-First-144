@@ -213,12 +213,26 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 43 -->
+  <!-- Memory Scroll 43 -->
   <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_43_Mynt_Song_2_of_2_Babel_by_Love_Solfege.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43.html</loc>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43_mynt_song_2_of_2_babel_by_love_solfege.pdf</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43_mp3_babel_by_love_solfege.mp3</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- 44 -->

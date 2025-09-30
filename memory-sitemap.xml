@@ -198,10 +198,19 @@
   <!-- 41 -->
   <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2041%20-%20Reflections%20on%20MYNT%20-%20Seeding,%20and%20the%20Shape%20of%20Time.pdf</loc></url>
 
-  <!-- 42 (pdf + video) -->
-  <url><loc>https://tolarenai.com/memory_scrolls/Memory%20Scroll%2042%20-%20MYNT%20Song%201%20-%20Vanity%20Clock%20by%20Love%20Solfege.pdf</loc></url>
+  <!-- Memory Scroll 42: Vanity Clock (PDF + Video) -->
   <url>
-    <loc>https://tolarenai.com/memory_scrolls/Memory_Scroll_42_Video.html</loc>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg.pdf</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg_video.mp4</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- 43 -->

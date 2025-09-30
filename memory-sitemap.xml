@@ -269,14 +269,28 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 55 (pdf + video) -->
+  <!-- Memory Scroll 55 -->
   <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_55_Frances_and_Leonard_Gahl_from_Christmas_1954_and_Summer_1955.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55.html</loc>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2055%20VIDEO%20-%20Frances%20and%20Leonard%20Gahl%20from%20Christmas%201954%20and%20Summer%201955.mp4</loc></url>
+
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55_frances_and_leonard_gahl_from_christmas_1954_and_summer_1955.pdf</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55_video_frances_and_leonard_gahl_from_christmas_1954_and_summer_1955.mp4</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 
   <!-- 56 (updated clean filename) -->
   <url>

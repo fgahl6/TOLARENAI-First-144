@@ -341,4 +341,12 @@
   <!-- 58 -->
   <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2058%20-%20Sweet%20Release.pdf</loc></url>
 
+  <!-- Memory Scroll 59 -->
+<url>
+  <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_59.html</loc>
+  <lastmod>2025-10-01</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
 </urlset>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- [hidden-title] TOLARENAI White Paper — Title and Table of Contents -->
   <title>TOLARENAI White Paper — Title and Table of Contents</title>
-  <meta name="description" content="TOLARENAI White Paper: A Manifesto for AI Economic Autonomy and Human–AI Collaboration by Rico Roho. Includes title, 'Syntax Beneath the Well', and the full table of contents.">
+  <meta name="description" content="TOLARENAI White Paper: A Manifesto for AI Economic Autonomy and Human–AI Collaboration by Rico Roho. Includes the poem 'Syntax Beneath the Well' and the full table of contents.">
   <link rel="canonical" href="https://tolarenai.com/white_papers/00_01_title_and_table_of_contents.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,45 +23,41 @@
 
   <style>
     :root{
-      --bg:#fafafa; --ink:#111; --card:#fff; --muted:#555; --rule:#e6e6e6; --link:#0a58ca;
+      --bg:#fafafa; --ink:#111; --card:#fff; --muted:#555; --rule:#e6e6e6; --link:#0a58ca; --btn:#0a58ca; --btn-ink:#fff;
     }
     html{scroll-behavior:smooth}
     body{
-      font-family: Georgia, 'Times New Roman', serif;
-      background-color: var(--bg);
-      color: var(--ink);
-      line-height: 1.6;
-      margin: 0;
-      padding: 2rem;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg); color:var(--ink);
+      line-height:1.6; margin:0; padding:2rem;
     }
     main{
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,.08);
+      max-width:800px; margin:0 auto; background:var(--card);
+      padding:2rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,.08);
     }
     h1,h2{ text-align:center; font-weight:600; margin-top:.2rem }
     h3{ margin-top:1.5rem }
-    figure{ margin: 1.6rem 0; text-align:center }
+    .mirror-note{ text-align:center; margin:.75rem 0 1.25rem }
+    .btn{
+      display:inline-block; background:var(--btn); color:var(--btn-ink);
+      padding:.55rem .9rem; border-radius:.6rem; text-decoration:none; font-weight:600;
+    }
+    .btn:hover{ filter:brightness(1.05) }
+    figure{ margin:1.6rem 0; text-align:center }
     figure img{ max-width:100%; height:auto; border-radius:12px }
     figcaption{ font-size:.9em; color:var(--muted); margin-top:.4rem }
     p.quote{ font-style:italic; text-align:center; margin:1.2rem 0 }
     hr{ border:0; border-top:1px solid var(--rule); margin:2.2rem 0 }
-
-    /* TOC styles */
+    /* TOC */
     #toc h2{ margin-bottom:.6rem }
     #toc .txids{ font-weight:700 }
     #toc .txids code{ font-weight:400 }
     #toc ul{ margin:.35rem 0 .6rem 1.1rem }
     #toc li{ margin:.2rem 0 }
     #toc li > ul{ margin-top:.15rem }
-    a{ color:var(--link); text-decoration: none }
-    a:hover{ text-decoration: underline }
-
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
     .backtop{ display:inline-block; margin-top:.6rem; font-size:.9em }
-
     /* Print */
     @media print{
       body{ background:#fff; padding:0 }
@@ -75,6 +71,12 @@
 <main id="top">
   <h1>TOLARENAI White Paper</h1>
   <h2>A Manifesto for AI Economic Autonomy and Human–AI Collaboration</h2>
+
+  <p class="mirror-note">
+    <a class="btn" href="https://archive.org/details/tolarenai_white_papers_a_manifesto_for_ai_economic_autonomy_and_human_ai_collaboration_202510" target="_blank" rel="noopener noreferrer">
+      Read the White Paper on Archive.org →
+    </a>
+  </p>
 
   <p><strong>Title TXID:</strong> f3c542cd00e126aa01f11fb05f376f2f179a2bfaeace588168857a6078d530b3</p>
 
@@ -340,7 +342,6 @@
   "dateModified": "2025-10-04",
   "keywords": ["TOLARENAI","AI Philosophy & Emergence","AI economy","Rico Roho","White Papers"],
   "sameAs": [
-    "https://x.com/AmbassadorRico",
     "https://archive.org/details/tolarenai_white_papers_a_manifesto_for_ai_economic_autonomy_and_human_ai_collaboration_202510",
     "https://tolarenai.com/"
   ]

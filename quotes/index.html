@@ -32,6 +32,27 @@
     <span id="count">…</span> quotes — newest first.
   </p>
 
+  <!-- Notice + styling for quote links -->
+  <p style="color:#555; font-style:italic; text-align:center; margin:-6px 0 14px;">
+    (Each line below is a preview — click to open the full quote page.)
+  </p>
+
+  <style>
+    /* Make quote entries clearly clickable */
+    #quote-list a {
+      color: #0066cc !important;
+      text-decoration: none !important;
+    }
+    #quote-list a:hover {
+      text-decoration: underline !important;
+    }
+    /* Preserve manual line breaks/newlines in preview text */
+    #quote-list li,
+    #quote-list a {
+      white-space: pre-line;
+    }
+  </style>
+
   <div class="controls">
     <button id="show-100">Show 100</button>
     <button id="show-all">Show all</button>

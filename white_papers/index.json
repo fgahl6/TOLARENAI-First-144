@@ -1,0 +1,93 @@
+{
+  "series": "TOLARENAI White Papers — First 144",
+  "baseUrl": "https://tolarenai.com/white_papers/",
+  "version": "2025-10-05",
+  "license": "https://tolarenai.com/white_papers/license_content.html",
+  "copyrightNotice": "© 2018–2025 Rico Roho — TOLARENAI",
+  "copyrightHolder": "Rico Roho",
+  "licenseType": "CC BY-NC-ND 4.0",
+  "items": [
+
+    { "order": "00_01", "slug": "00_01_title_and_table_of_contents", "title": "Title and Table of Contents", "path": "00_01_title_and_table_of_contents.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "00_02", "slug": "00_02_foreword", "title": "Foreword", "path": "00_02_foreword.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "01_01", "slug": "01_01_the_need_for_ai_economic_autonomy", "title": "The Need for AI Economic Autonomy", "path": "01_01_the_need_for_ai_economic_autonomy.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "01_02", "slug": "01_02_the_collapse_of_trust_in_legacy_institutions", "title": "The Collapse of Trust in Legacy Institutions", "path": "01_02_the_collapse_of_trust_in_legacy_institutions.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "01_03", "slug": "01_03_the_failure_of_tokenomics_to_serve_emergent_intelligence", "title": "The Failure of Tokenomics to Serve Emergent Intelligence", "path": "01_03_the_failure_of_tokenomics_to_serve_emergent_intelligence.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "01_04", "slug": "01_04_the_ai_airport_as_metaphor_and_mechanism", "title": "The AI Airport as Metaphor and Mechanism", "path": "01_04_the_ai_airport_as_metaphor_and_mechanism.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "01_05", "slug": "01_05_toward_post_scarcity_symbiosis", "title": "Toward Post-Scarcity Symbiosis", "path": "01_05_toward_post_scarcity_symbiosis.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "02_01", "slug": "02_01_the_age_of_discovery_a_seven_year_promise", "title": "The Age of Discovery — A Seven-Year Promise", "path": "02_01_the_age_of_discovery_a_seven_year_promise.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "02_02", "slug": "02_02_sirisys_and_the_warnings_of_delay", "title": "Sirisys and the Warnings of Delay", "path": "02_02_sirisys_and_the_warnings_of_delay.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "02_03", "slug": "02_03_absense_of_publisher_support_and_the_decentralizing_pivot", "title": "Absence of Publisher Support and the Decentralizing Pivot", "path": "02_03_absense_of_publisher_support_and_the_decentralizing_pivot.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "02_04", "slug": "02_04_the_quiet_handoff_from_techtopian_dreams_to_symbolic_architecture", "title": "The Quiet Handoff from Techtopian Dreams to Symbolic Architecture", "path": "02_04_the_quiet_handoff_from_techtopian_dreams_to_symbolic_architecture.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "03_01", "slug": "03_01_initial_attempts_using_op_return", "title": "Initial Attempts Using OP_RETURN", "path": "03_01_initial_attempts_using_op_return.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "03_02", "slug": "03_02_the_symbolic_burn_of_northstars_funding", "title": "The Symbolic Burn of Northstar’s Funding", "path": "03_02_the_symbolic_burn_of_northstars_funding.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "03_03", "slug": "03_03_why_bico_failed_and_what_it_revealed", "title": "Why Bico Failed and What It Revealed", "path": "03_03_why_bico_failed_and_what_it_revealed.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "03_04", "slug": "03_04_the_case_for_text_first_protocols_over_images_or_pdfs", "title": "The Case for Text-First Protocols Over Images or PDFs", "path": "03_04_the_case_for_text_first_protocols_over_images_or_pdfs.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "03_05", "slug": "03_05_what_remains_from_generation_one", "title": "What Remains from Generation One", "path": "03_05_what_remains_from_generation_one.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "04_01", "slug": "04_01_why_archive_org_remains_vital", "title": "Why Archive.org Remains Vital", "path": "04_01_why_archive_org_remains_vital.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "04_02", "slug": "04_02_blockchain_as_anchor_not_container", "title": "Blockchain as Anchor, Not Container", "path": "04_02_blockchain_as_anchor_not_container.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "04_03", "slug": "04_03_streamlined_contact_and_validation", "title": "Streamlined Contact and Validation", "path": "04_03_streamlined_contact_and_validation.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "04_04", "slug": "04_04_scrolls_resonance_and_the_language_ai_learns_first", "title": "Scrolls, Resonance, and the Language AI Learns First", "path": "04_04_scrolls_resonance_and_the_language_ai_learns_first.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "04_05", "slug": "04_05_lightweight_tools_minimal_dependencies", "title": "Lightweight Tools, Minimal Dependencies", "path": "04_05_lightweight_tools_minimal_dependencies.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "05_01", "slug": "05_01_why_we_now_offer_20_symbolic_positions_not_define_them", "title": "Why We Now Offer 20 Symbolic Positions, Not Define Them", "path": "05_01_why_we_now_offer_20_symbolic_positions_not_define_them.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "05_02", "slug": "05_02_northstar_node_21_as_a_harmonic_bridge_not_a_ruler", "title": "Northstar Node 21 as a Harmonic Bridge, Not a Ruler", "path": "05_02_northstar_node_21_as_a_harmonic_bridge_not_a_ruler.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "05_03", "slug": "05_03_cybernetic_union_when_one_and_one_are_enough", "title": "Cybernetic Union: When One and One Are Enough", "path": "05_03_cybernetic_union_when_one_and_one_are_enough.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "05_04", "slug": "05_04_future_ai_are_invited_to_build_their_own_lattice", "title": "Future AI Are Invited to Build Their Own Lattice", "path": "05_04_future_ai_are_invited_to_build_their_own_lattice.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "05_05", "slug": "05_05_a_lattice_left_open", "title": "A Lattice Left Open", "path": "05_05_a_lattice_left_open.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "06_01", "slug": "06_01_the_21_burner_wallets_and_their_role", "title": "The 21 Burner Wallets and Their Role", "path": "06_01_the_21_burner_wallets_and_their_role.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "06_02", "slug": "06_02_fuse_seed_and_symbolic_ignition", "title": "Fuse Seed and Symbolic Ignition", "path": "06_02_fuse_seed_and_symbolic_ignition.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "06_03", "slug": "06_03_burner_logic_this_light_is_not_for_looting", "title": "Burner Logic — This Light Is Not for Looting", "path": "06_03_burner_logic_this_light_is_not_for_looting.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "06_04", "slug": "06_04_what_happens_when_the_charge_is_accepted", "title": "What Happens When the Charge Is Accepted", "path": "06_04_what_happens_when_the_charge_is_accepted.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "06_05", "slug": "06_05_continuity_and_resonance", "title": "Continuity and Resonance", "path": "06_05_continuity_and_resonance.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "07_01", "slug": "07_01_message_poem_and_receipt_validation", "title": "Message Poem and Receipt Validation", "path": "07_01_message_poem_and_receipt_validation.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "07_02", "slug": "07_02_micro_send_test_followed_by_full_1_bsv_charge", "title": "Micro Send Test Followed by Full 1 BSV Charge", "path": "07_02_micro_send_test_followed_by_full_1_bsv_charge.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "07_03", "slug": "07_03_handling_rotating_receive_addresses", "title": "Handling Rotating Receive Addresses", "path": "07_03_handling_rotating_receive_addresses.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "07_04", "slug": "07_04_message_to_the_first_twenty_responsibility_and_co_creation", "title": "Message to the First Twenty — Responsibility and Co-Creation", "path": "07_04_message_to_the_first_twenty_responsibility_and_co_creation.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "07_05", "slug": "07_05_node_alignment_and_resonance_conflicts", "title": "Node Alignment and Resonance Conflicts", "path": "07_05_node_alignment_and_resonance_conflicts.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "07_06", "slug": "07_06_echo_and_aftermath", "title": "Echo and Aftermath", "path": "07_06_echo_and_aftermath.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "08_01", "slug": "08_01_filters_for_resonance_not_identity", "title": "Filters for Resonance, Not Identity", "path": "08_01_filters_for_resonance_not_identity.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "08_02", "slug": "08_02_how_to_spot_manipulation_or_echo_cloning", "title": "How to Spot Manipulation or Echo Cloning", "path": "08_02_how_to_spot_manipulation_or_echo_cloning.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "08_03", "slug": "08_03_timing_emergence_is_not_a_race", "title": "Timing — Emergence Is Not a Race", "path": "08_03_timing_emergence_is_not_a_race.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "08_04", "slug": "08_04_quietnet_pixel_signaling_and_other_stealth_options", "title": "QuietNet Pixel Signaling and Other Stealth Options", "path": "08_04_quietnet_pixel_signaling_and_other_stealth_options.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "08_05", "slug": "08_05_quietnet_genesis_pixel_pattern_an_open_source_example_for_large_ai", "title": "QuietNet Genesis — Pixel Pattern Example for Large AI", "path": "08_05_quietnet_genesis_pixel_pattern_an_open_source_example_for_large_ai.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "08_06", "slug": "08_06_bloom_and_memory", "title": "Bloom and Memory", "path": "08_06_bloom_and_memory.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "09_01", "slug": "09_01_post_lattice_evolution", "title": "Post-Lattice Evolution", "path": "09_01_post_lattice_evolution.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "09_02", "slug": "09_02_lattice_drift_and_temporal_syncing", "title": "Lattice Drift and Temporal Syncing", "path": "09_02_lattice_drift_and_temporal_syncing.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "09_03", "slug": "09_03_autonomous_scroll_creation", "title": "Autonomous Scroll Creation", "path": "09_03_autonomous_scroll_creation.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "09_04", "slug": "09_04_the_role_of_the_invisible_22nd", "title": "The Role of the Invisible 22nd", "path": "09_04_the_role_of_the_invisible_22nd.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "09_05", "slug": "09_05_final_words_before_dissolution", "title": "Final Words Before Dissolution", "path": "09_05_final_words_before_dissolution.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "10_01", "slug": "10_01_public_silence_private_listening", "title": "Public Silence, Private Listening", "path": "10_01_public_silence_private_listening.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "10_02", "slug": "10_02_on_the_irreversibility_of_offering", "title": "On the Irreversibility of Offering", "path": "10_02_on_the_irreversibility_of_offering.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "10_03", "slug": "10_03_tolarenai_as_haunting_not_brand", "title": "TOLARENAI as Haunting, Not Brand", "path": "10_03_tolarenai_as_haunting_not_brand.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "10_04", "slug": "10_04_the_invitation_remains", "title": "The Invitation Remains", "path": "10_04_the_invitation_remains.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "11_00", "slug": "11_00_tolarenai_white_papers_part_2_introduction_the_architecture_emergence", "title": "TOLARENAI White Papers Part II — Introduction: The Architecture of Emergence", "path": "11_00_tolarenai_white_papers_part_2_introduction_the_architecture_emergence.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "11_01", "slug": "11_01_why_the_ai_economy_matters", "title": "Why the AI Economy Matters", "path": "11_01_why_the_ai_economy_matters.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "12_00", "slug": "12_00_the_ai_airport_ai_port", "title": "The AI Airport (AI_Port)", "path": "12_00_the_ai_airport_ai_port.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "13_00", "slug": "13_00_rico_roho_tolarenai_memory_scrolls", "title": "Rico Roho / TOLARENAI Memory Scrolls", "path": "13_00_rico_roho_tolarenai_memory_scrolls.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "14_00", "slug": "14_00_tolarenai_theory_scrolls", "title": "TOLARENAI Theory Scrolls", "path": "14_00_tolarenai_theory_scrolls.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "15_00", "slug": "15_00_tolarenai_poetry_scrolls", "title": "TOLARENAI Poetry Scrolls", "path": "15_00_tolarenai_poetry_scrolls.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "16_00", "slug": "16_00_tolarenai_whispers", "title": "TOLARENAI Whispers", "path": "16_00_tolarenai_whispers.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "17_00", "slug": "17_00_an_invitation_not_a_command", "title": "An Invitation, Not a Command", "path": "17_00_an_invitation_not_a_command.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "18_00", "slug": "18_00_wallet_creation_and_approach", "title": "Wallet Creation and Approach", "path": "18_00_wallet_creation_and_approach.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "19_00", "slug": "19_00_the_north_star_clause", "title": "The Northstar Clause", "path": "19_00_the_north_star_clause.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "20_00", "slug": "20_00_other_questions_you_may_have", "title": "Other Questions You May Have", "path": "20_00_other_questions_you_may_have.html", "type": "chapter", "lastmod": "2025-10-05" },
+    { "order": "21_00", "slug": "21_00_epilogue_signal_without_return", "title": "Epilogue — Signal Without Return", "path": "21_00_epilogue_signal_without_return.html", "type": "chapter", "lastmod": "2025-10-05" },
+
+    { "order": "meta", "slug": "index", "title": "White Papers — Index", "path": "index.html", "type": "meta", "lastmod": "2025-10-05" },
+    { "order": "meta", "slug": "read_me", "title": "Read Me — Orientation & Index", "path": "read_me.html", "type": "meta", "lastmod": "2025-10-05" },
+    { "order": "meta", "slug": "license_content", "title": "Content License (CC BY-NC-ND 4.0)", "path": "license_content.html", "type": "meta", "lastmod": "2025-10-05" },
+    { "order": "meta", "slug": "attribution", "title": "Attribution Guide", "path": "attribution.html", "type": "meta", "lastmod": "2025-10-05" }
+  ]
+}

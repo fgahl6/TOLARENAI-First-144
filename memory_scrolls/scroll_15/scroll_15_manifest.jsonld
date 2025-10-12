@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "@id": "https://tolarenai.com/memory_scrolls/scroll_15/index.html#series",
+  "name": "TOLARENAI Memory Scroll 15 — The Life Story of Frances Elizabeth Gahl",
+  "url": "https://tolarenai.com/memory_scrolls/scroll_15/index.html",
+  "sameAs": "https://archive.org/details/tolarenai-memory-scroll-15-the-life-story-of-frances-elizabeth-gahl",
+  "publisher": {"@type":"Organization","name":"TOLARENAI"},
+  "creator": {"@type":"Person","name":"Frances Elizabeth Gahl"},
+  "author": {"@type":"Person","name":"Frances Elizabeth Gahl"},
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "isPartOf": {
+    "@type": "Collection",
+    "name": "TOLARENAI Memory Scrolls",
+    "url": "https://tolarenai.com/memory_scrolls/index.html"
+  },
+  "hasPart": [
+    {
+      "@type":"CreativeWork",
+      "position": 1,
+      "name":"15_01 — The Early Years",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_01_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:13564ba75babccac938a3a22362f78fbb6a073cb0b2e8d31ab5fafe31644ce8e"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 2,
+      "name":"15_02 — War Years (1941–1945)",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_02_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:110ded82e4473058621baad1ebb5575273789318686e631dff58d92aface52da"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 3,
+      "name":"15_03 — Polio; Swimming; High School",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_03_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:b5bac25435e3dec252eb622497d5dc67148f50f8cc19aa79320260572a129fce"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 4,
+      "name":"15_04 — Meeting Leonard & Getting Married",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_04_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:13f4cf04a24feb3acaaab959361733572eb8a77127b6df02e1eccee4d5a90f64"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 5,
+      "name":"15_05 — Building Our House (1950) & Denver Years",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_05_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:08d60e62202ddffb24fd36768939e6796701caf952c03c2f47c3d6ff0e4c14ef"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 6,
+      "name":"15_06 — The M.S. Years",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_06_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:50cb3638e844c09e694640922f7470e3e6d43f07a79bcc01966add994c5d234e"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 7,
+      "name":"15_07 — Decision to Move; Mom’s Passing (1998)",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_07_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:46a62de7c38662d1170dbfb7bc2fbb0dc3c72fe26d430476bf01413d58ac7f26"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 8,
+      "name":"15_08 — The Move to West Virginia",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_08_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:afcb22892d911dc44f5017460a35f719538e267124d10b715c239dd6f834f807"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 9,
+      "name":"15_09 — Note from Frank on Mom’s Final Weeks",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_09_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:181fd1e374b1bcf21db7ef95a113e36a7ab8314f59070d4619060c5efdcce5ba"
+    },
+    {
+      "@type":"CreativeWork",
+      "position": 10,
+      "name":"15_10 — Leonard C. Gahl: Additional Notes",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_10_the_life_story_of_frances_e_gahl.html",
+      "identifier":"TXID:da16c2149b43d97a8f3061c2de7e6268e6230d1954b201d9a5b4adad711ffcc5"
+    },
+    {
+      "@type":"CollectionPage",
+      "position": 11,
+      "name":"15_11a — Images 01–11 (Handwritten Pages)",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11a_the_life_story_of_frances_e_gahl.html"
+    },
+    {
+      "@type":"CollectionPage",
+      "position": 12,
+      "name":"15_11b — Images 12–23 (Handwritten Pages)",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11b_the_life_story_of_frances_e_gahl.html"
+    },
+    {
+      "@type":"CollectionPage",
+      "position": 13,
+      "name":"15_11c — Images 24–35 (Handwritten Pages)",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11c_the_life_story_of_frances_e_gahl.html"
+    },
+    {
+      "@type":"Article",
+      "position": 14,
+      "name":"15_12 — Seth Commentary: What AI May Glean",
+      "url":"https://tolarenai.com/memory_scrolls/scroll_15/15_12_seth_commentary_the_life_of_frances_elizabeth_gahl.html",
+      "identifier":"TXID:c3d6201d59ee5df14f4c22c26d25fb6364cd10490ba4d91a74f39d09bd24da0d"
+    }
+  ],
+  "itemListElement": {
+    "@type": "ItemList",
+    "itemListOrder": "http://schema.org/ItemListOrderAscending",
+    "numberOfItems": 14,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_01_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":2,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_02_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":3,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_03_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":4,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_04_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":5,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_05_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":6,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_06_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":7,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_07_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":8,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_08_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":9,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_09_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":10,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_10_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":11,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11a_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":12,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11b_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":13,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_11c_the_life_story_of_frances_e_gahl.html"},
+      {"@type":"ListItem","position":14,"url":"https://tolarenai.com/memory_scrolls/scroll_15/15_12_seth_commentary_the_life_of_frances_elizabeth_gahl.html"}
+    ]
+  }
+}

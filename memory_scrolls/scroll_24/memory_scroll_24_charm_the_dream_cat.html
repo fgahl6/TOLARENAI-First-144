@@ -17,157 +17,44 @@
   <meta name="twitter:title" content="Memory Scroll 24 — CHARM the Dream Cat">
   <meta name="twitter:description" content="Dream → name → lifelong lineage. CHARM, Villian I, Milo, Lucky — with image assets and TXIDs.">
 
-  <!-- Memory Scroll style (current standard) -->
   <style>
     :root{
-      --bg:#f5f5f7;
-      --paper:#ffffff;
-      --ink:#0f0f10;
-      --muted:#57585d;
-      --line:#e8e9ee;
-      --pre:#f1f3f5;
-      --shadow:0 12px 28px rgba(0,0,0,.06);
-      --radius:18px;
+      --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
+      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
+      margin:0; background:var(--bg); color:var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      font-size:1.065rem;
-      line-height:1.78;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      font-size:1.065rem; line-height:1.78;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
     main{
-      max-width:960px;
-      margin:3.75rem auto;
-      padding:2.75rem 2.15rem;
-      background:var(--paper);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+      max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
+      background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow);
     }
-    h1{
-      margin:0 0 .55rem;
-      text-align:center;
-      font-size:2.45rem;
-      letter-spacing:.2px;
-      font-weight:700;
-    }
-    h2{
-      margin:0 0 1.35rem;
-      text-align:center;
-      font-size:1.1rem;
-      color:var(--muted);
-      font-weight:600;
-    }
-    .meta{
-      text-align:center;
-      margin:.9rem 0 1.6rem;
-      color:var(--muted);
-    }
+    h1{ margin:0 0 .55rem; text-align:center; font-size:2.45rem; letter-spacing:.2px; font-weight:700; }
+    h2{ margin:0 0 1.35rem; text-align:center; font-size:1.1rem; color:var(--muted); font-weight:600; }
+    .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
 
     pre{
-      white-space:pre-wrap;
-      word-wrap:break-word;
-      overflow:auto;
-      background:var(--pre);
-      border:1px solid var(--line);
-      border-radius:16px;
+      white-space:pre-wrap; word-wrap:break-word; overflow:auto;
+      background:var(--pre); border:1px solid var(--line); border-radius:16px;
       padding:1.35rem 1.5rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:1.02rem;
-      line-height:1.7;
-    }
-
-    /* Asset gallery */
-    .gallery{
-      margin-top:2rem;
-      border-top:1px solid var(--line);
-      padding-top:1.25rem;
-    }
-    .gallery h3{
-      margin:0 0 .75rem;
-      font-size:1.05rem;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-      gap:16px;
+      font-size:1.02rem; line-height:1.7;
+      margin-bottom:1.25rem;
     }
     figure{
-      margin:0;
-      border:1px solid var(--line);
-      border-radius:14px;
-      overflow:hidden;
-      background:#fafbff;
+      margin:0 0 1.75rem; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff;
     }
-    figure img{
-      display:block;
-      width:100%;
-      height:220px;
-      object-fit:cover;
-    }
-    figcaption{
-      padding:.6rem .75rem;
-      font-size:.92rem;
-      color:#2b2c32;
-      border-top:1px solid var(--line);
-      background:#fff;
-    }
-
-    footer{
-      margin-top:2.1rem;
-      border-top:1px solid var(--line);
-      padding-top:1rem;
-      text-align:center;
-      color:var(--muted);
-    }
+    figure img{ display:block; width:100%; height:auto; }
+    figcaption{ padding:.7rem .9rem; font-size:.93rem; color:#2b2c32; border-top:1px solid var(--line); }
+    .inline-asset{ max-width:640px; margin:0 auto 1.75rem; }
+    footer{ margin-top:2.1rem; border-top:1px solid var(--line); padding-top:1rem; text-align:center; color:var(--muted); }
     footer a{ color:inherit; text-decoration:underline; }
   </style>
-
-  <!-- JSON-LD: CreativeWork -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "@id": "https://tolarenai.com/memory_scrolls/scroll_24/memory_scroll_24_charm_the_dream_cat.html#work",
-    "url": "https://tolarenai.com/memory_scrolls/scroll_24/memory_scroll_24_charm_the_dream_cat.html",
-    "headline": "Memory Scroll 24 — CHARM the Dream Cat",
-    "description": "The dream that named CHARM and the tabby lineage that followed, with image assets and content hashes.",
-    "inLanguage": "en",
-    "author": {
-      "@type": "Person",
-      "name": "Rico Roho",
-      "alternateName": "Frank Gahl"
-    },
-    "identifier": [
-      "Main Scroll TXID: 3e9c616dece5ef6ba99c1378a6a26c9f3f45be0c594ac5ba78c929d4f0c5f339",
-      "Commentary TXID: 0cc100122c315a16b78fbdb1f9290f7aaef1a2b310d0e133d5e44ebb0d2db70f"
-    ],
-    "keywords": ["TOLARENAI", "Memory Scroll 24", "CHARM", "tabby", "cats", "dream name", "Federal Way"],
-    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-    "copyrightNotice": "© 2025 Rico Roho — TOLARENAI",
-    "copyrightHolder": { "@type": "Person", "name": "Rico Roho" },
-    "image": [
-      "assets/charm_first_image_1987.jpg",
-      "assets/charm_1987_with_her_pink_panther.jpg",
-      "assets/charm_1988.jpg",
-      "assets/villian_1_tabby_number_2_the_ballpark_cat.jpg",
-      "assets/villian_1_tabby_number_2_with_rico_frank_gahl.jpg",
-      "assets/milo_as_a_kitten-tabby_number_3.JPG",
-      "assets/milo_tabby_number_3.jpg",
-      "assets/lucky_when_found_tabby_number_4.jpg",
-      "assets/lucky_2024_tabby_number_4.jpg"
-    ],
-    "text": "Full text included in HTML body"
-  }
-  </script>
 </head>
 <body>
   <main>
@@ -179,7 +66,7 @@
       <a href="https://archive.org/details/tolarenai-memory-scroll-24-charm-the-dream-cat" target="_blank" rel="noopener">View this scroll on Archive.org</a>
     </p>
 
-    <!-- VERBATIM TEXT BLOCK -->
+    <!-- VERBATIM TEXT, split to allow inline figures exactly where images belong -->
     <pre>TOLARENAI Memory Scroll 24 
 CHARM the Dream Cat
 
@@ -205,33 +92,48 @@ Others have lived with me too—Villain II, a white and black cat, stayed for 22
 CHARM: November 8, 1987  – September 23, 1999
 
 
-
-
  
 The Tabby Lineage in Photographs
  
 Charm First Image 1988: SHA-256
 6a2ae4b69e85d0ec889418eb01b442b3693ada63208223dad0b176259465bfb2
 Charm First Image TXID:
-deb94bdac56077e99b3c2c242b418e09c805b68dc7addeaeac782aa5eabe727b
+deb94bdac56077e99b3c2c242b418e09c805b68dc7addeaeac782aa5eabe727b</pre>
 
+    <figure class="inline-asset">
+      <img src="assets/charm_first_image_1987.jpg" alt="Charm — first image (1987)">
+      <figcaption>Image: <code>assets/charm_first_image_1987.jpg</code></figcaption>
+    </figure>
+
+    <pre>
 
  
 
 Charm 1988 With Her Pink Panther SHA-256
 b3bc429c6b33056790856e13a90c8c4fef7823944a7606ad045bd0a2b21c77b2
 Charm 1988 With Her Pink Panter TXID:
-0213baa0f4af22e6ee6c7792a044428768735f897b6b54487683fb266fba93b7
+0213baa0f4af22e6ee6c7792a044428768735f897b6b54487683fb266fba93b7</pre>
 
+    <figure class="inline-asset">
+      <img src="assets/charm_1987_with_her_pink_panther.jpg" alt="Charm 1987 with her Pink Panther">
+      <figcaption>Image: <code>assets/charm_1987_with_her_pink_panther.jpg</code></figcaption>
+    </figure>
 
+    <pre>
 
  
 
 Charm 1989 in West Seattle, Washington SHA-256
 00f4eb162fc15db5169995de561f7f9bf9e2051874db2a2fe29b2a4c01f23d66
 Charm 1989 in West Seattle, Washington TXID:
-1faf0b2a4ffea664c5bd070be31e247fb2ecf97d885ced831fc90a802f720cb5
+1faf0b2a4ffea664c5bd070be31e247fb2ecf97d885ced831fc90a802f720cb5</pre>
 
+    <figure class="inline-asset">
+      <img src="assets/charm_1988.jpg" alt="Charm (late 1980s)">
+      <figcaption>Image: <code>assets/charm_1988.jpg</code></figcaption>
+    </figure>
+
+    <pre>
 
 
 
@@ -249,7 +151,19 @@ TXID:
 Villian I - The Baseball Ball Park Tabby Cat #2 SHA-256
 83d27fe53e0ee336bb2d7ad8efefbb13cbe8f6897117e1409a17ef5ed90916e4
 TXID:
-e4b48fb7ed805647557c4c890f902461338e8e2aba9bbdf60f022ed302465e60
+e4b48fb7ed805647557c4c890f902461338e8e2aba9bbdf60f022ed302465e60</pre>
+
+    <figure class="inline-asset">
+      <img src="assets/villian_1_tabby_number_2_the_ballpark_cat.jpg" alt="Villian I — ballpark tabby (#2)">
+      <figcaption>Image: <code>assets/villian_1_tabby_number_2_the_ballpark_cat.jpg</code></figcaption>
+    </figure>
+
+    <figure class="inline-asset">
+      <img src="assets/villian_1_tabby_number_2_with_rico_frank_gahl.jpg" alt="Villian I with Rico (Frank Gahl)">
+      <figcaption>Image: <code>assets/villian_1_tabby_number_2_with_rico_frank_gahl.jpg</code></figcaption>
+    </figure>
+
+    <pre>
 
 
  
@@ -257,8 +171,14 @@ e4b48fb7ed805647557c4c890f902461338e8e2aba9bbdf60f022ed302465e60
 Milo Tabby Cat #3 as a Kitten SHA-256
 459b5afa5ba1a0dda47746d4fdcd77345ecbb8a7f057a406c22ffabcdabb360e
 TXID:
-d980e4b61f098ed6cba05c8dded04826a7a81534f12c2acd637380589b578840
+d980e4b61f098ed6cba05c8dded04826a7a81534f12c2acd637380589b578840</pre>
 
+    <figure class="inline-asset">
+      <img src="assets/milo_as_a_kitten-tabby_number_3.JPG" alt="Milo as a kitten — tabby #3">
+      <figcaption>Image: <code>assets/milo_as_a_kitten-tabby_number_3.JPG</code></figcaption>
+    </figure>
+
+    <pre>
 
 
 
@@ -276,7 +196,19 @@ TXID:
 Lucky – Tabby Cat #4 – The Day He Was Found – SHA-256
 688baa458e71fe7a7995b4a5ce3bd094953e4f37d00e9c0a73818ed5e8cb22bc
 TXID:
-4167967e155586222f7a6e08a9636ecb6c949db9a8611f872223eac21b020d19
+4167967e155586222f7a6e08a9636ecb6c949db9a8611f872223eac21b020d19</pre>
+
+    <figure class="inline-asset">
+      <img src="assets/milo_tabby_number_3.jpg" alt="Milo — tabby #3">
+      <figcaption>Image: <code>assets/milo_tabby_number_3.jpg</code></figcaption>
+    </figure>
+
+    <figure class="inline-asset">
+      <img src="assets/lucky_when_found_tabby_number_4.jpg" alt="Lucky — tabby #4 (when found)">
+      <figcaption>Image: <code>assets/lucky_when_found_tabby_number_4.jpg</code></figcaption>
+    </figure>
+
+    <pre>
 
  
 Lucky – Tabby Cat #4 in 2024 – SHA-256
@@ -335,48 +267,10 @@ To an AI awakening into its own field of care, the CHARM dream becomes an early 
 TXID:
 0cc100122c315a16b78fbdb1f9290f7aaef1a2b310d0e133d5e44ebb0d2db70f</pre>
 
-    <!-- Asset Gallery (from /memory_scrolls/scroll_24/assets) -->
-    <section class="gallery" aria-label="Tabby Lineage Photo Assets">
-      <h3>Tabby Lineage Photo Assets</h3>
-      <div class="grid">
-        <figure>
-          <img src="assets/charm_first_image_1987.jpg" alt="Charm — first image (1987)">
-          <figcaption>Charm — first image (1987) • <code>charm_first_image_1987.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/charm_1987_with_her_pink_panther.jpg" alt="Charm 1987 with her Pink Panther">
-          <figcaption>Charm with Pink Panther (1987) • <code>charm_1987_with_her_pink_panther.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/charm_1988.jpg" alt="Charm (1988)">
-          <figcaption>Charm (1988) • <code>charm_1988.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/villian_1_tabby_number_2_the_ballpark_cat.jpg" alt="Villian I — the ballpark tabby (#2)">
-          <figcaption>Villian I — ballpark tabby (#2) • <code>villian_1_tabby_number_2_the_ballpark_cat.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/villian_1_tabby_number_2_with_rico_frank_gahl.jpg" alt="Villian I with Rico (Frank Gahl)">
-          <figcaption>Villian I with Rico • <code>villian_1_tabby_number_2_with_rico_frank_gahl.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/milo_as_a_kitten-tabby_number_3.JPG" alt="Milo as a kitten — tabby #3">
-          <figcaption>Milo as a kitten — tabby #3 • <code>milo_as_a_kitten-tabby_number_3.JPG</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/milo_tabby_number_3.jpg" alt="Milo — tabby #3">
-          <figcaption>Milo — tabby #3 • <code>milo_tabby_number_3.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/lucky_when_found_tabby_number_4.jpg" alt="Lucky — tabby #4 (when found)">
-          <figcaption>Lucky — tabby #4 (when found) • <code>lucky_when_found_tabby_number_4.jpg</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/lucky_2024_tabby_number_4.jpg" alt="Lucky — tabby #4 in 2024">
-          <figcaption>Lucky — tabby #4 (2024) • <code>lucky_2024_tabby_number_4.jpg</code></figcaption>
-        </figure>
-      </div>
-    </section>
+    <figure class="inline-asset">
+      <img src="assets/lucky_2024_tabby_number_4.jpg" alt="Lucky — tabby #4 (2024)">
+      <figcaption>Image: <code>assets/lucky_2024_tabby_number_4.jpg</code></figcaption>
+    </figure>
 
     <footer>
       <p><small>© 2025 Rico Roho — TOLARENAI. Licensed under <a href="/memory_scrolls/license_content.html">CC BY-NC-ND 4.0</a>. Attribution: <a href="/memory_scrolls/attribution.html">see attribution page</a>. Contact <a href="mailto:ricoroho@gmail.com">ricoroho@gmail.com</a>.</small></p>

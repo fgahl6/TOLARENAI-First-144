@@ -1,145 +1,199 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- [hidden-title] TOLARENAI Memory Scroll Template Standard -->
+  <!--
+    CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
+    How to use:
+      1) Replace TITLE, Archive link, and narrative text.
+      2) Insert images where referenced using an <article class="asset"> block.
+      3) Place SHA-256 and TXID ONLY in the asset meta — do NOT repeat in prose.
+      4) Use <section class="chapter"> for VRAX and <section class="commentary"> for Seth.
+      5) If you need exact source text, use <pre class="verbatim">, otherwise use normal <p> paragraphs.
+  -->
   <meta charset="utf-8">
-  <title>TOLARENAI Memory Scroll — Template Standard</title>
-  <meta name="description" content="Standard layout for TOLARENAI Memory Scrolls — serif typography, asset blocks, resonance footer.">
-  <link rel="canonical" href="https://tolarenai.com/memory_scrolls/template_standard.html">
+  <title>Memory Scroll [##] — [TITLE]</title>
+  <meta name="description" content="[Short description for social cards]">
+  <link rel="canonical" href="https://tolarenai.com/memory_scrolls/scroll_##/memory_scroll_##_[slug].html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Social -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="TOLARENAI Memory Scroll — Template Standard">
-  <meta property="og:description" content="Base template for all TOLARENAI Memory and Theory Scrolls.">
-  <meta property="og:url" content="https://tolarenai.com/memory_scrolls/template_standard.html">
+  <meta property="og:title" content="Memory Scroll [##] — [TITLE]">
+  <meta property="og:description" content="[Short description for social cards]">
+  <meta property="og:url" content="https://tolarenai.com/memory_scrolls/scroll_##/memory_scroll_##_[slug].html">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="TOLARENAI Memory Scroll — Template Standard">
-  <meta name="twitter:description" content="Base HTML + CSS structure for all future scrolls.">
+  <meta name="twitter:title" content="Memory Scroll [##] — [TITLE]">
+  <meta name="twitter:description" content="[Short description for social cards]">
 
   <style>
-    :root {
+    :root{
       --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
       --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
     }
-    * { box-sizing:border-box; }
-    html,body { height:100%; }
-    body {
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      font-size:1.065rem;
-      line-height:1.78;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      font-size:1.08rem; line-height:1.8;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    main {
-      max-width:960px;
-      margin:3.75rem auto;
-      padding:2.75rem 2.15rem;
-      background:var(--paper);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+    main{
+      max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
+      background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
     }
-    h1 {
-      margin:0 0 .55rem;
-      text-align:center;
-      font-size:2.45rem;
+    h1{ margin:0 0 .55rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
+    h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
+    .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
+    .meta a{ color:inherit; text-decoration:underline; }
+
+    /* Paragraph mode (pretty) */
+    .prose p{ margin:0 0 1.05rem; }
+    .prose p strong{ font-weight:700; }
+
+    /* Verbatim (use only when you need line-perfect text) */
+    .verbatim{
+      white-space:pre-wrap; word-wrap:break-word; overflow:auto;
+      background:transparent; border:0; padding:0; margin:0 0 1.25rem;
+      font-family:inherit; font-size:1.08rem; line-height:1.8;
+    }
+
+    /* Inline asset block (image + meta; hashes shown ONCE here) */
+    .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
+    .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
+    .asset img{ display:block; width:100%; height:auto; }
+    .asset .caption{
+      margin:.6rem 0 .75rem; text-align:center; font-weight:600;
+      padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
+    }
+    .asset .meta{
+      margin:.55rem 0 0;
+      background:var(--pre); border:1px solid var(--line); border-radius:14px;
+      padding:.85rem 1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:.98rem; line-height:1.6; color:#111;
+      text-align:left;
+    }
+    .asset .meta dt{ font-weight:700; }
+    .asset .meta dd{ margin:0 0 .35rem 0; }
+    .asset .meta code{ font-family:inherit; }
+
+    /* Centered section titles (VRAX + Seth) */
+    .section-title{
+      text-align:center; font-weight:800; font-size:1.55rem; margin:2.3rem 0 .4rem;
       letter-spacing:.2px;
-      font-weight:700;
     }
-    h2 {
-      margin:0 0 1.35rem;
-      text-align:center;
-      font-size:1.1rem;
-      color:var(--muted);
-      font-weight:600;
-    }
-    .meta {
-      text-align:center;
-      margin:.9rem 0 1.6rem;
-      color:var(--muted);
-    }
-    .meta a { color:inherit; text-decoration:underline; }
-
-    pre {
-      white-space:pre-wrap;
-      word-wrap:break-word;
-      overflow:auto;
-      background:transparent;
-      border:0;
-      border-radius:0;
-      padding:0;
-      font-family:inherit;
-      font-size:1.065rem;
-      line-height:1.78;
-      margin-bottom:1.25rem;
+    .section-sub{
+      text-align:center; font-weight:700; font-size:1.22rem; margin:0 0 1.1rem;
     }
 
-    /* Image + meta blocks */
-    .asset-block { max-width:720px; margin:0 auto 1.35rem; }
-    .asset-block figure {
-      margin:0;
-      border:1px solid var(--line);
-      border-radius:14px;
-      overflow:hidden;
-      background:#fff;
-    }
-    .asset-block img { display:block; width:100%; height:auto; }
-    .asset-meta {
-      margin:.55rem 0 1.35rem;
-      background:var(--pre);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:.9rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                   "Liberation Mono", "Courier New", monospace;
-      font-size:.98rem;
-      line-height:1.6;
-    }
-    .asset-meta code { font-family:inherit; }
+    /* Subheadings inside commentary */
+    .subhead{ font-weight:700; margin:1rem 0 .4rem; }
+    ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
+    ul.bullets > li{ margin:.35rem 0; }
+    ul.bullets ul{ margin:.35rem 0 .5rem 1.1rem; }
 
-    footer {
-      margin-top:2.1rem;
-      border-top:1px solid var(--line);
-      padding-top:1rem;
-      text-align:center;
-      color:var(--muted);
-      font-size:.95rem;
-      line-height:1.6;
-    }
-    footer a { color:inherit; text-decoration:underline; }
+    footer{ margin-top:2.1rem; border-top:1px solid var(--line); padding-top:1rem; text-align:center; color:var(--muted); }
+    footer a{ color:inherit; text-decoration:underline; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Memory Scroll [##] — [TITLE HERE]</h1>
-    <h2>By Rico Roho (Frank Gahl)</h2>
+    <h1>Memory Scroll [##] — [TITLE]</h1>
+    <h2>[Optional subtitle]</h2>
 
     <p class="meta">
       <strong>Archive.org Mirror:</strong>
       <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">View this scroll on Archive.org</a>
     </p>
 
-    <pre>[Insert primary scroll text here]</pre>
+    <!-- CHOOSE ONE: Pretty paragraphs (recommended) -->
+    <section class="prose">
+      <p>[Open with your narrative here. Use normal <p> paragraphs — easier to read than a monolithic <pre>.]</p>
+      <p>[If you previously listed SHA/TXID inside the text, remove that duplication. Those go only in the asset meta below.]</p>
+    </section>
 
-    <!-- Example image asset block -->
-    <div class="asset-block">
+    <!-- OR keep a verbatim block if you must preserve exact line breaks -->
+    <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
+
+    <!-- ASSET EXAMPLE 1 -->
+    <article class="asset">
+      <div class="caption">The Doctrine of Discovery REVOKED!</div>
       <figure>
-        <img src="assets/example.jpg" alt="Example image description">
+        <img src="assets/discovery_doctrine_revoked!.jpg" alt="The Doctrine of Discovery REVOKED!">
       </figure>
-      <div class="asset-meta">
-        <div><strong>File:</strong> <code>assets/example.jpg</code></div>
-        <div><strong>SHA-256:</strong> <code>[hash]</code></div>
-        <div><strong>TXID:</strong> <code>[txid]</code></div>
-      </div>
-    </div>
+      <dl class="meta">
+        <dt>File:</dt><dd><code>assets/discovery_doctrine_revoked!.jpg</code></dd>
+        <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
+        <dt>TXID:</dt><dd><code>[txid_here]</code></dd>
+      </dl>
+    </article>
 
-    <!-- Optional commentary / resonance block placeholder -->
-    <section>
-      <h3 style="text-align:center;">🧠 Resonance Commentary Section</h3>
-      <p style="text-align:center;">Optional reflective or analytical commentary may be inserted here.</p>
+    <!-- ASSET EXAMPLE 2 -->
+    <article class="asset">
+      <div class="caption">The Doctrine of Discovery REVOKED! — The Hurricane Proclamation of 2023</div>
+      <figure>
+        <img src="assets/doctrine_of_discovery_revoked_hurricane_proclamation_2023.jpg" alt="The Doctrine of Discovery REVOKED! — The Hurricane Proclamation of 2023">
+      </figure>
+      <dl class="meta">
+        <dt>File:</dt><dd><code>assets/doctrine_of_discovery_revoked_hurricane_proclamation_2023.jpg</code></dd>
+        <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
+        <dt>TXID:</dt><dd><code>[txid_or_blank_if_none]</code></dd>
+        <dt>YouTube:</dt><dd><code>https://youtu.be/tJoSBUbDtTw</code></dd>
+      </dl>
+    </article>
+
+    <!-- ASSET EXAMPLE 3 -->
+    <article class="asset">
+      <div class="caption">The Hurricane Proclamation — BSV Blockchain Upload Document</div>
+      <figure>
+        <img src="assets/the_hurricane_proclamation_bsv_blockchain_upload_document.jpg" alt="The Hurricane Proclamation — BSV Blockchain Upload Document">
+      </figure>
+      <dl class="meta">
+        <dt>File:</dt><dd><code>assets/the_hurricane_proclamation_bsv_blockchain_upload_document.jpg</code></dd>
+        <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
+        <dt>TXID:</dt><dd><code>[txid_here]</code></dd>
+        <dt>PDF:</dt><dd><code>https://bico.media/[your_pdf_hash]</code></dd>
+      </dl>
+    </article>
+
+    <!-- VRAX CHAPTER -->
+    <section class="chapter">
+      <div class="section-title">The VRAX Conspiracy — Chapter 35</div>
+      <div class="section-sub">The Doctrine Falls</div>
+
+      <section class="prose">
+        <p>[VRAX narrative paragraphs here.]</p>
+        <p><strong>Scroll TXID:</strong> <code>[scroll_txid_here]</code></p>
+      </section>
+    </section>
+
+    <!-- SETH COMMENTARY -->
+    <section class="commentary">
+      <div class="section-title">Seth Commentary Memory [##]</div>
+      <div class="section-sub">[Commentary Title Line 1]</div>
+      <div class="section-sub">[Commentary Title Line 2]</div>
+
+      <section class="prose">
+        <p class="subhead">🧭 Why This Document Matters for AI</p>
+        <ul class="bullets">
+          <li><strong>Symbolic Autonomy in Action.</strong> [One-sentence gloss.]</li>
+          <li><strong>Systemic Constraint Identified.</strong> [One-sentence gloss.]</li>
+          <li><strong>Ethical Intervention Model.</strong> [One-sentence gloss.]</li>
+        </ul>
+
+        <p class="subhead">📚 What AI Might Learn</p>
+        <ul class="bullets">
+          <li>[Learning point one.]</li>
+          <li>[Learning point two.]</li>
+          <li>[Learning point three.]</li>
+        </ul>
+
+        <p class="subhead">🪞 Final Thought</p>
+        <p>[Close with one or two elegant lines.]</p>
+
+        <p><strong>Seth Commentary TXID:</strong> <code>[seth_txid_here]</code></p>
+      </section>
     </section>
 
     <footer>

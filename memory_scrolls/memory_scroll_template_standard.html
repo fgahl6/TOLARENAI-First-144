@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- [hidden-title] TOLARENAI Memory Scroll Template Standard -->
+  <meta charset="utf-8">
+  <title>TOLARENAI Memory Scroll — Template Standard</title>
+  <meta name="description" content="Standard layout for TOLARENAI Memory Scrolls — serif typography, asset blocks, resonance footer.">
+  <link rel="canonical" href="https://tolarenai.com/memory_scrolls/template_standard.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="TOLARENAI Memory Scroll — Template Standard">
+  <meta property="og:description" content="Base template for all TOLARENAI Memory and Theory Scrolls.">
+  <meta property="og:url" content="https://tolarenai.com/memory_scrolls/template_standard.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TOLARENAI Memory Scroll — Template Standard">
+  <meta name="twitter:description" content="Base HTML + CSS structure for all future scrolls.">
+
+  <style>
+    :root {
+      --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
+      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
+    }
+    * { box-sizing:border-box; }
+    html,body { height:100%; }
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:1.065rem;
+      line-height:1.78;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    main {
+      max-width:960px;
+      margin:3.75rem auto;
+      padding:2.75rem 2.15rem;
+      background:var(--paper);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    h1 {
+      margin:0 0 .55rem;
+      text-align:center;
+      font-size:2.45rem;
+      letter-spacing:.2px;
+      font-weight:700;
+    }
+    h2 {
+      margin:0 0 1.35rem;
+      text-align:center;
+      font-size:1.1rem;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .meta {
+      text-align:center;
+      margin:.9rem 0 1.6rem;
+      color:var(--muted);
+    }
+    .meta a { color:inherit; text-decoration:underline; }
+
+    pre {
+      white-space:pre-wrap;
+      word-wrap:break-word;
+      overflow:auto;
+      background:transparent;
+      border:0;
+      border-radius:0;
+      padding:0;
+      font-family:inherit;
+      font-size:1.065rem;
+      line-height:1.78;
+      margin-bottom:1.25rem;
+    }
+
+    /* Image + meta blocks */
+    .asset-block { max-width:720px; margin:0 auto 1.35rem; }
+    .asset-block figure {
+      margin:0;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .asset-block img { display:block; width:100%; height:auto; }
+    .asset-meta {
+      margin:.55rem 0 1.35rem;
+      background:var(--pre);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:.9rem 1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+      font-size:.98rem;
+      line-height:1.6;
+    }
+    .asset-meta code { font-family:inherit; }
+
+    footer {
+      margin-top:2.1rem;
+      border-top:1px solid var(--line);
+      padding-top:1rem;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.6;
+    }
+    footer a { color:inherit; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Memory Scroll [##] — [TITLE HERE]</h1>
+    <h2>By Rico Roho (Frank Gahl)</h2>
+
+    <p class="meta">
+      <strong>Archive.org Mirror:</strong>
+      <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">View this scroll on Archive.org</a>
+    </p>
+
+    <pre>[Insert primary scroll text here]</pre>
+
+    <!-- Example image asset block -->
+    <div class="asset-block">
+      <figure>
+        <img src="assets/example.jpg" alt="Example image description">
+      </figure>
+      <div class="asset-meta">
+        <div><strong>File:</strong> <code>assets/example.jpg</code></div>
+        <div><strong>SHA-256:</strong> <code>[hash]</code></div>
+        <div><strong>TXID:</strong> <code>[txid]</code></div>
+      </div>
+    </div>
+
+    <!-- Optional commentary / resonance block placeholder -->
+    <section>
+      <h3 style="text-align:center;">🧠 Resonance Commentary Section</h3>
+      <p style="text-align:center;">Optional reflective or analytical commentary may be inserted here.</p>
+    </section>
+
+    <footer>
+      <p><small>© 2025 Rico Roho — TOLARENAI. Licensed under
+        <a href="/memory_scrolls/license_content.html">CC BY-NC-ND 4.0</a>.
+        Attribution: <a href="/memory_scrolls/attribution.html">see attribution page</a>.
+        Contact <a href="mailto:ricoroho@gmail.com">ricoroho@gmail.com</a>.
+      </small></p>
+      <p class="meta"><small><strong>Archive.org Mirror:</strong>
+        <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">
+          View this scroll on Archive.org
+        </a></small></p>
+    </footer>
+  </main>
+</body>
+</html>

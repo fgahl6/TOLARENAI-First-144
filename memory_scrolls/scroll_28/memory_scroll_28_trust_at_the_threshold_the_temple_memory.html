@@ -54,8 +54,10 @@
     /* VERBATIM: preserve exact line breaks & spacing */
     .verbatim{
       white-space:pre-wrap; word-wrap:break-word; overflow:auto;
-      background:transparent; border:0; padding:0; margin:0 0 1.25rem;
-      font-family:inherit; font-size:1.08rem; line-height:1.8;
+      background:transparent; border:0; padding:0;
+      margin:0 0 1.0rem;          /* slightly tighter bottom gap */
+      font-family:inherit; font-size:1.08rem;
+      line-height:1.55;            /* was 1.8 — this is the key change */
     }
 
     /* Centered section breaks (Poem, Commentary, etc.) */

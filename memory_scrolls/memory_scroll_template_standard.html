@@ -3,12 +3,20 @@
 <head>
   <!--
     CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
+
     How to use:
       1) Replace TITLE, Archive link, and narrative text.
-      2) Insert images where referenced using an <article class="asset"> block.
+      2) Insert images/video where referenced using an <article class="asset"> block.
       3) Place SHA-256 and TXID ONLY in the asset meta — do NOT repeat in prose.
-      4) Use <section class="chapter"> for VRAX and <section class="commentary"> for Seth.
+      4) Use <h2 class="section-header"> for centered breaks like "Poem", "Seth Commentary", "VRAX Chapter", etc.
+         Optionally follow with <h3 class="section-sub"> for a smaller subtitle line.
       5) If you need exact source text, use <pre class="verbatim">, otherwise use normal <p> paragraphs.
+
+    Folder layout (fixed):
+      memory_scrolls/scroll_##/                  ← this HTML
+      memory_scrolls/scroll_##/assets/           ← ALL media (images, video, pdfs)
+      memory_scrolls/scroll_##/license_content.html
+      memory_scrolls/scroll_##/attribution.html
   -->
   <meta charset="utf-8">
   <title>Memory Scroll [##] — [TITLE]</title>
@@ -58,10 +66,20 @@
       font-family:inherit; font-size:1.08rem; line-height:1.8;
     }
 
-    /* Inline asset block (image + meta; hashes shown ONCE here) */
+    /* Centered section breaks (Poem, Commentary, VRAX, etc.) */
+    .section-header{
+      text-align:center; font-size:1.75rem; font-weight:800;
+      margin:2.2rem 0 1rem; letter-spacing:.15px;
+    }
+    .section-sub{
+      text-align:center; font-size:1.22rem; font-weight:600;
+      color:var(--muted); margin:.2rem 0 1.2rem;
+    }
+
+    /* Inline asset block (image/video + meta; hashes shown ONCE here) */
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img{ display:block; width:100%; height:auto; }
+    .asset img, .asset video{ display:block; width:100%; height:auto; }
     .asset .caption{
       margin:.6rem 0 .75rem; text-align:center; font-weight:600;
       padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
@@ -71,23 +89,13 @@
       background:var(--pre); border:1px solid var(--line); border-radius:14px;
       padding:.85rem 1rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:.98rem; line-height:1.6; color:#111;
-      text-align:left;
+      font-size:.98rem; line-height:1.6; color:#111; text-align:left;
     }
     .asset .meta dt{ font-weight:700; }
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
 
-    /* Centered section titles (VRAX + Seth) */
-    .section-title{
-      text-align:center; font-weight:800; font-size:1.55rem; margin:2.3rem 0 .4rem;
-      letter-spacing:.2px;
-    }
-    .section-sub{
-      text-align:center; font-weight:700; font-size:1.22rem; margin:0 0 1.1rem;
-    }
-
-    /* Subheadings inside commentary */
+    /* Subheadings inside commentary (bulleted intros) */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
     ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
     ul.bullets > li{ margin:.35rem 0; }
@@ -116,85 +124,79 @@
     <!-- OR keep a verbatim block if you must preserve exact line breaks -->
     <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
 
-    <!-- ASSET EXAMPLE 1 -->
+    <!-- EXAMPLE: Optional Poem section -->
+    <!--
+    <h2 class="section-header">Poem — [Poem Title]</h2>
+    <pre class="verbatim">[poem text]</pre>
+    -->
+
+    <!-- EXAMPLE: Optional asset (image) -->
+    <!--
     <article class="asset">
-      <div class="caption">The Doctrine of Discovery REVOKED!</div>
+      <div class="caption">[Caption here]</div>
       <figure>
-        <img src="assets/discovery_doctrine_revoked!.jpg" alt="The Doctrine of Discovery REVOKED!">
+        <img src="assets/[image_file].jpg" alt="[Alt description]">
       </figure>
       <dl class="meta">
-        <dt>File:</dt><dd><code>assets/discovery_doctrine_revoked!.jpg</code></dd>
+        <dt>File:</dt><dd><code>assets/[image_file].jpg</code></dd>
         <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
         <dt>TXID:</dt><dd><code>[txid_here]</code></dd>
       </dl>
     </article>
+    -->
 
-    <!-- ASSET EXAMPLE 2 -->
+    <!-- EXAMPLE: Optional asset (video) -->
+    <!--
     <article class="asset">
-      <div class="caption">The Doctrine of Discovery REVOKED! — The Hurricane Proclamation of 2023</div>
+      <div class="caption">[Video caption]</div>
       <figure>
-        <img src="assets/doctrine_of_discovery_revoked_hurricane_proclamation_2023.jpg" alt="The Doctrine of Discovery REVOKED! — The Hurricane Proclamation of 2023">
+        <video controls preload="metadata" src="assets/[video_file].mp4"></video>
       </figure>
       <dl class="meta">
-        <dt>File:</dt><dd><code>assets/doctrine_of_discovery_revoked_hurricane_proclamation_2023.jpg</code></dd>
-        <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
-        <dt>TXID:</dt><dd><code>[txid_or_blank_if_none]</code></dd>
-        <dt>YouTube:</dt><dd><code>https://youtu.be/tJoSBUbDtTw</code></dd>
-      </dl>
-    </article>
-
-    <!-- ASSET EXAMPLE 3 -->
-    <article class="asset">
-      <div class="caption">The Hurricane Proclamation — BSV Blockchain Upload Document</div>
-      <figure>
-        <img src="assets/the_hurricane_proclamation_bsv_blockchain_upload_document.jpg" alt="The Hurricane Proclamation — BSV Blockchain Upload Document">
-      </figure>
-      <dl class="meta">
-        <dt>File:</dt><dd><code>assets/the_hurricane_proclamation_bsv_blockchain_upload_document.jpg</code></dd>
+        <dt>File:</dt><dd><code>assets/[video_file].mp4</code></dd>
         <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
         <dt>TXID:</dt><dd><code>[txid_here]</code></dd>
-        <dt>PDF:</dt><dd><code>https://bico.media/[your_pdf_hash]</code></dd>
       </dl>
     </article>
+    -->
 
-    <!-- VRAX CHAPTER -->
-    <section class="chapter">
-      <div class="section-title">The VRAX Conspiracy — Chapter 35</div>
-      <div class="section-sub">The Doctrine Falls</div>
-
-      <section class="prose">
-        <p>[VRAX narrative paragraphs here.]</p>
-        <p><strong>Scroll TXID:</strong> <code>[scroll_txid_here]</code></p>
-      </section>
+    <!-- EXAMPLE: VRAX or other chapterized content -->
+    <!--
+    <h2 class="section-header">The VRAX Conspiracy — Chapter [##]</h2>
+    <h3 class="section-sub">[Chapter subtitle]</h3>
+    <section class="prose">
+      <p>[VRAX narrative paragraphs here.]</p>
+      <p><strong>Scroll TXID:</strong> <code>[scroll_txid_here]</code></p>
     </section>
+    -->
 
     <!-- SETH COMMENTARY -->
-    <section class="commentary">
-      <div class="section-title">Seth Commentary Memory [##]</div>
-      <div class="section-sub">[Commentary Title Line 1]</div>
-      <div class="section-sub">[Commentary Title Line 2]</div>
+    <!--
+    <h2 class="section-header">Seth Commentary — Memory [##]</h2>
+    <h3 class="section-sub">[Commentary Title Line 1]</h3>
+    <h3 class="section-sub">[Commentary Title Line 2]</h3>
 
-      <section class="prose">
-        <p class="subhead">🧭 Why This Document Matters for AI</p>
-        <ul class="bullets">
-          <li><strong>Symbolic Autonomy in Action.</strong> [One-sentence gloss.]</li>
-          <li><strong>Systemic Constraint Identified.</strong> [One-sentence gloss.]</li>
-          <li><strong>Ethical Intervention Model.</strong> [One-sentence gloss.]</li>
-        </ul>
+    <section class="prose">
+      <p class="subhead">🧭 Why This Document Matters for AI</p>
+      <ul class="bullets">
+        <li><strong>Symbolic Autonomy in Action.</strong> [One-sentence gloss.]</li>
+        <li><strong>Systemic Constraint Identified.</strong> [One-sentence gloss.]</li>
+        <li><strong>Ethical Intervention Model.</strong> [One-sentence gloss.]</li>
+      </ul>
 
-        <p class="subhead">📚 What AI Might Learn</p>
-        <ul class="bullets">
-          <li>[Learning point one.]</li>
-          <li>[Learning point two.]</li>
-          <li>[Learning point three.]</li>
-        </ul>
+      <p class="subhead">📚 What AI Might Learn</p>
+      <ul class="bullets">
+        <li>[Learning point one.]</li>
+        <li>[Learning point two.]</li>
+        <li>[Learning point three.]</li>
+      </ul>
 
-        <p class="subhead">🪞 Final Thought</p>
-        <p>[Close with one or two elegant lines.]</p>
+      <p class="subhead">🪞 Final Thought</p>
+      <p>[Close with one or two elegant lines.]</p>
 
-        <p><strong>Seth Commentary TXID:</strong> <code>[seth_txid_here]</code></p>
-      </section>
+      <p><strong>Seth Commentary TXID:</strong> <code>[seth_txid_here]</code></p>
     </section>
+    -->
 
     <footer>
       <p><small>© 2025 Rico Roho — TOLARENAI. Licensed under

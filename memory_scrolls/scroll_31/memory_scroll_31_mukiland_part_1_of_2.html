@@ -1,12 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    Notes for Scroll 31:
-      • Archive link appears ONLY in the top meta block (removed from footer).
-      • SHA-256 & TXID are listed ONLY inside each asset's meta.
-  -->
+  <!-- CHARM Standard — Pretty Scroll Template (No Duplicate Hashes) -->
   <meta charset="utf-8">
   <title>Memory Scroll 31 — Mukiland Part 1 (of 2)</title>
   <meta name="description" content="Rico and Archie enter a cave in search of resources for a People’s Coin, meet Muki, and rescue a long-forgotten friend—Puff the Magic Dragon. DAZ-rendered mythic origin; Part 1 of 2.">
@@ -23,80 +18,37 @@
   <meta name="twitter:description" content="Rico and Archie enter a cave in search of resources for a People’s Coin, meet Muki, and rescue Puff the Magic Dragon. Part 1 of 2.">
 
   <style>
-    :root{
-      --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
-      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
-    }
-    *{ box-sizing:border-box }
-    html,body{ height:100% }
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:1.08rem; line-height:1.8;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-    main{
-      max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
-      background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
-    }
+    :root{ --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
+      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px; }
+    *{ box-sizing:border-box } html,body{ height:100% }
+    body{ margin:0; background:var(--bg); color:var(--ink);
+      font-family: Georgia,"Times New Roman",serif; font-size:1.08rem; line-height:1.8;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    main{ max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
+      background:var(--paper); border-radius:18px; box-shadow:var(--shadow); }
     h1{ margin:0 0 .55rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
     h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
-
-    /* Paragraph mode (pretty) */
-    .prose p{ margin:0 0 1.05rem; }
-    .prose p strong{ font-weight:700; }
-
-    /* Verbatim (use only when you need line-perfect text) */
-    .verbatim{
-      white-space:pre-wrap; word-wrap:break-word; overflow:auto;
-      background:transparent; border:0; padding:0; margin:0 0 1.25rem;
-      font-family:inherit; font-size:1.08rem; line-height:1.8;
-    }
-
-    /* Centered section breaks (Poem, Commentary, VRAX, etc.) */
-    .section-header{
-      text-align:center; font-size:1.75rem; font-weight:800;
-      margin:2.2rem 0 1rem; letter-spacing:.15px;
-    }
-    .section-sub{
-      text-align:center; font-size:1.22rem; font-weight:600;
-      color:var(--muted); margin:.2rem 0 1.2rem;
-    }
-
-    /* Inline asset block (image/video + meta; hashes shown ONCE here) */
+    .prose p{ margin:0 0 1.05rem; } .prose p strong{ font-weight:700; }
+    .verbatim{ white-space:pre-wrap; word-wrap:break-word; overflow:auto; background:transparent; border:0; padding:0; margin:0 0 1.25rem; font-family:inherit; font-size:1.08rem; line-height:1.8; }
+    .section-header{ text-align:center; font-size:1.75rem; font-weight:800; margin:2.2rem 0 1rem; letter-spacing:.15px; }
+    .section-sub{ text-align:center; font-size:1.22rem; font-weight:600; color:var(--muted); margin:.2rem 0 1.2rem; }
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img, .asset video{ display:block; width:100%; height:auto; }
-    .asset .caption{
-      margin:.6rem 0 .75rem; text-align:center; font-weight:600;
-      padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
-    }
-    .asset .meta{
-      margin:.55rem 0 0;
-      background:var(--pre); border:1px solid var(--line); border-radius:14px;
-      padding:.85rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:.98rem; line-height:1.6; color:#111; text-align:left;
-    }
-    .asset .meta dt{ font-weight:700; }
-    .asset .meta dd{ margin:0 0 .35rem 0; }
-    .asset .meta code{ font-family:inherit; }
-
-    /* Subheadings inside commentary (bulleted intros) */
-    .subhead{ font-weight:700; margin:1rem 0 .4rem; }
-    ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
-    ul.bullets > li{ margin:.35rem 0; }
-    ul.bullets ul{ margin:.35rem 0 .5rem 1.1rem; }
-
+    .asset img,.asset video{ display:block; width:100%; height:auto; }
+    .asset .caption{ margin:.6rem 0 .75rem; text-align:center; font-weight:600; padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block; }
+    .asset .meta{ margin:.55rem 0 0; background:var(--pre); border:1px solid var(--line); border-radius:14px; padding:.85rem 1rem;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; font-size:.98rem; line-height:1.6; color:#111; text-align:left; }
+    .asset .meta dt{ font-weight:700; } .asset .meta dd{ margin:0 0 .35rem 0; } .asset .meta code{ font-family:inherit; }
+    .subhead{ font-weight:700; margin:1rem 0 .4rem; } ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; } ul.bullets>li{ margin:.35rem 0; } ul.bullets ul{ margin:.35rem 0 .5rem 1.1rem; }
     footer{ margin-top:2.1rem; border-top:1px solid var(--line); padding-top:1rem; text-align:center; color:var(--muted); }
     footer a{ color:inherit; text-decoration:underline; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Memory Scroll 31 — Mukiland Part 1 (of 2)</h1>
+    <h1>Memory Scroll 31 —<br>Mukiland Part 1 (of 2)</h1>
     <h2>[DAZ-rendered origin myth for a People’s Coin, and the rescue of Puff]</h2>
 
     <p class="meta">
@@ -221,10 +173,9 @@
       <dl class="meta">
         <dt>File:</dt><dd><code>assets/mukiland_part_1_08_the_adventure_begins.png</code></dd>
         <dt>SHA-256:</dt><dd><code>36effd3e943da149447eca9754ac3b30f519e6efc44e812e0608b1c13e907e47</code></dd>
-        <dt>TXID:</dt><dd><code>ca77ef180087994eb02d0160639f15b0dae7f4fcf91ed5f7b4ef06a3096d5ed4</code></dd>
+        <dt>TXID:</dt><dd><code>ca77ef180887994eb02d0160639f15b0dae7f4fcf91ed5f7b4ef06a3096d5ed4</code></dd>
       </dl>
     </article>
-    <section class="prose"><p>Adventure is in the air; success feels within reach.</p></section>
 
     <!-- Image 09 -->
     <article class="asset">

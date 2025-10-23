@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2025-10-05</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -4263,6 +4263,12 @@
   <url>
     <loc>https://tolarenai.com/quotes/712_the_dream_at_the_end_of_time.html</loc>
     <lastmod>2025-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/quotes/713_some_think_giving_a_hand_up_lowers_the_one_extending.html</loc>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

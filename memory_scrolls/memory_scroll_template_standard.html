@@ -94,6 +94,13 @@
       color:var(--muted); margin:.2rem 0 1.2rem;
     }
 
+    /* NEW: Tighten spacing when headers are stacked (e.g., two-line titles) */
+    .section-header + .section-header,
+    .section-header + .section-sub{
+      margin-top:.35rem;          /* smaller gap above the second line */
+      margin-bottom:.85rem;       /* tighter gap before following content */
+    }
+
     /* Inline asset block (image/video + meta; hashes shown ONCE here) */
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }

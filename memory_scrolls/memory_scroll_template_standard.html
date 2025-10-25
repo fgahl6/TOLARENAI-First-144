@@ -3,34 +3,13 @@
 <head>
   <!--
     CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    ON EVERY SCROLL USE VERBATIM MODE:
-      Render exactly as provided.
-      No edits, no paraphrasing, no reformatting, no truncation.
-      Preserve every character, including spacing, line breaks, and punctuation.
-
-    HOW TO USE (STABLE HEADERS — READ THIS):
-      • All section breaks (Seth Commentary, VRAX, Poem, + any later sections) use:
-          <h3 class="section-header">Main line</h3>
-          <h4 class="section-sub">Optional subtitle line 1</h4>
-          <h4 class="section-sub">Optional subtitle line 2</h4>
-        DO NOT place <p>, <br>, or <strong> between these lines.
-
-      • Spacing is controlled by CSS for stacked headers:
-          .section-header + .section-sub  (tight)
-          .section-sub + .section-sub     (tight)
-        This keeps multi-line headers compact (especially Seth Commentary),
-        and applies to ANY multi-line headers that appear after Seth Commentary too.
-
-      • If someone accidentally uses <h2> or <h5> with these classes,
-        safety rules keep the visual size/spacing consistent — but please prefer h3/h4.
-
-      • Exact-source text? Use <pre class="verbatim">. Otherwise, normal <p> in <section class="prose">.
-
-    Folder layout (fixed):
-      memory_scrolls/scroll_##/                  ← this HTML
-      memory_scrolls/scroll_##/assets/           ← ALL media (images, video, pdfs)
-      memory_scrolls/scroll_##/license_content.html
-      memory_scrolls/scroll_##/attribution.html
+    VERBATIM MODE: render text exactly as provided.
+    HEADERS (LOCKED):
+      For any section with 1+ lines (e.g., Seth Commentary):
+        <h3 class="section-header">Main line</h3>
+        <h4 class="section-sub">Second line (same size)</h4>
+        <h4 class="section-sub">Third line (same size, optional)</h4>
+      Do NOT put <p>, <br>, or <strong> between these lines.
   -->
   <meta charset="utf-8">
   <title>Memory Scroll [##] — [TITLE]</title>
@@ -75,37 +54,29 @@
 
     /* Verbatim (exact archival text with standardized spacing) */
     .verbatim{
-      white-space:pre-wrap;
-      word-wrap:break-word;
-      overflow:auto;
-      background:transparent;
-      border:0;
-      padding:0;
-      margin:0 0 1.05rem;
-      font-family:inherit;
-      font-size:1.08rem;
-      line-height:1.52; /* STANDARD across all scrolls */
+      white-space:pre-wrap; word-wrap:break-word; overflow:auto;
+      background:transparent; border:0; padding:0; margin:0 0 1.05rem;
+      font-family:inherit; font-size:1.08rem; line-height:1.52;
     }
 
-    /* --- Centered section breaks (STABLE) ---
-       Use h3.section-header and h4.section-sub ONLY.
-       Stacked spacing is tightened to keep multi-line headers compact. */
+    /* === Centered section breaks (SAME SIZE lines) === */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800;
       margin:2.0rem 0 0.35rem; letter-spacing:.15px;
     }
     .section-sub{
-      text-align:center; font-size:1.22rem; font-weight:700;
+      text-align:center; font-size:1.75rem; font-weight:800;   /* same size/weight */
       color:var(--muted); margin:0.15rem 0 0.35rem;
     }
-    .section-header + .section-sub{ margin-top:0.20rem; margin-bottom:0.50rem; }
+    /* Tight stacking */
+    .section-header + .section-sub{ margin-top:0.20rem; margin-bottom:0.45rem; }
     .section-sub + .section-sub{  margin-top:0.15rem; margin-bottom:0.45rem; }
 
-    /* Safety: if h2/h5 are accidentally used, keep visuals consistent */
+    /* Safety if wrong tag used */
     h2.section-header, h5.section-header{ font-size:1.75rem; font-weight:800; text-align:center; margin:2.0rem 0 0.35rem; }
-    h2.section-sub,   h5.section-sub{   font-size:1.22rem; font-weight:700; text-align:center; color:var(--muted); margin:0.15rem 0 0.35rem; }
+    h2.section-sub,   h5.section-sub{   font-size:1.75rem; font-weight:800; text-align:center; color:var(--muted); margin:0.15rem 0 0.35rem; }
 
-    /* Inline asset block (image/video/audio + meta; hashes shown ONCE here) */
+    /* Assets */
     .asset{ max-width:720px; margin:.35rem auto 1.0rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
     .asset img, .asset video, .asset audio{ display:block; width:100%; height:auto; }
@@ -114,8 +85,7 @@
       padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
     }
     .asset .meta{
-      margin:.55rem 0 0;
-      background:var(--pre); border:1px solid var(--line); border-radius:14px;
+      margin:.55rem 0 0; background:var(--pre); border:1px solid var(--line); border-radius:14px;
       padding:.85rem 1rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size:.98rem; line-height:1.6; color:#111; text-align:left;
@@ -124,7 +94,7 @@
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
 
-    /* Subheadings inside commentary (bulleted intros) */
+    /* Bulleted intros inside commentary */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
     ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
     ul.bullets > li{ margin:.35rem 0; }
@@ -144,23 +114,23 @@
       <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">View this scroll on Archive.org</a>
     </p>
 
-    <!-- CHOOSE ONE: Pretty paragraphs (recommended) -->
+    <!-- Pretty paragraphs (recommended) -->
     <section class="prose">
       <p>[Open with your narrative here. Use normal <p> paragraphs — easier to read than a monolithic <pre>.]</p>
       <p>[If you previously listed SHA/TXID inside the text, remove that duplication. Those go only in the asset meta below.]</p>
     </section>
 
-    <!-- OR keep a verbatim block if you must preserve exact line breaks -->
+    <!-- Or: Verbatim block -->
     <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
 
-    <!-- EXAMPLE: Optional Poem section -->
+    <!-- Example: Poem -->
     <!--
     <h3 class="section-header">Poem — [Poem Title]</h3>
     <h4 class="section-sub">[Optional subtitle line]</h4>
     <pre class="verbatim">[poem text]</pre>
     -->
 
-    <!-- EXAMPLE: Optional asset (image) -->
+    <!-- Example: Asset -->
     <!--
     <article class="asset">
       <div class="caption">[Caption here]</div>
@@ -175,7 +145,7 @@
     </article>
     -->
 
-    <!-- EXAMPLE: Optional asset (video/audio) -->
+    <!-- Example: Video/Audio Asset -->
     <!--
     <article class="asset">
       <div class="caption">[Media caption]</div>
@@ -192,7 +162,7 @@
     </article>
     -->
 
-    <!-- EXAMPLE: VRAX or other chapterized content -->
+    <!-- Example: VRAX / chapterized -->
     <!--
     <h3 class="section-header">The VRAX Conspiracy — Chapter [##]</h3>
     <h4 class="section-sub">[Chapter subtitle]</h4>

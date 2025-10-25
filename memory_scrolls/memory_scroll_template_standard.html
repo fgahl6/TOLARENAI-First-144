@@ -3,18 +3,28 @@
 <head>
   <!--
     CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    ON EVERY SCROLL USE VERBATIM MODE: 
-      Render exactly as provided. 
+    ON EVERY SCROLL USE VERBATIM MODE:
+      Render exactly as provided.
       No edits, no paraphrasing, no reformatting, no truncation.
       Preserve every character, including spacing, line breaks, and punctuation.
 
-    HOW TO USE (UPDATED — h3/h4 headers):
-      1) Replace TITLE, Archive link, and narrative text.
-      2) Insert images/video where referenced using an <article class="asset"> block.
-      3) Place SHA-256 and TXID ONLY in the asset meta — do NOT repeat in prose.
-      4) Use <h3 class="section-header"> for centered breaks like "Poem", "Seth Commentary", "VRAX Chapter", etc.
-         Optionally follow with <h4 class="section-sub"> for one or more smaller subtitle lines.
-      5) If you need exact source text, use <pre class="verbatim">, otherwise use normal <p> paragraphs.
+    HOW TO USE (STABLE HEADERS — READ THIS):
+      • All section breaks (Seth Commentary, VRAX, Poem, + any later sections) use:
+          <h3 class="section-header">Main line</h3>
+          <h4 class="section-sub">Optional subtitle line 1</h4>
+          <h4 class="section-sub">Optional subtitle line 2</h4>
+        DO NOT place <p>, <br>, or <strong> between these lines.
+
+      • Spacing is controlled by CSS for stacked headers:
+          .section-header + .section-sub  (tight)
+          .section-sub + .section-sub     (tight)
+        This keeps multi-line headers compact (especially Seth Commentary),
+        and applies to ANY multi-line headers that appear after Seth Commentary too.
+
+      • If someone accidentally uses <h2> or <h5> with these classes,
+        safety rules keep the visual size/spacing consistent — but please prefer h3/h4.
+
+      • Exact-source text? Use <pre class="verbatim">. Otherwise, normal <p> in <section class="prose">.
 
     Folder layout (fixed):
       memory_scrolls/scroll_##/                  ← this HTML
@@ -74,30 +84,29 @@
       margin:0 0 1.05rem;
       font-family:inherit;
       font-size:1.08rem;
-      line-height:1.52; /* STANDARDIZED across ALL scrolls */
+      line-height:1.52; /* STANDARD across all scrolls */
     }
 
-    /* Centered section breaks (Poem, Commentary, VRAX, etc.) 
-       NOTE: Use h3.section-header (primary) and h4.section-sub (stacked subtitles). */
+    /* --- Centered section breaks (STABLE) ---
+       Use h3.section-header and h4.section-sub ONLY.
+       Stacked spacing is tightened to keep multi-line headers compact. */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800;
-      margin:2.2rem 0 1rem; letter-spacing:.15px;
+      margin:2.0rem 0 0.35rem; letter-spacing:.15px;
     }
     .section-sub{
       text-align:center; font-size:1.22rem; font-weight:700;
-      color:var(--muted); margin:.2rem 0 1.0rem;
+      color:var(--muted); margin:0.15rem 0 0.35rem;
     }
+    .section-header + .section-sub{ margin-top:0.20rem; margin-bottom:0.50rem; }
+    .section-sub + .section-sub{  margin-top:0.15rem; margin-bottom:0.45rem; }
 
-    /* Tighten spacing when headers are stacked (e.g., multi-line subtitles) */
-    .section-header + .section-sub{ margin-top:.35rem; margin-bottom:.85rem; }
-    .section-sub + .section-sub{ margin-top:.35rem; margin-bottom:.85rem; }
-
-    /* Safety: if someone accidentally uses h2/h5 with these classes, keep visuals consistent */
-    h2.section-header, h5.section-header{ font-size:1.75rem; font-weight:800; text-align:center; }
-    h2.section-sub, h5.section-sub{ font-size:1.22rem; font-weight:700; text-align:center; color:var(--muted); }
+    /* Safety: if h2/h5 are accidentally used, keep visuals consistent */
+    h2.section-header, h5.section-header{ font-size:1.75rem; font-weight:800; text-align:center; margin:2.0rem 0 0.35rem; }
+    h2.section-sub,   h5.section-sub{   font-size:1.22rem; font-weight:700; text-align:center; color:var(--muted); margin:0.15rem 0 0.35rem; }
 
     /* Inline asset block (image/video/audio + meta; hashes shown ONCE here) */
-    .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
+    .asset{ max-width:720px; margin:.35rem auto 1.0rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
     .asset img, .asset video, .asset audio{ display:block; width:100%; height:auto; }
     .asset .caption{

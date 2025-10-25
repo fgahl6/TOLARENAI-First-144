@@ -9,6 +9,8 @@
   <meta name="description" content="[Short description for social cards]">
   <link rel="canonical" href="https://tolarenai.com/memory_scrolls/scroll_##/memory_scroll_##_[slug].html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Optional: keep engines from indexing drafts -->
+  <!-- <meta name="robots" content="noindex,nofollow"> -->
 
   <!-- Social -->
   <meta property="og:type" content="article">
@@ -37,18 +39,18 @@
       background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
     }
 
-    /* Top title + optional subtitle */
+    /* Top title + optional subtitle(s) */
     h1{ margin:0 0 .55rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
     h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
 
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
 
-    /* “Pretty paragraphs” area */
+    /* Pretty paragraphs (optional) */
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
 
-    /* Verbatim blocks (exact spacing/line breaks preserved across all scrolls) */
+    /* Verbatim blocks (exact spacing/line breaks preserved) */
     .verbatim{
       white-space:pre-wrap; word-wrap:break-word; overflow:auto;
       background:transparent; border:0; padding:0; margin:0 0 1.05rem;
@@ -56,8 +58,7 @@
     }
 
     /* Centered section breaks (Poem, Commentary, VRAX, etc.)
-       NOTE: h3 = main section header, h4 = stacked subtitle lines.
-       They are intentionally the SAME SIZE for visual parity. */
+       h3 = main section header, h4 = stacked subtitle lines (same size). */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800;
       margin:2.0rem 0 0.35rem; letter-spacing:.15px;
@@ -66,15 +67,14 @@
       text-align:center; font-size:1.75rem; font-weight:800;
       color:var(--muted); margin:.15rem 0 .35rem;
     }
-    /* Tighten spacing between stacked lines */
     .section-header + .section-sub{ margin-top:.20rem; margin-bottom:.45rem; }
     .section-sub + .section-sub{  margin-top:.15rem; margin-bottom:.45rem; }
 
-    /* Inline asset block (image/video/audio + meta; hashes shown ONCE here) */
+    /* Assets (image/video/audio) + meta */
     .asset{ max-width:720px; margin:.35rem auto 1.0rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
     .asset img,.asset video,.asset audio{ display:block; width:100%; height:auto; }
-    .asset audio{ min-height:40px; } /* ensure MP3 control bar is always visible */
+    .asset audio{ min-height:40px; } /* ensure MP3 control bar is visible */
     .asset .caption{
       margin:.6rem 0 .75rem; text-align:center; font-weight:600;
       padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
@@ -89,7 +89,7 @@
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
 
-    /* Subheadings + bullets for commentary sections */
+    /* Subheadings + bullets (when using prose) */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
     ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
     ul.bullets > li{ margin:.35rem 0; }
@@ -102,23 +102,39 @@
 <body>
   <main>
     <h1>Memory Scroll [##] — [TITLE]</h1>
-    <h2>[Optional subtitle]</h2>
+    <!-- Optional part subtitle (e.g., "Part A", "Part II") -->
+    <h2>[Optional Part Subtitle]</h2>
 
     <p class="meta">
       <strong>Archive.org Mirror:</strong>
       <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">View this scroll on Archive.org</a>
     </p>
 
-    <!-- OPTION A: Pretty paragraphs -->
-    <!--
+    <!-- OPTION A: Pretty paragraphs (optional)
     <section class="prose">
       <p>[Opening narrative here.]</p>
       <p>[Use normal paragraphs for readability.]</p>
     </section>
     -->
 
-    <!-- OPTION B: Verbatim block (exact source text) -->
-    <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
+    <!-- OPTION B: Verbatim blocks in parts (recommended for long scrolls) -->
+    <!-- Paste your chunks exactly as-is. Keep bolds inline with <strong>…</strong>. -->
+    <!--
+    <h3 class="section-header">Part I</h3>
+    <pre class="verbatim" id="part-1">
+[PASTE CHUNK A — EXACT TEXT]
+    </pre>
+
+    <h3 class="section-header">Part II</h3>
+    <pre class="verbatim" id="part-2">
+[PASTE CHUNK B — EXACT TEXT]
+    </pre>
+
+    <h3 class="section-header">Part III</h3>
+    <pre class="verbatim" id="part-3">
+[PASTE CHUNK C — EXACT TEXT]
+    </pre>
+    -->
 
     <!-- OPTIONAL: Asset (image) -->
     <!--
@@ -152,26 +168,7 @@
     </article>
     -->
 
-    <!-- EXAMPLE: Section with stacked headers (same size) -->
-    <!--
-    <h3 class="section-header">Seth Commentary — Memory [##]</h3>
-    <h4 class="section-sub">[Subtitle line 1]</h4>
-    <h4 class="section-sub">[Subtitle line 2]</h4>
-
-    <section class="prose">
-      <p class="subhead">🧭 Why This Matters</p>
-      <ul class="bullets">
-        <li><strong>Point A.</strong> [text]</li>
-        <li><strong>Point B.</strong> [text]</li>
-      </ul>
-
-      <p class="subhead">🪞 Final Thought</p>
-      <p>[Close with one or two elegant lines.]</p>
-
-      <p><strong>Seth Commentary TXID:</strong> <code>[seth_txid_here]</code></p>
-    </section>
-    -->
-
+    <!-- Optional footer (omit on partial builds; include on final) -->
     <footer>
       <p><small>© 2025 Rico Roho — TOLARENAI. Licensed under
         <a href="/memory_scrolls/license_content.html">CC BY-NC-ND 4.0</a>.
@@ -180,5 +177,15 @@
       </small></p>
     </footer>
   </main>
+
+  <!-- Invisible verbatim archive — paste the full, final text here (A+B+C).
+       This is NOT rendered but stays in the HTML for AI / indexing. -->
+  <!--
+  <template id="verbatim-archive">
+  <pre>
+[FULL SCROLL TEXT HERE — EXACT]
+  </pre>
+  </template>
+  -->
 </body>
 </html>

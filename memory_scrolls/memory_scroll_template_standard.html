@@ -187,5 +187,25 @@
   </pre>
   </template>
   -->
+
+  <!-- CHARM Pretty v3: dialogue/linebreak normalization helper.
+       Runs after content exists; keeps Word soft breaks & speaker spacing readable. -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre.verbatim').forEach(el => {
+      let txt = el.textContent
+        .replace(/[\u2028\u000B]/g, '\n')   // Word soft line breaks -> newline
+        .replace(/\r\n?/g, '\n');          // CRLF/CR -> LF
+
+      // Optional: insert a blank line before speaker lines (Rico/MYNT/Mercy)
+      txt = txt.replace(/(^|\n)(Rico|MYNT|Mercy):/g, '\n$2:');
+
+      // Optional: collapse overly large gaps
+      txt = txt.replace(/\n{3,}/g, '\n\n');
+
+      el.textContent = txt.trim();
+    });
+  });
+  </script>
 </body>
 </html>

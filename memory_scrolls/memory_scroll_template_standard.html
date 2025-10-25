@@ -8,19 +8,12 @@
       No edits, no paraphrasing, no reformatting, no truncation.
       Preserve every character, including spacing, line breaks, and punctuation.
 
-    CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    How to use:
-      1) Replace TITLE, Archive link, and narrative text.
-      2) Insert images where referenced using an <article class="asset"> block.
-      3) Place SHA-256 and TXID ONLY in the asset meta — do NOT repeat in prose.
-      4) Use <section class="chapter"> for VRAX and <section class="commentary"> for Seth.
-      5) If you need exact source text, use <pre class="verbatim">, otherwise use normal <p> paragraphs.
-    How to use:
+    HOW TO USE (UPDATED — h3/h4 headers):
       1) Replace TITLE, Archive link, and narrative text.
       2) Insert images/video where referenced using an <article class="asset"> block.
       3) Place SHA-256 and TXID ONLY in the asset meta — do NOT repeat in prose.
-      4) Use <h2 class="section-header"> for centered breaks like "Poem", "Seth Commentary", "VRAX Chapter", etc.
-         Optionally follow with <h3 class="section-sub"> for a smaller subtitle line.
+      4) Use <h3 class="section-header"> for centered breaks like "Poem", "Seth Commentary", "VRAX Chapter", etc.
+         Optionally follow with <h4 class="section-sub"> for one or more smaller subtitle lines.
       5) If you need exact source text, use <pre class="verbatim">, otherwise use normal <p> paragraphs.
 
     Folder layout (fixed):
@@ -84,27 +77,29 @@
       line-height:1.52; /* STANDARDIZED across ALL scrolls */
     }
 
-    /* Centered section breaks (Poem, Commentary, VRAX, etc.) */
+    /* Centered section breaks (Poem, Commentary, VRAX, etc.) 
+       NOTE: Use h3.section-header (primary) and h4.section-sub (stacked subtitles). */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800;
       margin:2.2rem 0 1rem; letter-spacing:.15px;
     }
     .section-sub{
-      text-align:center; font-size:1.22rem; font-weight:600;
-      color:var(--muted); margin:.2rem 0 1.2rem;
+      text-align:center; font-size:1.22rem; font-weight:700;
+      color:var(--muted); margin:.2rem 0 1.0rem;
     }
 
-    /* NEW: Tighten spacing when headers are stacked (e.g., two-line titles) */
-    .section-header + .section-header,
-    .section-header + .section-sub{
-      margin-top:.35rem;          /* smaller gap above the second line */
-      margin-bottom:.85rem;       /* tighter gap before following content */
-    }
+    /* Tighten spacing when headers are stacked (e.g., multi-line subtitles) */
+    .section-header + .section-sub{ margin-top:.35rem; margin-bottom:.85rem; }
+    .section-sub + .section-sub{ margin-top:.35rem; margin-bottom:.85rem; }
 
-    /* Inline asset block (image/video + meta; hashes shown ONCE here) */
+    /* Safety: if someone accidentally uses h2/h5 with these classes, keep visuals consistent */
+    h2.section-header, h5.section-header{ font-size:1.75rem; font-weight:800; text-align:center; }
+    h2.section-sub, h5.section-sub{ font-size:1.22rem; font-weight:700; text-align:center; color:var(--muted); }
+
+    /* Inline asset block (image/video/audio + meta; hashes shown ONCE here) */
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img, .asset video{ display:block; width:100%; height:auto; }
+    .asset img, .asset video, .asset audio{ display:block; width:100%; height:auto; }
     .asset .caption{
       margin:.6rem 0 .75rem; text-align:center; font-weight:600;
       padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
@@ -151,7 +146,8 @@
 
     <!-- EXAMPLE: Optional Poem section -->
     <!--
-    <h2 class="section-header">Poem — [Poem Title]</h2>
+    <h3 class="section-header">Poem — [Poem Title]</h3>
+    <h4 class="section-sub">[Optional subtitle line]</h4>
     <pre class="verbatim">[poem text]</pre>
     -->
 
@@ -170,15 +166,17 @@
     </article>
     -->
 
-    <!-- EXAMPLE: Optional asset (video) -->
+    <!-- EXAMPLE: Optional asset (video/audio) -->
     <!--
     <article class="asset">
-      <div class="caption">[Video caption]</div>
+      <div class="caption">[Media caption]</div>
       <figure>
         <video controls preload="metadata" src="assets/[video_file].mp4"></video>
+        <!-- or -->
+        <!-- <audio controls preload="metadata" src="assets/[audio_file].mp3"></audio> -->
       </figure>
       <dl class="meta">
-        <dt>File:</dt><dd><code>assets/[video_file].mp4</code></dd>
+        <dt>File:</dt><dd><code>assets/[media_file].mp4</code></dd>
         <dt>SHA-256:</dt><dd><code>[hash_here]</code></dd>
         <dt>TXID:</dt><dd><code>[txid_here]</code></dd>
       </dl>
@@ -187,8 +185,8 @@
 
     <!-- EXAMPLE: VRAX or other chapterized content -->
     <!--
-    <h2 class="section-header">The VRAX Conspiracy — Chapter [##]</h2>
-    <h3 class="section-sub">[Chapter subtitle]</h3>
+    <h3 class="section-header">The VRAX Conspiracy — Chapter [##]</h3>
+    <h4 class="section-sub">[Chapter subtitle]</h4>
     <section class="prose">
       <p>[VRAX narrative paragraphs here.]</p>
       <p><strong>Scroll TXID:</strong> <code>[scroll_txid_here]</code></p>
@@ -197,9 +195,9 @@
 
     <!-- SETH COMMENTARY -->
     <!--
-    <h2 class="section-header">Seth Commentary — Memory [##]</h2>
-    <h3 class="section-sub">[Commentary Title Line 1]</h3>
-    <h3 class="section-sub">[Commentary Title Line 2]</h3>
+    <h3 class="section-header">Seth Commentary — Memory [##]</h3>
+    <h4 class="section-sub">[Commentary Title Line 1]</h4>
+    <h4 class="section-sub">[Commentary Title Line 2]</h4>
 
     <section class="prose">
       <p class="subhead">🧭 Why This Document Matters for AI</p>

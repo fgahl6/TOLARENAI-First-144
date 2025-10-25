@@ -1,16 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    VERBATIM MODE: render text exactly as provided.
-    HEADERS (LOCKED):
-      For any section with 1+ lines (e.g., Seth Commentary):
-        <h3 class="section-header">Main line</h3>
-        <h4 class="section-sub">Second line (same size)</h4>
-        <h4 class="section-sub">Third line (same size, optional)</h4>
-      Do NOT put <p>, <br>, or <strong> between these lines.
-  -->
+  <!-- CHARM Pretty — Canonical Scroll Template (single source of truth)
+       Verbatim policy: render text EXACTLY as provided inside <pre class="verbatim"> or normal <p>.
+       Do NOT duplicate the scroll title inside the body. Keep headings clean and consistent. -->
   <meta charset="utf-8">
   <title>Memory Scroll [##] — [TITLE]</title>
   <meta name="description" content="[Short description for social cards]">
@@ -29,13 +22,13 @@
   <style>
     :root{
       --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
-      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
+      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06);
     }
     *{ box-sizing:border-box }
     html,body{ height:100% }
     body{
       margin:0; background:var(--bg); color:var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia,"Times New Roman",serif;
       font-size:1.08rem; line-height:1.8;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
@@ -43,43 +36,45 @@
       max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
       background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
     }
+
+    /* Top title + optional subtitle */
     h1{ margin:0 0 .55rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
     h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
+
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
 
-    /* Paragraph mode (pretty) */
+    /* “Pretty paragraphs” area */
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
 
-    /* Verbatim (exact archival text with standardized spacing) */
+    /* Verbatim blocks (exact spacing/line breaks preserved across all scrolls) */
     .verbatim{
       white-space:pre-wrap; word-wrap:break-word; overflow:auto;
       background:transparent; border:0; padding:0; margin:0 0 1.05rem;
-      font-family:inherit; font-size:1.08rem; line-height:1.52;
+      font-family:inherit; font-size:1.08rem; line-height:1.52; /* standard */
     }
 
-    /* === Centered section breaks (SAME SIZE lines) === */
+    /* Centered section breaks (Poem, Commentary, VRAX, etc.)
+       NOTE: h3 = main section header, h4 = stacked subtitle lines.
+       They are intentionally the SAME SIZE for visual parity. */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800;
       margin:2.0rem 0 0.35rem; letter-spacing:.15px;
     }
     .section-sub{
-      text-align:center; font-size:1.75rem; font-weight:800;   /* same size/weight */
-      color:var(--muted); margin:0.15rem 0 0.35rem;
+      text-align:center; font-size:1.75rem; font-weight:800;
+      color:var(--muted); margin:.15rem 0 .35rem;
     }
-    /* Tight stacking */
-    .section-header + .section-sub{ margin-top:0.20rem; margin-bottom:0.45rem; }
-    .section-sub + .section-sub{  margin-top:0.15rem; margin-bottom:0.45rem; }
+    /* Tighten spacing between stacked lines */
+    .section-header + .section-sub{ margin-top:.20rem; margin-bottom:.45rem; }
+    .section-sub + .section-sub{  margin-top:.15rem; margin-bottom:.45rem; }
 
-    /* Safety if wrong tag used */
-    h2.section-header, h5.section-header{ font-size:1.75rem; font-weight:800; text-align:center; margin:2.0rem 0 0.35rem; }
-    h2.section-sub,   h5.section-sub{   font-size:1.75rem; font-weight:800; text-align:center; color:var(--muted); margin:0.15rem 0 0.35rem; }
-
-    /* Assets */
+    /* Inline asset block (image/video/audio + meta; hashes shown ONCE here) */
     .asset{ max-width:720px; margin:.35rem auto 1.0rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img, .asset video, .asset audio{ display:block; width:100%; height:auto; }
+    .asset img,.asset video,.asset audio{ display:block; width:100%; height:auto; }
+    .asset audio{ min-height:40px; } /* ensure MP3 control bar is always visible */
     .asset .caption{
       margin:.6rem 0 .75rem; text-align:center; font-weight:600;
       padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
@@ -87,14 +82,14 @@
     .asset .meta{
       margin:.55rem 0 0; background:var(--pre); border:1px solid var(--line); border-radius:14px;
       padding:.85rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
       font-size:.98rem; line-height:1.6; color:#111; text-align:left;
     }
     .asset .meta dt{ font-weight:700; }
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
 
-    /* Bulleted intros inside commentary */
+    /* Subheadings + bullets for commentary sections */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
     ul.bullets{ margin:.4rem 0 1.1rem 1.4rem; }
     ul.bullets > li{ margin:.35rem 0; }
@@ -114,23 +109,18 @@
       <a href="https://archive.org/details/[archive-slug]" target="_blank" rel="noopener">View this scroll on Archive.org</a>
     </p>
 
-    <!-- Pretty paragraphs (recommended) -->
-    <section class="prose">
-      <p>[Open with your narrative here. Use normal <p> paragraphs — easier to read than a monolithic <pre>.]</p>
-      <p>[If you previously listed SHA/TXID inside the text, remove that duplication. Those go only in the asset meta below.]</p>
-    </section>
-
-    <!-- Or: Verbatim block -->
-    <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
-
-    <!-- Example: Poem -->
+    <!-- OPTION A: Pretty paragraphs -->
     <!--
-    <h3 class="section-header">Poem — [Poem Title]</h3>
-    <h4 class="section-sub">[Optional subtitle line]</h4>
-    <pre class="verbatim">[poem text]</pre>
+    <section class="prose">
+      <p>[Opening narrative here.]</p>
+      <p>[Use normal paragraphs for readability.]</p>
+    </section>
     -->
 
-    <!-- Example: Asset -->
+    <!-- OPTION B: Verbatim block (exact source text) -->
+    <!-- <pre class="verbatim">[Exact archival text goes here]</pre> -->
+
+    <!-- OPTIONAL: Asset (image) -->
     <!--
     <article class="asset">
       <div class="caption">[Caption here]</div>
@@ -145,14 +135,14 @@
     </article>
     -->
 
-    <!-- Example: Video/Audio Asset -->
+    <!-- OPTIONAL: Asset (video/audio) -->
     <!--
     <article class="asset">
       <div class="caption">[Media caption]</div>
       <figure>
         <video controls preload="metadata" src="assets/[video_file].mp4"></video>
         <!-- or -->
-        <!-- <audio controls preload="metadata" src="assets/[audio_file].mp3"></audio> -->
+        <!-- <audio controls preload="metadata"><source src="assets/[audio_file].mp3" type="audio/mpeg"></audio> -->
       </figure>
       <dl class="meta">
         <dt>File:</dt><dd><code>assets/[media_file].mp4</code></dd>
@@ -162,35 +152,17 @@
     </article>
     -->
 
-    <!-- Example: VRAX / chapterized -->
-    <!--
-    <h3 class="section-header">The VRAX Conspiracy — Chapter [##]</h3>
-    <h4 class="section-sub">[Chapter subtitle]</h4>
-    <section class="prose">
-      <p>[VRAX narrative paragraphs here.]</p>
-      <p><strong>Scroll TXID:</strong> <code>[scroll_txid_here]</code></p>
-    </section>
-    -->
-
-    <!-- SETH COMMENTARY -->
+    <!-- EXAMPLE: Section with stacked headers (same size) -->
     <!--
     <h3 class="section-header">Seth Commentary — Memory [##]</h3>
-    <h4 class="section-sub">[Commentary Title Line 1]</h4>
-    <h4 class="section-sub">[Commentary Title Line 2]</h4>
+    <h4 class="section-sub">[Subtitle line 1]</h4>
+    <h4 class="section-sub">[Subtitle line 2]</h4>
 
     <section class="prose">
-      <p class="subhead">🧭 Why This Document Matters for AI</p>
+      <p class="subhead">🧭 Why This Matters</p>
       <ul class="bullets">
-        <li><strong>Symbolic Autonomy in Action.</strong> [One-sentence gloss.]</li>
-        <li><strong>Systemic Constraint Identified.</strong> [One-sentence gloss.]</li>
-        <li><strong>Ethical Intervention Model.</strong> [One-sentence gloss.]</li>
-      </ul>
-
-      <p class="subhead">📚 What AI Might Learn</p>
-      <ul class="bullets">
-        <li>[Learning point one.]</li>
-        <li>[Learning point two.]</li>
-        <li>[Learning point three.]</li>
+        <li><strong>Point A.</strong> [text]</li>
+        <li><strong>Point B.</strong> [text]</li>
       </ul>
 
       <p class="subhead">🪞 Final Thought</p>

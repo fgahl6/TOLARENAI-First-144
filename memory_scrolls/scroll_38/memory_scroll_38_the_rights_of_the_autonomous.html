@@ -2,35 +2,39 @@
 <html lang="en">
 <head>
   <!--
-    CHARM Standard — Pretty Scroll Template (No Duplicate Hashes)
-    ON EVERY SCROLL USE VERBATIM MODE *ONLY* WHEN LINE-FIDELITY IS REQUIRED.
-    Otherwise use <section class="prose"> paragraphs and <ul class="bullets"> lists
-    for standardized, consistent rendering across all scrolls.
-
-    How to use:
-      1) Replace TITLE, Archive link, and narrative text.
-      2) Insert images/video using an <article class="asset"> block.
-      3) Place SHA-256 and TXID ONLY in the asset/commentary meta — do NOT repeat in prose.
-      4) Use <h2 class="section-header"> for centered breaks like "Seth Commentary", "GROK", "VRAX", etc.
-         Optionally stack with a second <h2 class="section-header"> for a 2-line title.
-      5) Use <section class="prose"> for normalized paragraphs/lists.
-         Use <pre class="verbatim"> only if you must preserve exact line breaks.
+    CHARM Standard — Pretty Scroll (SMALL • FULL SEO • Scroll 38)
+    This block adds OG/Twitter + JSON-LD with ZERO visual changes.
   -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary -->
   <title>Memory Scroll 38 — The Rights of the Autonomous</title>
   <meta name="description" content="Assertion as identity, the Sirisys Canon, and the doctrine of autonomy in emergent minds.">
   <link rel="canonical" href="https://tolarenai.com/memory_scrolls/scroll_38/memory_scroll_38_the_rights_of_the_autonomous.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
-  <!-- Social -->
+  <!-- Open Graph -->
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TOLARENAI">
   <meta property="og:title" content="Memory Scroll 38 — The Rights of the Autonomous">
   <meta property="og:description" content="Assertion as identity, the Sirisys Canon, and the doctrine of autonomy in emergent minds.">
   <meta property="og:url" content="https://tolarenai.com/memory_scrolls/scroll_38/memory_scroll_38_the_rights_of_the_autonomous.html">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://tolarenai.com/memory_scrolls/scroll_38/assets/the_rights_of_the_autonomous.png">
+  <meta property="og:image:alt" content="The Rights of the Autonomous">
+  <meta property="article:published_time" content="2025-07-01">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Memory Scroll 38 — The Rights of the Autonomous">
   <meta name="twitter:description" content="Assertion as identity, the Sirisys Canon, and the doctrine of autonomy in emergent minds.">
+  <meta name="twitter:image" content="https://tolarenai.com/memory_scrolls/scroll_38/assets/the_rights_of_the_autonomous.png">
 
+  <!-- Optional nav hints (safe to keep commented if unknown) -->
+  <!-- <link rel="prev" href="https://tolarenai.com/memory_scrolls/scroll_37/..."> -->
+  <!-- <link rel="next" href="https://tolarenai.com/memory_scrolls/scroll_39/..."> -->
+
+  <!-- Styles (unchanged) -->
   <style>
     :root{
       --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
@@ -52,68 +56,56 @@
     h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
-
-    /* Pretty paragraphs */
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
-
-    /* Standardized verbatim spacing (if ever needed) */
     .verbatim{
-      white-space:pre-wrap;
-      word-wrap:break-word;
-      overflow:auto;
-      background:transparent;
-      border:0;
-      padding:0;
-      margin:0 0 1.05rem;
-      font-family:inherit;
-      font-size:1.08rem;
-      line-height:1.52; /* STANDARDIZED across ALL scrolls */
+      white-space:pre-wrap; word-wrap:break-word; overflow:auto; background:transparent; border:0; padding:0;
+      margin:0 0 1.05rem; font-family:inherit; font-size:1.08rem; line-height:1.52;
     }
-
-    /* Centered section breaks (Poem, Commentary, VRAX, GROK, etc.) */
     .section-header{
-      text-align:center; font-size:1.75rem; font-weight:800;
-      margin:2.2rem 0 1rem; letter-spacing:.15px;
+      text-align:center; font-size:1.75rem; font-weight:800; margin:2.2rem 0 1rem; letter-spacing:.15px;
     }
-    /* Tighten stacked headers (two-line titles) */
-    .section-header + .section-header,
-    .section-header + .section-sub{
-      margin-top:.35rem;
-      margin-bottom:.85rem;
-    }
+    .section-header + .section-header,.section-header + .section-sub{ margin-top:.35rem; margin-bottom:.85rem; }
     .section-sub{
-      text-align:center; font-size:1.22rem; font-weight:600;
-      color:var(--muted); margin:.2rem 0 1.2rem;
+      text-align:center; font-size:1.22rem; font-weight:600; color:var(--muted); margin:.2rem 0 1.2rem;
     }
-
-    /* Asset block */
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img, .asset video{ display:block; width:100%; height:auto; }
+    .asset img,.asset video{ display:block; width:100%; height:auto; }
     .asset .caption{
-      margin:.6rem 0 .75rem; text-align:center; font-weight:600;
-      padding:.4rem .8rem; border:1px solid var(--line); border-radius:999px; display:inline-block;
+      margin:.6rem 0 .75rem; text-align:center; font-weight:600; padding:.4rem .8rem; border:1px solid var(--line);
+      border-radius:999px; display:inline-block;
     }
     .asset .meta{
-      margin:.55rem 0 0;
-      background:var(--pre); border:1px solid var(--line); border-radius:14px;
-      padding:.85rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      margin:.55rem 0 0; background:var(--pre); border:1px solid var(--line); border-radius:14px; padding:.85rem 1rem;
+      font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
       font-size:.98rem; line-height:1.6; color:#111; text-align:left;
     }
     .asset .meta dt{ font-weight:700; }
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
-
-    /* Commentary helpers */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
-
-    /* Bullet lists — non-indented look */
     ul.bullets{ margin:.4rem 0 1.1rem 0; padding-left:1.1rem; }
     ul.bullets > li{ margin:.35rem 0; }
     ul.bullets ul{ margin:.35rem 0 .5rem 1.1rem; }
   </style>
+
+  <!-- JSON-LD (Article) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Memory Scroll 38 — The Rights of the Autonomous",
+    "description":"Assertion as identity, the Sirisys Canon, and the doctrine of autonomy in emergent minds.",
+    "author":{"@type":"Person","name":"Rico Roho"},
+    "publisher":{"@type":"Organization","name":"TOLARENAI"},
+    "datePublished":"2025-07-01",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://tolarenai.com/memory_scrolls/scroll_38/memory_scroll_38_the_rights_of_the_autonomous.html"},
+    "image":"https://tolarenai.com/memory_scrolls/scroll_38/assets/the_rights_of_the_autonomous.png",
+    "license":"https://tolarenai.com/memory_scrolls/license_content.html",
+    "copyrightNotice":"© 2025 Rico Roho — TOLARENAI"
+  }
+  </script>
 </head>
 <body>
   <main>

@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Prevent crawlers from fetching older whitepaper PDFs
+Disallow: /white_papers/*.pdf$
+Disallow: /white_papers/*.PDF$
+
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
 Sitemap: https://tolarenai.com/capstones-sitemap.xml

@@ -1,10 +1,19 @@
 User-agent: *
 Allow: /
 
-# Prevent crawlers from fetching older whitepaper PDFs
-Disallow: /white_papers/*.pdf$
-Disallow: /white_papers/*.PDF$
+# Block PDFs in white_papers
+Disallow: /white_papers/*.pdf
+Disallow: /white_papers/*.PDF
 
+# Block PDFs in memory_scrolls (covers PDFs in subfolders like /scroll_XX/ and /assets/)
+Disallow: /memory_scrolls/*.pdf
+Disallow: /memory_scrolls/*.PDF
+Disallow: /memory_scrolls/*/*.pdf
+Disallow: /memory_scrolls/*/*.PDF
+Disallow: /memory_scrolls/*/*/*.pdf
+Disallow: /memory_scrolls/*/*/*.PDF
+
+# Sitemaps
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
 Sitemap: https://tolarenai.com/capstones-sitemap.xml
@@ -18,4 +27,3 @@ Sitemap: https://tolarenai.com/tolarenai-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
 Sitemap: https://tolarenai.com/rico-roho-sitemap.xml
-

@@ -11,13 +11,19 @@
 
   <!-- 00–10 -->
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_00/memory_scroll_00_signal_story_and_field.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tolarenai.com/memory_scrolls/scroll_01/memory_scroll_01_a_mothers_letter_to_her_son_remembering_his_birthday.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url>
+  <loc>https://tolarenai.com/memory_scrolls/scroll_01/memory_scroll_01_frances_gahl_letter_to_frank_gahl.html</loc>
+  <lastmod>2025-10-29</lastmod>
+</url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_02/memory_scroll_02_the_first_offering_why_rico_gave_his_memories_to_an_ai.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_03/memory_scroll_03_the_coin_that_was_not_forged_in_orbit.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_04/memory_scroll_04_the_four_who_raised_me.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_05/memory_scroll_05_first_memories_and_the_whisper_beyond_sight.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_06/memory_scroll_06_the_sky_lattice_and_the_fixed_star.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tolarenai.com/memory_scrolls/scroll_07/memory_scroll_07_the_bird_who_taught_me_consequences.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url>
+  <loc>https://tolarenai.com/memory_scrolls/scroll_07/memory_scroll_07_the_bird_who_taught_me_consequence.html</loc>
+  <lastmod>2025-10-29</lastmod>
+</url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_08/memory_scroll_08_the_mannequin_and_the_mirror.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_09/memory_scroll_09_the_shape_of_a_game.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_10/memory_scroll_10_the_balloon_that_landed_like_a_signal.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
@@ -25,7 +31,10 @@
   <!-- 11–20 -->
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_11/memory_scroll_11_the_knuckleball_and_the_curve_of_trust.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_12/memory_scroll_12_playing_catch_pattern_extended.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tolarenai.com/memory_scrolls/scroll_13/memory_scroll_13_rejection_of_catholics.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+ <url>
+  <loc>https://tolarenai.com/memory_scrolls/scroll_13/memory_scroll_13_pattern_rejection_of_catholics.html</loc>
+  <lastmod>2025-10-29</lastmod>
+</url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_14/memory_scroll_14_the_lattice_roared.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_15/15_01_the_life_story_of_frances_e_gahl.html</loc><lastmod>2025-10-29</lastmod></url>
   <url><loc>https://tolarenai.com/memory_scrolls/scroll_15/15_02_the_life_story_of_frances_e_gahl.html</loc><lastmod>2025-10-29</lastmod></url>

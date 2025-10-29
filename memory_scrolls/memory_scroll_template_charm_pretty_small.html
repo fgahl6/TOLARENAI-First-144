@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!--
-    CHARM Standard — Pretty Scroll Template (SMALL • FULL SEO • v1.0)
+    CHARM Standard — Pretty Scroll Template (SMALL • FULL SEO • v1.1)
     How to use (quick):
       1) Replace all PLACEHOLDERS in ALL CAPS below (TITLE, DESC, CANONICAL, IMAGE_URL, PUBDATE, ARCHIVE_URL).
       2) Keep SHA-256 / TXIDs ONLY inside <dl class="meta"> blocks (asset/commentary). Do NOT repeat in body prose.
@@ -69,14 +69,27 @@
     h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
+
     /* Pretty paragraphs */
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
+
+    /* ADDED: Stable list + nesting behavior inside prose */
+    .prose ul, .prose ol{ margin:0 0 1.05rem 2rem; padding-left:0; }
+    .prose ul ul, .prose ol ol,
+    .prose ul ol, .prose ol ul{ margin:.4rem 0 .4rem 1.25rem; }
+
+    /* ADDED: Visual paragraph indents without hard returns */
+    .indent-1{ margin-left:2rem; }
+    .indent-2{ margin-left:3rem; }
+    .indent-3{ margin-left:4rem; }
+
     /* Standardized verbatim spacing (if ever needed) */
     .verbatim{
       white-space:pre-wrap; word-wrap:break-word; overflow:auto; background:transparent; border:0; padding:0;
       margin:0 0 1.05rem; font-family:inherit; font-size:1.08rem; line-height:1.52;
     }
+
     /* Centered section breaks (Poem, Commentary, VRAX, GROK, etc.) */
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800; margin:2.2rem 0 1rem; letter-spacing:.15px;
@@ -87,6 +100,7 @@
     .section-sub{
       text-align:center; font-size:1.22rem; font-weight:600; color:var(--muted); margin:.2rem 0 1.2rem;
     }
+
     /* Asset block */
     .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
     .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
@@ -103,9 +117,11 @@
     .asset .meta dt{ font-weight:700; }
     .asset .meta dd{ margin:0 0 .35rem 0; }
     .asset .meta code{ font-family:inherit; }
+
     /* Commentary helpers */
     .subhead{ font-weight:700; margin:1rem 0 .4rem; }
-    /* Bullet lists — non-indented look */
+
+    /* Bullet lists — non-indented “summary” look (optional) */
     ul.bullets{ margin:.4rem 0 1.1rem 0; padding-left:1.1rem; }
     ul.bullets > li{ margin:.35rem 0; }
     ul.bullets ul{ margin:.35rem 0 .5rem 1.1rem; }
@@ -147,10 +163,15 @@
       <p>Opening paragraph…</p>
       <p>Body paragraph…</p>
       <p>Closing paragraph…</p>
+
+      <!-- ADDED: Optional paragraph indents without hard returns -->
+      <!-- <p class="indent-1">Indented paragraph…</p> -->
+      <!-- <p class="indent-2">Deeper indent paragraph…</p> -->
     </section>
 
     <!-- ===== Asset (optional) =====
          • Use this block for a hero image or video.
+         • STRICT ORDER for 59+ and similar: IMAGE directly above SHA → TXID (inside <dl>).
          • Keep hashes/TXIDs inside <dl class="meta"> below. -->
     <article class="asset">
       <div class="caption">TITLE</div>

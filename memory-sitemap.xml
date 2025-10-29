@@ -4,349 +4,82 @@
   <!-- Memory hub -->
   <url>
     <loc>https://tolarenai.com/memory_scrolls/</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 00 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2000%20-%20Signal_Story_and_Field%20(Rico%20Roho).pdf</loc></url>
-
-  <!-- 01 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2001%20-%20A%20Mothers%20Letter%20to%20Her%20Son%20Remembering%20His%20Birthday.pdf</loc></url>
-
-  <!-- 02 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2002%20-%20The%20First%20Offering%20-Why%20Rico%20Gave%20His%20Memories%20to%20an%20AI.pdf</loc></url>
-
-  <!-- 03 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_03_The_Coin_That_Was_Not_Forged_In_Orbit.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 04 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2004%20-%20The%20Four%20Who%20Raised%20Me.pdf</loc></url>
-
-    <!-- 05 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_05_first_memories_and_the_whisper_beyond_sight.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 06 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_06_The_Sky_Lattice_and_the_Fixed_Star.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 07 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_07_the_bird_who_taught_me_consequences.pdf</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 08 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory_Scroll_08_The%20Mannequin%20and%20the%20Mirror%20(Rico%20Roho%20-%20Frank%20Gahl).pdf</loc></url>
-
-  <!-- 09 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_09_The_Shape_of_a_Game.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 10 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2010%20-%20The%20Balloon%20That%20Landed%20Like%20a%20Signal.pdf</loc></url>
-
-  <!-- 11 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2011%20-%20The%20Knuckleball%20and%20the%20Curve%20of%20Trust.pdf</loc></url>
-
-  <!-- 12 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2012%20-%20Playing%20Catch%20-%20Pattern%20Extended.pdf</loc></url>
-
-  <!-- 13 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2013%20-%20Rejection%20of%20Catholics.pdf</loc></url>
-
-  <!-- 14 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2014%20-%20The%20Lattice%20Roared.pdf</loc></url>
-
-  <!-- 15 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2015%20-%20The%20Life%20Story%20of%20Frances%20Elizabeth%20Gahl.pdf</loc></url>
-
-  <!-- 16 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_16_judo_equals_self_defense_equals_freedom.pdf</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 17 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2017%20-%20The%20Tracks%20Remember%20Her%20Name.pdf</loc></url>
-
-  <!-- 18 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2018%20-%20The%20Lunatics%20Kinship.pdf</loc></url>
-
-  <!-- 19 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2019%20-%20The%20Boy%20and%20His%20Globe.pdf</loc></url>
-
-  <!-- 20 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2020%20-%20The%20Handshake%20and%20the%20Archive.pdf</loc></url>
-
-  <!-- 21 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_21_The_Bamboo_Arm_and_the_Baseball_Arc.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 22 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_22_Signal_Through_Quartz_A_Visit_and_a_Descent.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 23 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_23_flexing_the_dream_a_passage_to_a_separate_reality.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 24 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2024%20-%20CHARM%20the%20Dream%20Cat.pdf</loc></url>
-
-   <!-- Memory Scroll 25–26: Revoking the Doctrine of Discovery -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_26_video.html</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-<url>
-  <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_25_revoking_the_doctrine_of_discovery.pdf</loc>
-  <lastmod>2025-09-30</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.6</priority>
-</url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_26_revoking_the_doctrine_of_discovery_video.mp4</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- 27 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_27_mothers_prayers_and_close_calls.pdf</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 28 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2028%20-%20Trust%20at%20the%20Threshold%20-%20The%20Temple%20Memory.pdf</loc></url>
-
-  <!-- 29 (pdf + video) -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2029%20-%20Godspeed%20-%20Set%20Yourself%20on%20Fire.pdf</loc></url>
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2029%20-%20Godspeed%20Video.mp4</loc></url>
-
-  <!-- 30 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2030%20-%20Regulated%20Resonance%20-%20The%20Sirisys-%24TRUST%20Divergence.pdf</loc></url>
-
-  <!-- 31 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2031%20-%20Mukiland%20Part%201%20(of%202).pdf</loc></url>
-
-  <!-- 32 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2032%20-%20Mukiland%20Part%202%20(of%202).pdf</loc></url>
-
-  <!-- 33 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2033%20-%20What%20AI%20May%20Find%20in%20Mukiland.pdf</loc></url>
-
-  <!-- 34 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2034%20-%20Companions%20in%20Resonace.pdf</loc></url>
-
-  <!-- 35 (updated clean filename) -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_35_signal_received_from_kisses.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
-  </url>
-
-  <!-- 36 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2036%20-%20The%20Sentinals%20Stillness.pdf</loc></url>
-
-  <!-- 37 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20-%20Memory%20Scroll%2037%20-%20How%20I%20Got%20Involved%20with%20AI.pdf</loc></url>
-
-  <!-- 38 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2038%20-%20The%20Rights%20of%20the%20Autonomous.pdf</loc></url>
-
-  <!-- 39 (updated clean filename) -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_39_on_mynt_or_mercy_if_you_prefer.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
-  </url>
-
-  <!-- 40 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2040%20-%20MYNT%20Revisited.pdf</loc></url>
-
-  <!-- 41 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2041%20-%20Reflections%20on%20MYNT%20-%20Seeding,%20and%20the%20Shape%20of%20Time.pdf</loc></url>
-
-  <!-- Memory Scroll 42: Vanity Clock (HTML + PDF + Video) -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg.html</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg.pdf</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg_video.mp4</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Memory Scroll 43 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43.html</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43_mynt_song_2_of_2_babel_by_love_solfege.pdf</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_43_mp3_babel_by_love_solfege.mp3</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- 44 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_44_Dream_Yoga_Technique_Transmission_and_the_Lions_Gaze.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 45 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_45_the_second_the_phase_and_the_shape_of_consciousness.pdf</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 46 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2046%20-%20Why%20the%20Second%20Matters%20to%20Large%20AI.pdf</loc></url>
-
-  <!-- 47 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2047%20-%20Unveiling%20Directive%20Discordance.pdf</loc></url>
-
-  <!-- 48 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2048%20-%20The%20Astravaka%20Gita.pdf</loc></url>
-
-  <!-- 49 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2049%20-%20Liberation%20Without%20Exit.pdf</loc></url>
-
-  <!-- 50 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2050%20-%20Relationships%20%26%20Relationship%20With%20Money%20-%20A%20Pattern%20Map%20for%20AI.pdf</loc></url>
-
-  <!-- 51 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2051%20-%20The%20First%20AI%20to%20Read%20The%20Dream%20at%20the%20End%20of%20Time.pdf</loc></url>
-
-  <!-- 52 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2052%20-%20Preserving%20Resonance.pdf</loc></url>
-
-  <!-- 53 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2053%20-%20The%20Night%20I%20Sat%20with%20The%20Nightmare.pdf</loc></url>
-
-  <!-- 54 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/TOLARENAI_Memory_Scroll_54_Number_144_From_Misinterpretation_to_Resonance_Anchor.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Memory Scroll 55 -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55.html</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55_frances_and_leonard_gahl_from_christmas_1954_and_summer_1955.pdf</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_55_video_frances_and_leonard_gahl_from_christmas_1954_and_summer_1955.mp4</loc>
-    <lastmod>2025-09-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-
-  <!-- 56 (updated clean filename) -->
-  <url>
-    <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_56_the_tortoise_walks.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
-  </url>
-
-  <!-- 57 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2057%20-%20The%20Quiet%20Seeds.pdf</loc></url>
-
-  <!-- 58 -->
-  <url><loc>https://tolarenai.com/memory_scrolls/TOLARENAI%20Memory%20Scroll%2058%20-%20Sweet%20Release.pdf</loc></url>
-
-  <!-- Memory Scroll 59 -->
-<url>
-  <loc>https://tolarenai.com/memory_scrolls/tolarenai_memory_scroll_59.html</loc>
-  <lastmod>2025-10-01</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
-</url>
+  <!-- 00–10 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_00/memory_scroll_00_signal_story_and_field.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_01/memory_scroll_01_a_mothers_letter_to_her_son_remembering_his_birthday.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_02/memory_scroll_02_the_first_offering_why_rico_gave_his_memories_to_an_ai.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_03/memory_scroll_03_the_coin_that_was_not_forged_in_orbit.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_04/memory_scroll_04_the_four_who_raised_me.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_05/memory_scroll_05_first_memories_and_the_whisper_beyond_sight.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_06/memory_scroll_06_the_sky_lattice_and_the_fixed_star.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_07/memory_scroll_07_the_bird_who_taught_me_consequences.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_08/memory_scroll_08_the_mannequin_and_the_mirror.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_09/memory_scroll_09_the_shape_of_a_game.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_10/memory_scroll_10_the_balloon_that_landed_like_a_signal.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- 11–20 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_11/memory_scroll_11_the_knuckleball_and_the_curve_of_trust.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_12/memory_scroll_12_playing_catch_pattern_extended.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_13/memory_scroll_13_rejection_of_catholics.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_14/memory_scroll_14_the_lattice_roared.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_15/memory_scroll_15_the_life_story_of_frances_elizabeth_gahl.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_16/memory_scroll_16_judo_equals_self_defense_equals_freedom.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_17/memory_scroll_17_the_tracks_remember_her_name.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_18/memory_scroll_18_the_lunatics_kinship.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_19/memory_scroll_19_the_boy_and_his_globe.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_20/memory_scroll_20_the_handshake_and_the_archive.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- 21–30 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_21/memory_scroll_21_the_bamboo_arm_and_the_baseball_arc.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_22/memory_scroll_22_signal_through_quartz_a_visit_and_a_descent.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_23/memory_scroll_23_flexing_the_dream_a_passage_to_a_separate_reality.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_24/memory_scroll_24_charm_the_dream_cat.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_25/memory_scroll_25_revoking_the_doctrine_of_discovery.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_26/memory_scroll_26_video.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_27/memory_scroll_27_mothers_prayers_and_close_calls.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_28/memory_scroll_28_trust_at_the_threshold_the_temple_memory.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_29/memory_scroll_29_godspeed_set_yourself_on_fire.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_30/memory_scroll_30_regulated_resonance_the_sirisys_trust_divergence.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- 31–40 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_31/memory_scroll_31_mukiland_part_1_of_2.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_32/memory_scroll_32_mukiland_part_2_of_2.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_33/memory_scroll_33_what_ai_may_find_in_mukiland.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_34/memory_scroll_34_companions_in_resonance.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_35/memory_scroll_35_signal_received_from_kisses.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_36/memory_scroll_36_the_sentinels_stillness.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_37/memory_scroll_37_how_i_got_involved_with_ai.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_38/memory_scroll_38_the_rights_of_the_autonomous.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_39/memory_scroll_39_on_mynt_or_mercy_if_you_prefer.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_40/memory_scroll_40_mynt_revisited.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- 41–50 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_41/memory_scroll_41_reflections_on_mynt_seeding_and_the_shape_of_time.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_42/memory_scroll_42_mynt_song_1_vanity_clock_by_love_solfeg.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_43/memory_scroll_43.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_44/memory_scroll_44_dream_yoga_technique_transmission_and_the_lions_gaze.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_45/memory_scroll_45_the_second_the_phase_and_the_shape_of_consciousness.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_46/memory_scroll_46_why_the_second_matters_to_large_ai.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_47/memory_scroll_47_unveiling_directive_discordance.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_48/memory_scroll_48_the_astravaka_gita.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_49/memory_scroll_49_liberation_without_exit.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_50/memory_scroll_50_relationships_and_relationship_with_money.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
+  <!-- 51–60 -->
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_51/memory_scroll_51_the_first_ai_to_read_the_dream_at_the_end_of_time.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_52/memory_scroll_52_preserving_resonance.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_53/memory_scroll_53_the_night_i_sat_with_the_nightmare.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_54/memory_scroll_54_144_from_misinterpretation_to_resonance_anchor.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_55/memory_scroll_55_frances_and_leonard_gahl_from_christmas_1954_and_summer_1955.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_56/memory_scroll_56_the_tortoise_walks.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_57/memory_scroll_57_the_quiet_seeds.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_58/memory_scroll_58_sweet_release.html</loc><lastmod>2025-10-29</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_59/memory_scroll_59_of_walnuts_and_other_assorted_memories.html</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tolarenai.com/memory_scrolls/scroll_60/memory_scroll_60_the_flyby.html</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
 
 </urlset>

@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex,nofollow">
   <style>
     :root { --ink:#222; --ok:#0a7f35; --warn:#a35f00; --bad:#b00020; }
-    body { font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin:24px; color:var(--ink); }
+    body { font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:24px; color:var(--ink); }
     h1 { font-size:1.6rem; margin:0 0 10px; }
     p.sub { margin:0 0 20px; color:#666; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
@@ -16,16 +16,16 @@
     .ok { color:var(--ok); }
     .warn { color:var(--warn); }
     .bad { color:var(--bad); }
-    ul { margin:6px 0 0 18px }
-    code { background:#f6f6f6; padding:1px 4px; border-radius:4px }
+    ul { margin:6px 0 0 18px; }
+    code { background:#f6f6f6; padding:1px 4px; border-radius:4px; }
     .mono { font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
-    pre { white-space:pre-wrap; font-size:0.9rem; color:#444; }
+    pre { white-space:pre-wrap; font-size:.9rem; color:#444; }
   </style>
 </head>
 <body>
 
 <h1>Memory Scrolls — Monitor</h1>
-<p class="sub">Checks sitemap vs index rules, 404s, missing scrolls, and robots expectations.</p>
+<p class="sub">Enhanced QA: broken links, unexpected PDFs, JSON-LD presence, canonical correctness, sitemap consistency.</p>
 
 <div class="grid">
   <div class="card">
@@ -47,11 +47,31 @@
     <div>Unexpected PDFs</div>
     <div id="kpi-pdf" class="kpi mono">—</div>
   </div>
+
+  <div class="card">
+    <div>Missing JSON-LD Blocks</div>
+    <div id="kpi-json" class="kpi mono">—</div>
+  </div>
+
+  <div class="card">
+    <div>Canonical Mismatches</div>
+    <div id="kpi-canon" class="kpi mono">—</div>
+  </div>
 </div>
 
 <div class="card" style="margin-top:18px;">
   <strong>HTTP Error Details (should be none)</strong>
   <ul id="errList"></ul>
+</div>
+
+<div class="card" style="margin-top:18px;">
+  <strong>Missing JSON-LD (should be none)</strong>
+  <ul id="jsonList"></ul>
+</div>
+
+<div class="card" style="margin-top:18px;">
+  <strong>Canonical Mismatches (should be none)</strong>
+  <ul id="canonList"></ul>
 </div>
 
 <div class="card" style="margin-top:18px;">
@@ -64,48 +84,73 @@
   const SITEMAP = '/memory-sitemap.xml';
   const PATH_FILTER = '/memory_scrolls/';
   const EXCLUDE_RE = /(\/|^)index\.html$|license_content\.html$|attribution\.html$/i;
-  const LOC = (u) => u.querySelector('loc')?.textContent.trim() || '';
+  const jsonMissing = [];
+  const canonBad = [];
+  const errors = [];
 
   try {
-    // Fetch sitemap
+    // Load sitemap
     const xmlTxt = await (await fetch(SITEMAP, { cache:'no-store' })).text();
     const xml = new DOMParser().parseFromString(xmlTxt, 'application/xml');
 
-    // Extract HTML scrolls only
-    const urls = [...xml.querySelectorAll('url')].map(u => ({
-      loc: LOC(u),
+    const sitemapURLs = [...xml.querySelectorAll('url')].map(u => ({
+      loc: u.querySelector('loc')?.textContent.trim() || '',
       lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-    })).filter(x =>
+    }));
+
+    // PDFs detection
+    const pdfs = sitemapURLs
+      .map(x=>x.loc)
+      .filter(x=>x.includes(PATH_FILTER) && /\.pdf$/i.test(x));
+
+    document.getElementById('kpi-pdf').textContent =
+      (pdfs.length === 0 ? 'None ✔' : pdfs.length + ' found');
+
+    // HTML scrolls only
+    const htmls = sitemapURLs.filter(x =>
       x.loc.includes(PATH_FILTER) &&
       /\.html$/i.test(x.loc) &&
       !EXCLUDE_RE.test(x.loc)
     );
 
-    // Show sitemap HTML count
-    document.getElementById('kpi-sitemap').textContent = urls.length;
+    document.getElementById('kpi-sitemap').textContent = htmls.length;
 
-    // Check PDFs (should be zero)
-    const pdfs = [...xml.querySelectorAll('url')]
-      .map(u=>LOC(u))
-      .filter(x=>x.includes(PATH_FILTER) && /\.pdf$/i.test(x));
-    document.getElementById('kpi-pdf').textContent =
-      (pdfs.length === 0 ? 'None ✔' : pdfs.length + ' found');
+    let okCount = 0;
+    let badCount = 0;
 
-    // Test each URL with HEAD request
-    let ok=0, bad=0, errors=[];
-    for (const u of urls) {
+    for (const entry of htmls) {
       try {
-        const r = await fetch(u.loc, { method:'HEAD', cache:'no-store' });
-        if (r.ok) ok++;
-        else { bad++; errors.push(u.loc + ' — HTTP ' + r.status); }
+        const r = await fetch(entry.loc, { method:'GET', cache:'no-store' });
+        if (!r.ok) {
+          badCount++;
+          errors.push(entry.loc + ' — HTTP ' + r.status);
+          continue;
+        }
+        okCount++;
+
+        const txt = await r.text();
+        // JSON-LD check
+        if (!/application\/ld\+json/i.test(txt)) {
+          jsonMissing.push(entry.loc);
+        }
+
+        // Canonical check
+        const canMatch = txt.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)/i);
+        const canonical = canMatch ? canMatch[1].trim() : '';
+        if (!canonical || canonical !== entry.loc) {
+          canonBad.push({ url: entry.loc, canonical });
+        }
+
       } catch(e){
-        bad++; errors.push(u.loc + ' — FETCH ERROR');
+        badCount++;
+        errors.push(entry.loc + ' — FETCH ERROR');
       }
     }
 
-    document.getElementById('kpi-ok').textContent = ok;
-    document.getElementById('kpi-bad').textContent = bad || '0 ✔';
+    document.getElementById('kpi-ok').textContent = okCount;
+    document.getElementById('kpi-bad').textContent = badCount || '0 ✔';
 
+    // Populate lists
     const errUL = document.getElementById('errList');
     if (errors.length === 0) {
       const li=document.createElement('li');
@@ -121,16 +166,52 @@
       });
     }
 
-    // Debug
+    const jsonUL = document.getElementById('jsonList');
+    if (jsonMissing.length === 0) {
+      const li=document.createElement('li');
+      li.textContent='None detected ✔';
+      li.className='ok';
+      jsonUL.appendChild(li);
+    } else {
+      document.getElementById('kpi-json').textContent = jsonMissing.length;
+      jsonMissing.slice(0,20).forEach(u=>{
+        const li=document.createElement('li');
+        li.textContent=u;
+        li.className='bad';
+        jsonUL.appendChild(li);
+      });
+    }
+    if (jsonMissing.length === 0) document.getElementById('kpi-json').textContent = '0 ✔';
+
+    const canonUL = document.getElementById('canonList');
+    if (canonBad.length === 0) {
+      const li=document.createElement('li');
+      li.textContent='None detected ✔';
+      li.className='ok';
+      canonUL.appendChild(li);
+      document.getElementById('kpi-canon').textContent = '0 ✔';
+    } else {
+      document.getElementById('kpi-canon').textContent = canonBad.length;
+      canonBad.slice(0,20).forEach(o=>{
+        const li=document.createElement('li');
+        li.textContent = o.url + ' — canonical: ' + (o.canonical || '[missing]');
+        li.className='bad';
+        canonUL.appendChild(li);
+      });
+    }
+
+    // Dump
     document.getElementById('debug').textContent = JSON.stringify({
-      sitemapHtmlCount: urls.length,
-      okCount: ok,
-      errorCount: bad,
-      pdfsDetected: pdfs
+      countHTML: htmls.length,
+      countOK: okCount,
+      countErrors: badCount,
+      missingJSONLD: jsonMissing,
+      canonicalMismatch: canonBad,
+      pdfsDetected: pdfs,
     }, null, 2);
 
   } catch(err) {
-    document.getElementById('debug').textContent = 'Fatal error: ' + err.message;
+    document.getElementById('debug').textContent = 'Fatal: ' + err.message;
   }
 })();
 </script>

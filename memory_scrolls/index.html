@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Memory Scrolls Archive</title>
-  <meta name="description" content="TOLARENAI Memory Scrolls archive — canonical collection, auto-listed A to Z from sitemap.">
+  <meta name="description" content="TOLARENAI Memory Scrolls — HTML-only canonical archive, auto-listed from sitemap with ordered ItemList for AI.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
   <link rel="canonical" href="https://tolarenai.com/memory_scrolls/">
   <style>
     :root { --ink:#222; --link:#0645ad; }
@@ -25,15 +26,14 @@
 <!-- TOLARENAI Branding Block -->
 <div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
   <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: 
+  <p>GitHub mirror:
      <a href="https://tolarenai.com/memory_scrolls/">https://tolarenai.com/memory_scrolls/</a></p>
 </div>
-<!-- End Branding Block -->
 
 <h1>Memory Scrolls</h1>
-<p class="intro">This archive auto-updates alphabetically from the sitemap.</p>
+<p class="intro">Auto-listed from the sitemap (HTML only), ordered by scroll number.</p>
 
-<h2>Browse (A–Z)</h2>
+<h2>Browse (Numeric)</h2>
 <ul id="memory-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
 
 <script>
@@ -41,31 +41,50 @@ async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 
   try {
     const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
     const xml  = new DOMParser().parseFromString(text, 'application/xml');
+
+    // exclude helper files
+    const EXCLUDE_RE = /(\/|^)index\.html$|license_content\.html$|attribution\.html$/i;
+
+    // extract scroll number from paths like /memory_scrolls/scroll_29/
+    function getScrollNum(url) {
+      const m = url.match(/\/memory_scrolls\/scroll_(\d+)\//i);
+      return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY;
+    }
+
     let items = [...xml.querySelectorAll('url')].map(u => ({
       loc: u.querySelector('loc')?.textContent.trim() || '',
       lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
     }))
-    .filter(x => x.loc.includes(pathFilter) && /\.(pdf|html)$/i.test(x.loc));
+    .filter(x =>
+      x.loc.includes(pathFilter) &&
+      /\.html$/i.test(x.loc) &&
+      !EXCLUDE_RE.test(x.loc)
+    );
 
-    // Alphabetical sort by filename/title
+    // numeric sort
     items.sort((a,b)=>{
-      const nameA = decodeURIComponent(a.loc.split('/').pop() || '').toLowerCase();
-      const nameB = decodeURIComponent(b.loc.split('/').pop() || '').toLowerCase();
-      return nameA.localeCompare(nameB);
+      const na = getScrollNum(a.loc), nb = getScrollNum(b.loc);
+      if (na !== nb) return na - nb;
+      const fa = (a.loc.split('/').pop() || '').toLowerCase();
+      const fb = (b.loc.split('/').pop() || '').toLowerCase();
+      return fa.localeCompare(fb);
     });
 
+    items = items.slice(0, limit);
+
+    // render into UL
     const UL = document.getElementById(containerId); UL.innerHTML='';
-    items.slice(0, limit).forEach(it=>{
+    items.forEach((it, idx)=>{
       const li=document.createElement('li');
       const a=document.createElement('a');
       const file = it.loc.split('/').pop() || '';
       const nice = decodeURIComponent(file)
-        .replace(/\.(pdf|mp4|md|html)$/i,'')
+        .replace(/\.html$/i,'')
         .replace(/[_-]+/g,' ')
         .trim();
-      a.href=it.loc; 
-      a.textContent=nice; 
-      a.target="_blank"; 
+      a.href=it.loc;
+      a.textContent=nice;
+      a.target="_blank";
       a.rel="noopener";
       li.appendChild(a);
       if (it.lastmod){
@@ -75,8 +94,28 @@ async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 
       }
       UL.appendChild(li);
     });
+
+    // JSON-LD ItemList for AI
+    const itemList = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "TOLARENAI Memory Scrolls",
+      "itemListOrder": "Ascending",
+      "numberOfItems": items.length,
+      "itemListElement": items.map((it, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": it.loc
+      }))
+    };
+    const ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify(itemList);
+    document.head.appendChild(ld);
+
   } catch(e){ console.error('Sitemap load failed:', e); }
 }
+
 renderFromSitemap({
   sitemapUrl: '/memory-sitemap.xml',
   pathFilter: '/memory_scrolls/',

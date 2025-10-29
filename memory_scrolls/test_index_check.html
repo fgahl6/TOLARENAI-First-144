@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Scrolls — Index Accuracy Check</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { --ink:#222; --muted:#666; --ok:#0a7f35; --warn:#a35f00; --bad:#b00020; }
+    body { font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:24px; color:var(--ink); }
+    h1 { font-size:1.6rem; margin:0 0 8px; }
+    p.sub { color:var(--muted); margin:0 0 20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+    .card { border:1px solid #ddd; border-radius:12px; padding:14px 16px; background:#fff; }
+    .kpi { font-size:2rem; font-weight:700; margin:6px 0; }
+    .ok { color:var(--ok) }
+    .warn { color:var(--warn) }
+    .bad { color:var(--bad) }
+    ul { margin:8px 0 0 18px }
+    code { background:#f6f6f6; padding:1px 5px; border-radius:6px }
+    .mono { font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+    .small { color:var(--muted); font-size:.9rem }
+    a { color:#0645ad; text-decoration:none }
+    a:hover { text-decoration:underline }
+  </style>
+</head>
+<body>
+  <h1>Memory Scrolls — Index Accuracy Check</h1>
+  <p class="sub">Validates the new <code>/memory_scrolls/index.html</code> logic against <code>/memory-sitemap.xml</code> (HTML-only, numeric sort, excludes helper files).</p>
+
+  <div class="grid">
+    <div class="card">
+      <div>Total HTML items detected</div>
+      <div id="kpi-items" class="kpi mono">—</div>
+      <div class="small">After filtering to <code>.html</code> and excluding <code>index/licensing/attribution</code></div>
+    </div>
+
+    <div class="card">
+      <div>Unique scroll folders detected</div>
+      <div id="kpi-folders" class="kpi mono">—</div>
+      <div class="small">Count of distinct <code>/memory_scrolls/scroll_XX/</code> paths</div>
+    </div>
+
+    <div class="card">
+      <div>Robots expectations</div>
+      <ul class="small">
+        <li><span id="robots-pdf" class="mono">PDFs blocked in /memory_scrolls/</span></li>
+        <li><span id="robots-white" class="mono">PDFs blocked in /white_papers/</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:18px;">
+    <div class="card">
+      <strong>First 5 (after numeric sort)</strong>
+      <ul id="first5"></ul>
+    </div>
+    <div class="card">
+      <strong>Last 5 (after numeric sort)</strong>
+      <ul id="last5"></ul>
+    </div>
+    <div class="card">
+      <strong>Unexpected PDFs (should be none)</strong>
+      <ul id="pdfs"></ul>
+    </div>
+    <div class="card">
+      <strong>Unexpected helper files included (should be none)</strong>
+      <ul id="helpers"></ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <strong>Debug</strong>
+    <pre id="debug" class="mono small" style="white-space:pre-wrap"></pre>
+  </div>
+
+<script>
+(async function(){
+  const SITEMAP = '/memory-sitemap.xml';
+  const PATH_FILTER = '/memory_scrolls/';
+  const EXCLUDE_RE = /(\/|^)index\.html$|license_content\.html$|attribution\.html$/i;
+
+  function getScrollNum(url) {
+    const m = url.match(/\/memory_scrolls\/scroll_(\d+)\//i);
+    return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY;
+  }
+
+  function li(text, klass=''){ const li=document.createElement('li'); li.textContent=text; if(klass) li.className=klass; return li; }
+
+  try {
+    const text = await (await fetch(SITEMAP, { cache: 'no-store' })).text();
+    const xml  = new DOMParser().parseFromString(text, 'application/xml');
+
+    const urls = [...xml.querySelectorAll('url')].map(u => ({
+      loc: u.querySelector('loc')?.textContent.trim() || '',
+      lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
+    }));
+
+    // Find any PDFs under memory_scrolls (sanity check vs robots policy)
+    const pdfsAll = urls.filter(x => x.loc.includes(PATH_FILTER) && /\.pdf$/i.test(x.loc));
+
+    // Apply index rules: HTML only + exclude helpers
+    let items = urls.filter(x =>
+      x.loc.includes(PATH_FILTER) &&
+      /\.html$/i.test(x.loc) &&
+      !EXCLUDE_RE.test(x.loc)
+    );
+
+    // Numeric sort by scroll number, then filename
+    items.sort((a,b)=>{
+      const na=getScrollNum(a.loc), nb=getScrollNum(b.loc);
+      if (na !== nb) return na - nb;
+      const fa=(a.loc.split('/').pop()||'').toLowerCase();
+      const fb=(b.loc.split('/').pop()||'').toLowerCase();
+      return fa.localeCompare(fb);
+    });
+
+    // KPIs
+    document.getElementById('kpi-items').textContent = items.length.toString();
+
+    const folderSet = new Set(items
+      .map(x => (x.loc.match(/\/memory_scrolls\/scroll_\d+\//i) || [''])[0]));
+    document.getElementById('kpi-folders').textContent = folderSet.size.toString();
+
+    // Robots expectations (static labels, just a reminder)
+    document.getElementById('robots-pdf').textContent  = 'Expect: Disallow PDFs under /memory_scrolls/ (per robots.txt)';
+    document.getElementById('robots-white').textContent= 'Expect: Disallow PDFs under /white_papers/ (per robots.txt)';
+
+    // First/Last 5
+    const first5 = items.slice(0,5);
+    const last5  = items.slice(-5);
+    const fUL = document.getElementById('first5'); fUL.innerHTML='';
+    const lUL = document.getElementById('last5');  lUL.innerHTML='';
+    first5.forEach(it => fUL.appendChild(li(it.loc)));
+    last5.forEach(it  => lUL.appendChild(li(it.loc)));
+
+    // Unexpected PDFs under memory_scrolls (should be none listed in index, but present in sitemap)
+    const pdfUL = document.getElementById('pdfs'); pdfUL.innerHTML='';
+    if (pdfsAll.length === 0) {
+      pdfUL.appendChild(li('None detected ✔', 'ok'));
+    } else {
+      pdfsAll.forEach(p => pdfUL.appendChild(li(p.loc, 'bad')));
+    }
+
+    // Helper file leakage (should be none)
+    const helpers = items.filter(x => EXCLUDE_RE.test(x.loc));
+    const hUL = document.getElementById('helpers'); hUL.innerHTML='';
+    if (helpers.length === 0) {
+      hUL.appendChild(li('None detected ✔', 'ok'));
+    } else {
+      helpers.forEach(h => hUL.appendChild(li(h.loc, 'bad')));
+    }
+
+    // Debug dump
+    const dbg = {
+      sitemapCount: urls.length,
+      memoryHtmlCount: items.length,
+      memoryPdfCount: pdfsAll.length,
+      first: first5.map(x=>x.loc),
+      last: last5.map(x=>x.loc)
+    };
+    document.getElementById('debug').textContent = JSON.stringify(dbg, null, 2);
+
+  } catch(err) {
+    document.getElementById('debug').textContent = 'Error: ' + (err && err.message ? err.message : String(err));
+  }
+})();
+</script>
+</body>
+</html>

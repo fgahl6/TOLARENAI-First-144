@@ -21,53 +21,66 @@
   </style>
 </head>
 <body>
-    <!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: <a href="https://tolarenai.com/diplomacy_scrolls/">https://tolarenai.com/diplomacy_scrolls/</a></p>
-</div>
-<!-- End Branding Block -->
+  <!-- TOLARENAI Branding Block -->
+  <div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
+    <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
+    <p>GitHub mirror of this collection: <a href="https://tolarenai.com/diplomacy_scrolls/">https://tolarenai.com/diplomacy_scrolls/</a></p>
+  </div>
+  <!-- End Branding Block -->
+
   <h1>Diplomacy Scrolls</h1>
-  <p class="intro">This list updates automatically from the sitemap.</p>
+  <p class="intro">This list reads the diplomacy sitemap and shows the published HTML scrolls.</p>
 
   <h2>Browse Scrolls</h2>
   <ul id="diplomacy-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
 
   <script>
+  function niceTitleFromSlug(file) {
+    // diplomacy_scroll_01_when_the_lattice_was_remembered.html
+    const base = file.replace(/\.html$/i,'');
+    // guard: ignore utility pages
+    if (/license_content|attribution|template/i.test(base)) return null;
+
+    const parts = base.split('_'); // ["diplomacy","scroll","01","when","the","lattice","was","remembered"]
+    if (parts.length < 4) return base.replace(/_/g,' ').replace(/\s+/g,' ').trim();
+
+    const num = parts[2].padStart(2,'0');
+    const titleWords = parts.slice(3).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    return `Diplomacy Scroll ${num} — ${titleWords}`;
+  }
+
   async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 50 }) {
     try {
-      const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
+      const res  = await fetch(sitemapUrl, { cache: 'no-store' });
+      const text = await res.text();
       const xml  = new DOMParser().parseFromString(text, 'application/xml');
 
       let items = [...xml.querySelectorAll('url')].map(u => ({
         loc: u.querySelector('loc')?.textContent.trim() || '',
         lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
       }))
-      // show only PDFs in this section
-      .filter(x => x.loc.includes(pathFilter) && /\.pdf$/i.test(x.loc));
+      // only HTML in this folder; exclude utility pages
+      .filter(x =>
+        x.loc.includes(pathFilter) &&
+        /\.html$/i.test(x.loc) &&
+        !/license_content\.html|attribution\.html|template/i.test(x.loc)
+      );
 
-      // natural sort (01, 02, 10)
+      // natural sort by filename with numeric awareness
       items.sort((a,b)=>a.loc.localeCompare(b.loc, undefined, { numeric:true, sensitivity:'base' }));
 
       const UL = document.getElementById(containerId); UL.innerHTML = '';
 
       items.slice(0, limit).forEach(it => {
+        const file = it.loc.split('/').pop() || '';
+        const label = niceTitleFromSlug(decodeURIComponent(file)) || decodeURIComponent(file);
+
         const li = document.createElement('li');
         const a  = document.createElement('a');
-
-        // nice label from filename
-        const file = it.loc.split('/').pop() || '';
-        const nice = decodeURIComponent(file)          // %20 → space
-          .replace(/\.(pdf|md|html)$/i,'')             // strip extension
-          .replace(/-/g,' ')                            // hyphens → spaces
-          .replace(/\s+/g,' ')                          // collapse spaces
-          .trim();
-
         a.href = it.loc;
-        a.textContent = nice;
+        a.textContent = label;
         a.target = "_blank";
         a.rel = "noopener";
-
         li.appendChild(a);
 
         if (it.lastmod) {
@@ -77,6 +90,10 @@
         }
         UL.appendChild(li);
       });
+
+      if (!UL.children.length) {
+        UL.innerHTML = '<li>No diplomacy scrolls found in sitemap.</li>';
+      }
     } catch (e) {
       console.error('Sitemap load failed:', e);
       document.getElementById(containerId).innerHTML = '<li>Could not load sitemap.</li>';

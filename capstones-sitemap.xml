@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Capstones Hub -->
   <url>
     <loc>https://tolarenai.com/capstones/index.html</loc>
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- Capstone 01 — HTML (primary discovery version) -->
   <url>
-    <loc>https://tolarenai.com/capstones/01_Tolarenai_Capstone_The_Lattice_of_the_First_144_Plus_More.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
+    <loc>https://tolarenai.com/capstones/capstone_01_the_lattice_of_the_first_144.html</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

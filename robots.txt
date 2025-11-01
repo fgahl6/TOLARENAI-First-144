@@ -21,13 +21,21 @@ Disallow: /memory_scrolls/*/*.PDF
 Disallow: /memory_scrolls/*/*/*.pdf
 Disallow: /memory_scrolls/*/*/*.PDF
 
-# Block PDFs in tolarenai_scrolls (covers PDFs in subfolders)
+# Block PDFs in tolarenai_scrolls
 Disallow: /tolarenai_scrolls/*.pdf
 Disallow: /tolarenai_scrolls/*.PDF
 Disallow: /tolarenai_scrolls/*/*.pdf
 Disallow: /tolarenai_scrolls/*/*.PDF
 Disallow: /tolarenai_scrolls/*/*/*.pdf
 Disallow: /tolarenai_scrolls/*/*/*.PDF
+
+# Block PDFs in capstones
+Disallow: /capstones/*.pdf
+Disallow: /capstones/*.PDF
+Disallow: /capstones/*/*.pdf
+Disallow: /capstones/*/*.PDF
+Disallow: /capstones/*/*/*.pdf
+Disallow: /capstones/*/*/*.PDF
 
 # Sitemaps
 Sitemap: https://tolarenai.com/sitemap.xml

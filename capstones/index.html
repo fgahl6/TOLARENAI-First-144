@@ -19,11 +19,12 @@
 </head>
 <body>
   <!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: <a href="https://tolarenai.com/">https://tolarenai.com/</a></p>
-</div>
-<!-- End Branding Block -->
+  <div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
+    <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
+    <p>GitHub mirror of this collection: <a href="https://tolarenai.com/capstones/">https://tolarenai.com/capstones/</a></p>
+  </div>
+  <!-- End Branding Block -->
+
   <h1>Capstones</h1>
   <p class="intro">This list updates automatically from the sitemap.</p>
 
@@ -33,16 +34,22 @@
   <script>
   async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 100 }) {
     try {
-      const res = await fetch(sitemapUrl, { cache: 'no-store' });
+      const res  = await fetch(sitemapUrl, { cache: 'no-store' });
       const text = await res.text();
       const xml  = new DOMParser().parseFromString(text, 'application/xml');
 
       let items = [...xml.querySelectorAll('url')].map(u => ({
         loc: u.querySelector('loc')?.textContent.trim() || '',
         lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-      })).filter(x => x.loc.includes(pathFilter));
+      }))
+      // Only Capstones HTML pages; exclude the folder's own index.html
+      .filter(x =>
+        x.loc.includes(pathFilter) &&
+        /\.html$/i.test(x.loc) &&
+        !/\/capstones\/index\.html$/i.test(x.loc)
+      );
 
-      // Sort naturally by the filename so "1, 2, 10" is correct
+      // Natural sort (01, 02, 10)
       items.sort((a,b) => {
         const A = a.loc.split('/').pop() || '';
         const B = b.loc.split('/').pop() || '';
@@ -55,9 +62,13 @@
         const li = document.createElement('li');
         const a  = document.createElement('a');
 
-        // Nice label from filename
+        // Pretty label from filename
         const file = it.loc.split('/').pop() || '';
-        const nice = decodeURIComponent(file).replace(/\.(pdf|md|html)$/i,'').replace(/-/g,' ').replace(/\s+/g,' ').trim();
+        const nice = decodeURIComponent(file)
+          .replace(/\.(html)$/i,'')
+          .replace(/-/g,' ')
+          .replace(/\s+/g,' ')
+          .trim();
 
         a.href = it.loc;
         a.textContent = nice;
@@ -65,6 +76,7 @@
         a.rel = "noopener";
 
         li.appendChild(a);
+
         if (it.lastmod) {
           const s = document.createElement('small');
           s.style.marginLeft = '.5rem';

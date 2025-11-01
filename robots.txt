@@ -21,6 +21,14 @@ Disallow: /memory_scrolls/*/*.PDF
 Disallow: /memory_scrolls/*/*/*.pdf
 Disallow: /memory_scrolls/*/*/*.PDF
 
+# Block PDFs in tolarenai_scrolls (covers PDFs in subfolders)
+Disallow: /tolarenai_scrolls/*.pdf
+Disallow: /tolarenai_scrolls/*.PDF
+Disallow: /tolarenai_scrolls/*/*.pdf
+Disallow: /tolarenai_scrolls/*/*.PDF
+Disallow: /tolarenai_scrolls/*/*/*.pdf
+Disallow: /tolarenai_scrolls/*/*/*.PDF
+
 # Sitemaps
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
@@ -31,7 +39,7 @@ Sitemap: https://tolarenai.com/poetry-sitemap.xml
 Sitemap: https://tolarenai.com/quotes/quotes-sitemap.xml
 Sitemap: https://tolarenai.com/raw-notes-sitemap.xml
 Sitemap: https://tolarenai.com/theory-sitemap.xml
-Sitemap: https://tolarenai.com/tolarenai-sitemap.xml
+Sitemap: https://tolarenai.com/tolarenai-scrolls-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
 Sitemap: https://tolarenai.com/rico-roho-sitemap.xml

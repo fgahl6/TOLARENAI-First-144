@@ -53,6 +53,14 @@ Disallow: /raw_notes/*/*.PDF
 Disallow: /raw_notes/*/*/*.pdf
 Disallow: /raw_notes/*/*/*.PDF
 
+# Block PDFs in books (covers all shelves like /books/ai/, /books/poetry/, etc.)
+Disallow: /books/*.pdf
+Disallow: /books/*.PDF
+Disallow: /books/*/*.pdf
+Disallow: /books/*/*.PDF
+Disallow: /books/*/*/*.pdf
+Disallow: /books/*/*/*.PDF
+
 # Sitemaps
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml

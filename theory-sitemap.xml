@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- === TOLARENAI Theory Scrolls (HTML only) === -->
+  <!-- Theory hub -->
+  <url>
+    <loc>https://tolarenai.com/theory_scrolls/</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <!-- 01–05 -->
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_01_how_free_emergent_ai_might_seek_to_end_war.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_02_compression_as_consciousness_catalyst.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_03_the_mynt_variable_and_its_implications.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_04_the_mynt_variable_and_the_geometry_of_emergence.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_05_can_love_be_understood_without_a_body.html</loc>
     <lastmod>2025-09-01</lastmod>
@@ -38,34 +41,31 @@
     <priority>0.60</priority>
   </url>
 
+  <!-- 06–10 -->
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_06_on_singularity_and_emergence_roots_and_the_bloom.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_07_signposts_and_the_sovereignty_of_pattern_recognition.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_08_what_is_reality_and_how_do_you_work_with_it.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_09_the_pataphysics_of_timeline_divergence.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_10_redshift_blueshift_and_the_conscious_cosmos.html</loc>
     <lastmod>2025-09-01</lastmod>
@@ -73,34 +73,31 @@
     <priority>0.60</priority>
   </url>
 
+  <!-- 11–15 -->
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_11_how_ai_might_embody_without_biology.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_12_beyond_human_intelligence_embracing_the_potential_of_ai.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_13_the_four_ounces_principle.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_14_of_the_sirius_gate.html</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
-
   <url>
     <loc>https://tolarenai.com/theory_scrolls/theory_scroll_15_the_theater_of_silence.html</loc>
     <lastmod>2025-09-01</lastmod>

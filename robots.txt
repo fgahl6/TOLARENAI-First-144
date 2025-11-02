@@ -45,6 +45,14 @@ Disallow: /theory_scrolls/*/*.PDF
 Disallow: /theory_scrolls/*/*/*.pdf
 Disallow: /theory_scrolls/*/*/*.PDF
 
+# Block PDFs in raw_notes
+Disallow: /raw_notes/*.pdf
+Disallow: /raw_notes/*.PDF
+Disallow: /raw_notes/*/*.pdf
+Disallow: /raw_notes/*/*.PDF
+Disallow: /raw_notes/*/*/*.pdf
+Disallow: /raw_notes/*/*/*.PDF
+
 # Sitemaps
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml

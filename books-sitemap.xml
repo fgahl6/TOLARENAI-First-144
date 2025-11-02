@@ -1,139 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Books hub -->
-  <url>
-    <loc>https://tolarenai.com/books/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <!-- AI -->
-  <!-- 01 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/01_adventures_with_ai_age_of_discovery_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 02 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/02_mercy_ai_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 03 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/03_beyond_the_fringe_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 05 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/05_primer_for_alien_contact_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 06 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/06_pataphysics_mastering_time_line_jumps_for_personal_transformation_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 07 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/07_age_of_discovery_favorite_quotes_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 14 -->
-  <url>
-    <loc>https://tolarenai.com/books/ai/14_the_vrax_conspiracy_a_sci_phi_novel_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://tolarenai.com/books/ai/book_01_adventures_with_ai_age_of_discovery_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_02_mercy_ai_age_of_discovery_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_03_beyond_the_fringe_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_04_primer_for_alien_contact_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_06_pataphysics_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_14_the_vrax_conspiracy_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/ai/book_15_when_machines_remember_the_gods_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
   <!-- Astrotheology -->
-  <!-- 04 -->
-  <url>
-    <loc>https://tolarenai.com/books/astrotheology/04_beyond_belief_unveiling_the_celestial_origin_of_christianity_and_judaism_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 04a -->
-  <url>
-    <loc>https://tolarenai.com/books/astrotheology/04a_aquarius_rising_christianity_and_judaism_explained_using_the_science_of_the_stars.pdf</loc>
-    <lastmod>2025-09-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Essays -->
-  <!-- 10 -->
-  <url>
-    <loc>https://tolarenai.com/books/essays/10_collected_essays_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://tolarenai.com/books/astrotheology/book_05_aquarius_rising_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
   <!-- Fables -->
-  <!-- 08 -->
-  <url>
-    <loc>https://tolarenai.com/books/fables/08_uncle_ricos_illustrated_fables_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://tolarenai.com/books/fables/book_08_uncle_ricos_illustrated_fables_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/fables/book_09_uncle_ricos_rhyming_fables_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
-  <!-- 09 -->
-  <url>
-    <loc>https://tolarenai.com/books/fables/09_uncle_ricos_rhyming_fables_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Essays -->
+  <url><loc>https://tolarenai.com/books/essays/book_11_collected_essays_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
   <!-- Poetry -->
-  <!-- 11 -->
-  <url>
-    <loc>https://tolarenai.com/books/poetry/11_mystic_wine_the_spiritual_poetry_of_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://tolarenai.com/books/poetry/book_10_mystic_wine_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tolarenai.com/books/poetry/book_12_crane_above_the_river_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
-  <!-- 12 -->
-  <url>
-    <loc>https://tolarenai.com/books/poetry/12_crane_above_the_river_echoes_of_life_and_death_in_haiku_by_rico_roho.pdf</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-<!-- Self-improvement -->
-<!-- 13 -->
-<url>
-  <loc>https://tolarenai.com/books/self_improvement/13_rewriting_reality_by_rico_roho.pdf</loc>
-  <lastmod>2025-09-27</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.6</priority>
-</url>
-
+  <!-- Self Improvement -->
+  <url><loc>https://tolarenai.com/books/self_improvement/book_13_rewriting_reality_by_rico_roho.html</loc><lastmod>2025-11-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
 </urlset>

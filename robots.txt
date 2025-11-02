@@ -66,4 +66,5 @@ Sitemap: https://tolarenai.com/theory-sitemap.xml
 Sitemap: https://tolarenai.com/tolarenai-scrolls-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
+Sitemap: https://tolarenai.com/wisdom-sitemap.xml
 Sitemap: https://tolarenai.com/rico-roho-sitemap.xml

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Theory Scrolls Archive</title>
-  <meta name="description" content="Auto-updating archive of TOLARENAI Theory Scrolls.">
+  <meta name="description" content="Auto-updating archive of TOLARENAI Theory Scrolls (HTML).">
   <link rel="canonical" href="https://tolarenai.com/theory_scrolls/">
   <style>
     :root { --ink:#222; --link:#0645ad; }
@@ -22,11 +22,12 @@
 </head>
 <body>
   <!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: <a href="https://tolarenai.com/theory_scrolls/">https://tolarenai.com/theory_scrolls/</a></p>
-</div>
-<!-- End Branding Block -->
+  <div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
+    <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
+    <p>GitHub mirror of this collection: <a href="https://tolarenai.com/theory_scrolls/">https://tolarenai.com/theory_scrolls/</a></p>
+  </div>
+  <!-- End Branding Block -->
+
   <h1>Theory Scrolls</h1>
   <p class="intro">This list updates automatically from the sitemap.</p>
 
@@ -34,37 +35,81 @@
   <ul id="theory-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
 
   <script>
-  async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 200 }) {
+  // Title-case helper (keeps small words lower unless first)
+  function toTitleCase(s){
+    const lowerKeep = new Set(['and','or','of','the','a','an','to','in','with','for','on','at','by','from','as']);
+    return s.split(/\s+/).map((w,i)=>{
+      const ww = w.toLowerCase();
+      if(i>0 && lowerKeep.has(ww)) return ww;
+      return ww.charAt(0).toUpperCase()+ww.slice(1);
+    }).join(' ');
+  }
+
+  // Build a nice label like: TOLARENAI Theory Scroll 15 — The Theatre of Silence
+  function makeLabelFromFilename(file){
+    const m = file.match(/^theory_scroll_(\d+)_([^.]+)\.html$/i);
+    if(!m){
+      // Fallback: strip extension and underscores
+      return toTitleCase(decodeURIComponent(file.replace(/\.[^.]+$/,'').replace(/_/g,' ')));
+    }
+    const num = m[1];
+    const slug = m[2].replace(/_/g,' ').trim();
+    const title = toTitleCase(slug);
+    return `TOLARENAI Theory Scroll ${num} — ${title}`;
+  }
+
+  async function renderFromSitemap({ sitemapUrl, containerId, limit = 200 }) {
     try {
       const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
       const xml  = new DOMParser().parseFromString(text, 'application/xml');
+
+      // Collect only theory scroll HTML pages; exclude assets and this index
       let items = [...xml.querySelectorAll('url')].map(u => ({
         loc: u.querySelector('loc')?.textContent.trim() || '',
         lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-      })).filter(x => x.loc.includes(pathFilter) && /\.(pdf|mp4)$/i.test(x.loc));
+      })).filter(x => {
+        if(!x.loc.includes('/theory_scrolls/')) return false;
+        if(x.loc.includes('/assets/')) return false;
+        if(/\/index\.html$/i.test(x.loc)) return false;
+        return /theory_scroll_\d+_.+\.html$/i.test(x.loc);
+      });
 
-      items.sort((a,b)=>a.loc.localeCompare(b.loc,undefined,{numeric:true,sensitivity:'base'}));
+      // Sort numerically by scroll number
+      items.sort((a,b)=>{
+        const na = (a.loc.match(/theory_scroll_(\d+)_/i)||[])[1] || '0';
+        const nb = (b.loc.match(/theory_scroll_(\d+)_/i)||[])[1] || '0';
+        return parseInt(na,10) - parseInt(nb,10);
+      });
 
       const UL = document.getElementById(containerId); UL.innerHTML='';
       items.slice(0, limit).forEach(it=>{
         const li=document.createElement('li');
         const a=document.createElement('a');
         const file=it.loc.split('/').pop()||'';
-        const label=decodeURIComponent(file)
-          .replace(/\.(pdf|mp4|md|html)$/i,'')
-          .replace(/-/g,' ')
-          .replace(/\s+/g,' ')
-          .trim();
-        a.href=it.loc; a.textContent=label; a.target="_blank"; a.rel="noopener";
+        a.href=it.loc;
+        a.textContent=makeLabelFromFilename(decodeURIComponent(file));
+        a.target="_blank"; a.rel="noopener";
         li.appendChild(a);
-        if (it.lastmod){const s=document.createElement('small');s.textContent=`(${it.lastmod})`;li.appendChild(s);}
+        if (it.lastmod){
+          const s=document.createElement('small');
+          s.textContent = `(${it.lastmod})`;
+          li.appendChild(s);
+        }
         UL.appendChild(li);
       });
-    } catch(e){ console.error('Sitemap load failed:', e); }
+
+      if(!items.length){
+        document.getElementById(containerId).innerHTML = '<li>No theory scrolls found in sitemap.</li>';
+      }
+    } catch(e){
+      console.error('Sitemap load failed:', e);
+      const UL = document.getElementById(containerId);
+      UL.innerHTML = '<li>Unable to load sitemap. Please try again later.</li>';
+    }
   }
+
   renderFromSitemap({
     sitemapUrl: '/theory-sitemap.xml',
-    pathFilter: '/theory_scrolls/',
     containerId: 'theory-list',
     limit: 200
   });

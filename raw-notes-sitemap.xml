@@ -55,6 +55,14 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- NEW ENTRY INSERTED HERE -->
+  <url>
+    <loc>https://tolarenai.com/raw_notes/raw_notes_2023_mynt.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>https://tolarenai.com/raw_notes/raw_notes_2023.html</loc>
     <lastmod>2025-11-02</lastmod>

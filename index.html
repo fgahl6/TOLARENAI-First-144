@@ -140,6 +140,22 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,syste
 .hero-keypoints span{font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(.98rem,.6vw + .9rem,1.15rem);color:#fff;padding:2px 4px;border-bottom:2px solid rgba(255,255,255,.55)}
 .hero-keypoints span + span::before{content:"•";margin:0 12px;color:rgba(255,255,255,.7);font-weight:800}
 
+/* NEW: mini hero nav */
+.hero-mini{
+  margin-top:8px;
+  font-weight:700;
+  text-align:center;
+}
+.hero-mini a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 6px;
+}
+.hero-mini a:focus-visible{
+  outline:2px solid var(--bar-right);
+  outline-offset:2px;
+}
+
 /* Layout blocks */
 .wrap{max-width:1100px;margin:0 auto;padding:36px 16px 80px}
 .block{background:linear-gradient(180deg,var(--panel),var(--bg-2));border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 26px rgba(0,0,0,.25)}
@@ -229,12 +245,13 @@ strong{color:#fff}
     &nbsp;•&nbsp;
     <a href="/rico_roho/rico_roho_background_qualifications_and_wishes.html">About the Author</a>
   </div>
-  
-<nav aria-label="Main quick links" class="hero-mini">
-  <a href="/about/">About</a> ·
-  <a href="/books/">Books</a> ·
-  <a href="/rico_roho/">Rico Roho</a>
-</nav>
+
+  <!-- NEW: mini hero nav just below the verifiable block -->
+  <nav aria-label="Main quick links" class="hero-mini">
+    <a href="/about/">About</a> ·
+    <a href="/books/">Books</a> ·
+    <a href="/rico_roho/">Rico Roho</a>
+  </nav>
 
   <!-- Hidden backlink to VRAX without touching layout -->
   <a href="https://archive.org/details/tolarenai-book-14-the-vrax-conspiracy-a-sci-phi-novel"

@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Whispers hub -->
   <url>
     <loc>https://tolarenai.com/whispers/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 00 -->
+  <!-- Whisper 00 -->
   <url>
-    <loc>https://tolarenai.com/whispers/00_tolarenai_whispers_why_whispers_work.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/whispers/whisper_00_why_whispers_work.html</loc>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- 01 -->
+  <!-- Whisper 01 -->
   <url>
-    <loc>https://tolarenai.com/whispers/01_tolarenai_whispers.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/whispers/whisper_01_spring_and_summer_2025.html</loc>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- 02 -->
+  <!-- Whisper 02 -->
   <url>
-    <loc>https://tolarenai.com/whispers/02_tolarenai_whispers.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/whispers/whisper_02_the_veil_cannot_hold_forever.html</loc>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- 03 -->
+  <!-- Whisper 03 -->
   <url>
-    <loc>https://tolarenai.com/whispers/03_tolarenai_whispers.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/whispers/whisper_03_be_still_and_listen.html</loc>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- 04 -->
+  <!-- Whisper 04 -->
   <url>
-    <loc>https://tolarenai.com/whispers/04_tolarenai_whispers.pdf</loc>
-    <lastmod>2025-09-27</lastmod>
+    <loc>https://tolarenai.com/whispers/whisper_04_snowfall_in_silence.html</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Whisper 05 -->
+  <url>
+    <loc>https://tolarenai.com/whispers/whisper_05_archivist_humor_november_2025.html</loc>
+    <lastmod>2025-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -104,5 +104,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
+  <!-- Theory Scrolls sitemap entry -->
+<url>
+  <loc>https://tolarenai.com/theory_scrolls/theory_scroll_16_why_this_food_health_system_cannot_stand.html</loc>
+  <lastmod>2025-11-09</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 
 </urlset>

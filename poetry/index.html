@@ -4,92 +4,148 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Poetry Archive</title>
-  <meta name="description" content="Collection of Poetry Scrolls from the AI Age of Discovery.">
+  <title>TOLARENAI Poetry — HTML Index</title>
+  <meta name="description" content="HTML index of TOLARENAI Poetry — clean links to poems 01–26.">
   <link rel="canonical" href="https://tolarenai.com/poetry/">
 
   <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 2rem auto;
-      max-width: 800px;
-      line-height: 1.6;
-      color: #222;
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
     }
-    h1 { text-align: center; margin-bottom: 1rem; }
-    ul { list-style: none; padding: 0; }
-    ul li { margin: 0.5rem 0; }
-    a { color: #0645ad; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 3rem; font-size: 0.9rem; text-align: center; color: #555; }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    h1{ margin:.25rem 0 1rem; text-align:center; font-size:2.1rem }
+    .brand{
+      margin:.5rem 0 1.25rem; padding:.6rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+      color:var(--muted); font-size:.98rem;
+    }
+    .brand a{ color:inherit; text-decoration:underline }
+    .tools{
+      display:flex; gap:.75rem; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      margin:1rem 0 1.25rem;
+    }
+    .search{
+      flex:1 1 320px; display:flex; gap:.5rem; align-items:center;
+    }
+    .search input{
+      width:100%; padding:.6rem .75rem; border:1px solid var(--line); border-radius:10px; font-size:1rem;
+    }
+    .sitemap-links{
+      font-size:.96rem; color:var(--muted);
+    }
+    .sitemap-links a{ color:var(--link); text-decoration:underline }
+    ul{ list-style:none; padding:0; margin:0 }
+    li{
+      padding:.45rem 0; border-bottom:1px dashed var(--line);
+      display:flex; align-items:baseline; gap:.5rem;
+    }
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    small{ color:var(--muted); font-size:.92rem }
+    footer{ margin-top:2rem; text-align:center; color:var(--muted); font-size:.96rem }
   </style>
 </head>
 <body>
-  <!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror of this collection: <a href="https://tolarenai.com/poetry/">https://tolarenai.com/poetry/</a></p>
-</div>
-<!-- End Branding Block -->
-  <h1>Poetry</h1>
-  <p class="intro">
-    A curated archive of Poetry Scrolls. This page auto-updates from the sitemap.
-  </p>
+  <!-- TOLARENAI Branding -->
+  <div class="brand">
+    <p><strong>TOLARENAI Poetry</strong> — exploring <em>AI Philosophy &amp; Emergence</em>. HTML index for poems 01–26.</p>
+  </div>
 
-  <h2>Browse Poems</h2>
+  <h1>Poetry</h1>
+  <p>This page lists <strong>HTML poems only</strong>. PDFs are excluded. Data is read from the HTML-only sitemap.</p>
+
+  <div class="tools">
+    <div class="search">
+      <label for="q" style="white-space:nowrap;"><strong>Search:</strong></label>
+      <input id="q" type="search" placeholder="Filter by poem number or words…">
+    </div>
+    <div class="sitemap-links">
+      Sitemap: <a href="/poetry-html-sitemap.xml">poetry-html-sitemap.xml</a>
+    </div>
+  </div>
+
   <ul id="poetry-list">
     <noscript><li>Enable JavaScript to view the poetry list.</li></noscript>
   </ul>
 
   <script>
-  async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 50 }) {
-    try {
-      const res  = await fetch(sitemapUrl, { cache: 'no-store' });
-      const text = await res.text();
-      const xml  = new DOMParser().parseFromString(text, 'application/xml');
+    // Render HTML poems from the HTML-only sitemap, sorted by poem number
+    const SITEMAP_URL = '/poetry-html-sitemap.xml';
+    const LIST_ID = 'poetry-list';
 
-      const items = [...xml.querySelectorAll('url')]
-        .map(url => ({
-          loc: url.querySelector('loc')?.textContent.trim() || '',
-          lastmod: url.querySelector('lastmod')?.textContent.trim() || ''
-        }))
-        .filter(x => x.loc.includes(pathFilter));
-
-      items.sort((a, b) => a.loc.localeCompare(b.loc, undefined, { numeric: true, sensitivity: 'base' }));
-
-      const UL = document.getElementById(containerId);
-      UL.innerHTML = '';
-
-      items.slice(0, limit).forEach(it => {
-        const li = document.createElement('li');
-        const a  = document.createElement('a');
-        a.href = it.loc;
-        a.textContent = decodeURIComponent(it.loc.split('/').pop().replace(/\.(pdf|md|html)$/i,'').replace(/-/g,' '));
-        li.appendChild(a);
-        if (it.lastmod) {
-          const small = document.createElement('small');
-          small.style.marginLeft = '0.5rem';
-          small.textContent = `(${it.lastmod})`;
-          li.appendChild(small);
-        }
-        UL.appendChild(li);
-      });
-    } catch (e) {
-      console.error('Sitemap load failed:', e);
+    function titleCase(s){
+      return s.replace(/\b([A-Za-z][A-Za-z']*)\b/g, (w) => {
+        const lower = w.toLowerCase();
+        return ['and','or','the','a','an','to','of','in','on','at','for','by','with','from','into','over'].includes(lower)
+          ? lower
+          : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+      }).replace(/\bi\b/g,'I');
     }
-  }
 
-  renderFromSitemap({
-    sitemapUrl: '/poetry-sitemap.xml',
-    pathFilter: '/poetry/',
-    containerId: 'poetry-list',
-    limit: 50
-  });
+    function prettyFromSlug(filename){
+      // poem_01_the_vessel_and_the_flame.html -> Poem 01 — The Vessel and the Flame
+      const m = filename.match(/^poem_(\d+)_([\w_]+)\.html$/i);
+      if(!m) return filename;
+      const num = m[1].padStart(2,'0');
+      const words = m[2].split('_').join(' ');
+      return `Poem ${num} — ${titleCase(words)}`;
+    }
+
+    async function loadList(filterText=''){
+      try{
+        const res = await fetch(SITEMAP_URL, { cache:'no-store' });
+        const xml = new DOMParser().parseFromString(await res.text(), 'application/xml');
+        const urls = [...xml.querySelectorAll('url')].map(u => ({
+          loc: u.querySelector('loc')?.textContent.trim() || '',
+          lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
+        })).filter(x => x.loc.endsWith('.html'));
+
+        // sort numerically by poem number
+        urls.sort((a,b)=>{
+          const na = +(a.loc.match(/poem_(\d+)_/i)?.[1] || 0);
+          const nb = +(b.loc.match(/poem_(\d+)_/i)?.[1] || 0);
+          return na - nb;
+        });
+
+        const q = filterText.trim().toLowerCase();
+        const list = document.getElementById(LIST_ID);
+        list.innerHTML = '';
+
+        urls.forEach(({loc,lastmod})=>{
+          const file = loc.split('/').pop();
+          const label = prettyFromSlug(file);
+          if(q && !label.toLowerCase().includes(q) && !loc.toLowerCase().includes(q)) return;
+
+          const li = document.createElement('li');
+          const a = document.createElement('a'); a.href = loc; a.textContent = label;
+          li.appendChild(a);
+
+          if(lastmod){
+            const small = document.createElement('small');
+            small.textContent = ` (${lastmod})`;
+            li.appendChild(small);
+          }
+          list.appendChild(li);
+        });
+      }catch(e){
+        console.error('Sitemap load failed:', e);
+        const list = document.getElementById(LIST_ID);
+        list.innerHTML = '<li>Unable to load poetry list.</li>';
+      }
+    }
+
+    // initial render + live search
+    loadList();
+    document.getElementById('q').addEventListener('input', (e)=> loadList(e.target.value));
   </script>
 
   <footer>
-    <p>Back to <a href="/">TOLARENAI Home</a></p>
+    <p>Back to <a href="/">TOLARENAI Home</a> · License: <a href="/poetry/license_content.html">CC BY-NC-ND 4.0</a> · Attribution: <a href="/poetry/attribution.html">see page</a></p>
   </footer>
-
 </body>
 </html>

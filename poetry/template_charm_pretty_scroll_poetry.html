@@ -1,24 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    CHARM Standard — Pretty Scroll Template (SMALL • FULL SEO • v1.2 • Poetry • Centered)
-    For files under /poetry/
-
-    Instructions:
-      1) Replace ALL CAPS placeholders (TITLE, DESC, CANONICAL, IMAGE_URL, PUBDATE, ARCHIVE_URL).
-      2) Paste the FULL poem (no truncation) into <pre class="verbatim poem"> … </pre>.
-      3) Keep SHA-256 / TXIDs ONLY inside <dl class="meta"> if you include the asset block.
-      4) Delete Commentary/GROK if not included.
-
-    License & Attribution (poetry-level):
-      • License:      /poetry/license_content.html
-      • Attribution:  /poetry/attribution.html
-  -->
+  <!-- CHARM Pretty • Poetry v1.3 • Centered • Numbered (use POEM_NO like 01, 02, …) -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Primary -->
   <title>Poetry — TITLE</title>
   <meta name="description" content="DESC">
   <link rel="canonical" href="CANONICAL">
@@ -42,69 +28,24 @@
   <meta name="twitter:description" content="DESC">
   <meta name="twitter:image" content="IMAGE_URL">
 
-  <!-- Styles -->
   <style>
-    :root{
-      --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
-      --line:#e8e9ee; --pre:#f1f3f5; --shadow:0 12px 28px rgba(0,0,0,.06); --radius:18px;
-    }
+    :root{ --bg:#f5f5f7; --paper:#fff; --ink:#0f0f10; --muted:#57585d; --line:#e8e9ee; --shadow:0 12px 28px rgba(0,0,0,.06); }
     *{ box-sizing:border-box }
     html,body{ height:100% }
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:1.08rem; line-height:1.8;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-    main{
-      max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem;
-      background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
-    }
-    h1{ margin:0 0 .55rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
-    h2{ margin:0 0 1.35rem; text-align:center; font-size:1.15rem; color:var(--muted); font-weight:600; }
-    .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
+    body{ margin:0; background:var(--bg); color:var(--ink); font-family:Georgia,"Times New Roman",serif; font-size:1.08rem; line-height:1.8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    main{ max-width:960px; margin:3.75rem auto; padding:2.75rem 2.15rem; background:var(--paper); border-radius:18px; box-shadow:var(--shadow); }
+    h1{ margin:0 0 .5rem; text-align:center; font-size:2.55rem; font-weight:700; letter-spacing:.2px; }
+    /* Numbered subhead */
+    .subhead{ margin:.35rem 0 1.35rem; text-align:center; font-size:1.05rem; font-weight:700; color:#222; letter-spacing:.12rem; }
+    .meta{ text-align:center; margin:.4rem 0 1.2rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
 
-    /* Center all poem text */
     .prose{ text-align:center; }
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
-
-    .indent-1{ margin-left:2rem; }
-    .indent-2{ margin-left:3rem; }
-
-    .verbatim{
-      white-space:pre-wrap; word-wrap:break-word; overflow:auto; background:transparent; border:0; padding:0;
-      margin:0 0 1.05rem;
-      font-family:inherit; font-size:1.15rem; line-height:1.6;
-    }
-    /* Ensures preformatted poem lines render centered */
-    .verbatim.poem{ text-align:center; }
-
-    .section-header{
-      text-align:center; font-size:1.75rem; font-weight:800; margin:2.2rem 0 1rem; letter-spacing:.15px;
-    }
-    .section-sub{
-      text-align:center; font-size:1.22rem; font-weight:600; color:var(--muted); margin:.2rem 0 1.2rem;
-    }
-
-    .asset{ max-width:720px; margin:.35rem auto 1.5rem; }
-    .asset figure{ margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
-    .asset img,.asset video{ display:block; width:100%; height:auto; }
-    .asset .caption{
-      margin:.6rem 0 .75rem; text-align:center; font-weight:600; padding:.4rem .8rem; border:1px solid var(--line);
-      border-radius:999px; display:inline-block;
-    }
-    .asset .meta{
-      margin:.55rem 0 0; background:var(--pre); border:1px solid var(--line); border-radius:14px; padding:.85rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New",monospace;
-      font-size:.98rem; line-height:1.6; color:#111; text-align:left;
-    }
-    .asset .meta dt{ font-weight:700; }
-    .asset .meta dd{ margin:0 0 .35rem 0; }
+    .verbatim{ white-space:pre-wrap; word-wrap:break-word; background:transparent; border:0; padding:0; margin:0 0 1.05rem; font-family:inherit; font-size:1.15rem; line-height:1.6; text-align:center; }
   </style>
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -125,43 +66,17 @@
 <body>
   <main>
     <h1>Poetry — TITLE</h1>
-    <h2>TOLARENAI Poetry</h2>
+    <div class="subhead">TOLARENAI POETRY POEM_NO</div>
 
     <p class="meta">
       <strong>Archive.org Mirror:</strong>
       <a href="ARCHIVE_URL" target="_blank" rel="noopener">View this poem on Archive.org</a>
     </p>
 
-    <!-- ===== Poem Text (NO TRUNCATION) ===== -->
     <section class="prose">
-      <p><strong>Filed PUBDATE, by Rico Roho</strong></p>
-
-      <!-- Use verbatim for exact line breaks -->
-      <pre class="verbatim poem">
-FIRST LINE
-SECOND LINE
-THIRD LINE
-      </pre>
-
-      <!-- Optional closing reflection paragraph (centered as well) -->
-      <!-- <p>Closing reflection paragraph…</p> -->
+      <pre class="verbatim">POEM_TEXT_VERBATIM</pre>
     </section>
 
-    <!-- ===== Optional Assets ===== -->
-    <!-- Remove if no asset block -->
-    <article class="asset">
-      <div class="caption">TITLE</div>
-      <figure>
-        <img src="assets/IMAGE_FILENAME.png" alt="Poetry — TITLE">
-      </figure>
-      <dl class="meta">
-        <dt>File:</dt><dd><code>assets/IMAGE_FILENAME.png</code></dd>
-        <dt>SHA-256:</dt><dd><code>SHA256_HASH_PLACEHOLDER</code></dd>
-        <dt>TXID:</dt><dd><code>TXID_PLACEHOLDER</code></dd>
-      </dl>
-    </article>
-
-    <!-- ===== Footer ===== -->
     <footer>
       <p><small>© 2025 Rico Roho — TOLARENAI. Licensed under
         <a href="/poetry/license_content.html">CC BY-NC-ND 4.0</a>.

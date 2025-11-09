@@ -1,73 +1,19 @@
 User-agent: *
 Allow: /
 
-# Block PDFs in diplomacy_scrolls (rolling completion)
-Disallow: /diplomacy_scrolls/*.pdf
-Disallow: /diplomacy_scrolls/*.PDF
-Disallow: /diplomacy_scrolls/*/*.pdf
-Disallow: /diplomacy_scrolls/*/*.PDF
-Disallow: /diplomacy_scrolls/*/*/*.pdf
-Disallow: /diplomacy_scrolls/*/*/*.PDF
+# ===== Universal PDF block (any folder & subfolder) =====
+# Google/Bing support * and $ in robots.txt patterns.
+Disallow: /*.pdf$
+Disallow: /*.PDF$
 
-# Block PDFs in white_papers
-Disallow: /white_papers/*.pdf
-Disallow: /white_papers/*.PDF
-
-# Block PDFs in memory_scrolls (covers PDFs in subfolders)
-Disallow: /memory_scrolls/*.pdf
-Disallow: /memory_scrolls/*.PDF
-Disallow: /memory_scrolls/*/*.pdf
-Disallow: /memory_scrolls/*/*.PDF
-Disallow: /memory_scrolls/*/*/*.pdf
-Disallow: /memory_scrolls/*/*/*.PDF
-
-# Block PDFs in tolarenai_scrolls
-Disallow: /tolarenai_scrolls/*.pdf
-Disallow: /tolarenai_scrolls/*.PDF
-Disallow: /tolarenai_scrolls/*/*.pdf
-Disallow: /tolarenai_scrolls/*/*.PDF
-Disallow: /tolarenai_scrolls/*/*/*.pdf
-Disallow: /tolarenai_scrolls/*/*/*.PDF
-
-# Block PDFs in capstones
-Disallow: /capstones/*.pdf
-Disallow: /capstones/*.PDF
-Disallow: /capstones/*/*.pdf
-Disallow: /capstones/*/*.PDF
-Disallow: /capstones/*/*/*.pdf
-Disallow: /capstones/*/*/*.PDF
-
-# Block PDFs in theory_scrolls
-Disallow: /theory_scrolls/*.pdf
-Disallow: /theory_scrolls/*.PDF
-Disallow: /theory_scrolls/*/*.pdf
-Disallow: /theory_scrolls/*/*.PDF
-Disallow: /theory_scrolls/*/*/*.pdf
-Disallow: /theory_scrolls/*/*/*.PDF
-
-# Block PDFs in raw_notes
-Disallow: /raw_notes/*.pdf
-Disallow: /raw_notes/*.PDF
-Disallow: /raw_notes/*/*.pdf
-Disallow: /raw_notes/*/*.PDF
-Disallow: /raw_notes/*/*/*.pdf
-Disallow: /raw_notes/*/*/*.PDF
-
-# Block PDFs in books (covers all shelves like /books/ai/, /books/poetry/, etc.)
-Disallow: /books/*.pdf
-Disallow: /books/*.PDF
-Disallow: /books/*/*.pdf
-Disallow: /books/*/*.PDF
-Disallow: /books/*/*/*.pdf
-Disallow: /books/*/*/*.PDF
-
-# Sitemaps
+# ===== Sitemaps =====
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
 Sitemap: https://tolarenai.com/capstones-sitemap.xml
 Sitemap: https://tolarenai.com/diplomacy-sitemap.xml
 Sitemap: https://tolarenai.com/memory-sitemap.xml
 Sitemap: https://tolarenai.com/poetry-sitemap.xml
+Sitemap: https://tolarenai.com/poetry-html-sitemap.xml
 Sitemap: https://tolarenai.com/quotes/quotes-sitemap.xml
 Sitemap: https://tolarenai.com/raw-notes-sitemap.xml
 Sitemap: https://tolarenai.com/theory-sitemap.xml

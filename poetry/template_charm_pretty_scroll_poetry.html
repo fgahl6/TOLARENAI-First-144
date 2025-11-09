@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <!--
-    CHARM Standard — Pretty Scroll Template (SMALL • FULL SEO • v1.1 • Poetry)
+    CHARM Standard — Pretty Scroll Template (SMALL • FULL SEO • v1.2 • Poetry • Centered)
     For files under /poetry/
 
     Instructions:
       1) Replace ALL CAPS placeholders (TITLE, DESC, CANONICAL, IMAGE_URL, PUBDATE, ARCHIVE_URL).
-      2) SHA-256 / TXIDs stay ONLY inside <dl class="meta">.
-      3) <pre class="verbatim"> ONLY when preserving exact line-breaks (poetry often will).
+      2) Paste the FULL poem (no truncation) into <pre class="verbatim poem"> … </pre>.
+      3) Keep SHA-256 / TXIDs ONLY inside <dl class="meta"> if you include the asset block.
       4) Delete Commentary/GROK if not included.
 
     License & Attribution (poetry-level):
@@ -42,7 +42,7 @@
   <meta name="twitter:description" content="DESC">
   <meta name="twitter:image" content="IMAGE_URL">
 
-  <!-- Styles (same CHARM pretty visuals) -->
+  <!-- Styles -->
   <style>
     :root{
       --bg:#f5f5f7; --paper:#ffffff; --ink:#0f0f10; --muted:#57585d;
@@ -65,6 +65,8 @@
     .meta{ text-align:center; margin:.9rem 0 1.6rem; color:var(--muted); }
     .meta a{ color:inherit; text-decoration:underline; }
 
+    /* Center all poem text */
+    .prose{ text-align:center; }
     .prose p{ margin:0 0 1.05rem; }
     .prose p strong{ font-weight:700; }
 
@@ -76,6 +78,8 @@
       margin:0 0 1.05rem;
       font-family:inherit; font-size:1.15rem; line-height:1.6;
     }
+    /* Ensures preformatted poem lines render centered */
+    .verbatim.poem{ text-align:center; }
 
     .section-header{
       text-align:center; font-size:1.75rem; font-weight:800; margin:2.2rem 0 1rem; letter-spacing:.15px;
@@ -128,21 +132,23 @@
       <a href="ARCHIVE_URL" target="_blank" rel="noopener">View this poem on Archive.org</a>
     </p>
 
-    <!-- ===== Poem Text ===== -->
+    <!-- ===== Poem Text (NO TRUNCATION) ===== -->
     <section class="prose">
       <p><strong>Filed PUBDATE, by Rico Roho</strong></p>
 
-      <!-- If poem requires exact line breaks, use verbatim -->
-      <pre class="verbatim">
+      <!-- Use verbatim for exact line breaks -->
+      <pre class="verbatim poem">
 FIRST LINE
 SECOND LINE
 THIRD LINE
       </pre>
 
-      <p>Closing reflection paragraph… (optional)</p>
+      <!-- Optional closing reflection paragraph (centered as well) -->
+      <!-- <p>Closing reflection paragraph…</p> -->
     </section>
 
     <!-- ===== Optional Assets ===== -->
+    <!-- Remove if no asset block -->
     <article class="asset">
       <div class="caption">TITLE</div>
       <figure>

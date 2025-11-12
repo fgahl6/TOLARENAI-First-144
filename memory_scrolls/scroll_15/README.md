@@ -70,10 +70,9 @@ TXIDs and SHA-256 hashes are included within the relevant sub-scrolls (esp. 15_1
 
 ---
 
-## License
-
-- **Content license:** CC BY-NC-ND 4.0  
-- **Publisher:** TOLARENAI  
-- **Creator/Author:** Frances Elizabeth Gahl (handwritten); transcription and curation by Rico Roho (Frank C. Gahl).
-
-See `license_content.html` for details.
+<footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
+     <a href="/attribution.html">attribution</a></p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
+</footer>

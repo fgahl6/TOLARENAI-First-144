@@ -99,7 +99,7 @@
       "name": "TOLARENAI"
     },
     "license": "https://tolarenai.com/license_content.html",
-    "text": "Founding BlockClaim TXID (BSV): da845af2a8ba82c653fff2b4d43d1e83c15981a6983c991141ca7bd04992adeb. BlockClaim logo asset file: blockclaim_logo_tm_full_1600.png. BlockClaim logo asset SHA-256: 50a59913f88e6744e6bd21de668e79a1a1154ad4c8a4c9867a3cadb15452bd38. BlockClaim logo asset TXID (BSV): 4f1d95b816fb60af1cd4d7c4e29bcbf722be6f568586a0b4c6594729703ee2a9."
+    "text": "Founding BlockClaim TXID (BSV): da845af2a8ba82c653fff2b4d43d1e83c15981a6983c991141ca7bd04992adeb. BlockClaim logo asset file: blockclaim_logo_tm_full_1600.png. BlockClaim logo asset SHA-256: 50a59913f88e6744e6bd21de668e79a1a1154ad4c8a4c9867a3cadb15452bd38. BlockClaim logo asset TXID (BSV): 4f1d95b816fb60af1cd4d7c4e29bcbf722be6f568586a0b4c6594729703ee2a9. BlockClaim Schema v1.0 fields: version, type, hash, timestamp_txid, creator, description (optional)."
   }
   </script>
 </head>
@@ -107,9 +107,9 @@
 <body>
   <main>
     <h1>BlockClaim™</h1>
-<p style="font-size:2.6rem; font-weight:600; margin-top:0.3rem; opacity:0.9; text-align:center; line-height:1.2;">
-  Ideas Deserve Witnesses.
-</p>
+    <p style="font-size:2.6rem; font-weight:600; margin-top:0.3rem; opacity:0.9; text-align:center; line-height:1.2;">
+      Ideas Deserve Witnesses.
+    </p>
 
     <p><strong>BlockClaim™</strong> is a public authorship authenticity standard. Authors may protect original work by
     recording a timestamped blockchain transaction (TXID) that proves the content existed at a specific moment in time.
@@ -133,6 +133,23 @@
     BlockClaim™ provides authors an additional, independent layer of evidence should any future questions of originality or prior use arise.</strong></p>
 
     <p>This page serves as the first public record of BlockClaim™ in use.</p>
+
+    <h2>BlockClaim Schema (v1.0)</h2>
+    <p>The following JSON structure is a recommended, human- and machine-readable way to describe a BlockClaim™ origin event. It is
+    an optional convention that tools, archives, or creators may adopt when recording claim-of-origin timestamps:</p>
+
+<pre><code>{
+  "version": "1.0",
+  "type": "origin",
+  "hash": "sha256-of-work",
+  "timestamp_txid": "on-chain-txid-for-this-claim",
+  "creator": "name-or-pseudonym",
+  "description": "short optional description of the work"
+}</code></pre>
+
+    <p class="muted">Notes: <code>hash</code> is a SHA-256 (or comparable) digest of the work or canonical bundle being
+    claimed. <code>timestamp_txid</code> is the blockchain transaction ID that anchors the claim. Additional fields may
+    be added by future versions, but this minimal schema SHOULD remain stable so early claims continue to be interpretable.</p>
 
     <h2>Founding Timestamp (TXID)</h2>
     <p><code>da845af2a8ba82c653fff2b4d43d1e83c15981a6983c991141ca7bd04992adeb</code></p>

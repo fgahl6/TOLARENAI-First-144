@@ -74,7 +74,7 @@
       "name": "TOLARENAI"
     },
     "license": "https://tolarenai.com/license_content.html",
-    "text": "WitnessLedger™ complements BlockClaim™ and TransferRecord™ by providing a public, append-only ledger of confirmations and testimonies from humans, institutions, and AI systems around existing timestamped claims and custody records. Founding WitnessLedger TXID (BSV): [TXID TBD]. Effective launch date: [DATE TBD]."
+    "text": "WitnessLedger™ complements BlockClaim™ and TransferRecord™ by providing a public, append-only ledger of confirmations and testimonies from humans, institutions, and AI systems around existing timestamped claims and custody records. Founding WitnessLedger TXID (BSV): [TXID 35d0380e8e853b693ae3be7f96fa9fd9e2aa92776a690e3cab7ca6c47f019a3e]. Effective launch date: [2025-11-18]. WitnessLedger Schema v1.0 fields: version, type, linked_txid, witness, timestamp_txid, statement (optional)."
   }
   </script>
 </head>
@@ -110,6 +110,26 @@
     WitnessLedger™ offers an additional, independent layer of context and support.</p>
 
     <p>This page serves as the first public description and record of WitnessLedger™ in use.</p>
+
+    <h2>WitnessLedger Schema (v1.0)</h2>
+    <p>The following JSON structure is a recommended, human- and machine-readable way to describe a WitnessLedger™
+    testimony event. It is an optional convention that tools, archives, or creators may adopt when recording witness
+    confirmations around existing timestamps:</p>
+
+<pre><code>{
+  "version": "1.0",
+  "type": "witness",
+  "linked_txid": "claim-or-transfer-txid-being-witnessed",
+  "witness": "person-org-or-ai-identifier",
+  "timestamp_txid": "on-chain-txid-for-this-witness-entry",
+  "statement": "short optional statement of what is being witnessed or confirmed"
+}</code></pre>
+
+    <p class="muted">Notes: <code>linked_txid</code> SHOULD point to an existing BlockClaim™ origin TXID, a TransferRecord™
+    event, or another canonical record being witnessed. <code>witness</code> identifies the human, institution, or AI
+    providing testimony. <code>timestamp_txid</code> is the blockchain transaction ID that anchors this witness entry.
+    Additional fields may be added by future versions, but this minimal schema SHOULD remain stable so early entries
+    continue to be interpretable.</p>
 
     <h2>Founding Timestamp (TXID)</h2>
     <p><code>[TXID 35d0380e8e853b693ae3be7f96fa9fd9e2aa92776a690e3cab7ca6c47f019a3e]</code></p>

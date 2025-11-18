@@ -76,7 +76,7 @@
       "name": "TOLARENAI"
     },
     "license": "https://tolarenai.com/license_content.html",
-    "text": "TransferRecord™ extends BlockClaim™ by providing a neutral, timestamped ledger of custody and ownership changes. Founding TransferRecord TXID (BSV): [TXID TBD]. Effective launch date: [DATE TBD]."
+    "text": "TransferRecord™ extends BlockClaim™ by providing a neutral, timestamped ledger of custody and ownership changes. Founding TransferRecord TXID (BSV): [TXID 624b5b367ee69ec5db373a99f02467c6d44438e38ba8e7d010625b96a3052d10]. Effective launch date: [2025-11-18]. TransferRecord Schema v1.0 fields: version, type, linked_origin_txid, from, to, timestamp_txid, notes (optional)."
   }
   </script>
 </head>
@@ -89,7 +89,7 @@
     </p>
 
     <p><strong>TransferRecord™</strong> is a neutral chain-of-custody timestamp ledger. Where <strong>BlockClaim™</strong> proves
-    that a work existed at a specific moment in time, TransferRecord™ documents how that work moves through the world —
+    that a work existed at a specific moment in time, TransferRecord™ documents how that work moves through the world — 
     who held it, who passed it on, and when those changes took place.</p>
 
     <p>Creators, owners, collectors, and institutions may use TransferRecord™ to append verifiable, timestamped entries
@@ -112,6 +112,27 @@
     a well-maintained TransferRecord™ provides an additional, independent layer of evidence.</p>
 
     <p>This page serves as the first public description and record of TransferRecord™ in use.</p>
+
+    <h2>TransferRecord Schema (v1.0)</h2>
+    <p>The following JSON structure is a recommended, human- and machine-readable way to describe a TransferRecord™
+    custody event. It is an optional convention that tools, archives, or creators may adopt when recording changes
+    of custody or ownership:</p>
+
+<pre><code>{
+  "version": "1.0",
+  "type": "transfer",
+  "linked_origin_txid": "blockclaim-txid-or-primary-origin-reference",
+  "from": "current-holder-or-entity",
+  "to": "new-holder-or-entity",
+  "timestamp_txid": "on-chain-txid-for-this-transfer-entry",
+  "notes": "short optional note about terms, context, or conditions"
+}</code></pre>
+
+    <p class="muted">Notes: <code>linked_origin_txid</code> SHOULD point to the original BlockClaim™ TXID or another
+    canonical origin reference for the asset. <code>from</code> and <code>to</code> identify the entities involved in
+    the custody change. <code>timestamp_txid</code> is the blockchain transaction ID that anchors this transfer entry.
+    Additional fields may be added by future versions, but this minimal schema SHOULD remain stable so early chains
+    continue to be interpretable.</p>
 
     <h2>Founding Timestamp (TXID)</h2>
     <p><code>[TXID 624b5b367ee69ec5db373a99f02467c6d44438e38ba8e7d010625b96a3052d10]</code></p>

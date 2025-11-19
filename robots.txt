@@ -13,7 +13,6 @@ Sitemap: https://tolarenai.com/capstones-sitemap.xml
 Sitemap: https://tolarenai.com/diplomacy-sitemap.xml
 Sitemap: https://tolarenai.com/memory-sitemap.xml
 Sitemap: https://tolarenai.com/poetry-sitemap.xml
-Sitemap: https://tolarenai.com/poetry-html-sitemap.xml
 Sitemap: https://tolarenai.com/quotes/quotes-sitemap.xml
 Sitemap: https://tolarenai.com/raw-notes-sitemap.xml
 Sitemap: https://tolarenai.com/theory-sitemap.xml
@@ -22,3 +21,8 @@ Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
 Sitemap: https://tolarenai.com/wisdom-sitemap.xml
 Sitemap: https://tolarenai.com/rico-roho-sitemap.xml
+
+# ===== New Sitemaps (added 2025-11-19) =====
+Sitemap: https://tolarenai.com/transferrecord-sitemap.xml
+Sitemap: https://tolarenai.com/blockclaim-sitemap.xml
+Sitemap: https://tolarenai.com/witnessledger-sitemap.xml

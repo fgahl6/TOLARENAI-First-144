@@ -77,4 +77,18 @@
     <priority>0.5</priority>
   </url>
 
+    <url>
+    <loc>https://tolarenai.com/raw_notes/raw_notes_2025_twenty_one_day_fast_part_01.html</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/raw_notes/raw_notes_2025_twenty_one_day_fast_part_02.html</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

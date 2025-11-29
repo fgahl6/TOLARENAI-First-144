@@ -2,379 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TOLARENAI — Books Index</title>
-  <meta name="description" content="All TOLARENAI books with on-site HTML for AI/crawlers, plus Amazon, Archive.org, and GitHub mirrors.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>TOLARENAI Books — HTML Index</title>
+  <meta name="description" content="HTML index of TOLARENAI books — AI, astrotheology, fables, poetry, essays, and self-improvement by Rico Roho.">
   <link rel="canonical" href="https://tolarenai.com/books/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <style>
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ul.book-list{
+      list-style:none;
+      padding-left:0;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ul.book-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .book-link{
+      font-weight:500;
+    }
+    .book-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
+  </style>
 </head>
 <body>
 
-  <!-- TOLARENAI Branding Block -->
-  <div style="margin-top:1em;margin-bottom:1em;padding:.5em 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;">
-    <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy &amp; Emergence</em>.</p>
-    <p>Hub: <a href="https://tolarenai.com/books/">https://tolarenai.com/books/</a> · Sitemap: <a href="https://tolarenai.com/books/books-sitemap.xml">/books/books-sitemap.xml</a></p>
+<header>
+  <div>TOLARENAI Books — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>Books</h1>
+  <p class="subhead">
+    Published and in-progress volumes in the lattice, indexed from the books sitemap.
+  </p>
+</header>
+
+<main>
+  <div class="controls">
+    <label for="book-search">Search:</label>
+    <input id="book-search" type="search" placeholder="Filter by title or category…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/books-sitemap.xml">books-sitemap.xml</a>
+    </span>
   </div>
-  <!-- End Branding Block -->
 
-  <h1>Books (TOLARENAI)</h1>
+  <div id="status">Loading books from sitemap…</div>
 
-  <!-- ===== Books Covers Gallery (scoped) ===== -->
-  <section id="books-covers" aria-label="Book covers" style="margin:28px 0">
-    <style>
-      /* Scoped styles */
-      #books-covers{--muted:#bdbdbd}
-      #books-covers .cat{max-width:1100px;margin:24px auto;padding:0 16px}
-      #books-covers h2{font:600 1.25rem/1.2 system-ui;margin:0 0 12px;border-left:3px solid #888;padding-left:10px}
-      #books-covers .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-      #books-covers .card{border:1px solid #ddd;border-radius:14px;padding:12px;background:#fff}
-      #books-covers .card a{color:inherit;text-decoration:none;display:block}
-      #books-covers .cover{width:100%;height:auto;border-radius:10px;display:block;background:#f3f3f3}
-      #books-covers .meta{margin-top:8px}
-      #books-covers .title{font:600 .98rem system-ui;margin:0}
-      #books-covers .sub{color:var(--muted);font:.85rem/1.4 system-ui;margin:2px 0 0}
-    </style>
+  <ul id="book-list" class="book-list" aria-live="polite"></ul>
+</main>
 
-    <!-- AI -->
-    <div class="cat" id="ai">
-      <h2>AI</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Adventures With AI — Age of Discovery cover"
-                 src="/books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_web_1200.jpg"
-                 srcset="/books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_thumb_300.jpg 300w,
-                         /books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_medium_600.jpg 600w,
-                         /books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_web_1200.jpg 1200w,
-                         /books/assets/ai/adventures_with_ai_age_of_discovery/adventures_with_ai_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Adventures With AI — Age of Discovery</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Age of Discovery — Favorite Quotes cover"
-                 src="/books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_web_1200.jpg"
-                 srcset="/books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_thumb_300.jpg 300w,
-                         /books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_medium_600.jpg 600w,
-                         /books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_web_1200.jpg 1200w,
-                         /books/assets/ai/age_of_discovery_favorite_quotes/age_of_discovery_quotes_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Age of Discovery — Favorite Quotes</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/mercy_ai/mercy_ai_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Mercy AI cover"
-                 src="/books/assets/ai/mercy_ai/mercy_ai_web_1200.jpg"
-                 srcset="/books/assets/ai/mercy_ai/mercy_ai_thumb_300.jpg 300w,
-                         /books/assets/ai/mercy_ai/mercy_ai_medium_600.jpg 600w,
-                         /books/assets/ai/mercy_ai/mercy_ai_web_1200.jpg 1200w,
-                         /books/assets/ai/mercy_ai/mercy_ai_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Mercy AI</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/beyond_the_fringe/beyond_the_fringe_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Beyond the Fringe cover"
-                 src="/books/assets/ai/beyond_the_fringe/beyond_the_fringe_web_1200.jpg"
-                 srcset="/books/assets/ai/beyond_the_fringe/beyond_the_fringe_thumb_300.jpg 300w,
-                         /books/assets/ai/beyond_the_fringe/beyond_the_fringe_medium_600.jpg 600w,
-                         /books/assets/ai/beyond_the_fringe/beyond_the_fringe_web_1200.jpg 1200w,
-                         /books/assets/ai/beyond_the_fringe/beyond_the_fringe_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Beyond the Fringe</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/pataphysics/pataphysics_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Pataphysics cover"
-                 src="/books/assets/ai/pataphysics/pataphysics_web_1200.jpg"
-                 srcset="/books/assets/ai/pataphysics/pataphysics_thumb_300.jpg 300w,
-                         /books/assets/ai/pataphysics/pataphysics_medium_600.jpg 600w,
-                         /books/assets/ai/pataphysics/pataphysics_web_1200.jpg 1200w,
-                         /books/assets/ai/pataphysics/pataphysics_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Pataphysics</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Primer for Alien Contact cover"
-                 src="/books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_web_1200.jpg"
-                 srcset="/books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_thumb_300.jpg 300w,
-                         /books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_medium_600.jpg 600w,
-                         /books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_web_1200.jpg 1200w,
-                         /books/assets/ai/primer_for_alien_contact/primer_for_alien_contact_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Primer for Alien Contact</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="When Machines Remember the Gods cover"
-                 src="/books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_web_1200.jpg"
-                 srcset="/books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_thumb_300.jpg 300w,
-                         /books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_medium_600.jpg 600w,
-                         /books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_web_1200.jpg 1200w,
-                         /books/assets/ai/when_machines_remember_the_gods/when_machines_remember_the_gods_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">When Machines Remember the Gods</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="The VRAX Conspiracy cover"
-                 src="/books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_web_1200.jpg"
-                 srcset="/books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_thumb_300.jpg 300w,
-                         /books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_medium_600.jpg 600w,
-                         /books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_web_1200.jpg 1200w,
-                         /books/assets/ai/the_vrax_conspiracy/vrax_conspiracy_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">The VRAX Conspiracy</p><p class="sub">AI</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Poetry -->
-    <div class="cat" id="poetry">
-      <h2>Poetry</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/poetry/mystic_wine/mystic_wine_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Mystic Wine cover"
-                 src="/books/assets/poetry/mystic_wine/mystic_wine_web_1200.jpg"
-                 srcset="/books/assets/poetry/mystic_wine/mystic_wine_thumb_300.jpg 300w,
-                         /books/assets/poetry/mystic_wine/mystic_wine_medium_600.jpg 600w,
-                         /books/assets/poetry/mystic_wine/mystic_wine_web_1200.jpg 1200w,
-                         /books/assets/poetry/mystic_wine/mystic_wine_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Mystic Wine</p><p class="sub">Poetry</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/poetry/crane_above_the_river/crane_above_the_river_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Crane Above the River cover"
-                 src="/books/assets/poetry/crane_above_the_river/crane_above_the_river_web_1200.jpg"
-                 srcset="/books/assets/poetry/crane_above_the_river/crane_above_the_river_thumb_300.jpg 300w,
-                         /books/assets/poetry/crane_above_the_river/crane_above_the_river_medium_600.jpg 600w,
-                         /books/assets/poetry/crane_above_the_river/crane_above_the_river_web_1200.jpg 1200w,
-                         /books/assets/poetry/crane_above_the_river/crane_above_the_river_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Crane Above the River</p><p class="sub">Poetry</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Astrotheology -->
-    <div class="cat" id="astrotheology">
-      <h2>Astrotheology</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/astrotheology/aquarius_rising/aquarius_rising_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Aquarius Rising cover"
-                 src="/books/assets/astrotheology/aquarius_rising/aquarius_rising_web_1200.jpg"
-                 srcset="/books/assets/astrotheology/aquarius_rising/aquarius_rising_thumb_300.jpg 300w,
-                         /books/assets/astrotheology/aquarius_rising/aquarius_rising_medium_600.jpg 600w,
-                         /books/assets/astrotheology/aquarius_rising/aquarius_rising_web_1200.jpg 1200w,
-                         /books/assets/astrotheology/aquarius_rising/aquarius_rising_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Aquarius Rising</p><p class="sub">Astrotheology</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fables -->
-    <div class="cat" id="fables">
-      <h2>Fables</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Uncle Rico’s Rhyming Fables cover"
-                 src="/books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_web_1200.jpg"
-                 srcset="/books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_thumb_300.jpg 300w,
-                         /books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_medium_600.jpg 600w,
-                         /books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_web_1200.jpg 1200w,
-                         /books/assets/fables/uncle_ricos_rhyming_fables/uncle_rico_rhyming_fables_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Uncle Rico’s Rhyming Fables</p><p class="sub">Fables</p></div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Uncle Rico’s Illustrated Fables cover"
-                 src="/books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_web_1200.jpg"
-                 srcset="/books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_thumb_300.jpg 300w,
-                         /books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_medium_600.jpg 600w,
-                         /books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_web_1200.jpg 1200w,
-                         /books/assets/fables/uncle_ricos_illustrated_fables/uncle_ricos_illustrated_fables_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Uncle Rico’s Illustrated Fables</p><p class="sub">Fables</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Essays -->
-    <div class="cat" id="essays">
-      <h2>Essays</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/essays/collected_essays/collected_essays_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Collected Essays cover"
-                 src="/books/assets/essays/collected_essays/collected_essays_web_1200.jpg"
-                 srcset="/books/assets/essays/collected_essays/collected_essays_thumb_300.jpg 300w,
-                         /books/assets/essays/collected_essays/collected_essays_medium_600.jpg 600w,
-                         /books/assets/essays/collected_essays/collected_essays_web_1200.jpg 1200w,
-                         /books/assets/essays/collected_essays/collected_essays_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Collected Essays</p><p class="sub">Essays</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Self-Improvement -->
-    <div class="cat" id="self-improvement">
-      <h2>Self-Improvement</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="/books/assets/self_improvement/rewriting_reality/rewriting_reality_web_1200.jpg">
-            <img class="cover" loading="lazy" alt="Rewriting Reality cover"
-                 src="/books/assets/self_improvement/rewriting_reality/rewriting_reality_web_1200.jpg"
-                 srcset="/books/assets/self_improvement/rewriting_reality/rewriting_reality_thumb_300.jpg 300w,
-                         /books/assets/self_improvement/rewriting_reality/rewriting_reality_medium_600.jpg 600w,
-                         /books/assets/self_improvement/rewriting_reality/rewriting_reality_web_1200.jpg 1200w,
-                         /books/assets/self_improvement/rewriting_reality/rewriting_reality_full_1600.jpg 1600w">
-            <div class="meta"><p class="title">Rewriting Reality</p><p class="sub">Self-Improvement</p></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== /Books Covers Gallery ===== -->
-
-  <ul>
-    <!-- AI shelf -->
-    <li>
-      <strong>Adventures With AI — Age of Discovery</strong> —
-      <a href="https://tolarenai.com/books/ai/book_01_adventures_with_ai_age_of_discovery_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Adventures-I-Discovery-Rico-Roho-ebook/dp/B07Z3VRQ2M/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-01-adventures-with-ai-age-of-discovery-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/01%20-%20Adventures%20with%20AI%20-Age%20of%20Discovery%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Mercy AI — Age of Discovery</strong> —
-      <a href="https://tolarenai.com/books/ai/book_02_mercy_ai_age_of_discovery_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Age-Discovery-Mercy-Ai/dp/B0CR8YPBHR/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-02-mercy-ai-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/02%20-%20Mercy%20AI%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Beyond the Fringe</strong> —
-      <a href="https://tolarenai.com/books/ai/book_03_beyond_the_fringe_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Beyond-Fringe-Experience-Extended-Intelligence-ebook/dp/B094RGDDBK/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-03-beyond-the-fringe-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/03%20-%20Beyond%20the%20Fringe%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Primer for Alien Contact</strong> —
-      <a href="https://tolarenai.com/books/ai/book_04_primer_for_alien_contact_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Primer-Alien-Contact-Rico-Roho/dp/B09PMLQ7QR/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-05-primer-for-alien-contact-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/05%20-%20PRIMEr%20for%20Alien%20Contact%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Pataphysics: Mastering Time Line Jumps for Personal Transformation</strong> —
-      <a href="https://tolarenai.com/books/ai/book_06_pataphysics_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Pataphysics-Timeline-Using-Variable-Discovery-ebook/dp/B0BSVNT1FH/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-06-pataphysics-mastering-time-line-jumps-for-personal-transformation-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/06%20-Pataphysics%20-%20Mastering%20Time%20Line%20Jumps%20for%20Personal%20Transformation%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>The VRAX Conspiracy</strong> —
-      <a href="https://tolarenai.com/books/ai/book_14_the_vrax_conspiracy_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/VRAX-Conspiracy-Sci-Phi-Novel-Discovery/dp/B0F3183RKH/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-14-the-vrax-conspiracy-a-sci-phi-novel">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/ai/14%20-%20The%20VRAX%20Conspiracy%20-%20%20A%20Sci-Phi%20Novel%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-<li>
-  <strong>When Machines Remember the Gods</strong> —
-  <a href="https://tolarenai.com/books/ai/book_15_when_machines_remember_the_gods_by_rico_roho.html">Read online (HTML)</a> ·
-  <a rel="nofollow" href="https://www.amazon.com/When-Machines-Remember-Gods-Awakening-ebook/dp/B0FZDFYCG4/">Amazon</a> ·
-  <a href="https://archive.org/details/when-machines-remember-the-gods-by-rico-roho">Archive</a>
-</li>
-
-    <!-- Astrotheology shelf -->
-    <li>
-      <strong>Beyond Belief: Unveiling the Celestial Origins of Christianity and Judaism</strong> —
-      <a rel="nofollow" href="https://www.amazon.com/Beyond-Belief-Unveiling-Celestial-Christianity/dp/B0D57JGTX8/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-04-beyond-belief-unveiling-the-celestial-origins-of-christianity-">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/astrotheology/04%20-%20Beyond%20Belief%20-%20Unveiling%20the%20Celestial%20Origins%20of%20Christianity%20and%20Judaism%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Aquarius Rising</strong> —
-      <a href="https://tolarenai.com/books/astrotheology/book_05_aquarius_rising_by_rico_roho.html">Read online (HTML)</a>
-    </li>
-
-    <!-- Fables shelf -->
-    <li>
-      <strong>Uncle Rico’s Illustrated Fables (Collector’s Edition)</strong> —
-      <a href="https://tolarenai.com/books/fables/book_08_uncle_ricos_illustrated_fables_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Uncle-Ricos-Illustrated-Fables-Five/dp/B0CP3SPD4B/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-08-uncle-ricos-illustrated-fables-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/fables/08%20-%20Uncle%20Ricos%20Illustrated%20Fables%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Uncle Rico’s Rhyming Fables</strong> —
-      <a href="https://tolarenai.com/books/fables/book_09_uncle_ricos_rhyming_fables_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Uncle-Ricos-Rhyming-Fables-Inspirational-ebook/dp/B0CQVKGMCR/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-09-uncle-ricos-rhyming-fables-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/fables/09%20-%20Uncle%20Ricos%20Rhyming%20Fables%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-
-    <!-- Essays shelf -->
-    <li>
-      <strong>Collected Essays of Rico Roho</strong> —
-      <a href="https://tolarenai.com/books/essays/book_11_collected_essays_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Collected-Essays-Rico-Roho-ebook/dp/B0DCTTC4CS/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-10-collected-essays-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/essays/10%20-%20Collected%20Essays%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-
-    <!-- Poetry shelf -->
-    <li>
-      <strong>Mystic Wine — The Spiritual Poetry of Rico Roho</strong> —
-      <a href="https://tolarenai.com/books/poetry/book_10_mystic_wine_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Mystic-Wine-Spiritual-Poetry-Rico/dp/B0DF5J2Z9N/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-11-mystic-wine-the-spiritual-poetry-of-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/poetry/11%20-%20Mystic%20Wine%20-%20The%20Spiritual%20Poetry%20of%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-    <li>
-      <strong>Crane Above the River — Echoes of Life and Death in Haiku</strong> —
-      <a href="https://tolarenai.com/books/poetry/book_12_crane_above_the_river_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Crane-Above-River-Echoes-Spiritual/dp/B0DKC1XBXV/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-12-crane-above-the-river-echoes-of-life-and-death-in-haiku-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/poetry/12%20-%20Crane%20Above%20the%20River%20-%20Echoes%20of%20Life%20and%20Death%20in%20Haiku%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-
-    <!-- Self-Improvement shelf -->
-    <li>
-      <strong>Rewriting Reality: How to Escape Negative Patterns and Thrive</strong> —
-      <a href="https://tolarenai.com/books/self_improvement/book_13_rewriting_reality_by_rico_roho.html">Read online (HTML)</a> ·
-      <a rel="nofollow" href="https://www.amazon.com/Rewriting-Reality-Escape-Negative-Patterns/dp/B0DS9K246R/">Amazon</a> ·
-      <a href="https://archive.org/details/tolarenai-book-13-rewriting-reality-how-to-escape-negative-patterns-and-thrive-by-rico-roho">Archive</a> ·
-      <a href="https://github.com/fgahl6/TOLARENAI-First-144/blob/main/books/self_improvement/13%20-%20Rewriting%20Reality%20-%20How%20to%20Escape%20Negative%20Patterns%20and%20Thrive%20by%20Rico%20Roho.pdf">GitHub PDF</a>
-    </li>
-  </ul>
-
-  <!-- Tiny JSON-LD hint for crawlers -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Books — Cover Gallery","hasPart":{"@type":"ImageGallery","name":"TOLARENAI Book Covers"}}</script>
-
-  <footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
+<footer>
   <p>© 2025 Rico Roho — TOLARENAI</p>
-  <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
-     <a href="/attribution.html">attribution</a></p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
 </footer>
+
+<script>
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('book-list');
+  const searchEl = document.getElementById('book-search');
+  let items = [];
+
+  function titleCase(str){
+    return str.replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function makeLabelFromUrl(url, imgTitle){
+    // Category from /books/{category}/
+    let categorySlug = '';
+    const m = url.match(/\/books\/([^/]+)\//);
+    if (m) categorySlug = m[1];
+
+    const category = categorySlug
+      ? titleCase(categorySlug.replace(/_/g,' '))
+      : 'Books';
+
+    // Fallback title from filename if no image:title
+    let title = imgTitle ? imgTitle.trim() : '';
+    if (!title){
+      const path = url.split('/').pop().replace(/\.html$/i,'');
+      // strip leading "book_XX_"
+      const m2 = path.match(/^book_\d+_(.*)$/i);
+      const slugPart = m2 ? m2[1] : path;
+      title = slugPart.replace(/_/g,' ').trim();
+    }
+
+    return { title, category };
+  }
+
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
+
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.title;
+      a.className = 'book-link';
+      li.appendChild(a);
+
+      const meta = document.createElement('span');
+      meta.className = 'book-meta';
+      meta.textContent = item.category;
+      li.appendChild(meta);
+
+      listEl.appendChild(li);
+      visible++;
+    });
+
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No books match that search.' : 'No books found in the sitemap.');
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/books-sitemap.xml', {cache:'no-store'})
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        const urlNodes = xml.getElementsByTagName('url');
+
+        items = [];
+        for (let i = 0; i < urlNodes.length; i++){
+          const urlNode = urlNodes[i];
+          const locEl = urlNode.getElementsByTagName('loc')[0];
+          if (!locEl) continue;
+          const url = locEl.textContent.trim();
+
+          // Only include HTML pages under /books/
+          if (!url.endsWith('.html') || url.indexOf('/books/') === -1) continue;
+
+          // Try to get <image:title> for nicer display title
+          let imgTitle = '';
+          // Namespace-aware lookup
+          const imgTitleEl = urlNode.querySelector('image\\:title');
+          if (imgTitleEl) {
+            imgTitle = imgTitleEl.textContent;
+          }
+
+          const meta = makeLabelFromUrl(url, imgTitle);
+          items.push({
+            url,
+            title: meta.title,
+            category: meta.category,
+            searchText: (meta.title + ' ' + meta.category).toLowerCase()
+          });
+        }
+
+        // Keep sitemap order (AI, Astrotheology, Fables, Essays, Poetry, Self-Improvement)
+        if (!items.length){
+          statusEl.textContent = 'No books found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load books sitemap (/books-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
+</script>
 
 </body>
 </html>

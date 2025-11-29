@@ -122,23 +122,29 @@
   const searchEl = document.getElementById('poem-search');
   let items = [];
 
+  // Handle both "poem_02_…" and "tolarenai_poem_01_…" patterns
   function makeLabelFromUrl(url){
     try{
       const path = url.split('/').pop().replace(/\.html$/i,'');
-      const m = path.match(/^(\d+)_+(.*)$/);
-      let num = '', slug = path;
+      const m = path.match(/^(?:tolarenai_)?poem_(\d+)_+(.*)$/i);
+      let number = '', slug = path;
+
       if (m){
-        num = m[1];
+        number = m[1];          // raw number string from filename
         slug = m[2];
       }
+
       const title = slug.replace(/_/g,' ').trim();
+      const displayNumber = number ? number.padStart(2,'0') : '';
+
       return {
-        number: num,
+        number,                  // for numeric sort
+        displayNumber,           // for showing "01", "02", …
         title: title || path,
-        label: num ? num + ' — ' + title : title
+        label: displayNumber ? ('poem ' + displayNumber + ' ' + title) : title
       };
     }catch(e){
-      return {number:'', title:url, label:url};
+      return {number:'', displayNumber:'', title:url, label:url};
     }
   }
 
@@ -151,19 +157,19 @@
       if (q && !item.searchText.includes(q)) return;
 
       const li = document.createElement('li');
+
       const a = document.createElement('a');
       a.href = item.url;
       a.textContent = item.label;
       a.className = 'poem-link';
-
       li.appendChild(a);
 
-      if (item.number || item.titleExtra){
+      if (item.displayNumber || item.title){
         const meta = document.createElement('span');
         meta.className = 'poem-meta';
         const bits = [];
-        if (item.number) bits.push('Poem ' + item.number);
-        if (item.titleExtra) bits.push(item.titleExtra);
+        if (item.displayNumber) bits.push('Poem ' + item.displayNumber);
+        if (item.title) bits.push(item.title);
         meta.textContent = bits.join(' • ');
         li.appendChild(meta);
       }
@@ -172,13 +178,9 @@
       visible++;
     });
 
-    if (!visible){
-      statusEl.textContent = q
-        ? 'No poems match that search.'
-        : 'No poems found in the sitemap.';
-    } else {
-      statusEl.textContent = '';
-    }
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No poems match that search.' : 'No poems found in the sitemap.');
   }
 
   function initSearch(){
@@ -205,20 +207,22 @@
           .map(url => {
             const meta = makeLabelFromUrl(url);
             return {
-              url: url,
+              url,
               label: meta.label,
               number: meta.number,
-              titleExtra: meta.title,
-              searchText: (meta.number + ' ' + meta.title).toLowerCase()
+              displayNumber: meta.displayNumber,
+              title: meta.title,
+              searchText: (meta.displayNumber + ' ' + meta.title).toLowerCase()
             };
           });
 
-        // sort by numeric poem number if present, otherwise by label
+        // sort by numeric poem number if present; otherwise by label
         items.sort((a,b) => {
-          const an = parseInt(a.number,10), bn = parseInt(b.number,10);
-          if (!isNaN(an) && !isNaN(bn)) return an - bn;
-          if (!isNaN(an)) return -1;
-          if (!isNaN(bn)) return 1;
+          const an = parseInt(a.number || '0',10);
+          const bn = parseInt(b.number || '0',10);
+          if (!isNaN(an) && !isNaN(bn) && an !== 0 && bn !== 0) return an - bn;
+          if (!isNaN(an) && an !== 0) return -1;
+          if (!isNaN(bn) && bn !== 0) return 1;
           return a.label.localeCompare(b.label);
         });
 

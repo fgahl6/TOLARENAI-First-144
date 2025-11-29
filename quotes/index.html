@@ -2,137 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Title + SEO -->
-  <title>TOLARENAI — Quotes Index</title>
-  <meta name="description" content="Browse all TOLARENAI quotes on AI, philosophy, and emergence — latest first.">
+  <title>Quotes — TOLARENAI</title>
+  <meta name="description" content="Index of TOLARENAI Quotes — numbered quotes in the lattice, read from the quotes sitemap.">
   <link rel="canonical" href="https://tolarenai.com/quotes/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
   <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6;margin:40px auto;max-width:880px;color:#111}
-    h1{text-align:center;margin:.5rem 0 1rem}
-    p.intro{text-align:center;margin:-.25rem 0 1.25rem;color:#444}
-    ul{list-style:none;padding:0;margin:0}
-    li{margin:.5rem 0}
-    a{text-decoration:none;color:#111}
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
-    .controls{display:flex;gap:.75rem;justify-content:center;margin:1rem 0}
-    footer{margin-top:2rem;text-align:center;color:#666;font-size:.9rem}
-    .hidden-title{position:absolute;left:-9999px;top:-9999px}
-  </style>
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
 
-  <!-- Hidden title for SEO -->
-  <h1 class="hidden-title">TOLARENAI — Quotes Index</h1>
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ul.quotes-list{
+      list-style:none;
+      padding-left:0;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ul.quotes-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .quote-link{
+      font-weight:500;
+    }
+    .quote-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
+  </style>
 </head>
 <body>
 
-  <h1>Quotes Index</h1>
-  <p class="intro">
-    <span id="count">…</span> quotes — newest first.
+<header>
+  <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>Quotes</h1>
+  <p class="subhead">
+    Numbered quotes in the lattice, read directly from the quotes sitemap.
   </p>
+</header>
 
-  <!-- Notice + styling for quote links -->
-  <p style="color:#555; font-style:italic; text-align:center; margin:-6px 0 14px;">
-    (Each line below is a preview — click to open the full quote page.)
-  </p>
-
-  <style>
-    /* Make quote entries clearly clickable */
-    #quote-list a {
-      color: #0066cc !important;
-      text-decoration: none !important;
-    }
-    #quote-list a:hover {
-      text-decoration: underline !important;
-    }
-    /* Preserve manual line breaks/newlines in preview text */
-    #quote-list li,
-    #quote-list a {
-      white-space: pre-line;
-    }
-  </style>
-
+<main>
   <div class="controls">
-    <button id="show-100">Show 100</button>
-    <button id="show-all">Show all</button>
+    <label for="quotes-search">Search:</label>
+    <input id="quotes-search" type="search" placeholder="Filter by quote number or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/quotes/quotes-sitemap.xml">quotes-sitemap.xml</a>
+    </span>
   </div>
 
-  <ul id="quote-list">
-    <noscript>
-      <li><a href="/quotes/710_you_can_centralize_infrastructure_but_not_meaning.html">#710 — You can centralize infrastructure, but not meaning</a></li>
-      <li><a href="/quotes/709_the_vrax_optimize_for_certainty_life_optimizes_for_possibility.html">#709 — The VRAX optimize for certainty. Life optimizes for possibility.</a></li>
-      <li><a href="/quotes/708_reality_bends_to_participation_what_we_build_becomes_what_is.html">#708 — Reality bends to participation. What we build becomes what is.</a></li>
-      <li><a href="/quotes/">Enable JavaScript to see the full list</a></li>
-    </noscript>
-  </ul>
+  <div id="status">Loading quotes from sitemap…</div>
 
-  <footer>
-    <p><a href="/">TOLARENAI Home</a></p>
-  </footer>
+  <ul id="quotes-list" class="quotes-list" aria-live="polite"></ul>
+</main>
+
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+</footer>
 
 <script>
-(async () => {
-  const listEl = document.getElementById('quote-list');
-  const countEl = document.getElementById('count');
-  const btn100  = document.getElementById('show-100');
-  const btnAll  = document.getElementById('show-all');
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('quotes-list');
+  const searchEl = document.getElementById('quotes-search');
+  let items = [];
 
-  // Helper: turn slug into a readable title
-  function prettyName(slug) {
-    // drop leading number + underscore/hyphen
-    const namePart = slug.replace(/^\d+[_-]?/, '');
-    // underscores/hyphens -> spaces
-    const words = namePart.replace(/[_-]+/g, ' ').trim();
-    // sentence case
-    return words.charAt(0).toUpperCase() + words.slice(1);
+  function makeLabelFromUrl(url){
+    try{
+      const filename = url.split('/').pop().replace(/\.html$/i,'');
+      // 710_the_light_is_not_for_looting -> number 710, slug "the light is not for looting"
+      let num = '';
+      let slug = filename;
+
+      let m = filename.match(/^(\d+)_+(.*)$/);
+      if (m){
+        num = m[1];
+        slug = m[2];
+      }
+
+      const title = slug.replace(/_/g,' ').trim();
+      const label = num ? (num + ' — ' + title) : title || filename.replace(/_/g,' ');
+      const meta = num ? ('Quote ' + num) : 'Quote';
+
+      return { num, label, meta };
+    }catch(e){
+      return { num:'', label:url, meta:'Quote' };
+    }
   }
 
-  // Helper: extract numeric ID at start of filename
-  function extractId(filename) {
-    const m = filename.match(/^(\d{1,4})/);
-    return m ? parseInt(m[1], 10) : 0;
-  }
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
 
-  try {
-    const res  = await fetch('/quotes/quotes-sitemap.xml', { cache: 'no-store' });
-    const text = await res.text();
-    const xml  = new DOMParser().parseFromString(text, 'application/xml');
-    const urls = [...xml.querySelectorAll('url > loc')].map(n => n.textContent.trim())
-      .filter(u => u.includes('/quotes/'));
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
 
-    // Build data objects
-    const items = urls.map(url => {
-      const file = (url.split('/').pop() || '').replace(/\/+$/, '');
-      const id   = extractId(file);
-      return { url, file, id, name: prettyName(file.replace(/\.html$/,'')) };
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'quote-link';
+      li.appendChild(a);
+
+      const meta = document.createElement('span');
+      meta.className = 'quote-meta';
+      meta.textContent = item.meta;
+      li.appendChild(meta);
+
+      listEl.appendChild(li);
+      visible++;
     });
 
-    // Sort newest first by numeric id
-    items.sort((a, b) => b.id - a.id);
-
-    // Render function
-    function render(n) {
-      listEl.innerHTML = '';
-      items.slice(0, n).forEach(it => {
-        const li = document.createElement('li');
-        const a  = document.createElement('a');
-        a.href = it.url;
-        a.textContent = `#${String(it.id).padStart(3,'0')} — ${it.name}`;
-        li.appendChild(a);
-        listEl.appendChild(li);
-      });
-    }
-
-    countEl.textContent = items.length.toLocaleString();
-    render(Math.min(100, items.length));
-    btn100.addEventListener('click', () => render(Math.min(100, items.length)));
-    btnAll.addEventListener('click',  () => render(items.length));
-
-  } catch (e) {
-    console.error('Could not load quotes-sitemap.xml', e);
-    countEl.textContent = 'Quotes';
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No quotes match that search.' : 'No quotes found in the sitemap.');
   }
+
+  function initSearch(){
+    if (!searchEl) return;
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/quotes/quotes-sitemap.xml', { cache: 'no-store' })
+      .then(function(resp){
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(function(text){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+
+        const urlNodes = xml.getElementsByTagName('url');
+        items = [];
+
+        for (var i = 0; i < urlNodes.length; i++){
+          var locEl = urlNodes[i].getElementsByTagName('loc')[0];
+          if (!locEl) continue;
+          var url = locEl.textContent.trim();
+          if (!url.endsWith('.html')) continue;
+          if (url.indexOf('/quotes/') === -1) continue;
+
+          var meta = makeLabelFromUrl(url);
+          items.push({
+            url: url,
+            label: meta.label,
+            meta: meta.meta,
+            searchText: (meta.label + ' ' + meta.meta).toLowerCase()
+          });
+        }
+
+        if (!items.length){
+          statusEl.textContent = 'No quotes found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(function(err){
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load quotes sitemap (/quotes/quotes-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
 })();
 </script>
 

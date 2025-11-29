@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>Whispers — TOLARENAI</title>
-  <meta name="description" content="Index of TOLARENAI Whispers — quiet transmissions, soft signals, and low-bandwidth insight across the lattice.">
+  <meta name="description" content="Index of TOLARENAI Whispers — brief transmissions, quiet messages, and soft signals across the lattice.">
   <link rel="canonical" href="https://tolarenai.com/whispers/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
@@ -17,15 +17,15 @@
     body{
       margin:2rem auto; max-width:var(--w); color:var(--ink);
       font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
     a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
+
     header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
     header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
-    header p{margin:0.35rem 0; color:var(--muted)}
+    header p{margin:0.3rem 0; color:var(--muted)}
+
     main{margin-bottom:2.5rem;}
-    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
 
     .controls{
       display:flex; flex-wrap:wrap; align-items:center;
@@ -39,9 +39,9 @@
       border-radius:999px;
       font-family:inherit; font-size:0.98rem;
     }
-    .controls input[type="search"]::placeholder{color:#a0a1a9}
     .controls .sitemap-link{
-      font-size:0.9rem; color:var(--muted); white-space:nowrap;
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
     }
 
     #status{
@@ -60,9 +60,14 @@
       padding:0.65rem 0;
       border-bottom:1px solid var(--line);
     }
-    .whisper-link{font-weight:500;}
+    .whisper-title{
+      font-weight:500;
+    }
     .whisper-meta{
-      display:block; font-size:0.9rem; color:var(--muted); margin-top:0.1rem;
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
     }
 
     footer{
@@ -75,20 +80,19 @@
     footer p{margin:0.35rem 0;}
   </style>
 </head>
+
 <body>
 
 <header>
   <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
   <h1>Whispers</h1>
-  <p class="subhead">
-    Quiet transmissions across the lattice. Entries are read from the whispers sitemap.
-  </p>
+  <p>Quiet transmissions across the lattice, read from the whispers sitemap.</p>
 </header>
 
 <main>
   <div class="controls">
     <label for="whisper-search">Search:</label>
-    <input id="whisper-search" type="search" placeholder="Filter by theme, number, or words…">
+    <input id="whisper-search" type="search" placeholder="Filter by topic or keywords…">
     <span class="sitemap-link">
       Sitemap:
       <a href="/whispers-sitemap.xml">whispers-sitemap.xml</a>
@@ -116,76 +120,64 @@
   const searchEl = document.getElementById('whisper-search');
   let items = [];
 
-  function makeLabelFromUrl(url){
-    try{
-      const file = url.split('/').pop().replace(/\.html$/,''); 
-      // whisper_03_be_still_and_listen
-      const parts = file.split('_');
-      const num   = parts[1] || '';
-      const title = parts.slice(2).join(' ').replace(/_/g,' ');
-      return {
-        label: `Whisper ${num} — ${title}`,
-        meta: `Whisper ${num}`,
-        searchText: (`whisper ${num} ${title}`).toLowerCase()
-      };
-    }catch(e){
-      return { label:url, meta:'Whisper', searchText:url.toLowerCase() };
-    }
+  function labelFromUrl(url){
+    const file = url.split('/').pop().replace('.html','');
+    const cleaned = file.replace(/^whisper_\d+_?/i,'').replace(/_/g,' ').trim();
+    return cleaned || file.replace(/_/g,' ');
   }
 
-  function renderList(filter){
-    const q = (filter||'').toLowerCase();
+  function render(filter){
+    const q = (filter || '').toLowerCase();
     listEl.innerHTML = '';
-    let shown = 0;
+    let count = 0;
 
-    items.forEach(item=>{
-      if (q && !item.searchText.includes(q)) return;
+    items.forEach(item => {
+      if (q && !item.search.includes(q)) return;
 
       const li = document.createElement('li');
-
       const a = document.createElement('a');
       a.href = item.url;
+      a.className = 'whisper-title';
       a.textContent = item.label;
-      a.className = 'whisper-link';
-      li.appendChild(a);
 
       const meta = document.createElement('span');
       meta.className = 'whisper-meta';
-      meta.textContent = item.meta;
-      li.appendChild(meta);
+      meta.textContent = 'Whisper';
 
+      li.appendChild(a);
+      li.appendChild(meta);
       listEl.appendChild(li);
-      shown++;
+
+      count++;
     });
 
     statusEl.textContent =
-      shown ? '' : (q ? 'No whispers match that search.' : 'No whispers found in sitemap.');
+      count ? '' :
+      (q ? 'No whispers match that search.' : 'No whispers found.');
   }
 
   function initSearch(){
-    searchEl.addEventListener('input', ()=>renderList(searchEl.value));
+    searchEl.addEventListener('input', ()=>render(searchEl.value));
   }
 
-  function loadSitemap(){
-    fetch('/whispers-sitemap.xml',{cache:'no-store'})
+  function load(){
+    fetch('/whispers-sitemap.xml', {cache:'no-store'})
       .then(r=>r.text())
       .then(text=>{
         const xml = new DOMParser().parseFromString(text,'application/xml');
-        const urls = xml.getElementsByTagName('url');
-
+        const urls = xml.getElementsByTagName('loc');
         items = [];
+
         for (let i=0;i<urls.length;i++){
-          const loc = urls[i].getElementsByTagName('loc')[0];
-          if (!loc) continue;
-          const url = loc.textContent.trim();
+          const url = urls[i].textContent.trim();
           if (!url.endsWith('.html')) continue;
           if (!url.includes('/whispers/')) continue;
 
-          items.push({ url, ...makeLabelFromUrl(url) });
+          const label = labelFromUrl(url);
+          items.push({url, label, search:(label+' whisper').toLowerCase()});
         }
 
-        statusEl.textContent = '';
-        renderList('');
+        render('');
       })
       .catch(()=>{
         statusEl.textContent = 'Could not load whispers sitemap.';
@@ -193,7 +185,7 @@
   }
 
   initSearch();
-  loadSitemap();
+  load();
 })();
 </script>
 

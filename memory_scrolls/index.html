@@ -142,8 +142,9 @@
           number = m[1];
           slug = m[2];
         } else {
-          // Pattern 3: 15_01_the_life_story_of_frances_e_gahl
-          m = filename.match(/^(\d{2})_\d{2}_(.*)$/);
+          // Pattern 3: 15_01_the_life_story... and 15_11a_the_life_story...
+          // two digits, underscore, two digits + optional letters, underscore, rest
+          m = filename.match(/^(\d{2})_\d{2}[a-z]*_(.*)$/i);
           if (m){
             number = m[1];
             slug = m[2];
@@ -230,19 +231,14 @@
               number: meta.number,
               displayNumber: meta.displayNumber,
               title: meta.title,
+              // search on number + title
               searchText: (meta.displayNumber + ' ' + meta.title).toLowerCase()
             };
           });
 
-        // Sort by numeric scroll number when available, else by label
-        items.sort((a,b) => {
-          const an = parseInt(a.number || '0',10);
-          const bn = parseInt(b.number || '0',10);
-          if (!isNaN(an) && !isNaN(bn) && an !== 0 && bn !== 0) return an - bn;
-          if (!isNaN(an) && an !== 0) return -1;
-          if (!isNaN(bn) && bn !== 0) return 1;
-          return a.label.localeCompare(b.label);
-        });
+        // IMPORTANT: keep sitemap order (no extra sorting)
+        // The sitemap already has 00–63, and the 15_11a/b/c pieces
+        // in the right place under scroll 15.
 
         if (!items.length){
           statusEl.textContent = 'No memory scrolls found in the sitemap.';

@@ -2,24 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>TOLARENAI Poetry — HTML Index</title>
-  <meta name="description" content="HTML index of TOLARENAI Poetry — clean links to numbered poems in the lattice.">
+  <title>TOLARENAl Poetry — HTML Index</title>
+  <meta name="description" content="HTML index of TOLARENAl Poetry — clean links to numbered poems in the lattice.">
   <link rel="canonical" href="https://tolarenai.com/poetry/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="TOLARENAI Poetry — HTML Index">
-  <meta property="og:description" content="Browse the TOLARENAI Poetry lattice — numbered HTML poems sourced from the poetry HTML sitemap.">
-  <meta property="og:url" content="https://tolarenai.com/poetry/">
-  <meta property="og:site_name" content="TOLARENAI">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="TOLARENAI Poetry — HTML Index">
-  <meta name="twitter:description" content="HTML index of TOLARENAI Poetry — clean links into the numbered poetry lattice.">
 
   <style>
     :root{
@@ -32,136 +20,222 @@
       font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    h1{ margin:.25rem 0 1rem; text-align:center; font-size:2.1rem }
-    .brand{
-      margin:.5rem 0 1.25rem; padding:.6rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-      color:var(--muted); font-size:.98rem;
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
     }
-    .brand a{ color:inherit; text-decoration:underline }
-    .tools{
-      display:flex; gap:.75rem; align-items:center; justify-content:space-between; flex-wrap:wrap;
-      margin:1rem 0 1.25rem;
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
     }
-    .search{
-      flex:1 1 320px; display:flex; gap:.5rem; align-items:center;
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
     }
-    .search input{
-      width:100%; padding:.6rem .75rem; border:1px solid var(--line); border-radius:10px; font-size:1rem;
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
     }
-    .sitemap-links{
-      font-size:.96rem; color:var(--muted);
+
+    ol.poem-list{
+      list-style:decimal;
+      padding-left:1.5rem;
+      margin:0;
+      border-top:1px solid var(--line);
     }
-    .sitemap-links a{ color:var(--link); text-decoration:underline }
-    ul{ list-style:none; padding:0; margin:0 }
-    li{
-      padding:.45rem 0; border-bottom:1px dashed var(--line);
-      display:flex; align-items:baseline; gap:.5rem;
+    ol.poem-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
     }
-    a{ color:var(--link); text-decoration:none }
-    a:hover{ text-decoration:underline }
-    small{ color:var(--muted); font-size:.92rem }
-    footer{ margin-top:2rem; text-align:center; color:var(--muted); font-size:.96rem }
+    .poem-link{
+      font-weight:500;
+    }
+    .poem-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
   </style>
 </head>
 <body>
-  <!-- TOLARENAI Branding -->
-  <div class="brand">
-    <p><strong>TOLARENAI Poetry</strong> — exploring <em>AI Philosophy &amp; Emergence</em>. HTML index for numbered poems in the lattice.</p>
-  </div>
 
+<header>
+  <div>TOLARENAl Poetry — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
   <h1>Poetry</h1>
-  <p>This page lists <strong>HTML poems only</strong>. PDFs are excluded. Data is read from the HTML-only sitemap.</p>
+  <p class="subhead">
+    This page lists <strong>HTML poems only.</strong> PDFs are excluded.
+    Data is read from the HTML-only poetry sitemap.
+  </p>
+</header>
 
-  <div class="tools">
-    <div class="search">
-      <label for="q" style="white-space:nowrap;"><strong>Search:</strong></label>
-      <input id="q" type="search" placeholder="Filter by poem number or words…">
-    </div>
-    <div class="sitemap-links">
-      Sitemap: <a href="/poetry-html-sitemap.xml">poetry-html-sitemap.xml</a>
-    </div>
+<main>
+  <div class="controls">
+    <label for="poem-search">Search:</label>
+    <input id="poem-search" type="search" placeholder="Filter by poem number or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/poetry-sitemap.xml">poetry-sitemap.xml</a>
+    </span>
   </div>
 
-  <ul id="poetry-list">
-    <noscript><li>Enable JavaScript to view the poetry list.</li></noscript>
-  </ul>
+  <div id="status">Loading poems from sitemap…</div>
 
-  <script>
-    // Render HTML poems from the HTML-only sitemap, sorted by poem number
-    const SITEMAP_URL = '/poetry-html-sitemap.xml';
-    const LIST_ID = 'poetry-list';
+  <ol id="poem-list" class="poem-list" aria-live="polite"></ol>
+</main>
 
-    function titleCase(s){
-      return s.replace(/\b([A-Za-z][A-Za-z']*)\b/g, (w) => {
-        const lower = w.toLowerCase();
-        return ['and','or','the','a','an','to','of','in','on','at','for','by','with','from','into','over'].includes(lower)
-          ? lower
-          : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
-      }).replace(/\bi\b/g,'I');
-    }
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAl</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+</footer>
 
-    function prettyFromSlug(filename){
-      // poem_01_the_vessel_and_the_flame.html -> Poem 01 — The Vessel and the Flame
-      const m = filename.match(/^poem_(\d+)_([\w_]+)\.html$/i);
-      if(!m) return filename;
-      const num = m[1].padStart(2,'0');
-      const words = m[2].split('_').join(' ');
-      return `Poem ${num} — ${titleCase(words)}`;
-    }
+<script>
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('poem-list');
+  const searchEl = document.getElementById('poem-search');
+  let items = [];
 
-    async function loadList(filterText=''){
-      try{
-        const res = await fetch(SITEMAP_URL, { cache:'no-store' });
-        const xml = new DOMParser().parseFromString(await res.text(), 'application/xml');
-        const urls = [...xml.querySelectorAll('url')].map(u => ({
-          loc: u.querySelector('loc')?.textContent.trim() || '',
-          lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-        })).filter(x => x.loc.endsWith('.html'));
-
-        // sort numerically by poem number
-        urls.sort((a,b)=>{
-          const na = +(a.loc.match(/poem_(\d+)_/i)?.[1] || 0);
-          const nb = +(b.loc.match(/poem_(\d+)_/i)?.[1] || 0);
-          return na - nb;
-        });
-
-        const q = filterText.trim().toLowerCase();
-        const list = document.getElementById(LIST_ID);
-        list.innerHTML = '';
-
-        urls.forEach(({loc,lastmod})=>{
-          const file = loc.split('/').pop();
-          const label = prettyFromSlug(file);
-          if(q && !label.toLowerCase().includes(q) && !loc.toLowerCase().includes(q)) return;
-
-          const li = document.createElement('li');
-          const a = document.createElement('a'); a.href = loc; a.textContent = label;
-          li.appendChild(a);
-
-          if(lastmod){
-            const small = document.createElement('small');
-            small.textContent = ` (${lastmod})`;
-            li.appendChild(small);
-          }
-          list.appendChild(li);
-        });
-      }catch(e){
-        console.error('Sitemap load failed:', e);
-        const list = document.getElementById(LIST_ID);
-        list.innerHTML = '<li>Unable to load poetry list.</li>';
+  function makeLabelFromUrl(url){
+    try{
+      const path = url.split('/').pop().replace(/\.html$/i,'');
+      const m = path.match(/^(\d+)_+(.*)$/);
+      let num = '', slug = path;
+      if (m){
+        num = m[1];
+        slug = m[2];
       }
+      const title = slug.replace(/_/g,' ').trim();
+      return {
+        number: num,
+        title: title || path,
+        label: num ? num + ' — ' + title : title
+      };
+    }catch(e){
+      return {number:'', title:url, label:url};
     }
+  }
 
-    // initial render + live search
-    loadList();
-    document.getElementById('q').addEventListener('input', (e)=> loadList(e.target.value));
-  </script>
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
 
-  <footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
-    <p>© 2025 Rico Roho — TOLARENAI</p>
-    <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
-       <a href="/attribution.html">attribution</a></p>
-    <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
-  </footer>
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'poem-link';
+
+      li.appendChild(a);
+
+      if (item.number || item.titleExtra){
+        const meta = document.createElement('span');
+        meta.className = 'poem-meta';
+        const bits = [];
+        if (item.number) bits.push('Poem ' + item.number);
+        if (item.titleExtra) bits.push(item.titleExtra);
+        meta.textContent = bits.join(' • ');
+        li.appendChild(meta);
+      }
+
+      listEl.appendChild(li);
+      visible++;
+    });
+
+    if (!visible){
+      statusEl.textContent = q
+        ? 'No poems match that search.'
+        : 'No poems found in the sitemap.';
+    } else {
+      statusEl.textContent = '';
+    }
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/poetry-sitemap.xml', {cache:'no-store'})
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        const locs = xml.querySelectorAll('url > loc');
+        items = Array.from(locs).map(loc => {
+          const url = loc.textContent.trim();
+          const meta = makeLabelFromUrl(url);
+          return {
+            url: url,
+            label: meta.label,
+            number: meta.number,
+            titleExtra: meta.title,
+            searchText: (meta.number + ' ' + meta.title).toLowerCase()
+          };
+        });
+
+        // sort by numeric poem number if present, otherwise by label
+        items.sort((a,b) => {
+          const an = parseInt(a.number,10), bn = parseInt(b.number,10);
+          if (!isNaN(an) && !isNaN(bn)) return an - bn;
+          if (!isNaN(an)) return -1;
+          if (!isNaN(bn)) return 1;
+          return a.label.localeCompare(b.label);
+        });
+
+        if (!items.length){
+          statusEl.textContent = 'No poems found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load poetry sitemap (/poetry-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
+</script>
+
 </body>
 </html>

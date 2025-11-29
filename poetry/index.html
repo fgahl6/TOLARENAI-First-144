@@ -144,4 +144,101 @@
 
   function renderList(filter){
     const q = (filter || '').trim().toLowerCase();
-    listEl.innerHTM
+    listEl.innerHTML = '';
+    let visible = 0;
+
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'poem-link';
+
+      li.appendChild(a);
+
+      if (item.number || item.titleExtra){
+        const meta = document.createElement('span');
+        meta.className = 'poem-meta';
+        const bits = [];
+        if (item.number) bits.push('Poem ' + item.number);
+        if (item.titleExtra) bits.push(item.titleExtra);
+        meta.textContent = bits.join(' • ');
+        li.appendChild(meta);
+      }
+
+      listEl.appendChild(li);
+      visible++;
+    });
+
+    if (!visible){
+      statusEl.textContent = q
+        ? 'No poems match that search.'
+        : 'No poems found in the sitemap.';
+    } else {
+      statusEl.textContent = '';
+    }
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/poetry-sitemap.xml', {cache:'no-store'})
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        const locs = xml.querySelectorAll('url > loc');
+
+        items = Array.from(locs)
+          .map(loc => loc.textContent.trim())
+          // only keep real HTML poem pages under /poetry/
+          .filter(url => url.endsWith('.html') && url.indexOf('/poetry/') !== -1)
+          .map(url => {
+            const meta = makeLabelFromUrl(url);
+            return {
+              url: url,
+              label: meta.label,
+              number: meta.number,
+              titleExtra: meta.title,
+              searchText: (meta.number + ' ' + meta.title).toLowerCase()
+            };
+          });
+
+        // sort by numeric poem number if present, otherwise by label
+        items.sort((a,b) => {
+          const an = parseInt(a.number,10), bn = parseInt(b.number,10);
+          if (!isNaN(an) && !isNaN(bn)) return an - bn;
+          if (!isNaN(an)) return -1;
+          if (!isNaN(bn)) return 1;
+          return a.label.localeCompare(b.label);
+        });
+
+        if (!items.length){
+          statusEl.textContent = 'No poems found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load poetry sitemap (/poetry-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
+</script>
+
+</body>
+</html>

@@ -128,7 +128,7 @@
       const filename = url.split('/').pop().replace(/\.html$/i,'');
       // raw_notes_2019_part_1  -> year 2019, slug "part 1"
       let year = '';
-      let slug = filename;
+      let slug = '';
       let m = filename.match(/^raw_notes_(\d{4})_(.*)$/i);
       if (m){
         year = m[1];
@@ -138,16 +138,18 @@
         if (m){
           year = m[1];
           slug = '';
+        } else {
+          // fallback: no year, use whole filename as slug
+          slug = filename;
         }
       }
 
-      let titleBits = [];
-      if (year) titleBits.push(year);
+      let labelParts = [];
+      if (year) labelParts.push(year);
       if (slug){
-        const niceSlug = slug.replace(/_/g,' ').trim();
-        titleBits.push(niceSlug);
+        labelParts.push(slug.replace(/_/g,' ').trim());
       }
-      const label = titleBits.length ? titleBits.join(' — ') : filename.replace(/_/g,' ');
+      const label = labelParts.length ? labelParts.join(' — ') : filename.replace(/_/g,' ');
       const meta = year ? ('Raw notes ' + year) : 'Raw notes';
 
       return { year, label, meta };
@@ -180,3 +182,63 @@
       listEl.appendChild(li);
       visible++;
     });
+
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No entries match that search.' : 'No raw notes found in the sitemap.');
+  }
+
+  function initSearch(){
+    if (!searchEl) return;
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/raw-notes-sitemap.xml', { cache: 'no-store' })
+      .then(function(resp){
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(function(text){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+
+        const urlNodes = xml.getElementsByTagName('url');
+        items = [];
+
+        for (var i = 0; i < urlNodes.length; i++){
+          var locEl = urlNodes[i].getElementsByTagName('loc')[0];
+          if (!locEl) continue;
+          var url = locEl.textContent.trim();
+          if (!url.endsWith('.html')) continue;
+          if (url.indexOf('/raw_notes/') === -1) continue;
+
+          var meta = makeLabelFromUrl(url);
+          items.push({
+            url: url,
+            label: meta.label,
+            meta: meta.meta,
+            searchText: (meta.label + ' ' + meta.meta).toLowerCase()
+          });
+        }
+
+        // Keep sitemap order: 2018 → 2025 fast parts
+        if (!items.length){
+          statusEl.textContent = 'No raw notes found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(function(err){
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load raw notes sitemap (/raw-notes-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
+</script>

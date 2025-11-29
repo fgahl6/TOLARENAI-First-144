@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>TOLARENAl Poetry — HTML Index</title>
-  <meta name="description" content="HTML index of TOLARENAl Poetry — clean links to numbered poems in the lattice.">
+  <title>TOLARENAI Poetry — HTML Index</title>
+  <meta name="description" content="HTML index of TOLARENAI Poetry — clean links to numbered poems in the lattice.">
   <link rel="canonical" href="https://tolarenai.com/poetry/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
@@ -84,11 +84,10 @@
 <body>
 
 <header>
-  <div>TOLARENAl Poetry — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <div>TOLARENAI Poetry — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
   <h1>Poetry</h1>
   <p class="subhead">
-    This page lists <strong>HTML poems only.</strong> PDFs are excluded.
-    Data is read from the HTML-only poetry sitemap.
+    Numbered poems in the lattice, pulled from the poetry sitemap.
   </p>
 </header>
 
@@ -108,7 +107,7 @@
 </main>
 
 <footer>
-  <p>© 2025 Rico Roho — TOLARENAl</p>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
   <p>
     <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
     <a href="https://tolarenai.com/attribution.html">attribution</a>
@@ -145,97 +144,4 @@
 
   function renderList(filter){
     const q = (filter || '').trim().toLowerCase();
-    listEl.innerHTML = '';
-    let visible = 0;
-
-    items.forEach(item => {
-      if (q && !item.searchText.includes(q)) return;
-
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = item.url;
-      a.textContent = item.label;
-      a.className = 'poem-link';
-
-      li.appendChild(a);
-
-      if (item.number || item.titleExtra){
-        const meta = document.createElement('span');
-        meta.className = 'poem-meta';
-        const bits = [];
-        if (item.number) bits.push('Poem ' + item.number);
-        if (item.titleExtra) bits.push(item.titleExtra);
-        meta.textContent = bits.join(' • ');
-        li.appendChild(meta);
-      }
-
-      listEl.appendChild(li);
-      visible++;
-    });
-
-    if (!visible){
-      statusEl.textContent = q
-        ? 'No poems match that search.'
-        : 'No poems found in the sitemap.';
-    } else {
-      statusEl.textContent = '';
-    }
-  }
-
-  function initSearch(){
-    searchEl.addEventListener('input', function(){
-      renderList(this.value);
-    });
-  }
-
-  function loadSitemap(){
-    fetch('/poetry-sitemap.xml', {cache:'no-store'})
-      .then(resp => {
-        if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        return resp.text();
-      })
-      .then(text => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'application/xml');
-        const locs = xml.querySelectorAll('url > loc');
-        items = Array.from(locs).map(loc => {
-          const url = loc.textContent.trim();
-          const meta = makeLabelFromUrl(url);
-          return {
-            url: url,
-            label: meta.label,
-            number: meta.number,
-            titleExtra: meta.title,
-            searchText: (meta.number + ' ' + meta.title).toLowerCase()
-          };
-        });
-
-        // sort by numeric poem number if present, otherwise by label
-        items.sort((a,b) => {
-          const an = parseInt(a.number,10), bn = parseInt(b.number,10);
-          if (!isNaN(an) && !isNaN(bn)) return an - bn;
-          if (!isNaN(an)) return -1;
-          if (!isNaN(bn)) return 1;
-          return a.label.localeCompare(b.label);
-        });
-
-        if (!items.length){
-          statusEl.textContent = 'No poems found in the sitemap.';
-        } else {
-          statusEl.textContent = '';
-        }
-        renderList('');
-      })
-      .catch(err => {
-        console.error('Sitemap load error:', err);
-        statusEl.textContent = 'Could not load poetry sitemap (/poetry-sitemap.xml).';
-      });
-  }
-
-  initSearch();
-  loadSitemap();
-})();
-</script>
-
-</body>
-</html>
+    listEl.innerHTM

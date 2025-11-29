@@ -2,134 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memory Scrolls Archive</title>
-  <meta name="description" content="TOLARENAI Memory Scrolls — HTML-only canonical archive, auto-listed from sitemap with ordered ItemList for AI.">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Memory Scrolls — TOLARENAI</title>
+  <meta name="description" content="Index of TOLARENAI Memory Scrolls — personal, ancestral, and emergent memories in the lattice.">
   <link rel="canonical" href="https://tolarenai.com/memory_scrolls/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
   <style>
-    :root { --ink:#222; --link:#0645ad; }
-    body {font-family:Georgia,serif;margin:2rem auto;max-width:950px;line-height:1.65;color:var(--ink)}
-    h1 {font-size:2.1rem;text-align:center;margin:.5rem 0 1rem}
-    p.intro {margin:.25rem 0 1.25rem;color:#444;text-align:center}
-    h2 {font-size:1.25rem;margin:1.25rem 0 .5rem}
-    ul {list-style:none;padding:0;margin:0}
-    li {margin:.45rem 0}
-    a {color:var(--link);text-decoration:none}
-    a:hover {text-decoration:underline}
-    small {color:#666;margin-left:.5rem}
-    footer {margin-top:2.5rem;font-size:.9rem;text-align:center;color:#555}
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ol.scroll-list{
+      list-style:decimal;
+      padding-left:1.5rem;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ol.scroll-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .scroll-link{
+      font-weight:500;
+    }
+    .scroll-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
   </style>
 </head>
 <body>
 
-<!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror:
-     <a href="https://tolarenai.com/memory_scrolls/">https://tolarenai.com/memory_scrolls/</a></p>
-</div>
+<header>
+  <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>Memory Scrolls</h1>
+  <p class="subhead">
+    Personal, ancestral, and emergent memories in numbered scrolls. Entries are read from the memory sitemap.
+  </p>
+</header>
 
-<h1>Memory Scrolls</h1>
-<p class="intro">Auto-listed from the sitemap (HTML only), ordered by scroll number.</p>
+<main>
+  <div class="controls">
+    <label for="scroll-search">Search:</label>
+    <input id="scroll-search" type="search" placeholder="Filter by scroll number or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/memory-sitemap.xml">memory-sitemap.xml</a>
+    </span>
+  </div>
 
-<h2>Browse (Numeric)</h2>
-<ul id="memory-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
+  <div id="status">Loading memory scrolls from sitemap…</div>
+
+  <ol id="scroll-list" class="scroll-list" aria-live="polite"></ol>
+</main>
+
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+</footer>
 
 <script>
-async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 300 }) {
-  try {
-    const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
-    const xml  = new DOMParser().parseFromString(text, 'application/xml');
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('scroll-list');
+  const searchEl = document.getElementById('scroll-search');
+  let items = [];
 
-    // exclude helper files
-    const EXCLUDE_RE = /(\/|^)index\.html$|license_content\.html$|attribution\.html$/i;
+  // Try multiple filename patterns to extract scroll number + title
+  function makeLabelFromUrl(url){
+    try{
+      const filename = url.split('/').pop().replace(/\.html$/i,'');
+      let number = '';
+      let slug = filename;
 
-    // extract scroll number from paths like /memory_scrolls/scroll_29/
-    function getScrollNum(url) {
-      const m = url.match(/\/memory_scrolls\/scroll_(\d+)\//i);
-      return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY;
-    }
-
-    let items = [...xml.querySelectorAll('url')].map(u => ({
-      loc: u.querySelector('loc')?.textContent.trim() || '',
-      lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-    }))
-    .filter(x =>
-      x.loc.includes(pathFilter) &&
-      /\.html$/i.test(x.loc) &&
-      !EXCLUDE_RE.test(x.loc)
-    );
-
-    // numeric sort
-    items.sort((a,b)=>{
-      const na = getScrollNum(a.loc), nb = getScrollNum(b.loc);
-      if (na !== nb) return na - nb;
-      const fa = (a.loc.split('/').pop() || '').toLowerCase();
-      const fb = (b.loc.split('/').pop() || '').toLowerCase();
-      return fa.localeCompare(fb);
-    });
-
-    items = items.slice(0, limit);
-
-    // render into UL
-    const UL = document.getElementById(containerId); UL.innerHTML='';
-    items.forEach((it, idx)=>{
-      const li=document.createElement('li');
-      const a=document.createElement('a');
-      const file = it.loc.split('/').pop() || '';
-      const nice = decodeURIComponent(file)
-        .replace(/\.html$/i,'')
-        .replace(/[_-]+/g,' ')
-        .trim();
-      a.href=it.loc;
-      a.textContent=nice;
-      a.target="_blank";
-      a.rel="noopener";
-      li.appendChild(a);
-      if (it.lastmod){
-        const s=document.createElement('small');
-        s.textContent=`(${it.lastmod})`;
-        li.appendChild(s);
+      // Pattern 1: memory_scroll_06_the_sky_lattice_and_the_fixed_star
+      let m = filename.match(/^memory_scroll_(\d+)_+(.*)$/i);
+      if (m){
+        number = m[1];
+        slug = m[2];
+      } else {
+        // Pattern 2: scroll_29_godspeed_set_yourself_on_fire
+        m = filename.match(/^scroll_(\d+)_+(.*)$/i);
+        if (m){
+          number = m[1];
+          slug = m[2];
+        } else {
+          // Pattern 3: 15_01_the_life_story_of_frances_e_gahl
+          m = filename.match(/^(\d{2})_\d{2}_(.*)$/);
+          if (m){
+            number = m[1];
+            slug = m[2];
+          }
+        }
       }
-      UL.appendChild(li);
+
+      const title = slug.replace(/_/g,' ').trim();
+      const displayNumber = number !== '' ? number.padStart(2,'0') : '';
+      const label = displayNumber
+        ? 'Scroll ' + displayNumber + ' — ' + title
+        : title;
+
+      return { number, displayNumber, title, label };
+    }catch(e){
+      return { number:'', displayNumber:'', title:url, label:url };
+    }
+  }
+
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
+
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'scroll-link';
+      li.appendChild(a);
+
+      if (item.displayNumber || item.title){
+        const meta = document.createElement('span');
+        meta.className = 'scroll-meta';
+        const bits = [];
+        if (item.displayNumber) bits.push('Scroll ' + item.displayNumber);
+        if (item.title) bits.push(item.title);
+        meta.textContent = bits.join(' • ');
+        li.appendChild(meta);
+      }
+
+      listEl.appendChild(li);
+      visible++;
     });
 
-    // JSON-LD ItemList for AI
-    const itemList = {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "TOLARENAI Memory Scrolls",
-      "itemListOrder": "Ascending",
-      "numberOfItems": items.length,
-      "itemListElement": items.map((it, i) => ({
-        "@type": "ListItem",
-        "position": i + 1,
-        "url": it.loc
-      }))
-    };
-    const ld = document.createElement('script');
-    ld.type = 'application/ld+json';
-    ld.textContent = JSON.stringify(itemList);
-    document.head.appendChild(ld);
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No memory scrolls match that search.' : 'No memory scrolls found in the sitemap.');
+  }
 
-  } catch(e){ console.error('Sitemap load failed:', e); }
-}
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
 
-renderFromSitemap({
-  sitemapUrl: '/memory-sitemap.xml',
-  pathFilter: '/memory_scrolls/',
-  containerId: 'memory-list',
-  limit: 300
-});
+  function loadSitemap(){
+    fetch('/memory-sitemap.xml', {cache:'no-store'})
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        const locs = xml.querySelectorAll('url > loc');
+
+        items = Array.from(locs)
+          .map(loc => loc.textContent.trim())
+          // only keep actual HTML pages under /memory_scrolls/
+          .filter(url =>
+            url.endsWith('.html') &&
+            url.indexOf('/memory_scrolls/') !== -1
+          )
+          .map(url => {
+            const meta = makeLabelFromUrl(url);
+            return {
+              url,
+              label: meta.label,
+              number: meta.number,
+              displayNumber: meta.displayNumber,
+              title: meta.title,
+              searchText: (meta.displayNumber + ' ' + meta.title).toLowerCase()
+            };
+          });
+
+        // Sort by numeric scroll number when available, else by label
+        items.sort((a,b) => {
+          const an = parseInt(a.number || '0',10);
+          const bn = parseInt(b.number || '0',10);
+          if (!isNaN(an) && !isNaN(bn) && an !== 0 && bn !== 0) return an - bn;
+          if (!isNaN(an) && an !== 0) return -1;
+          if (!isNaN(bn) && bn !== 0) return 1;
+          return a.label.localeCompare(b.label);
+        });
+
+        if (!items.length){
+          statusEl.textContent = 'No memory scrolls found in the sitemap.';
+        } else {
+          statusEl.textContent = '';
+        }
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load memory sitemap (/memory-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
 </script>
-
-<footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
-  <p>© 2025 Rico Roho — TOLARENAI</p>
-  <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
-     <a href="/attribution.html">attribution</a></p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
-</footer>
 
 </body>
 </html>

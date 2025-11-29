@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://tolarenai.com/rico_roho/</loc>
-  </url>
 
-  <!-- Rico Roho — Background, Qualifications & Wishes | Linked to TOLARENAI Scroll 00 (Archive.org) -->
+  <!-- Rico Roho — Author Hub (primary landing page) -->
   <url>
     <loc>https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html</loc>
-    <lastmod>2025-10-03</lastmod>
+    <lastmod>2025-11-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
+
+  <!-- Rico Roho — Directory (secondary) -->
+  <url>
+    <loc>https://tolarenai.com/rico_roho/</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>

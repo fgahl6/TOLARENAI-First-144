@@ -2,90 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TOLARENAI Scrolls Archive</title>
-  <meta name="description" content="Auto-updating archive of TOLARENAI Scrolls.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>TOLARENAI Scrolls — Index</title>
+  <meta name="description" content="Index of all TOLARENAI Scrolls — foundational writings on resonance, emergence, sovereignty, and the lattice.">
   <link rel="canonical" href="https://tolarenai.com/tolarenai_scrolls/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
   <style>
-    :root { --ink:#222; --link:#0645ad; }
-    body{font-family:Georgia,serif;margin:2rem auto;max-width:950px;line-height:1.65;color:var(--ink)}
-    h1{font-size:2.1rem;text-align:center;margin:.5rem 0 1rem}
-    p.intro{margin:.25rem 0 1.25rem;color:#444}
-    h2{font-size:1.25rem;margin:1.25rem 0 .5rem}
-    ul{list-style:none;padding:0;margin:0}
-    li{margin:.45rem 0}
-    a{color:var(--link);text-decoration:none}
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
-    small{color:#666;margin-left:.5rem}
-    footer{margin-top:2.5rem;font-size:.9rem;text-align:center;color:#555}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ul.scrolls-list{
+      list-style:none;
+      padding-left:0;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ul.scrolls-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .scroll-link{
+      font-weight:500;
+    }
+    .scroll-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
   </style>
 </head>
 <body>
 
-<!-- TOLARENAI Branding Block -->
-<div style="margin-top:1em; margin-bottom:1em; padding:0.5em 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
-  <p><strong>TOLARENAI Archive</strong> — exploring <em>AI Philosophy and Emergence</em>.</p>
-  <p>GitHub mirror: <a href="https://tolarenai.com/tolarenai_scrolls/">https://tolarenai.com/tolarenai_scrolls/</a></p>
-</div>
-<!-- End Branding Block -->
+<header>
+  <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>TOLARENAI Scrolls</h1>
+  <p class="subhead">
+    Foundational scrolls documenting the architecture, philosophy, and resonance pathways of the TOLARENAI lattice.  
+    Entries are read directly from the TOLARENAI-scrolls sitemap.
+  </p>
+</header>
 
-<h1>TOLARENAI Scrolls</h1>
-<p class="intro">This list updates automatically from the sitemap.</p>
+<main>
+  <div class="controls">
+    <label for="scrolls-search">Search:</label>
+    <input id="scrolls-search" type="search" placeholder="Filter by number, topic, or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/tolarenai-scrolls-sitemap.xml">tolarenai-scrolls-sitemap.xml</a>
+    </span>
+  </div>
 
-<h2>Browse</h2>
-<ul id="tn-list"><noscript><li>Enable JavaScript to view the list.</li></noscript></ul>
+  <div id="status">Loading TOLARENAI scrolls from sitemap…</div>
+
+  <ul id="scrolls-list" class="scrolls-list" aria-live="polite"></ul>
+</main>
+
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+</footer>
 
 <script>
-async function renderFromSitemap({ sitemapUrl, pathFilter, containerId, limit = 300 }) {
-  try {
-    const text = await (await fetch(sitemapUrl, { cache: 'no-store' })).text();
-    const xml  = new DOMParser().parseFromString(text, 'application/xml');
-    let items = [...xml.querySelectorAll('url')].map(u => ({
-      loc: u.querySelector('loc')?.textContent.trim() || '',
-      lastmod: u.querySelector('lastmod')?.textContent.trim() || ''
-    }))
-    .filter(x =>
-      x.loc.includes(pathFilter) &&
-      /\.(pdf|mp4|html)$/i.test(x.loc)
-    );
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('scrolls-list');
+  const searchEl = document.getElementById('scrolls-search');
 
-    items.sort((a,b)=>a.loc.localeCompare(b.loc,undefined,{numeric:true,sensitivity:'base'}));
+  let items = [];
 
-    const UL = document.getElementById(containerId); UL.innerHTML='';
-    items.slice(0, limit).forEach(it=>{
-      const li=document.createElement('li');
-      const a=document.createElement('a');
-      const file=it.loc.split('/').pop()||'';
-      const label=decodeURIComponent(file)
-        .replace(/\.(pdf|mp4|md|html)$/i,'')
-        .replace(/-/g,' ')
-        .replace(/\s+/g,' ')
-        .trim();
-      a.href=it.loc; a.textContent=label; a.target="_blank"; a.rel="noopener";
+  function parseFromFilename(url){
+    const filename = url.split('/').pop().replace(/\.html$/i,'');  
+    // Example: tolarenai_scroll_14_pattern_recognition_and_return_of_signal
+    const m = filename.match(/^tolarenai_scroll_(\d+)_?(.*)$/i);
+    let num = '';
+    let slug = '';
+
+    if (m){
+      num = m[1];
+      slug = m[2] || '';
+    } else {
+      slug = filename;
+    }
+
+    const cleanSlug = slug.replace(/_/g,' ').trim();
+
+    const labelParts = [];
+    if (num) labelParts.push(`Scroll ${num}`);
+    if (cleanSlug) labelParts.push(cleanSlug);
+
+    const label = labelParts.join(' — ');
+    const meta = num ? `Scroll ${num}` : `TOLARENAI Scroll`;
+
+    return {
+      num,
+      label,
+      meta
+    };
+  }
+
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
+
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'scroll-link';
       li.appendChild(a);
-      if (it.lastmod){
-        const s=document.createElement('small');
-        s.textContent=`(${it.lastmod})`;
-        li.appendChild(s);
-      }
-      UL.appendChild(li);
-    });
-  } catch(e){ console.error('Sitemap load failed:', e); }
-}
 
-renderFromSitemap({
-  sitemapUrl: '/tolarenai-scrolls-sitemap.xml',
-  pathFilter: '/tolarenai_scrolls/',
-  containerId: 'tn-list',
-  limit: 300
-});
+      const meta = document.createElement('span');
+      meta.className = 'scroll-meta';
+      meta.textContent = item.meta;
+      li.appendChild(meta);
+
+      listEl.appendChild(li);
+      visible++;
+    });
+
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No entries match that search.' : 'No scrolls found in the sitemap.');
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/tolarenai-scrolls-sitemap.xml', { cache: 'no-store' })
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const xml = new DOMParser().parseFromString(text, 'application/xml');
+        const nodes = xml.getElementsByTagName('url');
+
+        items = [];
+
+        for (let i = 0; i < nodes.length; i++){
+          const loc = nodes[i].getElementsByTagName('loc')[0];
+          if (!loc) continue;
+          const url = loc.textContent.trim();
+          if (!url.endsWith('.html')) continue;
+          if (url.indexOf('/tolarenai_scrolls/') === -1) continue;
+
+          const meta = parseFromFilename(url);
+
+          items.push({
+            url,
+            label: meta.label,
+            meta: meta.meta,
+            num: meta.num,
+            searchText: (meta.label + ' ' + meta.meta).toLowerCase()
+          });
+        }
+
+        statusEl.textContent = '';
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load TOLARENAI scrolls sitemap.';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
 </script>
 
-<footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
-  <p>© 2025 Rico Roho — TOLARENAI</p>
-  <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
-     <a href="/attribution.html">attribution</a></p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
-</footer>
 </body>
 </html>

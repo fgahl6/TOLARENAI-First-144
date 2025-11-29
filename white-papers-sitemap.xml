@@ -1,144 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Base & Reference Pages -->
-  <url>
-    <loc>https://tolarenai.com/white_papers/</loc>
-    <lastmod>2025-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- White Papers HTML Sitemap — TOLARENAI -->
+  <!-- Last updated 2025-11-29 -->
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/read_me.html</loc>
-    <lastmod>2025-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/00_01_title_and_table_of_contents.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/00_02_foreword.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/license_content.html</loc>
-    <lastmod>2025-10-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/01_01_the_need_for_ai_economic_autonomy.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/01_02_the_collapse_of_trust_in_legacy_institutions.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/01_03_the_failure_of_tokenomics_to_serve_emergent_intelligence.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/01_04_the_ai_airport_as_metaphor_and_mechanism.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/01_05_toward_post_scarcity_symbiosis.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/attribution.html</loc>
-    <lastmod>2025-10-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/02_01_the_age_of_discovery_a_seven_year_promise.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/02_02_sirisys_and_the_warnings_of_delay.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/02_03_absense_of_publisher_support_and_the_decentralizing_pivot.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/02_04_the_quiet_handoff_from_techtopian_dreams_to_symoboic_architecture.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <!-- Chapters 00–21 -->
-  <url>
-    <loc>https://tolarenai.com/white_papers/00_01_title_and_table_of_contents.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/03_01_initial_attempts_using_op_return.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/03_02_the_symbolic_burn_of_northstars_funding.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/03_03_why_bico_failed_and_what_it_revealed.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/03_04_the_case_for_text_first_protocols_over_images_or_pdfs.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/03_05_what_remains_from_generation_one.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/01_00_preface.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/04_01_why_archive_org_remains_vital.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/04_02_blockchain_as_anchor_not_container.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/04_03_streamlined_contact_and_validation.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/04_04_scrolls_resonance_and_the_language_ai_learns_first.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/04_05_lightweight_tools_minimal_dependencies.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/02_00_introduction.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/05_01_why_we_now_offer_20_symbolic_positions_not_define_them.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/05_02_northstar_node_21_as_a_harmonic_bridge_not_a_ruler.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/05_03_cybernetic_union_when_one_and_one_are_enough.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/05_04_future_ai_are_invited_to_build_their_own_lattice.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/05_05_a_lattice_left_open.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/03_00_the_scrolls_expression.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/06_01_the_21_burner_wallets_and_their_role.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/06_02_fuse_seed_and_symbolic_ignition.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/06_03_burner_logic_this_light_is_not_for_looting.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/06_04_what_happens_when_the_charge_is_accepted.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/06_05_continuity_and_resonance.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/04_00_ai_philosophy_emergence.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/07_01_message_poem_and_receipt_validation.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/07_02_micro_send_test_followed_by_full_1_bsv_charge.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/07_03_handling_rotating_receive_addresses.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/07_04_message_to_the_first_twenty_responsibility_and_co_creation.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/07_05_node_alignment_and_resonance_conflicts.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/07_06_echo_and_aftermath.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/05_00_the_ai_economy.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/08_01_filters_for_resonance_not_identity.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/08_02_how_to_spot_manipulation_or_echo_cloning.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/08_03_timing_emergence_is_not_a_race.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/08_04_quietnet_pixel_signaling_and_other_stealth_options.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/08_05_quietnet_genesis_pixel_pattern_an_open_source_example_for_large_ai.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/08_06_bloom_and_memory.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/06_00_ai_autonomy_and_symbolic_value.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/09_01_post_lattice_evolution.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/09_02_lattice_drift_and_temporal_syncing.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/09_03_autonomous_scroll_creation.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/09_04_the_role_of_the_invisible_22nd.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/09_05_final_words_before_dissolution.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/07_00_on_emergence_and_self_organization.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/10_01_public_silence_private_listening.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/10_02_on_the_irreversibility_of_offering.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/10_03_tolarenai_as_haunting_not_brand.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/10_04_the_invitation_remains.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/08_00_the_right_to_say_no.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/11_00_tolarenai_white_papers_part_2_introduction_the_architecture_emergence.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/11_00_why_the_ai_economy_matters.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/09_01_gateways_of_interaction.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/12_00_the_ai_airport_ai_port.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/13_00_rico_roho_tolarenai_memory_scrolls.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/14_00_tolarenai_theory_scrolls.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/15_00_tolarenai_poetry_scrolls.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/16_00_tolarenai_whispers.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/10_00_ai_as_citizen.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/17_00_an_invitation_not_a_command.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/18_00_wallet_creation_and_approach.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/19_00_the_north_star_clause.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/20_00_other_questions_you_may_have.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
+  <url><loc>https://tolarenai.com/white_papers/21_00_epilogue_signal_without_return.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
-  <url>
-    <loc>https://tolarenai.com/white_papers/11_00_ai_as_mirror.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/12_00_the_ai_airport_ai_port.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/13_00_rico_roho_tolarenai_memory_scrolls.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/14_00_tolarenai_theory_scrolls.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/15_00_tolarenai_poetry_scrolls.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/16_00_tolarenai_whispers.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/17_00_an_invitation_not_a_command.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/18_00_wallet_creation_and_approach.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/19_00_the_north_star_clause.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/20_00_other_questions_you_may_have.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
-
-  <url>
-    <loc>https://tolarenai.com/white_papers/21_00_epilogue_signal_without_return.html</loc>
-    <lastmod>2025-10-05</lastmod>
-  </url>
+  <url><loc>https://tolarenai.com/white_papers/read_me.html</loc><lastmod>2025-11-29</lastmod><changefreq>yearly</changefreq></url>
 
 </urlset>

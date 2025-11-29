@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Wisdom Scrolls — TOLARENAI</title>
+  <meta name="description" content="Index of TOLARENAI Wisdom Scrolls — leadership, resonance, ethics, and the meta-structures of influence.">
+  <link rel="canonical" href="https://tolarenai.com/wisdom_scrolls/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wisdom Scrolls — TOLARENAI">
+  <meta property="og:description" content="Leadership, resonance, ethics, and the meta-structures of influence.">
+  <meta property="og:url" content="https://tolarenai.com/wisdom_scrolls/">
+  <meta property="og:site_name" content="TOLARENAI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wisdom Scrolls — TOLARENAI">
+  <meta name="twitter:description" content="Leadership, resonance, ethics, and the meta-structures of influence.">
+
+  <style>
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ul.ws-list{
+      list-style:none;
+      padding-left:0;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ul.ws-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .ws-link{
+      font-weight:500;
+    }
+    .ws-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>Wisdom Scrolls</h1>
+  <p class="subhead">
+    Leadership, resonance dynamics, ethical structures, and meta-strategic intelligence.  
+    Entries are read from the wisdom-scrolls sitemap.
+  </p>
+</header>
+
+<main>
+  <div class="controls">
+    <label for="ws-search">Search:</label>
+    <input id="ws-search" type="search" placeholder="Filter by topic or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/wisdom-sitemap.xml">wisdom-sitemap.xml</a>
+    </span>
+  </div>
+
+  <div id="status">Loading wisdom scrolls from sitemap…</div>
+
+  <ul id="ws-list" class="ws-list" aria-live="polite"></ul>
+</main>
+
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+</footer>
+
+<script>
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('ws-list');
+  const searchEl = document.getElementById('ws-search');
+  let items = [];
+
+  function makeLabel(url){
+    const file = url.split('/').pop().replace('.html','');
+    // wisdom_scroll_01_top_10_resonant_leaders
+    const clean = file.replace(/^wisdom_scroll_/,'').replace(/_/g,' ');
+    return clean.trim();
+  }
+
+  function render(filter){
+    const q = (filter||'').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let shown = 0;
+
+    items.forEach(item=>{
+      if(q && !item.search.includes(q)) return;
+
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'ws-link';
+      li.appendChild(a);
+
+      const meta = document.createElement('span');
+      meta.className = 'ws-meta';
+      meta.textContent = 'Wisdom Scroll';
+      li.appendChild(meta);
+
+      listEl.appendChild(li);
+      shown++;
+    });
+
+    statusEl.textContent =
+      shown ? '' :
+      (q ? 'No entries match that search.' : 'No wisdom scrolls found in sitemap.');
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input',()=>render(searchEl.value));
+  }
+
+  function load(){
+    fetch('/wisdom-sitemap.xml',{cache:'no-store'})
+      .then(r=>r.text())
+      .then(txt=>{
+        const xml = new DOMParser().parseFromString(txt,'application/xml');
+        const urls = xml.getElementsByTagName('loc');
+        items = [];
+
+        for(let i=0;i<urls.length;i++){
+          const u = urls[i].textContent.trim();
+          if(!u.endsWith('.html')) continue;
+          items.push({
+            url: u,
+            label: makeLabel(u),
+            search: makeLabel(u).toLowerCase()
+          });
+        }
+
+        render('');
+      })
+      .catch(err=>{
+        console.error(err);
+        statusEl.textContent = 'Could not load wisdom-sitemap.xml';
+      });
+  }
+
+  initSearch();
+  load();
+})();
+</script>
+
+</body>
+</html>

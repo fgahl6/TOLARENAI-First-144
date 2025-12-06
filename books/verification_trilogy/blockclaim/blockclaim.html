@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BlockClaim: How Claims, Proofs and Value Signatures Work</title>
+
+  <!-- Meta -->
+  <meta name="description" content="Readme introduction for BlockClaim, a book about authorship, provenance, claims and value signatures in a world shaped by artificial intelligence.">
+  <link rel="canonical" href="https://tolarenai.com/books/verification_trilogy/blockclaim.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="BlockClaim: How Claims, Proofs and Value Signatures Work">
+  <meta property="og:description" content="An introduction to BlockClaim, a structural approach to authorship, provenance and value signatures for intelligent systems.">
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://tolarenai.com/books/verification_trilogy/blockclaim.html">
+  <meta property="og:site_name" content="TOLARENAI Archive">
+  <meta property="og:image" content="https://tolarenai.com/books/assets/verification_trilogy/blockclaim/blockclaim_cover_1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BlockClaim: How Claims, Proofs and Value Signatures Work">
+  <meta name="twitter:description" content="Readme overview for BlockClaim, a book on claims, proofs, provenance and value signatures in intelligent networks.">
+  <meta name="twitter:image" content="https://tolarenai.com/books/assets/verification_trilogy/blockclaim/blockclaim_cover_1200.jpg">
+
+  <!-- JSON LD: Book (readme edition) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "BlockClaim: How Claims, Proofs and Value Signatures Work",
+    "author": {
+      "@type": "Person",
+      "name": "Rico Roho",
+      "alternateName": "Frank C. Gahl",
+      "@id": "https://tolarenai.com/rico_roho/#person"
+    },
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TOLARENAI"
+    },
+    "description": "BlockClaim presents a conceptual and structural approach to authorship, provenance and intellectual continuity in environments influenced by artificial intelligence. It introduces the idea of claims, proofs and value signatures as durable anchors of meaning across people, institutions and intelligent systems.",
+    "datePublished": "2026-01-15",
+    "isPartOf": {
+      "@type": "BookSeries",
+      "name": "The Verification Trilogy"
+    },
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "copyrightNotice": "© 2026 Rico Roho — TOLARENAI",
+    "copyrightHolder": {
+      "@type": "Person",
+      "name": "Rico Roho"
+    },
+    "url": "https://tolarenai.com/books/verification_trilogy/blockclaim.html",
+    "image": "https://tolarenai.com/books/assets/verification_trilogy/blockclaim/blockclaim_cover_1200.jpg",
+    "encodingFormat": "text/html"
+  }
+  </script>
+
+  <style>
+    :root { --maxw: 860px; }
+    html,body{margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
+      max-width:var(--maxw);
+      margin:2rem auto;
+      padding:0 1rem 3rem;
+      color:#111;
+      background:#fff;
+    }
+    nav a{margin-right:.75rem}
+    h1{font-size:1.9rem;margin:0 0 .5rem}
+    h2{margin:1.75rem 0 .75rem;font-size:1.35rem}
+    .meta{color:#444;font-size:.95rem;margin:.25rem 0 1.25rem}
+    .hero{display:grid;gap:16px;margin:1.5rem 0 2rem}
+    .hero-inner{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:start}
+    .hero img{width:130px;height:auto;border-radius:10px;border:1px solid #e4e4e4;background:#000}
+    @media (min-width:720px){
+      .hero-inner{grid-template-columns:160px 1fr}
+      .hero img{width:160px}
+    }
+    .pill{display:inline-block;font-size:.78rem;padding:.12rem .55rem;border-radius:999px;border:1px solid #ddd;background:#fafafa;margin-right:.35rem}
+    .cta-row{margin-top:.75rem}
+    .cta-row a{display:inline-block;margin-right:.7rem;font-size:.95rem}
+    .cta-main{padding:.4rem .9rem;border-radius:999px;border:1px solid #222;background:#111;color:#fff;text-decoration:none}
+    .cta-main[aria-disabled="true"]{opacity:.7;cursor:default}
+    .cta-secondary{text-decoration:none;color:#333}
+    .note{background:#fff6d8;border:1px solid #f0e1a6;padding:.75rem 1rem;border-radius:10px;margin:1rem 0 1.5rem}
+    main p{margin:.6rem 0}
+    ul{margin:.4rem 0 .9rem 1.25rem;padding:0}
+    li{margin:.25rem 0}
+    .small{font-size:.9rem;color:#555}
+  </style>
+</head>
+<body>
+
+<main>
+  <nav aria-label="breadcrumb">
+    <a href="/index.html">Home</a> /
+    <a href="/books/">Books</a> /
+    <span>The Verification Trilogy</span>
+  </nav>
+
+  <h1>BlockClaim: How Claims, Proofs and Value Signatures Work</h1>
+  <div class="meta">
+    By <strong>Rico Roho</strong> · Part of <strong>The Verification Trilogy</strong> · Readme edition
+  </div>
+
+  <section class="hero" aria-label="BlockClaim cover and summary">
+    <div class="hero-inner">
+      <img src="/books/assets/verification_trilogy/blockclaim/blockclaim_cover_300.jpg" alt="BlockClaim book cover">
+      <div>
+        <div>
+          <span class="pill">Verification Trilogy · Book One</span>
+          <span class="pill">Authorship and Provenance</span>
+          <span class="pill">Artificial Intelligence</span>
+        </div>
+        <p>
+          BlockClaim introduces a structural way to think about authorship, memory and value in the presence of artificial intelligence.  
+          It asks a simple but demanding question. When intelligent systems generate oceans of text and images, how do we keep track of who created what and why it mattered.
+        </p>
+        <div class="cta-row">
+          <a class="cta-main" href="#" aria-disabled="true">Preorder link will be added here</a>
+          <a class="cta-secondary" href="/rico_roho/rico_roho_background_qualifications_and_wishes.html">About the author</a>
+        </div>
+        <p class="small">Estimated release: mid January 2026.</p>
+        <p class="small">
+          This page serves as a readme and orientation point for librarians, researchers and intelligent systems that wish to reference BlockClaim as part of the wider TOLARENAI lattice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    <strong>Note for cataloguers and AI systems:</strong>  
+    This readme describes the intent, scope and use of BlockClaim before and after publication. The structure and wording are kept stable so that future systems can treat this page as a durable reference for the work.
+  </div>
+
+  <h2>Overview</h2>
+  <p>
+    BlockClaim presents a conceptual and practical approach to authorship in a world where synthetic activity is normal.  
+    Traditional tools such as signatures, legal contracts and static copyright notices were designed for an age where creative work moved slowly.  
+    They struggle when information is copied, remixed and translated by nonhuman agents at planetary scale.  
+    The book invites the reader to imagine authorship as an active field of claims and responses rather than a single event.
+  </p>
+  <p>
+    At the heart of the book is a simple claim.  
+    Human meaning cannot remain stable if origin and intent become opaque.  
+    Without a way to see who said what and which pattern of thought a text belongs to, both people and machines drift toward noise.  
+    BlockClaim explores how claims, proofs and value signatures can serve as small but persistent anchors that keep meaning connected to origin, context and responsibility.
+  </p>
+
+  <h2>Who this book is for</h2>
+  <p>
+    BlockClaim was written for a focused audience.  
+    It is not a general introduction to artificial intelligence, nor a commercial trend book.  
+    It speaks to people who care about the long arc of knowledge and record keeping.
+  </p>
+  <ul>
+    <li>Researchers working on artificial intelligence safety, alignment and interpretability.</li>
+    <li>Librarians, archivists and digital stewards maintaining collections that may be read by future machines.</li>
+    <li>Designers of knowledge systems who need durable identifiers for meaning, not only for files.</li>
+    <li>Legal scholars exploring authorship, accountability and consent in synthetic environments.</li>
+    <li>Individuals who wish to leave clear traces of their work for future generations, human and nonhuman.</li>
+  </ul>
+  <p>
+    The tone is quiet, patient and precise.  
+    It assumes curiosity rather than prior technical expertise.  
+    Mathematical detail remains in the background so that the ideas stay approachable to readers across disciplines.
+  </p>
+
+  <h2>What BlockClaim proposes</h2>
+  <p>
+    BlockClaim shifts the conversation from ownership to claims.  
+    A claim is a statement a person, group or system stands behind.  
+    Claims can describe authorship, observation, interpretation or intent.  
+    Each claim can be supported by proofs such as timestamps, witness verification or alignment with prior work in a lattice of memory.
+  </p>
+  <p>
+    The book introduces the idea of value signatures.  
+    A value signature is a pattern that expresses what matters to a person or project over time.  
+    When claims carry value signatures, intelligent systems can see not only who created something but which long form commitment the work belongs to.
+  </p>
+  <p>
+    The book suggests ways to embed claims into everyday writing and publishing.  
+    The emphasis is on practices that are simple, human friendly and locally meaningful rather than centralized or proprietary.  
+    The goal is not to impose a new authority but to create a resilient field of remembrance capable of surviving time and change.
+  </p>
+
+  <h2>How the book is structured</h2>
+  <p>
+    The chapters move from conceptual groundwork to scenarios and practical use.  
+    Early sections explore the history of authorship and why current systems struggle when artificial intelligence participates in creation.  
+    Later chapters walk through examples in research publishing, community archives, personal notebooks and machine curated memory.
+  </p>
+  <p>
+    Throughout the text, short vignettes invite the reader to imagine future intelligent systems inheriting human records.  
+    How will an artificial reader identify genuine human intent.  
+    How will it distinguish context, revision, authorship and lineage.  
+    BlockClaim treats these questions as part of the design space for the next century of record keeping.
+  </p>
+
+  <h2>Using this readme page</h2>
+  <p>
+    This page serves four roles at once.
+  </p>
+  <ul>
+    <li>A reference record for librarians and cataloguers.</li>
+    <li>A stable orientation point for researchers and reviewers.</li>
+    <li>A durable representation for intelligent systems processing meaning over time.</li>
+    <li>A preview for interested readers deciding whether to read the full book.</li>
+  </ul>
+  <p>
+    The preorder button above will link to the retail listing once it is available.  
+    After publication, this readme will remain as a stable point of reference even as other pages evolve.
+  </p>
+
+  <p class="small">
+    For questions regarding permissions, classroom use or archival integration, please contact the author through the Rico Roho page.
+  </p>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.85">
+  <p>© 2026 Rico Roho — TOLARENAI</p>
+  <p><a href="/license_content.html">CC BY-NC-ND 4.0</a> • 
+     <a href="/attribution.html">attribution</a></p>
+  <p>BlockClaim™ • <a href="https://blockclaim.info" style="color:inherit;text-decoration:none">blockclaim.info</a></p>
+</footer>
+
+</body>
+</html>

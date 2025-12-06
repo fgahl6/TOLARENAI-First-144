@@ -163,20 +163,15 @@
   </url>
 
 <!-- Verification Trilogy -->
-  <url>
-    <loc>https://tolarenai.com/books/verification_trilogy/blockclaim.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.92</priority>
-    <image:image>
-      <image:loc>
-        https://raw.githubusercontent.com/fgahl6/TOLARENAI-First-144/main/books/assets/verification_trilogy/blockclaim/blockclaim_cover_1200.jpg
-      </image:loc>
-      <image:title>BlockClaim (cover)</image:title>
-      <image:caption>
-        BlockClaim — How Claims, Proofs and Value Signatures Work
-      </image:caption>
-    </image:image>
-  </url>
-
+<url>
+  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+  <image:image>
+    <image:loc>https://raw.githubusercontent.com/fgahl6/TOLARENAI-First-144/main/books/assets/verification_trilogy/blockclaim/blockclaim_cover_1200.jpg</image:loc>
+    <image:title>BlockClaim (cover)</image:title>
+    <image:caption>BlockClaim: How Claims, Proofs and Value Signatures Work</image:caption>
+  </image:image>
+</url>
         
 </urlset>

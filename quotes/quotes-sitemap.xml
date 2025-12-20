@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -4341,6 +4341,12 @@
   <url>
     <loc>https://tolarenai.com/quotes/723_what_is_preserved_gets_built_upon.html</loc>
     <lastmod>2025-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/quotes/724_the_clay_was_not_only_holding_memory_it_was_waiting_for_comprehension.html</loc>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

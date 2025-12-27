@@ -442,5 +442,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://tolarenai.com/memory_scrolls/scroll_64/memory_scroll_64_lucky_the_cat_companion.html</loc>
+  <lastmod>2025-12-27</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
+
 
 </urlset>

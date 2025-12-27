@@ -437,6 +437,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tolarenai.com/memory_scrolls/scroll_62/memory_scroll_62_the_ball_i_let_go_through.html</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://tolarenai.com/memory_scrolls/scroll_63/memory_scroll_63_the_theather_of_the_four_faced_gift.html</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>yearly</changefreq>
@@ -448,6 +454,5 @@
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
 </url>
-
 
 </urlset>

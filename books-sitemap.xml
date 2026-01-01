@@ -173,5 +173,27 @@
     <image:caption>BlockClaim: How Claims, Proofs and Value Signatures Work</image:caption>
   </image:image>
 </url>
-        
+
+  <url>
+    <loc>https://tolarenai.com/books/verification_trilogy/transferrecord/book/transferrecord.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/fgahl6/TOLARENAI-First-144/main/books/assets/verification_trilogy/transferrecord/transferrecord_cover_1200.jpg</image:loc>
+      <image:title>TransferRecord (cover)</image:title>
+      <image:caption>TransferRecord: Preserving Stewardship, Custody, and Continuity Across Time</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tolarenai.com/books/verification_trilogy/witnessledger/book/witnessledger.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/fgahl6/TOLARENAI-First-144/main/books/assets/verification_trilogy/witnessledger/witnessledger_cover_1200.jpg</image:loc>
+      <image:title>WitnessLedger (cover)</image:title>
+      <image:caption>WitnessLedger: Independent Verification Pattern</image:caption>
+    </image:image>
+  </url>
+     
 </urlset>

@@ -827,21 +827,47 @@
     return str.replace(/\b\w/g, c => c.toUpperCase());
   }
 
-  function makeLabelFromUrl(url, imgTitle){
+  function cleanCoverTitle(s){
+    return (s || '').replace(/\s*\(cover\)\s*/gi,'').trim();
+  }
+
+  function slugToTitle(slug){
+    return titleCase((slug || '').replace(/_/g,' ').trim());
+  }
+
+  function makeLabelFromUrl(url, imgTitle, imgCaption){
+    // Category from /books/{category}/
     let categorySlug = '';
     const m = url.match(/\/books\/([^/]+)\//);
     if (m) categorySlug = m[1];
 
-    const category = categorySlug
-      ? titleCase(categorySlug.replace(/_/g,' '))
-      : 'Books';
+    const category = categorySlug ? slugToTitle(categorySlug) : 'Books';
 
-    let title = imgTitle ? imgTitle.trim() : '';
+    // Filename fallback
+    const filename = (url.split('/').pop() || '').replace(/\.html$/i,'').trim();
+
+    // If this is a /verification_trilogy/{slug}/book.html style page, derive title from folder
+    let derivedFromFolder = '';
+    const vt = url.match(/\/books\/verification_trilogy\/([^/]+)\/book\.html$/i);
+    if (vt && vt[1]) derivedFromFolder = slugToTitle(vt[1]);
+
+    // Best title priority: image:title > image:caption > folder-derived (for book.html) > filename slug
+    let title = cleanCoverTitle((imgTitle || '').trim());
     if (!title){
-      const path = url.split('/').pop().replace(/\.html$/i,'');
-      const m2 = path.match(/^book_\d+_(.*)$/i);
-      const slugPart = m2 ? m2[1] : path;
-      title = slugPart.replace(/_/g,' ').trim();
+      // If caption looks like "TransferRecord: Preserving ..." keep the left side or whole if short
+      const cap = (imgCaption || '').trim();
+      if (cap){
+        const left = cap.split(':')[0].trim();
+        title = left.length >= 3 && left.length <= 60 ? left : cap;
+      }
+    }
+    if (!title && derivedFromFolder) title = derivedFromFolder;
+
+    if (!title){
+      // general filename fallback, stripping leading book_XX_
+      const m2 = filename.match(/^book_\d+_(.*)$/i);
+      const slugPart = m2 ? m2[1] : filename;
+      title = slugToTitle(slugPart);
     }
 
     return { title, category };
@@ -861,7 +887,6 @@
       li.style.gap = '12px';
       li.style.alignItems = 'start';
 
-      // Thumbnail
       const thumbLink = document.createElement('a');
       thumbLink.href = item.url;
       thumbLink.setAttribute('aria-label', item.title);
@@ -878,7 +903,6 @@
         img.style.border = '1px solid #eaeaea';
         thumbLink.appendChild(img);
       } else {
-        // Fallback placeholder if sitemap has no image:loc
         const ph = document.createElement('span');
         ph.textContent = '—';
         ph.style.display = 'inline-grid';
@@ -894,7 +918,6 @@
 
       li.appendChild(thumbLink);
 
-      // Text block
       const wrap = document.createElement('div');
 
       const a = document.createElement('a');
@@ -945,17 +968,17 @@
 
           if (!url.endsWith('.html') || url.indexOf('/books/') === -1) continue;
 
-          // Try to get <image:title> for nicer display title
-          let imgTitle = '';
-          const imgTitleEl = urlNode.querySelector('image\\:title');
-          if (imgTitleEl) imgTitle = imgTitleEl.textContent;
+          // More reliable than querySelector for prefixed nodes
+          const imgTitleEl = urlNode.getElementsByTagName('image:title')[0];
+          const imgCaptionEl = urlNode.getElementsByTagName('image:caption')[0];
+          const imgLocEl = urlNode.getElementsByTagName('image:loc')[0];
 
-          // Try to get <image:loc> for thumbnail
-          let thumb = '';
-          const imgLocEl = urlNode.querySelector('image\\:loc');
-          if (imgLocEl) thumb = imgLocEl.textContent.trim();
+          const imgTitle = imgTitleEl ? imgTitleEl.textContent : '';
+          const imgCaption = imgCaptionEl ? imgCaptionEl.textContent : '';
+          const thumb = imgLocEl ? imgLocEl.textContent.trim() : '';
 
-          const meta = makeLabelFromUrl(url, imgTitle);
+          const meta = makeLabelFromUrl(url, imgTitle, imgCaption);
+
           items.push({
             url,
             title: meta.title,
@@ -978,6 +1001,3 @@
   loadSitemap();
 })();
 </script>
-
-</body>
-</html>

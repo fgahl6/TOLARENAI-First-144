@@ -856,17 +856,59 @@
       if (q && !item.searchText.includes(q)) return;
 
       const li = document.createElement('li');
+      li.style.display = 'grid';
+      li.style.gridTemplateColumns = '54px 1fr';
+      li.style.gap = '12px';
+      li.style.alignItems = 'start';
+
+      // Thumbnail
+      const thumbLink = document.createElement('a');
+      thumbLink.href = item.url;
+      thumbLink.setAttribute('aria-label', item.title);
+
+      if (item.thumb){
+        const img = document.createElement('img');
+        img.src = item.thumb;
+        img.alt = item.title + ' cover';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.style.width = '54px';
+        img.style.height = 'auto';
+        img.style.borderRadius = '8px';
+        img.style.border = '1px solid #eaeaea';
+        thumbLink.appendChild(img);
+      } else {
+        // Fallback placeholder if sitemap has no image:loc
+        const ph = document.createElement('span');
+        ph.textContent = '—';
+        ph.style.display = 'inline-grid';
+        ph.style.placeItems = 'center';
+        ph.style.width = '54px';
+        ph.style.height = '72px';
+        ph.style.borderRadius = '8px';
+        ph.style.border = '1px solid #eaeaea';
+        ph.style.color = '#777';
+        ph.style.background = '#fbfbfb';
+        thumbLink.appendChild(ph);
+      }
+
+      li.appendChild(thumbLink);
+
+      // Text block
+      const wrap = document.createElement('div');
 
       const a = document.createElement('a');
       a.href = item.url;
       a.textContent = item.title;
       a.className = 'book-link';
-      li.appendChild(a);
+      wrap.appendChild(a);
 
       const meta = document.createElement('span');
       meta.className = 'book-meta';
       meta.textContent = item.category;
-      li.appendChild(meta);
+      wrap.appendChild(meta);
+
+      li.appendChild(wrap);
 
       listEl.appendChild(li);
       visible++;
@@ -903,15 +945,22 @@
 
           if (!url.endsWith('.html') || url.indexOf('/books/') === -1) continue;
 
+          // Try to get <image:title> for nicer display title
           let imgTitle = '';
           const imgTitleEl = urlNode.querySelector('image\\:title');
           if (imgTitleEl) imgTitle = imgTitleEl.textContent;
+
+          // Try to get <image:loc> for thumbnail
+          let thumb = '';
+          const imgLocEl = urlNode.querySelector('image\\:loc');
+          if (imgLocEl) thumb = imgLocEl.textContent.trim();
 
           const meta = makeLabelFromUrl(url, imgTitle);
           items.push({
             url,
             title: meta.title,
             category: meta.category,
+            thumb,
             searchText: (meta.title + ' ' + meta.category).toLowerCase()
           });
         }

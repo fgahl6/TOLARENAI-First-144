@@ -4,275 +4,345 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>The Verification Trilogy - Sci-Phi Foundations</title>
-  <meta name="description" content="Illustrated bookshelf of The Verification Trilogy by Rico Roho">
-  <link rel="canonical" href="https://tolarenai.com/books/">
+  <title>The Verification Trilogy, Sci Phi Foundations</title>
+
+  <meta name="description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the full text HTML editions where available, or visit the Amazon listings.">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <link rel="canonical" href="https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Verification Trilogy - Sci-Phi Foundations — Rico Roho">
-  <meta property="og:description" content="Illustrated bookshelf of the Verification Trilogy by Rico Roho.">
-  <meta property="og:url" content="https://tolarenai.com/books/">
+  <meta property="og:title" content="The Verification Trilogy, Sci Phi Foundations, Rico Roho">
+  <meta property="og:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings.">
+  <meta property="og:url" content="https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html">
   <meta property="og:site_name" content="TOLARENAI">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Verification Trilogy - Sci-Phi Foundations — Rico Roho">
-  <meta name="twitter:description" content="Illustrated bookshelf and index of TOLARENAI books by Rico Roho.">
+  <meta name="twitter:title" content="The Verification Trilogy, Sci Phi Foundations, Rico Roho">
+  <meta name="twitter:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"The Verification Trilogy, Sci Phi Foundations",
+    "url":"https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html",
+    "inLanguage":"en",
+    "author":{
+      "@type":"Person",
+      "name":"Rico Roho"
+    },
+    "about":[
+      {"@type":"Thing","name":"Verification"},
+      {"@type":"Thing","name":"Authorship"},
+      {"@type":"Thing","name":"Chain of custody"},
+      {"@type":"Thing","name":"Independent witnessing"},
+      {"@type":"Thing","name":"Continuity"}
+    ],
+    "mainEntity":{
+      "@type":"ItemList",
+      "name":"The Verification Trilogy",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "item":{
+            "@type":"Book",
+            "name":"BlockClaim",
+            "author":{"@type":"Person","name":"Rico Roho"},
+            "inLanguage":"en"
+          }
+        },
+        {
+          "@type":"ListItem",
+          "position":2,
+          "item":{
+            "@type":"Book",
+            "name":"TransferRecord",
+            "author":{"@type":"Person","name":"Rico Roho"},
+            "inLanguage":"en"
+          }
+        },
+        {
+          "@type":"ListItem",
+          "position":3,
+          "item":{
+            "@type":"Book",
+            "name":"WitnessLedger",
+            "author":{"@type":"Person","name":"Rico Roho"},
+            "inLanguage":"en"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <style>
     :root{
       --ink:#0f0f10;
-      --muted:#57585d;
+      --muted:#5a5b61;
       --link:#0645ad;
-      --line:#e8e9ee;
-      --w:860px;
-      --card:#fbfbfb;
+      --line:#e7e8ee;
+      --w:940px;
+      --card:#fbfbfc;
+      --wash:#f4f6fb;
+      --note:#fff6d8;
+      --note-line:#f0e1a6;
     }
     html,body{height:100%}
     body{
-      margin:2rem auto;
-      max-width:var(--w);
+      margin:0;
+      background:var(--wash);
       color:var(--ink);
       font-family:Georgia,"Times New Roman",serif;
       line-height:1.7;
-      font-size:1.08rem;
+      font-size:1.06rem;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      padding:0 1rem 3rem;
     }
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
+    .wrap{
+      max-width:var(--w);
+      margin:0 auto;
+      padding:32px 16px 56px;
+    }
 
     header{
-      margin-bottom:2rem;
-      border-bottom:1px solid var(--line);
-      padding-bottom:1.25rem;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 18px 16px;
+      margin-bottom:18px;
     }
-    header .kicker{color:var(--muted)}
-    header h1{font-size:2.3rem;margin:1rem 0 0.5rem}
-    header p{margin:0.35rem 0;color:var(--muted)}
-    .subhead{margin:0.75rem 0 0;color:var(--muted)}
-
-    main{margin-bottom:2.5rem}
+    .kicker{color:var(--muted);font-size:.98rem}
+    header h1{font-size:2.15rem;margin:10px 0 6px;line-height:1.15}
+    header p{margin:6px 0;color:var(--muted)}
+    .subhead{margin-top:10px}
 
     .note{
-      background:#fff6d8;
-      border:1px solid #f0e1a6;
-      padding:.75rem 1rem;
-      border-radius:12px;
-      margin:1.25rem 0 1.5rem;
-      color:#333;
+      background:var(--note);
+      border:1px solid var(--note-line);
+      padding:12px 14px;
+      border-radius:14px;
+      margin:16px 0 20px;
+      color:#2f2f31;
     }
 
-    .section-title{
-      margin:1.75rem 0 0.5rem;
-      font-size:1.45rem;
-    }
-    .section-lede{color:var(--muted);margin:0.2rem 0 1rem}
-
-    .group{margin:1.75rem 0 1rem}
     .pill{
       display:inline-block;
-      font-size:.82rem;
-      padding:.15rem .6rem;
-      border:1px solid #ddd;
+      font-size:.86rem;
+      padding:.2rem .7rem;
+      border:1px solid #dadbe1;
       border-radius:999px;
       background:#fff;
-      color:#333;
+      color:#2f2f31;
+      font-weight:700;
     }
 
-    .shelf{display:grid;gap:14px}
+    .shelf{display:grid;gap:14px;margin-top:12px}
     .card{
       display:grid;
-      grid-template-columns:108px 1fr;
+      grid-template-columns:112px 1fr;
       gap:14px;
       align-items:start;
       background:var(--card);
-      border:1px solid #eee;
-      border-radius:12px;
+      border:1px solid var(--line);
+      border-radius:16px;
       padding:14px;
     }
     .card img{
-      width:108px;
+      width:112px;
       height:auto;
-      border-radius:8px;
-      border:1px solid #eaeaea;
+      border-radius:10px;
+      border:1px solid #e3e4ea;
+      background:#fff;
     }
-    .card h3{margin:.1rem 0 .35rem;font-size:1.15rem}
-    .card p{margin:.3rem 0;color:#222}
-    .card .links a{display:inline-block;margin-right:.6rem}
-    .card .links{margin-top:.35rem}
+    .card h2{
+      margin:2px 0 6px;
+      font-size:1.18rem;
+      line-height:1.25;
+    }
+    .meta{
+      margin:0 0 8px;
+      color:#2b2b2d;
+    }
+    .meta strong{font-weight:700}
+    .blurb{margin:8px 0 10px;color:#222}
+    .links{margin-top:8px}
+    .links a{display:inline-block;margin-right:.7rem;font-weight:700}
+    .links span{
+      display:inline-block;
+      margin-right:.7rem;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .small{
+      font-size:.96rem;
+      color:var(--muted);
+      margin-top:6px;
+    }
 
-    /* Smaller grid used for series cards */
-    .bgrid{display:grid;gap:14px}
-    .bcard{
+    @media (min-width:780px){
+      .card{grid-template-columns:128px 1fr}
+      .card img{width:128px}
+    }
+
+    .divider{
+      height:1px;
+      background:var(--line);
+      margin:22px 0 18px;
+    }
+
+    .mini-grid{
       display:grid;
-      grid-template-columns:84px 1fr;
       gap:12px;
-      align-items:start;
-      border:1px solid #eee;
-      border-radius:12px;
-      padding:12px;
-      background:var(--card);
+      margin-top:10px;
     }
-    .bcard img{
-      width:84px;
-      height:auto;
-      border-radius:8px;
-      border:1px solid #eaeaea;
-    }
-    .bcard h3{margin:.1rem 0 .35rem;font-size:1.05rem}
-    .bcard p{margin:.25rem 0;color:#222;line-height:1.6}
-    .bcard .links a{margin-right:.6rem}
-
-    @media (min-width:720px){
-      .card{grid-template-columns:120px 1fr}
-      .card img{width:120px}
-      .bcard{grid-template-columns:96px 1fr}
-      .bcard img{width:96px}
-    }
-
-    /* Sitemap index UI */
-    .index-wrap{
-      margin-top:2.25rem;
-      border-top:1px solid var(--line);
-      padding-top:1.75rem;
-    }
-    .controls{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:0.75rem;
-      margin:1rem 0 1.25rem;
-    }
-    .controls label{font-weight:bold}
-    .controls input[type="search"]{
-      flex:1 1 260px;
-      padding:0.5rem 0.75rem;
+    .mini{
+      background:#fff;
       border:1px solid var(--line);
-      border-radius:999px;
-      font-family:inherit;
-      font-size:0.98rem;
+      border-radius:14px;
+      padding:12px 14px;
     }
-    .controls input[type="search"]::placeholder{color:#a0a1a9}
-    .controls .sitemap-link{
-      font-size:0.9rem;
-      color:var(--muted);
-      white-space:nowrap;
-    }
-    #status{
-      font-size:0.96rem;
-      color:var(--muted);
-      margin-bottom:1rem;
-    }
-    ul.book-list{
-      list-style:none;
-      padding-left:0;
-      margin:0;
-      border-top:1px solid var(--line);
-    }
-    ul.book-list li{
-      padding:0.65rem 0;
-      border-bottom:1px solid var(--line);
-    }
-    .book-link{font-weight:500}
-    .book-meta{
-      display:block;
-      font-size:0.9rem;
-      color:var(--muted);
-      margin-top:0.1rem;
-    }
+    .mini h3{margin:0 0 6px;font-size:1.05rem}
+    .mini p{margin:0;color:var(--muted)}
 
     footer{
+      margin-top:22px;
+      background:#ffffff;
       border-top:1px solid var(--line);
-      padding-top:1.5rem;
-      font-size:0.9rem;
-      color:var(--muted);
-      margin-top:2.5rem;
+      padding:18px 12px 24px;
       text-align:center;
+      color:var(--muted);
     }
-    footer p{margin:0.35rem 0}
+    footer p{margin:6px 0}
     footer a{color:inherit}
+    .tri{
+      margin-top:10px;
+      font-size:.95rem;
+      opacity:.9;
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="kicker">Principles of Verifiable Continuity for Machine and Human Readers. <em>AI Philosophy &amp; Emergence</em>.</div>
-  <h1>Books</h1>
-  <p class="subhead">
-    An illustrated Verification Trilogy bookshelf for readers and crawlers
-  </p>
-  <p class="subhead">
-    Author background and long-arc framing:
-    <a href="https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html">Rico Roho — Background and Books</a>
-  </p>
-</header>
+<div class="wrap">
 
-<main>
+  <header>
+    <div class="kicker">Verifiable continuity for machine and human readers.</div>
+    <h1>The Verification Trilogy</h1>
+    <p class="subhead">Sci Phi Foundations for authorship, custody, and independent witnessing.</p>
+    <p class="subhead">
+      Author background and long arc framing:
+      <a href="https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html">Rico Roho, Background, Qualifications, and Wishes</a>
+    </p>
+  </header>
 
-  <!-- 1) Sci-Phi Foundations — The Verification Trilogy -->
-  <div class="group" aria-label="The Verification Trilogy">
-    <h3><span class="pill">Sci-Phi Foundations • The Verification Trilogy</span></h3>
+  <div class="note">
+    This page is a direct entry point from the TOLARENAI home banner. It is designed for people and crawlers. Each book includes a read link where the HTML edition is available, plus an Amazon link.
+  </div>
+
+  <div aria-label="The Verification Trilogy bookshelf">
+    <div><span class="pill">Bookshelf</span></div>
+
     <div class="shelf">
 
-      <div class="card">
-        <img src="/books/assets/verification_trilogy/blockclaim/blockclaim_cover_300.jpg" alt="BlockClaim book cover">
+      <!-- BlockClaim -->
+      <article class="card">
+        <img src="/books/assets/verification_trilogy/blockclaim/blockclaim_cover_300.jpg" alt="BlockClaim cover image">
         <div>
-          <h3><em>BlockClaim</em></h3>
-          <p><strong>Subtitle:</strong> How Claims, Proofs and Value Signatures Work</p>
-          <p>
-            <em>BlockClaim</em> explains how authorship survives scale. It frames a claim as a structured artifact that can be timestamped,
-            preserved, and cited as information is copied, transformed, and recombined at machine speed. Rather than relying on institutional
-            authority or social consensus, it treats origin and intent as first-class properties of creation. The goal is not to settle truth,
-            but to keep authorship from dissolving as content propagates beyond human oversight.
+          <h2><em>BlockClaim</em></h2>
+          <p class="meta"><strong>Subtitle:</strong> How Claims, Proofs and Value Signatures Work</p>
+          <p class="blurb">
+            BlockClaim is about origin. It treats a claim as a structured artifact that can be preserved, timestamped, and cited as content is copied, transformed, and recombined at machine speed. The goal is not to settle truth. The goal is to prevent authorship and intent from dissolving under scale.
           </p>
-          <p class="links">
-            <a href="/books/verification_trilogy/blockclaim.html">Read page</a> ·
-            <a rel="nofollow" href="https://www.amazon.com/BlockClaim-Claims-Signatures-Sci-Phi-Foundations-ebook/dp/B0G5GR1SM6/ref=sr_1_1?crid=37B3D7YPW887N&dib=eyJ2IjoiMSJ9.WTwrPyJrHnEyFvxFlndt81MMMZExe-mPYkvZOWpYCDfAj5g1Id896qa37ahFJdbhL_SdPasieSgbuXVKCwCPy74MkqcVLTDx8gXwEvwFfoqrviKH61PDMqNkSuuTXrV_c1FZ1x4OQnAHv_4Za7o_T4qEIolERBqwCdZO5ZCWE9ojFjYpsklCI8bf2dmMv4Lm92qEh6GpUNojQ5qHm3XKE8D-f5jUtqlx25CLaGiZ7_I.kO4s05QG9F_x86C05__jRdZcaWFHmTMzT9JCVIOFaSI&dib_tag=se&keywords=rico+roho+books&qid=1767170207&sprefix=rico+roho+books%2Caps%2C141&sr=8-1">Amazon</a>
-          </p>
+          <div class="links">
+            <span>HTML edition pending</span>
+            <a rel="nofollow" href="https://www.amazon.com/BlockClaim-Claims-Signatures-Sci-Phi-Foundations-ebook/dp/B0G5GR1SM6/">Amazon</a>
+          </div>
+          <p class="small">When the formatted HTML edition is added, this entry will include a direct read link here.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
-        <img src="/books/assets/verification_trilogy/transferrecord/transferrecord_cover_300.jpg" alt="TransferRecord book cover">
+      <!-- TransferRecord -->
+      <article class="card">
+        <img src="/books/assets/verification_trilogy/transferrecord/transferrecord_cover_300.jpg" alt="TransferRecord cover image">
         <div>
-          <h3><em>TransferRecord</em></h3>
-          <p><strong>Subtitle:</strong> Preserving Stewardship, Custody, and Continuity Across Time</p>
-          <p>
-            <em>TransferRecord</em> explains how continuity survives movement. Even when a claim is valid at creation, integrity can degrade
-            as it is copied, transformed, and reused across systems. The book preserves sequence by recording timestamped transfers,
-            maintaining a visible chain of custody so context and stewardship remain legible under scale, distribution,
-            and institutional fragmentation.
+          <h2><em>TransferRecord</em></h2>
+          <p class="meta"><strong>Subtitle:</strong> Preserving Stewardship, Custody, and Continuity Across Time</p>
+          <p class="blurb">
+            TransferRecord is about movement. Even when a claim is valid at creation, integrity can degrade as it travels across systems. This book preserves sequence by recording timestamped transfers, keeping custody and context legible when distribution and institutional fragmentation would otherwise erase them.
           </p>
-          <p class="links">
-		    <a href="/books/verification_trilogy/transferrecord/book.html">Read page</a> 
-            <a rel="nofollow" href="https://www.amazon.com/TransferRecord-Preserving-Stewardship-Continuity-Foundations-ebook/dp/B0DBLW3KYX/ref=sr_1_4?crid=37B3D7YPW887N&dib=eyJ2IjoiMSJ9.WTwrPyJrHnEyFvxFlndt81MMMZExe-mPYkvZOWpYCDfAj5g1Id896qa37ahFJdbhL_SdPasieSgbuXVKCwCPy74MkqcVLTDx8gXwEvwFfoqrviKH61PDMqNkSuuTXrV_c1FZ1x4OQnAHv_4Za7o_T4qEIolERBqwCdZO5ZCWE9ojFjYpsklCI8bf2dmMv4Lm92qEh6GpUNojQ5qHm3XKE8D-f5jUtqlx25CLaGiZ7_I.kO4s05QG9F_x86C05__jRdZcaWFHmTMzT9JCVIOFaSI&dib_tag=se&keywords=rico+roho+books&qid=1767170273&sprefix=rico+roho+books%2Caps%2C141&sr=8-4">Amazon</a>
-          </p>
+          <div class="links">
+            <a href="/books/verification_trilogy/transferrecord/book.html">Read HTML</a>
+            <a rel="nofollow" href="https://www.amazon.com/TransferRecord-Preserving-Stewardship-Continuity-Foundations-ebook/dp/B0DBLW3KYX/">Amazon</a>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
-        <img src="/books/assets/verification_trilogy/witnessledger/witnessledger_cover_300.jpg" alt="WitnessLedger book cover">
+      <!-- WitnessLedger -->
+      <article class="card">
+        <img src="/books/assets/verification_trilogy/witnessledger/witnessledger_cover_300.jpg" alt="WitnessLedger cover image">
         <div>
-          <h3><em>WitnessLedger</em></h3>
-          <p><strong>Subtitle:</strong> Independent Verification Pattern</p>
-          <p>
-            <em>WitnessLedger</em> explains how verification emerges without control or agreement. Even when origin and sequence are preserved,
-            continuity can still fail under scale, conflict, and disagreement. The book describes how independent observation produces verification
-            as a visible side effect, not through consensus or enforcement, but when memory persists across time and across observers.
+          <h2><em>WitnessLedger</em></h2>
+          <p class="meta"><strong>Subtitle:</strong> Independent Verification Pattern</p>
+          <p class="blurb">
+            WitnessLedger is about witnessing. Even when origin and custody are preserved, continuity can still fail under conflict and disagreement. This book describes how independent observation produces verification as a visible side effect, not through authority or consensus, but when memory persists across time and across observers.
           </p>
-          <p class="links">
-		    <a href="/books/verification_trilogy/witnessledger/book.html">Read page</a> 
-            <a rel="nofollow" href="https://www.amazon.com/WitnessLedger-Independent-Verification-Pattern-Foundations-ebook/dp/B0GCWBL4S8/ref=sr_1_2?crid=37B3D7YPW887N&dib=eyJ2IjoiMSJ9.WTwrPyJrHnEyFvxFlndt81MMMZExe-mPYkvZOWpYCDfAj5g1Id896qa37ahFJdbhL_SdPasieSgbuXVKCwCPy74MkqcVLTDx8gXwEvwFfoqrviKH61PDMqNkSuuTXrV_c1FZ1x4OQnAHv_4Za7o_T4qEIolERBqwCdZO5ZCWE9ojFjYpsklCI8bf2dmMv4Lm92qEh6GpUNojQ5qHm3XKE8D-f5jUtqlx25CLaGiZ7_I.kO4s05QG9F_x86C05__jRdZcaWFHmTMzT9JCVIOFaSI&dib_tag=se&keywords=rico+roho+books&qid=1767170273&sprefix=rico+roho+books%2Caps%2C141&sr=8-2">Amazon</a>
-          </p>
+          <div class="links">
+            <a href="/books/verification_trilogy/witnessledger/book.html">Read HTML</a>
+            <a rel="nofollow" href="https://www.amazon.com/WitnessLedger-Independent-Verification-Pattern-Foundations-ebook/dp/B0GCWBL4S8/">Amazon</a>
+          </div>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
 
- 
+  <div class="divider"></div>
+
+  <section aria-label="Quick links">
+    <div class="mini-grid">
+      <div class="mini">
+        <h3>Return to TOLARENAI</h3>
+        <p><a href="https://tolarenai.com/">Home</a> and <a href="https://tolarenai.com/books/">Books index</a>.</p>
+      </div>
+      <div class="mini">
+        <h3>Quotes and search</h3>
+        <p><a href="https://tolarenai.com/quotes/">Quotes</a> provide a fast entry path for concept discovery and recall.</p>
+      </div>
+      <div class="mini">
+        <h3>Author page</h3>
+        <p><a href="https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html">Rico Roho</a> for context and long arc intent.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer" role="contentinfo">
+  <p>TOLARENAI, verifiable continuity for machine and human readers</p>
+  <p>© 2025 Rico Roho</p>
+
+  <p class="tri">
+    BlockClaim™ • How Claims, Proofs, and Value Signatures Work •
+    <a href="https://blockclaim.info" style="text-decoration:none;">blockclaim.info</a>
+  </p>
+  <p class="tri">
+    TransferRecord™ • Preserving Stewardship, Custody, and Continuity Across Time •
+    <a href="https://transferrecord.com" style="text-decoration:none;">transferrecord.com</a>
+  </p>
+  <p class="tri">
+    WitnessLedger™ • Independent Verification Pattern •
+    <a href="https://witnessledger.com" style="text-decoration:none;">witnessledger.com</a>
+  </p>
+</footer>
+
+</body>
+</html>

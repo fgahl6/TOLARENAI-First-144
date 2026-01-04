@@ -220,5 +220,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
   </url>
+    <url>
+    <loc>https://tolarenai.com/tolarenai_scrolls/tolarenai_scroll_34_alastu_and_the_first_witness.html</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
 
 </urlset>

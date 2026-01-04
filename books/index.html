@@ -806,16 +806,6 @@
 
 </main>
 
-<!-- Footer outside main -->
-<footer role="contentinfo">
-  <p>© 2025 Rico Roho — TOLARENAI</p>
-  <p>
-    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
-    <a href="https://tolarenai.com/attribution.html">attribution</a>
-  </p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
-</footer>
-
 <script>
 (function(){
   const statusEl = document.getElementById('status');
@@ -835,6 +825,32 @@
     return titleCase((slug || '').replace(/_/g,' ').trim());
   }
 
+  // Normalize sitemap loc URLs to real on-disk book pages
+  function normalizeBookUrl(locUrl){
+    try{
+      const u = new URL(locUrl);
+      const path = u.pathname;
+
+      // Fix shallow VT locs like /books/verification_trilogy/blockclaim.html
+      const vtShallow = path.match(/^\/books\/verification_trilogy\/([^/]+)\.html$/i);
+      if (vtShallow && vtShallow[1]){
+        const slug = vtShallow[1];
+        return u.origin + '/books/verification_trilogy/' + slug + '/book/book.html';
+      }
+
+      // Fix intermediate VT locs like /books/verification_trilogy/blockclaim/book.html
+      const vtMid = path.match(/^\/books\/verification_trilogy\/([^/]+)\/book\.html$/i);
+      if (vtMid && vtMid[1]){
+        const slug = vtMid[1];
+        return u.origin + '/books/verification_trilogy/' + slug + '/book/book.html';
+      }
+
+      return locUrl;
+    } catch(e){
+      return locUrl;
+    }
+  }
+
   function makeLabelFromUrl(url, imgTitle, imgCaption){
     // Category from /books/{category}/
     let categorySlug = '';
@@ -846,15 +862,14 @@
     // Filename fallback
     const filename = (url.split('/').pop() || '').replace(/\.html$/i,'').trim();
 
-    // If this is a /verification_trilogy/{slug}/book.html style page, derive title from folder
+    // If this is a /books/verification_trilogy/{slug}/book/book.html style page, derive title from folder
     let derivedFromFolder = '';
     const vt = url.match(/\/books\/verification_trilogy\/([^/]+)\/book\/book\.html$/i);
     if (vt && vt[1]) derivedFromFolder = slugToTitle(vt[1]);
 
-    // Best title priority: image:title > image:caption > folder-derived (for book.html) > filename slug
+    // Best title priority: image:title > image:caption > folder-derived (for book pages) > filename slug
     let title = cleanCoverTitle((imgTitle || '').trim());
     if (!title){
-      // If caption looks like "TransferRecord: Preserving ..." keep the left side or whole if short
       const cap = (imgCaption || '').trim();
       if (cap){
         const left = cap.split(':')[0].trim();
@@ -864,7 +879,6 @@
     if (!title && derivedFromFolder) title = derivedFromFolder;
 
     if (!title){
-      // general filename fallback, stripping leading book_XX_
       const m2 = filename.match(/^book_\d+_(.*)$/i);
       const slugPart = m2 ? m2[1] : filename;
       title = slugToTitle(slugPart);
@@ -964,11 +978,10 @@
           const urlNode = urlNodes[i];
           const locEl = urlNode.getElementsByTagName('loc')[0];
           if (!locEl) continue;
-          const url = locEl.textContent.trim();
 
+          const url = locEl.textContent.trim();
           if (!url.endsWith('.html') || url.indexOf('/books/') === -1) continue;
 
-          // More reliable than querySelector for prefixed nodes
           const imgTitleEl = urlNode.getElementsByTagName('image:title')[0];
           const imgCaptionEl = urlNode.getElementsByTagName('image:caption')[0];
           const imgLocEl = urlNode.getElementsByTagName('image:loc')[0];
@@ -977,10 +990,13 @@
           const imgCaption = imgCaptionEl ? imgCaptionEl.textContent : '';
           const thumb = imgLocEl ? imgLocEl.textContent.trim() : '';
 
-          const meta = makeLabelFromUrl(url, imgTitle, imgCaption);
+          // Normalize the URL so it points to the real book page
+          const finalUrl = normalizeBookUrl(url);
+
+          const meta = makeLabelFromUrl(finalUrl, imgTitle, imgCaption);
 
           items.push({
-            url,
+            url: finalUrl,
             title: meta.title,
             category: meta.category,
             thumb,

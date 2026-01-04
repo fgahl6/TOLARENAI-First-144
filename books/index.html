@@ -848,7 +848,7 @@
 
     // If this is a /verification_trilogy/{slug}/book.html style page, derive title from folder
     let derivedFromFolder = '';
-    const vt = url.match(/\/books\/verification_trilogy\/([^/]+)\/book\.html$/i);
+    const vt = url.match(/\/books\/verification_trilogy\/([^/]+)\/book\/book\.html$/i);
     if (vt && vt[1]) derivedFromFolder = slugToTitle(vt[1]);
 
     // Best title priority: image:title > image:caption > folder-derived (for book.html) > filename slug

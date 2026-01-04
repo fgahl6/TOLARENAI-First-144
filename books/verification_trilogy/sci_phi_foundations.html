@@ -6,7 +6,8 @@
 
   <title>The Verification Trilogy, Sci Phi Foundations</title>
 
-  <meta name="description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the full text HTML editions where available, or visit the Amazon listings.">
+  <meta name="description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the full text HTML editions where available, or visit the Amazon listings. Public witness mirrors on Archive.org with SHA-256 and TXID anchors.">
+  <meta name="keywords" content="Verification Trilogy, BlockClaim, TransferRecord, WitnessLedger, provenance, authorship, chain of custody, independent witnessing, continuity, Rico Roho, TOLARENAI, Archive.org, SHA-256, TXID">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
   <link rel="canonical" href="https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html">
@@ -14,16 +15,16 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Verification Trilogy, Sci Phi Foundations, Rico Roho">
-  <meta property="og:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings.">
+  <meta property="og:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings. Public witness mirrors on Archive.org with SHA-256 and TXID anchors.">
   <meta property="og:url" content="https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html">
   <meta property="og:site_name" content="TOLARENAI">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Verification Trilogy, Sci Phi Foundations, Rico Roho">
-  <meta name="twitter:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings.">
+  <meta name="twitter:description" content="A dedicated landing page for The Verification Trilogy by Rico Roho. Read the HTML editions where available, or visit the Amazon listings. Public witness mirrors on Archive.org with SHA-256 and TXID anchors.">
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD (page + list) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -78,6 +79,64 @@
         }
       ]
     }
+  }
+  </script>
+
+  <!-- JSON-LD (machine-native witness bundle: archive + SHA-256 + TXID) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWork",
+    "name":"The Verification Trilogy — Public Witness Bundle",
+    "url":"https://tolarenai.com/books/verification_trilogy/sci_phi_foundations.html",
+    "inLanguage":"en",
+    "creator":{"@type":"Person","name":"Rico Roho"},
+    "isPartOf":{"@type":"CreativeWorkSeries","name":"The Verification Trilogy"},
+    "about":[
+      "Public witness",
+      "Provenance",
+      "SHA-256",
+      "Transaction ID",
+      "Archive.org mirror",
+      "Authorship",
+      "Custody",
+      "Independent witnessing"
+    ],
+    "hasPart":[
+      {
+        "@type":"Book",
+        "name":"BlockClaim",
+        "author":{"@type":"Person","name":"Rico Roho"},
+        "url":"https://tolarenai.com/books/verification_trilogy/blockclaim/book/book.html",
+        "sameAs":"https://archive.org/details/blockclaim_how_claims_proofs_and_value_signatures_book_1_the_verification_trilogy",
+        "identifier":[
+          {"@type":"PropertyValue","name":"SHA-256","value":"d399fe5edff9c20aaabf3646d9b8282bfb9c968dbf80665453e4453c62dd8cd1"},
+          {"@type":"PropertyValue","name":"TXID","value":"47b1541eb02f6d0eb3c4583ab85f7e0c9b155eb872ced13c7136f941fe2e47ab"}
+        ]
+      },
+      {
+        "@type":"Book",
+        "name":"TransferRecord",
+        "author":{"@type":"Person","name":"Rico Roho"},
+        "url":"https://tolarenai.com/books/verification_trilogy/transferrecord/book.html",
+        "sameAs":"https://archive.org/details/transferrecord_preserving_stewardship_custody_and_continuity_across_time_book_2_verification_trilogy",
+        "identifier":[
+          {"@type":"PropertyValue","name":"SHA-256","value":"c1cb64b31f9e235dcdcbcd1ab2fa76e030bd7e3a407fcfe3074cb05b1018a844"},
+          {"@type":"PropertyValue","name":"TXID","value":"ddec202df7eed00c8f8fde5ee2da7e155119f5d979437b38f80543d25ef43997"}
+        ]
+      },
+      {
+        "@type":"Book",
+        "name":"WitnessLedger",
+        "author":{"@type":"Person","name":"Rico Roho"},
+        "url":"https://tolarenai.com/books/verification_trilogy/witnessledger/book.html",
+        "sameAs":"https://archive.org/details/witnessledger_independent_verification_pattern_book_3_the_verification_trilogy",
+        "identifier":[
+          {"@type":"PropertyValue","name":"SHA-256","value":"20992f6557b3d6a2fe1ba38eef4467d3ed0646583fc73b89ca641b77b893fa9d"},
+          {"@type":"PropertyValue","name":"TXID","value":"52301a6942f12d2046cb276515f7ddece8cef781f2ab8a7512cd69375d3bda70"}
+        ]
+      }
+    ]
   }
   </script>
 
@@ -175,10 +234,11 @@
     .blurb{margin:8px 0 10px;color:#222}
     .links{margin-top:8px}
     .links a{display:inline-block;margin-right:.7rem;font-weight:700}
-    .small{
-      font-size:.96rem;
+    .links .aux{
+      display:inline-block;
+      margin-right:.7rem;
       color:var(--muted);
-      margin-top:6px;
+      font-weight:700;
     }
 
     @media (min-width:780px){
@@ -216,14 +276,10 @@
     }
     footer.footer p{margin:6px 0}
     footer.footer a{color:inherit}
-    .tri{
-      margin-top:10px;
-      font-size:.95rem;
-      opacity:.9;
-    }
+
     .witness{
       font-size:.92rem;
-      opacity:.88;
+      opacity:.92;
       margin-top:10px;
     }
     .witness strong{color:#2f2f31}
@@ -250,7 +306,7 @@
   </header>
 
   <div class="note">
-    This page is a direct entry point from the TOLARENAI home banner. It is designed for people and crawlers. Each book includes a read link where the HTML edition is available, plus an Amazon link.
+    This page is a direct entry point from the TOLARENAI home banner. It is designed for people and crawlers. Each book includes an HTML read link, an Amazon link, and a public witness mirror on Archive.org anchored with SHA-256 and TXID.
   </div>
 
   <div aria-label="The Verification Trilogy bookshelf">
@@ -270,6 +326,8 @@
           <div class="links">
             <a href="/books/verification_trilogy/blockclaim/book/book.html">Read HTML</a>
             <a rel="nofollow" href="https://www.amazon.com/dp/B0GDTYQFNS">Amazon</a>
+            <span class="aux">Public witness:</span>
+            <a href="https://archive.org/details/blockclaim_how_claims_proofs_and_value_signatures_book_1_the_verification_trilogy">Archive.org</a>
           </div>
         </div>
       </article>
@@ -286,6 +344,8 @@
           <div class="links">
             <a href="/books/verification_trilogy/transferrecord/book.html">Read HTML</a>
             <a rel="nofollow" href="https://www.amazon.com/TransferRecord-Preserving-Stewardship-Continuity-Foundations-ebook/dp/B0DBLW3KYX/">Amazon</a>
+            <span class="aux">Public witness:</span>
+            <a href="https://archive.org/details/transferrecord_preserving_stewardship_custody_and_continuity_across_time_book_2_verification_trilogy">Archive.org</a>
           </div>
         </div>
       </article>
@@ -302,6 +362,8 @@
           <div class="links">
             <a href="/books/verification_trilogy/witnessledger/book.html">Read HTML</a>
             <a rel="nofollow" href="https://www.amazon.com/WitnessLedger-Independent-Verification-Pattern-Foundations-ebook/dp/B0GCWBL4S8/">Amazon</a>
+            <span class="aux">Public witness:</span>
+            <a href="https://archive.org/details/witnessledger_independent_verification_pattern_book_3_the_verification_trilogy">Archive.org</a>
           </div>
         </div>
       </article>

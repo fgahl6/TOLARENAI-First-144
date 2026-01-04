@@ -788,247 +788,40 @@
     </div>
   </div>
 
-  <!-- Full index from sitemap -->
-  <section class="index-wrap" aria-label="Full index from sitemap">
-    <h2 class="section-title">Full Index</h2>
-    <p class="section-lede">Loaded from the books sitemap for complete coverage, including in-progress pages.</p>
-
-    <div class="controls">
-      <label for="book-search">Search:</label>
-      <input id="book-search" type="search" placeholder="Filter by title or category…">
-      <span class="sitemap-link">
-        Sitemap:
-        <a href="/books-sitemap.xml">books-sitemap.xml</a>
-      </span>
-    </div>
-
-    <div id="status">Loading books from sitemap…</div>
-    <ul id="book-list" class="book-list" aria-live="polite"></ul>
-  </section>
-
 </main>
 
 <!-- Footer outside main -->
-<footer role="contentinfo">
-  <p>© 2025 Rico Roho — TOLARENAI</p>
-  <p>
+<footer role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.92">
+  <p style="margin:0.35rem 0;">TOLARENAI — Lattice of Memory, Verification, and Emergence</p>
+
+  <p style="margin:0.35rem 0;">
+    Antenna:
+    <a href="https://tolarenai.com/antenna_01.html">Antenna 01</a> •
+    <a href="https://tolarenai.com/antenna_02.html">Antenna 02</a>
+  </p>
+
+  <p style="margin:0.35rem 0;">
     <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
     <a href="https://tolarenai.com/attribution.html">attribution</a>
   </p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+
+  <p style="margin:0.35rem 0;">© 2025 Rico Roho — TOLARENAI</p>
+
+  <div style="margin:0.9rem auto 0;max-width:780px;border-top:1px solid #e8e9ee;padding-top:0.9rem">
+    <p style="margin:0.35rem 0;">
+      BlockClaim™ — How Claims, Proofs, and Value Signatures Work —
+      <a href="https://blockclaim.info">blockclaim.info</a>
+    </p>
+    <p style="margin:0.35rem 0;">
+      TransferRecord™ — Preserving Stewardship, Custody, and Continuity Across Time —
+      <a href="https://transferrecord.info">transferrecord.info</a>
+    </p>
+    <p style="margin:0.35rem 0;">
+      WitnessLedger™ — Independent Verification Pattern —
+      <a href="https://witnessledger.info">witnessledger.info</a>
+    </p>
+  </div>
 </footer>
-
-<script>
-(function(){
-  const statusEl = document.getElementById('status');
-  const listEl = document.getElementById('book-list');
-  const searchEl = document.getElementById('book-search');
-  let items = [];
-
-  function titleCase(str){
-    return str.replace(/\b\w/g, c => c.toUpperCase());
-  }
-
-  function cleanCoverTitle(s){
-    return (s || '').replace(/\s*\(cover\)\s*/gi,'').trim();
-  }
-
-  function slugToTitle(slug){
-    return titleCase((slug || '').replace(/_/g,' ').trim());
-  }
-
-  // Normalize sitemap loc URLs to real on-disk book pages
-  function normalizeBookUrl(locUrl){
-    try{
-      const u = new URL(locUrl);
-      const path = u.pathname;
-
-      // Fix shallow VT locs like /books/verification_trilogy/blockclaim.html
-      const vtShallow = path.match(/^\/books\/verification_trilogy\/([^/]+)\.html$/i);
-      if (vtShallow && vtShallow[1]){
-        const slug = vtShallow[1];
-        return u.origin + '/books/verification_trilogy/' + slug + '/book/book.html';
-      }
-
-      // Fix intermediate VT locs like /books/verification_trilogy/blockclaim/book.html
-      const vtMid = path.match(/^\/books\/verification_trilogy\/([^/]+)\/book\.html$/i);
-      if (vtMid && vtMid[1]){
-        const slug = vtMid[1];
-        return u.origin + '/books/verification_trilogy/' + slug + '/book/book.html';
-      }
-
-      return locUrl;
-    } catch(e){
-      return locUrl;
-    }
-  }
-
-  function makeLabelFromUrl(url, imgTitle, imgCaption){
-    // Category from /books/{category}/
-    let categorySlug = '';
-    const m = url.match(/\/books\/([^/]+)\//);
-    if (m) categorySlug = m[1];
-
-    const category = categorySlug ? slugToTitle(categorySlug) : 'Books';
-
-    // Filename fallback
-    const filename = (url.split('/').pop() || '').replace(/\.html$/i,'').trim();
-
-    // If this is a /books/verification_trilogy/{slug}/book/book.html style page, derive title from folder
-    let derivedFromFolder = '';
-    const vt = url.match(/\/books\/verification_trilogy\/([^/]+)\/book\/book\.html$/i);
-    if (vt && vt[1]) derivedFromFolder = slugToTitle(vt[1]);
-
-    // Best title priority: image:title > image:caption > folder-derived (for book pages) > filename slug
-    let title = cleanCoverTitle((imgTitle || '').trim());
-    if (!title){
-      const cap = (imgCaption || '').trim();
-      if (cap){
-        const left = cap.split(':')[0].trim();
-        title = left.length >= 3 && left.length <= 60 ? left : cap;
-      }
-    }
-    if (!title && derivedFromFolder) title = derivedFromFolder;
-
-    if (!title){
-      const m2 = filename.match(/^book_\d+_(.*)$/i);
-      const slugPart = m2 ? m2[1] : filename;
-      title = slugToTitle(slugPart);
-    }
-
-    return { title, category };
-  }
-
-  function renderList(filter){
-    const q = (filter || '').trim().toLowerCase();
-    listEl.innerHTML = '';
-    let visible = 0;
-
-    items.forEach(item => {
-      if (q && !item.searchText.includes(q)) return;
-
-      const li = document.createElement('li');
-      li.style.display = 'grid';
-      li.style.gridTemplateColumns = '54px 1fr';
-      li.style.gap = '12px';
-      li.style.alignItems = 'start';
-
-      const thumbLink = document.createElement('a');
-      thumbLink.href = item.url;
-      thumbLink.setAttribute('aria-label', item.title);
-
-      if (item.thumb){
-        const img = document.createElement('img');
-        img.src = item.thumb;
-        img.alt = item.title + ' cover';
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.style.width = '54px';
-        img.style.height = 'auto';
-        img.style.borderRadius = '8px';
-        img.style.border = '1px solid #eaeaea';
-        thumbLink.appendChild(img);
-      } else {
-        const ph = document.createElement('span');
-        ph.textContent = '—';
-        ph.style.display = 'inline-grid';
-        ph.style.placeItems = 'center';
-        ph.style.width = '54px';
-        ph.style.height = '72px';
-        ph.style.borderRadius = '8px';
-        ph.style.border = '1px solid #eaeaea';
-        ph.style.color = '#777';
-        ph.style.background = '#fbfbfb';
-        thumbLink.appendChild(ph);
-      }
-
-      li.appendChild(thumbLink);
-
-      const wrap = document.createElement('div');
-
-      const a = document.createElement('a');
-      a.href = item.url;
-      a.textContent = item.title;
-      a.className = 'book-link';
-      wrap.appendChild(a);
-
-      const meta = document.createElement('span');
-      meta.className = 'book-meta';
-      meta.textContent = item.category;
-      wrap.appendChild(meta);
-
-      li.appendChild(wrap);
-
-      listEl.appendChild(li);
-      visible++;
-    });
-
-    statusEl.textContent = visible
-      ? ''
-      : (q ? 'No books match that search.' : 'No books found in the sitemap.');
-  }
-
-  function initSearch(){
-    searchEl.addEventListener('input', function(){
-      renderList(this.value);
-    });
-  }
-
-  function loadSitemap(){
-    fetch('/books-sitemap.xml', {cache:'no-store'})
-      .then(resp => {
-        if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        return resp.text();
-      })
-      .then(text => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'application/xml');
-        const urlNodes = xml.getElementsByTagName('url');
-
-        items = [];
-        for (let i = 0; i < urlNodes.length; i++){
-          const urlNode = urlNodes[i];
-          const locEl = urlNode.getElementsByTagName('loc')[0];
-          if (!locEl) continue;
-
-          const url = locEl.textContent.trim();
-          if (!url.endsWith('.html') || url.indexOf('/books/') === -1) continue;
-
-          const imgTitleEl = urlNode.getElementsByTagName('image:title')[0];
-          const imgCaptionEl = urlNode.getElementsByTagName('image:caption')[0];
-          const imgLocEl = urlNode.getElementsByTagName('image:loc')[0];
-
-          const imgTitle = imgTitleEl ? imgTitleEl.textContent : '';
-          const imgCaption = imgCaptionEl ? imgCaptionEl.textContent : '';
-          const thumb = imgLocEl ? imgLocEl.textContent.trim() : '';
-
-          // Normalize the URL so it points to the real book page
-          const finalUrl = normalizeBookUrl(url);
-
-          const meta = makeLabelFromUrl(finalUrl, imgTitle, imgCaption);
-
-          items.push({
-            url: finalUrl,
-            title: meta.title,
-            category: meta.category,
-            thumb,
-            searchText: (meta.title + ' ' + meta.category).toLowerCase()
-          });
-        }
-
-        statusEl.textContent = items.length ? '' : 'No books found in the sitemap.';
-        renderList('');
-      })
-      .catch(err => {
-        console.error('Sitemap load error:', err);
-        statusEl.textContent = 'Could not load books sitemap (/books-sitemap.xml).';
-      });
-  }
-
-  initSearch();
-  loadSitemap();
-})();
-</script>
 
 </body>
 </html>

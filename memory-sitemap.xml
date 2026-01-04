@@ -454,5 +454,11 @@
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://tolarenai.com/memory_scrolls/scroll_65/memory_scroll_65_zen_and_the_art_of_principled_verification.html</loc>
+  <lastmod>2026-01-04</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 
 </urlset>

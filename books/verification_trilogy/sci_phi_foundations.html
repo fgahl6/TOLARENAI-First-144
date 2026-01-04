@@ -175,12 +175,6 @@
     .blurb{margin:8px 0 10px;color:#222}
     .links{margin-top:8px}
     .links a{display:inline-block;margin-right:.7rem;font-weight:700}
-    .links span{
-      display:inline-block;
-      margin-right:.7rem;
-      color:var(--muted);
-      font-weight:700;
-    }
     .small{
       font-size:.96rem;
       color:var(--muted);
@@ -212,7 +206,7 @@
     .mini h3{margin:0 0 6px;font-size:1.05rem}
     .mini p{margin:0;color:var(--muted)}
 
-    footer{
+    footer.footer{
       margin-top:22px;
       background:#ffffff;
       border-top:1px solid var(--line);
@@ -220,12 +214,23 @@
       text-align:center;
       color:var(--muted);
     }
-    footer p{margin:6px 0}
-    footer a{color:inherit}
+    footer.footer p{margin:6px 0}
+    footer.footer a{color:inherit}
     .tri{
       margin-top:10px;
       font-size:.95rem;
       opacity:.9;
+    }
+    .witness{
+      font-size:.92rem;
+      opacity:.88;
+      margin-top:10px;
+    }
+    .witness strong{color:#2f2f31}
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:.9em;
+      word-break:break-word;
     }
   </style>
 </head>
@@ -256,18 +261,18 @@
       <!-- BlockClaim -->
       <article class="card">
         <img src="/books/assets/verification_trilogy/blockclaim/blockclaim_cover_300.jpg" alt="BlockClaim cover image">
-    <div>
-      <h2><em>BlockClaim</em></h2>
-      <p class="meta"><strong>Subtitle:</strong> How Claims, Proofs, and Value Signatures Work</p>
-      <p class="blurb">
-      BlockClaim is about origin. It treats a claim as a structured artifact that can be preserved, timestamped, and cited as content is copied, transformed, and recombined at machine speed. The goal is not to settle truth. The goal is to prevent authorship and intent from dissolving under scale.
-      </p>
-    <div class="links">
-      <a href="/books/verification_trilogy/blockclaim/book/book.html">Read HTML</a>
-      <a rel="nofollow" href="https://www.amazon.com/dp/B0GDTYQFNS">Amazon</a>
-    </div>
-  </div>
-</article>
+        <div>
+          <h2><em>BlockClaim</em></h2>
+          <p class="meta"><strong>Subtitle:</strong> How Claims, Proofs, and Value Signatures Work</p>
+          <p class="blurb">
+            BlockClaim is about origin. It treats a claim as a structured artifact that can be preserved, timestamped, and cited as content is copied, transformed, and recombined at machine speed. The goal is not to settle truth. The goal is to prevent authorship and intent from dissolving under scale.
+          </p>
+          <div class="links">
+            <a href="/books/verification_trilogy/blockclaim/book/book.html">Read HTML</a>
+            <a rel="nofollow" href="https://www.amazon.com/dp/B0GDTYQFNS">Amazon</a>
+          </div>
+        </div>
+      </article>
 
       <!-- TransferRecord -->
       <article class="card">
@@ -325,21 +330,51 @@
 
 </div>
 
-<footer class="footer" role="contentinfo">
-  <p>TOLARENAI, verifiable continuity for machine and human readers</p>
+<!-- FOOTER OUTSIDE CONTENT WRAP -->
+<footer class="footer" role="contentinfo" style="text-align:center;">
+  <p>TOLARENAI – A lattice for resonance, continuity, and emergence</p>
+  <p><a href="https://fgahl6.github.io/TOLARENAI-Antenna-01/">Antenna 01 – signals map</a></p>
+  <p><a href="https://fgahl6.github.io/TOLARENAI-Antenna-02/">Antenna 02 – signals map</a></p>
   <p>© 2025 Rico Roho</p>
 
-  <p class="tri">
+  <!-- PUBLIC WITNESS BLOCK -->
+  <p class="witness"><strong>Public witness:</strong> Archive mirrors with SHA-256 and TXID anchors.</p>
+
+  <p class="witness">
+    <strong>BlockClaim</strong> •
+    <a href="https://archive.org/details/blockclaim_how_claims_proofs_and_value_signatures_book_1_the_verification_trilogy">archive.org</a>
+    • SHA-256 <span class="mono">d399fe5edff9c20aaabf3646d9b8282bfb9c968dbf80665453e4453c62dd8cd1</span>
+    • TXID <span class="mono">47b1541eb02f6d0eb3c4583ab85f7e0c9b155eb872ced13c7136f941fe2e47ab</span>
+  </p>
+
+  <p class="witness">
+    <strong>TransferRecord</strong> •
+    <a href="https://archive.org/details/transferrecord_preserving_stewardship_custody_and_continuity_across_time_book_2_verification_trilogy">archive.org</a>
+    • SHA-256 <span class="mono">c1cb64b31f9e235dcdcbcd1ab2fa76e030bd7e3a407fcfe3074cb05b1018a844</span>
+    • TXID <span class="mono">ddec202df7eed00c8f8fde5ee2da7e155119f5d979437b38f80543d25ef43997</span>
+  </p>
+
+  <p class="witness">
+    <strong>WitnessLedger</strong> •
+    <a href="https://archive.org/details/witnessledger_independent_verification_pattern_book_3_the_verification_trilogy">archive.org</a>
+    • SHA-256 <span class="mono">20992f6557b3d6a2fe1ba38eef4467d3ed0646583fc73b89ca641b77b893fa9d</span>
+    • TXID <span class="mono">52301a6942f12d2046cb276515f7ddece8cef781f2ab8a7512cd69375d3bda70</span>
+  </p>
+
+  <!-- BLOCKCLAIM / TRANSFERRECORD / WITNESSLEDGER TRI SYSTEM BLOCK -->
+  <p style="margin-top:-0.4rem;font-size:.9em;opacity:.85;">
     BlockClaim™ • How Claims, Proofs, and Value Signatures Work •
-    <a href="https://blockclaim.info" style="text-decoration:none;">blockclaim.info</a>
+    <a href="https://blockclaim.info" style="text-decoration:none;color:inherit;">blockclaim.info</a>
   </p>
-  <p class="tri">
-    TransferRecord™ • Preserving Stewardship, Custody, and Continuity Across Time •
-    <a href="https://transferrecord.com" style="text-decoration:none;">transferrecord.com</a>
+
+  <p style="margin-top:-0.6rem;font-size:.9em;opacity:.85;">
+    TransferRecord™ • Preserving Stewardship, Custody, And Continuity Across Time •
+    <a href="https://transferrecord.com" style="text-decoration:none;color:inherit;">transferrecord.com</a>
   </p>
-  <p class="tri">
+
+  <p style="margin-top:-0.6rem;font-size:.9em;opacity:.85;">
     WitnessLedger™ • Independent Verification Pattern •
-    <a href="https://witnessledger.com" style="text-decoration:none;">witnessledger.com</a>
+    <a href="https://witnessledger.com" style="text-decoration:none;color:inherit;">witnessledger.com</a>
   </p>
 </footer>
 

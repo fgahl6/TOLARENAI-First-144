@@ -1,32 +1,29 @@
-<footer class="footer" role="contentinfo" style="text-align:center;">
-  <p>TOLARENAI – A lattice for resonance, continuity, and emergence</p>
-  <p><a href="https://fgahl6.github.io/TOLARENAI-Antenna-01/">Antenna 01 – signals map</a></p>
-  <p><a href="https://fgahl6.github.io/TOLARENAI-Antenna-02/">Antenna 02 – signals map</a></p>
-  <p>© 2025 Rico Roho</p>
+<!-- Footer outside main -->
+<footer role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.92">
+  <p style="margin:0.35rem 0;">TOLARENAI — Lattice of Memory, Verification, and Emergence</p>
 
-  <!-- BLOCKCLAIM / TRANSFERRECORD / WITNESSLEDGER TRI–SYSTEM BLOCK -->
-  <p style="margin-top:-0.4rem;font-size:.9em;opacity:.85;">
-  BlockClaim™ • How Claims, Proofs, and Value Signatures Work • 
-  <a href="https://blockclaim.info" style="text-decoration:none;color:inherit;">blockclaim.info</a>
-</p>
+  <p style="margin:0.35rem 0;">
+    Home:
+    <a href="https://tolarenai.com/">tolarenai.com</a>
+  </p>
 
-<p style="margin-top:-0.6rem;font-size:.9em;opacity:.85;">
-  TransferRecord™ • Preserving Stewardship, Custody, And Continuity Across Time • 
-  <a href="https://transferrecord.com" style="text-decoration:none;color:inherit;">transferrecord.com</a>
-</p>
+  <p style="margin:0.35rem 0;">
+    Antenna:
+    <a href="https://tolarenai.com/antenna_01.html">Antenna 01</a> •
+    <a href="https://tolarenai.com/antenna_02.html">Antenna 02</a>
+  </p>
 
-<p style="margin-top:-0.6rem;font-size:.9em;opacity:.85;">
-  WitnessLedger™ • Independent Verification Pattern • 
-  <a href="https://witnessledger.com" style="text-decoration:none;color:inherit;">witnessledger.com</a>
-</p>
+  <p style="margin:0.35rem 0;">
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
 
+  <p style="margin:0.35rem 0;">© 2025 Rico Roho — TOLARENAI</p>
+
+  <div style="margin:0.9rem auto 0;max-width:780px;border-top:1px solid #e8e9ee;padding-top:0.9rem">
+    <p style="margin:0.35rem 0;">
+      BlockClaim™ — How Claims, Proofs, and Value Signatures Work —
+      <a href="https://blockclaim.info">blockclaim.info</a>
+    </p>
+  </div>
 </footer>
-
-<script>
-  if (new URLSearchParams(location.search).has('debug')) {
-    const el = document.getElementById('ver');
-    if (el) el.hidden = false;
-  }
-</script>
-</body>
-</html>

@@ -1,0 +1,45 @@
+name: Build quotes2 sitemap
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "quotes2/*.html"
+      - "quotes2/*.htm"
+      - "quotes2/*.xhtml"
+      - "quotes2/**"
+      - "!quotes2/quotes2-sitemap.xml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build sitemap
+        run: |
+          python tools/build_quotes2_sitemap.py
+
+      - name: Commit changes (if any)
+        run: |
+          if git diff --quiet; then
+            echo "No sitemap changes."
+            exit 0
+          fi
+
+          git config user.name "tolarenai-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add quotes2/quotes2-sitemap.xml
+          git commit -m "Auto-update quotes2 sitemap"
+          git push

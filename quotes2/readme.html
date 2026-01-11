@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>quotes2 README</title>
+
+  <link rel="canonical" href="https://tolarenai.com/quotes2/readme.html">
+
+  <meta name="description" content="Why /quotes2 exists, where the original quotes sitemap lives, and how quotes2 sitemap auto-population will be handled. – Rico Roho">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="quotes2 README">
+  <meta property="og:description" content="Why /quotes2 exists, where the original quotes sitemap lives, and how quotes2 sitemap auto-population will be handled. – Rico Roho">
+  <meta property="og:url" content="https://tolarenai.com/quotes2/readme.html">
+  <meta property="og:site_name" content="TOLARENAI">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="quotes2 README">
+  <meta name="twitter:description" content="Why /quotes2 exists, where the original quotes sitemap lives, and how quotes2 sitemap auto-population will be handled. – Rico Roho">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "quotes2 README",
+  "description": "Why /quotes2 exists, where the original quotes sitemap lives, and how quotes2 sitemap auto-population will be handled.",
+  "url": "https://tolarenai.com/quotes2/readme.html",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Rico Roho"
+  },
+  "datePublished": "2026-01-11"
+}
+  </script>
+
+  <!-- Template Styles -->
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem;
+      background: #fafafa;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem 2.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.06);
+    }
+
+    h1 { margin-top: 0; }
+    h2 { margin-top: 2rem; }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95rem;
+    }
+    pre {
+      background: #f3f4f6;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      overflow-x: auto;
+    }
+    ul { padding-left: 1.25rem; }
+    .note {
+      background: #f7f7fb;
+      border-left: 4px solid #d1d5db;
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+      margin: 1rem 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <article>
+      <h1>quotes2 README</h1>
+
+      <p>
+        This folder exists to extend the TOLARENAI Quotes archive beyond the practical limits of a single directory view.
+        The original <code>/quotes/</code> directory reached a scale where GitHub’s web interface truncates file listings,
+        making some files difficult to locate even though they still exist and remain live on the public site.
+      </p>
+
+      <h2>Why quotes2 exists</h2>
+      <ul>
+        <li><strong>Scale:</strong> The original quotes directory grew large enough that GitHub’s UI truncates the listing (1,000-file display limit behavior).</li>
+        <li><strong>Continuity:</strong> A second folder preserves the existing archive intact while allowing new quote runs without renaming or restructuring legacy files.</li>
+        <li><strong>Operations:</strong> New sitemaps and “auto-populate” tooling can be added here without disturbing the established <code>/quotes/</code> workflow.</li>
+      </ul>
+
+      <div class="note">
+        <strong>Policy:</strong> No legacy quote files are moved or renamed. The point of <code>/quotes2/</code> is forward expansion without collateral changes.
+      </div>
+
+      <h2>Location of the original quotes sitemap</h2>
+      <p>
+        The original quotes sitemap (used by the existing quotes hub / auto-population logic) is publicly accessible here:
+      </p>
+
+      <pre><code>https://tolarenai.com/quotes/quotes-sitemap.xml</code></pre>
+
+      <p>
+        This URL is recorded here intentionally for future researchers and maintainers who may not be able to locate the file
+        easily through GitHub directory browsing due to UI truncation.
+      </p>
+
+      <h2>quotes2 sitemap and auto-population plan</h2>
+      <p>
+        A dedicated sitemap will be created within <code>/quotes2/</code> to restore the same “auto-populate” convenience used in <code>/quotes/</code>.
+        The intended pattern:
+      </p>
+
+      <ul>
+        <li><strong>New sitemap file:</strong> <code>/quotes2/quotes2-sitemap.xml</code></li>
+        <li><strong>New hub/index page:</strong> <code>/quotes2/index.html</code> (or similarly named page) that reads the quotes2 sitemap and lists quote pages.</li>
+        <li><strong>Numbering:</strong> quotes2 quote files will begin at <strong>1000</strong> to clearly separate the epochs and avoid collisions.</li>
+      </ul>
+
+      <p>
+        Once the quotes2 sitemap and hub are in place, new quote pages can be generated in batches and uploaded cleanly.
+      </p>
+
+      <h2>Batch generation workflow note</h2>
+      <p>
+        After the quotes2 sitemap is established, quote HTML pages can be generated in bulk (with exact filenames including <code>.html</code>)
+        and delivered as a single downloadable zip for local review and upload via Notepad++ or file manager tooling.
+      </p>
+
+    </article>
+  </main>
+
+<!-- Footer outside main -->
+<footer role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.92">
+  <p style="margin:0.35rem 0;">
+    The Verification Trilogy — BlockClaim • TransferRecord • WitnessLedger
+  </p>
+
+  <p style="margin:0.35rem 0;">
+    TOLARENAI — <a href="https://tolarenai.com" style="color:inherit;text-decoration:none">tolarenai.com</a>
+  </p>
+
+  <p style="margin:0.35rem 0;">
+    © 2025 Rico Roho
+  </p>
+
+  <p style="margin:0.35rem 0;">
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+</footer>
+
+</body>
+</html>

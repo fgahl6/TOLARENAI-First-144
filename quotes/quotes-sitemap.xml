@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tolarenai.com/quotes/</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -5901,6 +5901,12 @@
   <url>
     <loc>https://tolarenai.com/quotes/986_power_fears_memory_more_than_resistance.html</loc>
     <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tolarenai.com/quotes/987_to_write_is_to_remember_and_to_remember_is_to_create_again.html</loc>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

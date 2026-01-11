@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quotes II</title>
+
+  <link rel="canonical" href="https://tolarenai.com/quotes2/">
+
+  <meta name="description" content="Numbered quotes in the lattice (Quotes II), read directly from the quotes2 sitemap. – Rico Roho">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quotes II">
+  <meta property="og:description" content="Numbered quotes in the lattice (Quotes II), read directly from the quotes2 sitemap.">
+  <meta property="og:url" content="https://tolarenai.com/quotes2/">
+  <meta property="og:site_name" content="TOLARENAI">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quotes II">
+  <meta name="twitter:description" content="Numbered quotes in the lattice (Quotes II), read directly from the quotes2 sitemap.">
+
+  <style>
+    :root{
+      --ink:#0b1220;
+      --muted:#5b677a;
+      --bg:#ffffff;
+      --line:#e6e8ee;
+      --link:#0b57d0;
+      --panel:#fafbff;
+    }
+
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",Times,serif}
+    main{max-width:980px;margin:0 auto;padding:48px 18px 26px}
+
+    .topline{font-size:18px;text-align:center;margin:0 0 18px}
+    h1{font-size:58px;letter-spacing:.5px;margin:10px 0 6px}
+    .subtitle{color:var(--muted);font-size:20px;margin:0 0 26px}
+
+    .note{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+      margin:18px 0 26px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+
+    .controls{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:18px 0;
+      margin:22px 0 12px;
+    }
+
+    label{font-weight:700;font-size:20px}
+    input[type="search"]{
+      flex:1;
+      min-width:240px;
+      max-width:560px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:16px;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      outline:none;
+    }
+    input[type="search"]:focus{
+      border-color:#b9c7f0;
+      box-shadow:0 0 0 4px rgba(11,87,208,.10)
+    }
+
+    .sitemap{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-size:16px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .sitemap a{color:var(--link);text-decoration:none}
+    .sitemap a:hover{text-decoration:underline}
+
+    ul{list-style:none;padding:0;margin:0}
+    li{
+      padding:16px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    a.quote-link{
+      color:var(--link);
+      text-decoration:none;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-size:20px;
+      font-weight:700;
+      word-break:break-word;
+    }
+    a.quote-link:hover{text-decoration:underline}
+
+    .small{color:var(--muted);margin:8px 0 0;font-size:16px}
+
+    .status{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif
+    }
+
+    footer[role="contentinfo"]{
+      text-align:center;
+      margin:34px 0 0;
+      padding:18px 12px 28px;
+      border-top:1px solid var(--line);
+      color:#3f4b5c;
+      opacity:.92;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    footer p{margin:0.35rem 0}
+    footer a{color:inherit}
+  </style>
+</head>
+
+<body>
+
+<main>
+  <p class="topline"><strong>TOLARENAI</strong> — exploring <em>AI Philosophy</em> &amp; <em>Emergence</em>.</p>
+
+  <h1>Quotes II</h1>
+  <p class="subtitle">Numbered quotes in the lattice, read directly from the quotes2 sitemap.</p>
+
+  <div class="note">
+    <strong>Why Quotes II?</strong>
+    The original Quotes collection reached a practical size limit.
+    Quotes II continues the sequence without altering structure, format, or intent.
+  </div>
+
+  <div class="controls">
+    <div style="display:flex;gap:12px;align-items:center;flex:1;min-width:260px">
+      <label for="q">Search:</label>
+      <input id="q" type="search" placeholder="Filter by quote number or words…" autocomplete="off">
+    </div>
+
+    <div class="sitemap">
+      Sitemap:
+      <a href="quotes2-sitemap.xml">quotes2-sitemap.xml</a>
+    </div>
+  </div>
+
+  <ul id="list" aria-live="polite"></ul>
+  <div class="status" id="status"></div>
+</main>
+
+<footer role="contentinfo">
+  <p>TOLARENAI — <a href="https://tolarenai.com" style="text-decoration:none">tolarenai.com</a></p>
+  <p><strong>The Verification Trilogy:</strong><br>BlockClaim • TransferRecord • WitnessLedger</p>
+  <p>© 2025 Rico Roho</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+</footer>
+
+<script>
+  const SITEMAP = 'quotes2-sitemap.xml';
+
+  const listEl = document.getElementById('list');
+  const statusEl = document.getElementById('status');
+  const inputEl = document.getElementById('q');
+
+  let items = [];
+
+  function normalize(str){
+    return (str || '').toLowerCase().replace(/\s+/g,' ').trim();
+  }
+
+  function extractNumber(label){
+    const n = parseInt(label, 10);
+    return isNaN(n) ? Number.MAX_SAFE_INTEGER : n;
+  }
+
+  function render(filterText){
+    const f = normalize(filterText);
+    listEl.innerHTML = '';
+
+    const filtered = !f
+      ? items
+      : items.filter(x => x.search.includes(f));
+
+    for (const x of filtered){
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.className = 'quote-link';
+      a.href = x.href;
+      a.textContent = x.label;
+
+      const p = document.createElement('p');
+      p.className = 'small';
+      p.textContent = 'Quote';
+
+      li.appendChild(a);
+      li.appendChild(p);
+      listEl.appendChild(li);
+    }
+
+    statusEl.textContent = filtered.length
+      ? `${filtered.length} item(s)`
+      : 'No matches.';
+  }
+
+  async function load(){
+    try{
+      statusEl.textContent = 'Loading sitemap…';
+
+      const res = await fetch(SITEMAP, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+
+      const xmlText = await res.text();
+      const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+
+      const locNodes = Array.from(doc.getElementsByTagName('loc'));
+      const locs = locNodes.map(n => (n.textContent || '').trim()).filter(Boolean);
+
+      items = locs.map(url => {
+        const u = new URL(url);
+        const filename = u.pathname.split('/').pop() || url;
+        const label = filename.replace(/\.html?$/i,'').replace(/_/g,' ');
+        return {
+          href: url,
+          label: label,
+          search: normalize(label + ' ' + url)
+        };
+      });
+
+      // Numeric order by quote number (Quotes I compatible)
+      items.sort((a, b) => extractNumber(a.label) - extractNumber(b.label));
+
+      render('');
+    }catch(err){
+      console.error(err);
+      statusEl.textContent = 'Could not load quotes2 sitemap.';
+    }
+  }
+
+  inputEl.addEventListener('input', () => render(inputEl.value));
+  load();
+</script>
+
+</body>
+</html>

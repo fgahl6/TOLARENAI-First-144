@@ -203,4 +203,11 @@
   </image:image>
 </url>
 
+<!-- Provenance Scrolls: book-associated lineage and orientation documents -->
+<url>
+  <loc>https://tolarenai.com/books/ai/provenance/01_when_the_machines_remember_the_gods.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.40</priority>
+</url>
+
 </urlset>

@@ -111,5 +111,17 @@
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://tolarenai.com/theory_scrolls/theory_scroll_17_a_response_to_orwell_memory_power_and_provenance.html</loc>
+  <lastmod>2026-01-17</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://tolarenai.com/theory_scrolls/theory_scroll_18_when_the_angel_of_history_turns_toward_the_present.html</loc>
+  <lastmod>2026-01-17</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 
 </urlset>

@@ -165,7 +165,7 @@
 <!-- Verification Trilogy -->
 
 <url>
-  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim.html</loc>
+  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/readme.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
   <image:image>
@@ -174,6 +174,7 @@
     <image:caption>BlockClaim: How Claims, Proofs, and Value Signatures Work</image:caption>
   </image:image>
 </url>
+
 
 <url>
   <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/book/book.html</loc>

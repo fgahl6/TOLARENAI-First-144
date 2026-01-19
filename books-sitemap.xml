@@ -211,6 +211,12 @@
 </url>
 
 <url>
+  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/provenance/tolarenai_provenance_scroll_02_blockclaim.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
+
+<url>
   <loc>https://tolarenai.com/books/verification_trilogy/witnessledger/provenance/tolarenai_provenance_scroll_03_transferrecord.html</loc>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>

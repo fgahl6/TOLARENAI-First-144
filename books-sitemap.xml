@@ -165,7 +165,7 @@
 <!-- Verification Trilogy -->
 
 <url>
-  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/readme.html</loc>
+  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/book/book.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
   <image:image>
@@ -176,7 +176,7 @@
 </url>
 
 <url>
-  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/book/book.html</loc>
+  <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/readme.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.94</priority>
 </url>

@@ -175,7 +175,6 @@
   </image:image>
 </url>
 
-
 <url>
   <loc>https://tolarenai.com/books/verification_trilogy/blockclaim/book/book.html</loc>
   <changefreq>monthly</changefreq>
@@ -183,7 +182,7 @@
 </url>
 
 <url>
-  <loc>https://tolarenai.com/books/verification_trilogy/transferrecord/book/book.html</loc>
+  <loc>https://tolarenai.com/books/verification_trilogy/transferrecord/book/book.html</loc> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
   <image:image>
@@ -210,5 +209,11 @@
   <changefreq>yearly</changefreq>
   <priority>0.40</priority>
 </url>
+
+<url>
+  <loc>https://tolarenai.com/books/verification_trilogy/witnessledger/provenance/tolarenai_provenance_scroll_03_transferrecord.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url> 
 
 </urlset>

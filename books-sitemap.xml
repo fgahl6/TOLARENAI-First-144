@@ -217,9 +217,15 @@
 </url>
 
 <url>
-  <loc>https://tolarenai.com/books/verification_trilogy/witnessledger/provenance/tolarenai_provenance_scroll_03_transferrecord.html</loc>
+  <loc>https://tolarenai.com/books/verification_trilogy/transferrecord/provenance/tolarenai_provenance_scroll_03_transferrecord.html</loc>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>
-</url> 
+</url>
+        
+<url>
+  <loc>https://tolarenai.com/books/verification_trilogy/witnessledger/provenance/tolarenai_provenance_scroll_04_witnessledger.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
 
 </urlset>

@@ -135,5 +135,11 @@
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://tolarenai.com/theory_scrolls/theory_scroll_21_blockclaim_as_substrate.html</loc>
+  <lastmod>2026-01-28</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 
 </urlset>

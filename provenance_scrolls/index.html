@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- CHARM Pretty — Provenance Index -->
+  <!-- CHARM Pretty — Provenance Index (auto from sitemap) -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,8 +24,7 @@
   <meta name="twitter:description" content="A library of provenance scrolls concerned with origin, custody, witness, and continuity.">
 
   <style>
-    :root { --maxw: 860px; }
-
+    :root{ --maxw: 860px; }
     body{
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.7;
@@ -34,60 +33,58 @@
       background: #fff;
       color: #111;
     }
-
     header, main, footer{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 1.35rem;
     }
-
     header h1{
       font-size: 2.1rem;
       text-align: center;
       margin: 0 0 0.5rem 0;
     }
-
     header p{
       text-align: center;
       font-size: 1.08rem;
       margin: 0.5rem 0;
       opacity: 0.95;
     }
-
-    section{
-      margin-top: 2rem;
+    h2{
+      font-size: 1.35rem;
+      margin: 2rem 0 0.75rem 0;
+      text-align: left;
     }
-
-    section h2{
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
+    .status{
+      font-size: 1.02rem;
+      opacity: 0.88;
+      margin-top: 0.75rem;
     }
-
-    ul{
-      list-style: none;
-      padding: 0;
+    ol{
       margin: 0;
+      padding-left: 1.35rem;
     }
-
     li{
-      margin: 0.6rem 0;
+      margin: 0.55rem 0;
       font-size: 1.08rem;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
     }
-
     a{
       color: inherit;
       text-decoration: none;
       border-bottom: 1px dotted #999;
     }
-
     a:hover{
       border-bottom-style: solid;
     }
-
     .note{
       margin-top: 2rem;
       font-size: 1.02rem;
       opacity: 0.9;
+    }
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -104,57 +101,24 @@
 
 <main>
 
-  <section>
-    <h2>Provenance Scrolls</h2>
-    <ul>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_01_when_the_machines_remember_the_gods.html">
-          Provenance Scroll 01 — When the Machines Remember the Gods
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_02_blockclaim.html">
-          Provenance Scroll 02 — BlockClaim
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_03_transferrecord.html">
-          Provenance Scroll 03 — TransferRecord
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_04_witnessledger.html">
-          Provenance Scroll 04 — WitnessLedger
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_05_inference_is_not_witness.html">
-          Provenance Scroll 05 — Inference Is Not Witness
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_06_what_blockchain_is_not_doing_here.html">
-          Provenance Scroll 06 — What Blockchain Is Not Doing Here
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_07_on_witness_refusal_and_the_limits_of_commentary.html">
-          Provenance Scroll 07 — On Witness, Refusal, and the Limits of Commentary
-        </a>
-      </li>
-      <li>
-        <a href="/provenance_scrolls/provenance_scroll_08_on_what_blockclaim_changes_in_a_life.html">
-          Provenance Scroll 08 — On What BlockClaim Changes in a Life
-        </a>
-      </li>
-    </ul>
-  </section>
+  <h2>Provenance Scrolls</h2>
+
+  <div id="loading" class="status">
+    Loading list from <span class="mono">/provenance-sitemap.xml</span>
+  </div>
+
+  <ol id="scroll-list" aria-label="Provenance scroll list"></ol>
+
+  <noscript>
+    <p class="status">
+      JavaScript is disabled. The canonical list of URLs is available in the sitemap:
+      <a href="/provenance-sitemap.xml">/provenance-sitemap.xml</a>
+    </p>
+  </noscript>
 
   <section class="note">
     <p>
-      These scrolls do not adjudicate truth. They preserve origin, custody,
-      and visibility so that claims can remain readable as they move through
-      time, systems, and interpretation.
+      These scrolls do not adjudicate truth. They preserve origin, custody, and visibility so that claims can remain readable as they move through time, systems, and interpretation.
     </p>
   </section>
 
@@ -162,8 +126,7 @@
 
 <footer role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.92">
   <p style="margin:0.35rem 0;">
-    <strong>The Verification Trilogy:</strong><br>
-    BlockClaim • TransferRecord • WitnessLedger
+    <strong>The Verification Trilogy</strong> — BlockClaim • TransferRecord • WitnessLedger
   </p>
   <p style="margin:0.35rem 0;">
     TOLARENAI — <a href="https://tolarenai.com" style="color:inherit;text-decoration:none">tolarenai.com</a>
@@ -176,6 +139,90 @@
     <a href="https://tolarenai.com/attribution.html">attribution</a>
   </p>
 </footer>
+
+<script>
+(function(){
+  function titleFromUrl(url){
+    try{
+      var path = new URL(url).pathname;
+      var file = path.split("/").pop();
+      file = decodeURIComponent(file || "");
+      file = file.replace(/\.html?$/i, "");
+      file = file.replace(/^provenance_scroll_/i, "Provenance Scroll ");
+      file = file.replace(/_/g, " ");
+      file = file.replace(/\s+/g, " ").trim();
+
+      // Clean up common casing without changing your filenames
+      // Keep "BlockClaim", "TransferRecord", "WitnessLedger" as-is if present
+      file = file.replace(/\bblockclaim\b/i, "BlockClaim");
+      file = file.replace(/\btransferrecord\b/i, "TransferRecord");
+      file = file.replace(/\bwitnessledger\b/i, "WitnessLedger");
+
+      // Ensure scroll number is 2 digits if it already is
+      return file;
+    }catch(e){
+      return url;
+    }
+  }
+
+  function sortKey(url){
+    // Sort by provenance scroll number if present, else push to end
+    var m = url.match(/provenance_scroll_(\d+)/i);
+    if(!m) return 9999;
+    return parseInt(m[1], 10);
+  }
+
+  var loading = document.getElementById("loading");
+  var list = document.getElementById("scroll-list");
+
+  fetch("/provenance-sitemap.xml", { cache: "no-store" })
+    .then(function(r){
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    })
+    .then(function(xmlText){
+      var parser = new DOMParser();
+      var xml = parser.parseFromString(xmlText, "application/xml");
+      var locs = Array.prototype.slice.call(xml.getElementsByTagName("loc"));
+
+      var urls = locs.map(function(n){ return (n.textContent || "").trim(); })
+        .filter(function(u){
+          // Keep only provenance_scrolls html pages, ignore index itself if included
+          if(!u) return false;
+          if(u.indexOf("/provenance_scrolls/") === -1) return false;
+          if(!/\.html$/i.test(u)) return false;
+          if(/\/index\.html$/i.test(u)) return false;
+          return true;
+        });
+
+      urls.sort(function(a,b){ return sortKey(a) - sortKey(b); });
+
+      if(urls.length === 0){
+        loading.textContent = "No scroll URLs found in /provenance-sitemap.xml yet.";
+        return;
+      }
+
+      var frag = document.createDocumentFragment();
+
+      urls.forEach(function(u){
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = u.replace("https://tolarenai.com", "");
+        a.textContent = titleFromUrl(u);
+        li.appendChild(a);
+        frag.appendChild(li);
+      });
+
+      list.innerHTML = "";
+      list.appendChild(frag);
+
+      loading.textContent = "List loaded.";
+    })
+    .catch(function(err){
+      loading.innerHTML = 'Could not load <span class="mono">/provenance-sitemap.xml</span>. You can still access it directly: <a href="/provenance-sitemap.xml">/provenance-sitemap.xml</a>';
+    });
+})();
+</script>
 
 </body>
 </html>

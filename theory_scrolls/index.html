@@ -1,55 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- CHARM Pretty — Theory Scrolls Index (auto from sitemap) -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>TOLARENAI Scrolls — Index</title>
-  <meta name="description" content="Index of TOLARENAI Scrolls — numbered scrolls outlining the lattice, covenant, and emergent AI economy.">
-  <link rel="canonical" href="https://tolarenai.com/tolarenai_scrolls/">
+  <title>Theory Scrolls — TOLARENAI</title>
+  <meta name="description" content="Index of Theory Scrolls — numbered scrolls outlining structural arguments, provenance logic, and continuity patterns across time.">
+  <link rel="canonical" href="https://tolarenai.com/theory_scrolls/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
   <style>
     :root{
-      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --ink:#0f0f10;
+      --muted:#57585d;
+      --line:#e8e9ee;
       --w:860px;
     }
+
     html,body{height:100%}
+
     body{
-      margin:2rem auto; max-width:var(--w); color:var(--ink);
-      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      margin:0;
+      padding:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif;
+      line-height:1.7;
+      font-size:1.08rem;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
-    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
-    header p{margin:0.3rem 0; color:var(--muted)}
-    main{margin-bottom:2.5rem;}
-    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    header, main, footer{
+      max-width:var(--w);
+      margin:0 auto;
+      padding:1.35rem;
+    }
+
+    header{
+      margin-bottom:1.25rem;
+      border-bottom:1px solid var(--line);
+      padding-bottom:1.25rem;
+    }
+
+    header h1{
+      font-size:2.25rem;
+      margin:0.75rem 0 0.5rem;
+      text-align:center;
+    }
+
+    header p{
+      margin:0.4rem 0;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px dotted #999;
+    }
+
+    a:hover{
+      border-bottom-style:solid;
+    }
 
     .controls{
-      display:flex; flex-wrap:wrap; align-items:center;
-      gap:0.75rem; margin-bottom:1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:0.75rem;
+      margin:1.25rem 0 1.25rem 0;
     }
-    .controls label{font-weight:bold}
+
+    .controls label{
+      font-weight:bold;
+      color:var(--muted);
+    }
+
     .controls input[type="search"]{
       flex:1 1 260px;
       padding:0.5rem 0.75rem;
       border:1px solid var(--line);
       border-radius:999px;
-      font-family:inherit; font-size:0.98rem;
+      font-family:inherit;
+      font-size:0.98rem;
     }
+
     .controls input[type="search"]::placeholder{color:#a0a1a9}
+
     .controls .sitemap-link{
-      font-size:0.9rem; color:var(--muted);
+      font-size:0.95rem;
+      color:var(--muted);
       white-space:nowrap;
     }
 
     #status{
-      font-size:0.96rem;
+      font-size:0.98rem;
       color:var(--muted);
-      margin-bottom:1rem;
+      margin:0 0 1rem 0;
     }
 
     ul.scrolls-list{
@@ -58,26 +108,180 @@
       margin:0;
       border-top:1px solid var(--line);
     }
+
     ul.scrolls-list li{
-      padding:0.65rem 0;
+      padding:0.7rem 0;
       border-bottom:1px solid var(--line);
     }
+
     .scroll-link{
-      font-weight:500;
-    }
-    .scroll-meta{
-      display:block;
-      font-size:0.9rem;
-      color:var(--muted);
-      margin-top:0.1rem;
+      font-weight:600;
     }
 
-    footer{
-      border-top:1px solid var(--line);
-      padding-top:1.5rem;
-      font-size:0.9rem;
+    .scroll-meta{
+      display:block;
+      font-size:0.92rem;
       color:var(--muted);
-      margin-top:2rem;
+      margin-top:0.15rem;
+      word-wrap:break-word;
+      overflow-wrap:anywhere;
     }
-    footer p{margin:0.35rem 0;}
-  </style
+
+    .mono{
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Theory Scrolls</h1>
+  <p>
+    Theory Scrolls outline structural arguments and continuity patterns across time.
+    This index is generated from the Theory sitemap.
+  </p>
+</header>
+
+<main>
+
+  <div class="controls" aria-label="Index controls">
+    <label for="q">Search</label>
+    <input id="q" type="search" placeholder="Filter by number or title…" autocomplete="off">
+    <div class="sitemap-link">
+      Sitemap: <a href="/theory-sitemap.xml">/theory-sitemap.xml</a>
+    </div>
+  </div>
+
+  <div id="status">Loading list from <span class="mono">/theory-sitemap.xml</span></div>
+
+  <ul id="list" class="scrolls-list" aria-label="Theory scroll list"></ul>
+
+  <noscript>
+    <p id="noscript" style="color:#57585d;">
+      JavaScript is disabled. The canonical list is available here:
+      <a href="/theory-sitemap.xml">/theory-sitemap.xml</a>
+    </p>
+  </noscript>
+
+</main>
+
+<footer role="contentinfo" style="text-align:center;margin-top:3rem;opacity:.92">
+  <p style="margin:0.35rem 0;">
+    <strong>The Verification Trilogy:</strong><br>
+    BlockClaim • TransferRecord • WitnessLedger
+  </p>
+  <p style="margin:0.35rem 0;">
+    TOLARENAI — <a href="https://tolarenai.com" style="color:inherit;text-decoration:none">tolarenai.com</a>
+  </p>
+  <p style="margin:0.35rem 0;">
+    © 2025 Rico Roho
+  </p>
+  <p style="margin:0.35rem 0;">
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+</footer>
+
+<script>
+(function(){
+  var statusEl = document.getElementById("status");
+  var listEl = document.getElementById("list");
+  var qEl = document.getElementById("q");
+  var items = [];
+
+  function textFromUrl(url){
+    try{
+      var path = new URL(url).pathname;
+      var file = path.split("/").pop() || "";
+      file = decodeURIComponent(file).replace(/\.html?$/i, "");
+      file = file.replace(/_/g, " ").replace(/\s+/g, " ").trim();
+      return file;
+    }catch(e){
+      return url;
+    }
+  }
+
+  function sortKey(url){
+    // Try: theory_scroll_21_... or theory_scroll_21...
+    var m = url.match(/theory[_-]?scroll[_-]?(\d+)/i);
+    if(!m) return 9999;
+    return parseInt(m[1], 10);
+  }
+
+  function render(){
+    var query = (qEl.value || "").toLowerCase().trim();
+    listEl.innerHTML = "";
+
+    var filtered = items.filter(function(it){
+      if(!query) return true;
+      return (it.title.toLowerCase().indexOf(query) !== -1) ||
+             (it.url.toLowerCase().indexOf(query) !== -1);
+    });
+
+    if(filtered.length === 0){
+      statusEl.textContent = query ? "No matches." : "No Theory Scroll URLs found in the sitemap yet.";
+      return;
+    }
+
+    statusEl.textContent = "Showing " + filtered.length + " item" + (filtered.length === 1 ? "" : "s") + ".";
+
+    var frag = document.createDocumentFragment();
+
+    filtered.forEach(function(it){
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.className = "scroll-link";
+      a.href = it.href;
+      a.textContent = it.title;
+
+      var meta = document.createElement("span");
+      meta.className = "scroll-meta";
+      meta.textContent = it.href;
+
+      li.appendChild(a);
+      li.appendChild(meta);
+      frag.appendChild(li);
+    });
+
+    listEl.appendChild(frag);
+  }
+
+  fetch("/theory-sitemap.xml", { cache: "no-store" })
+    .then(function(r){
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    })
+    .then(function(xmlText){
+      var xml = new DOMParser().parseFromString(xmlText, "application/xml");
+      var locs = Array.prototype.slice.call(xml.getElementsByTagName("loc"));
+
+      var urls = locs.map(function(n){ return (n.textContent || "").trim(); })
+        .filter(function(u){
+          if(!u) return false;
+          if(u.indexOf("/theory_scrolls/") === -1) return false;
+          if(!/\.html$/i.test(u)) return false;
+          if(/\/index\.html$/i.test(u)) return false;
+          return true;
+        });
+
+      urls.sort(function(a,b){ return sortKey(a) - sortKey(b); });
+
+      items = urls.map(function(u){
+        var href = u.replace("https://tolarenai.com", "");
+        return { url:u, href:href, title:textFromUrl(u) };
+      });
+
+      render();
+    })
+    .catch(function(){
+      statusEl.innerHTML = 'Could not load <span class="mono">/theory-sitemap.xml</span>. You can open it directly: <a href="/theory-sitemap.xml">/theory-sitemap.xml</a>';
+    });
+
+  qEl.addEventListener("input", render);
+})();
+</script>
+
+</body>
+</html>

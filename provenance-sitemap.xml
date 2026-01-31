@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Provenance Scrolls Index -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Provenance Scroll 01 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_01_when_the_machines_remember_the_gods.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Provenance Scroll 02 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_02_blockclaim.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Provenance Scroll 03 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_03_transferrecord.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Provenance Scroll 04 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_04_witnessledger.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Provenance Scroll 05 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_05_inference_is_not_witness.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Provenance Scroll 06 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_06_what_blockchain_is_not_doing_here.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Provenance Scroll 07 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_07_on_witness_refusal_and_the_limits_of_commentary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Provenance Scroll 08 -->
+  <url>
+    <loc>https://tolarenai.com/provenance_scrolls/provenance_scroll_08_on_what_blockclaim_changes_in_a_life.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+</urlset>

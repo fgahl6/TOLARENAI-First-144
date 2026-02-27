@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Verification Scrolls — TOLARENAI</title>
+  <meta name="description" content="Index of TOLARENAI Verification Scrolls — operational methods for inspectable memory, custody, and layered verification. Entries are read from the verification scrolls sitemap.">
+  <link rel="canonical" href="https://tolarenai.com/verification_scrolls/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+  <style>
+    :root{
+      --ink:#0f0f10; --muted:#57585d; --link:#0645ad; --line:#e8e9ee;
+      --w:860px;
+    }
+    html,body{height:100%}
+    body{
+      margin:2rem auto; max-width:var(--w); color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+    header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
+    header p{margin:0.3rem 0; color:var(--muted)}
+    main{margin-bottom:2.5rem;}
+    .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+
+    .controls{
+      display:flex; flex-wrap:wrap; align-items:center;
+      gap:0.75rem; margin-bottom:1.5rem;
+    }
+    .controls label{font-weight:bold}
+    .controls input[type="search"]{
+      flex:1 1 260px;
+      padding:0.5rem 0.75rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:inherit; font-size:0.98rem;
+    }
+    .controls input[type="search"]::placeholder{color:#a0a1a9}
+    .controls .sitemap-link{
+      font-size:0.9rem; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    #status{
+      font-size:0.96rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    ol.scroll-list{
+      list-style:decimal;
+      padding-left:1.5rem;
+      margin:0;
+      border-top:1px solid var(--line);
+    }
+    ol.scroll-list li{
+      padding:0.65rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .scroll-link{
+      font-weight:500;
+    }
+    .scroll-meta{
+      display:block;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.1rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:1.5rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:2rem;
+    }
+    footer p{margin:0.35rem 0;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>TOLARENAI — exploring <em>AI Philosophy &amp; Emergence</em>.</div>
+  <h1>Verification Scrolls</h1>
+  <p class="subhead">
+    Operational methods for inspectable memory, custody, and layered verification. Entries are read from the verification scrolls sitemap.
+  </p>
+</header>
+
+<main>
+  <div class="controls">
+    <label for="scroll-search">Search:</label>
+    <input id="scroll-search" type="search" placeholder="Filter by scroll number or words…">
+    <span class="sitemap-link">
+      Sitemap:
+      <a href="/verification-scrolls-sitemap.xml">verification-scrolls-sitemap.xml</a>
+    </span>
+  </div>
+
+  <div id="status">Loading verification scrolls from sitemap…</div>
+
+  <ol id="scroll-list" class="scroll-list" aria-live="polite"></ol>
+</main>
+
+<footer>
+  <p>© 2025 Rico Roho — TOLARENAI</p>
+  <p>
+    <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
+    <a href="https://tolarenai.com/attribution.html">attribution</a>
+  </p>
+  <p>The Verification Trilogy — BlockClaim • TransferRecord • WitnessLedger</p>
+</footer>
+
+<script>
+(function(){
+  const statusEl = document.getElementById('status');
+  const listEl = document.getElementById('scroll-list');
+  const searchEl = document.getElementById('scroll-search');
+  let items = [];
+
+  function makeLabelFromUrl(url){
+    try{
+      const path = url.split('/').pop().replace(/\.html$/i,'');
+      // verification_scroll_01_why_blockchain_should_not_be_the_first_layer_of_verification
+      const m = path.match(/^verification_scroll_(\d+)_+(.*)$/i);
+      let number = '', slug = path;
+      if (m){
+        number = m[1];
+        slug = m[2];
+      }
+      const title = slug.replace(/_/g,' ').trim();
+      const displayNumber = number ? number.padStart(2,'0') : '';
+      const label = displayNumber
+        ? 'Scroll ' + displayNumber + ' — ' + title
+        : title;
+      return { number, displayNumber, title, label };
+    }catch(e){
+      return { number:'', displayNumber:'', title:url, label:url };
+    }
+  }
+
+  function renderList(filter){
+    const q = (filter || '').trim().toLowerCase();
+    listEl.innerHTML = '';
+    let visible = 0;
+
+    items.forEach(item => {
+      if (q && !item.searchText.includes(q)) return;
+
+      const li = document.createElement('li');
+
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      a.className = 'scroll-link';
+      li.appendChild(a);
+
+      if (item.displayNumber || item.title){
+        const meta = document.createElement('span');
+        meta.className = 'scroll-meta';
+        const bits = [];
+        if (item.displayNumber) bits.push('Scroll ' + item.displayNumber);
+        if (item.title) bits.push(item.title);
+        meta.textContent = bits.join(' • ');
+        li.appendChild(meta);
+      }
+
+      listEl.appendChild(li);
+      visible++;
+    });
+
+    statusEl.textContent = visible
+      ? ''
+      : (q ? 'No verification scrolls match that search.' : 'No verification scrolls found in the sitemap.');
+  }
+
+  function initSearch(){
+    searchEl.addEventListener('input', function(){
+      renderList(this.value);
+    });
+  }
+
+  function loadSitemap(){
+    fetch('/verification-scrolls-sitemap.xml', {cache:'no-store'})
+      .then(resp => {
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      })
+      .then(text => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        const locs = xml.querySelectorAll('url > loc');
+
+        items = Array.from(locs)
+          .map(loc => loc.textContent.trim())
+          // only keep actual scroll HTML pages under /verification_scrolls/
+          .filter(url => url.endsWith('.html') && url.indexOf('/verification_scrolls/') !== -1)
+          .map(url => {
+            const meta = makeLabelFromUrl(url);
+            return {
+              url,
+              label: meta.label,
+              number: meta.number,
+              displayNumber: meta.displayNumber,
+              title: meta.title,
+              searchText: (meta.displayNumber + ' ' + meta.title).toLowerCase()
+            };
+          });
+
+        // Sort by numeric scroll number
+        items.sort((a,b) => {
+          const an = parseInt(a.number || '0',10);
+          const bn = parseInt(b.number || '0',10);
+          if (!isNaN(an) && !isNaN(bn) && an !== 0 && bn !== 0) return an - bn;
+          if (!isNaN(an) && an !== 0) return -1;
+          if (!isNaN(bn) && bn !== 0) return 1;
+          return a.label.localeCompare(b.label);
+        });
+
+        statusEl.textContent = items.length ? '' : 'No verification scrolls found in the sitemap.';
+        renderList('');
+      })
+      .catch(err => {
+        console.error('Sitemap load error:', err);
+        statusEl.textContent = 'Could not load verification scrolls sitemap (/verification-scrolls-sitemap.xml).';
+      });
+  }
+
+  initSearch();
+  loadSitemap();
+})();
+</script>
+
+</body>
+</html>

@@ -20,6 +20,7 @@ Sitemap: https://tolarenai.com/quotes2/quotes2-sitemap.xml
 Sitemap: https://tolarenai.com/raw-notes-sitemap.xml
 Sitemap: https://tolarenai.com/theory-sitemap.xml
 Sitemap: https://tolarenai.com/tolarenai-scrolls-sitemap.xml
+Sitemap: https://tolarenai.com/verification-scrolls-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
 Sitemap: https://tolarenai.com/wisdom-sitemap.xml

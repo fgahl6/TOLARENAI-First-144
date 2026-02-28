@@ -228,4 +228,10 @@
   <priority>0.60</priority>
 </url>
 
+ <url>
+  <loc>https://tolarenai.com/books/beyond_the_memory_hole/book/book_16_beyond_the_memory_hole_by_rico_roho.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>       
+
 </urlset>

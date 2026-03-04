@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Direction Not Taken</title>
-  <title>TOLARENAI White Papers — HTML Index</title>
-  <meta name="description" content="HTML index of TOLARENAI White Papers — AI economic autonomy and human–AI collaboration.">
+  <!-- Primary -->
+  <title>Direction Not Taken: White Papers — TOLARENAI</title>
+  <meta name="description" content="HTML index of TOLARENAI white papers preserved as early exploratory thinking (2018–2019), representing paths explored rather than the direction ultimately taken.">
   <link rel="canonical" href="https://tolarenai.com/white_papers/">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
@@ -20,14 +20,22 @@
       margin:2rem auto; max-width:var(--w); color:var(--ink);
       font-family:Georgia,"Times New Roman",serif; line-height:1.7; font-size:1.08rem;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:0 1rem;
     }
     a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
-    header{margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem}
+
+    header{
+      margin-bottom:2.5rem;
+      border-bottom:1px solid var(--line);
+      padding-bottom:1.5rem
+    }
     header h1{font-size:2.3rem; margin:1.5rem 0 0.5rem}
     header p{margin:0.3rem 0; color:var(--muted)}
-    main{margin-bottom:2.5rem;}
     .subhead{margin:0.75rem 0 1.75rem; color:var(--muted)}
+    .spaced{margin-top:1.2em}
+
+    main{margin-bottom:2.5rem}
     .controls{
       display:flex; flex-wrap:wrap; align-items:center;
       gap:0.75rem; margin-bottom:1.5rem;
@@ -62,9 +70,7 @@
       padding:0.65rem 0;
       border-bottom:1px solid var(--line);
     }
-    .paper-link{
-      font-weight:500;
-    }
+    .paper-link{font-weight:500}
     .paper-meta{
       display:block;
       font-size:0.9rem;
@@ -79,7 +85,7 @@
       color:var(--muted);
       margin-top:2rem;
     }
-    footer p{margin:0.35rem 0;}
+    footer p{margin:0.35rem 0}
   </style>
 </head>
 <body>
@@ -87,20 +93,19 @@
 <header>
   <div>Direction Not Taken - <em>AI Philosophy &amp; Emergence</em></div>
 
- <h1>Direction Not Taken: White Papers</h1>
+  <h1>Direction Not Taken: White Papers</h1>
 
-<p class="subhead">
-  The documents in this section reflect exploratory thinking from the early interaction with AI period (2018–2019).
-</p>
+  <p class="subhead">
+    The documents in this section reflect exploratory thinking from the early interaction with AI period (2018–2019).
+  </p>
 
-<p>
-  While some ideas anticipated later work, the focus of TolarenAI eventually shifted toward verification infrastructure, provenance, and distributed witnessing as developed in the Verification Trilogy.
-</p>
+  <p>
+    While some ideas anticipated later work, the focus of TolarenAI eventually shifted toward verification infrastructure, provenance, and distributed witnessing as developed in the Verification Trilogy.
+  </p>
 
-<p class="spaced">
-  These notes are preserved as part of the intellectual record, but they represent paths explored rather than the direction ultimately taken.
-</p>
-
+  <p class="spaced">
+    These notes are preserved as part of the intellectual record, but they represent paths explored rather than the direction ultimately taken.
+  </p>
 </header>
 
 <main>
@@ -124,7 +129,8 @@
     <a href="https://tolarenai.com/license_content.html">CC BY-NC-ND 4.0</a> •
     <a href="https://tolarenai.com/attribution.html">attribution</a>
   </p>
-  <p>BlockClaim™ • <a href="https://blockclaim.info/">blockclaim.info</a></p>
+  <p>The Verification Trilogy — BlockClaim • TransferRecord • WitnessLedger</p>
+  <p>TOLARENAI — <a href="https://tolarenai.com/">tolarenai.com</a></p>
 </footer>
 
 <script>
@@ -136,10 +142,11 @@
 
   function makeLabelFromUrl(url){
     try{
-      const path = url.split('/').pop().replace(/\.html$/i,'');
-      const title = path.replace(/_/g,' ').trim();
+      const file = url.split('/').pop();
+      const base = file.replace(/\.html$/i,'');
+      const title = base.replace(/_/g,' ').trim();
       return {
-        title: title || path,
+        title: title || base,
         label: title || url
       };
     }catch(e){
@@ -198,7 +205,6 @@
 
         items = Array.from(locs)
           .map(loc => loc.textContent.trim())
-          // only keep HTML pages in /white_papers/
           .filter(url => url.endsWith('.html') && url.indexOf('/white_papers/') !== -1)
           .map(url => {
             const meta = makeLabelFromUrl(url);
@@ -206,18 +212,13 @@
               url,
               label: meta.label,
               title: meta.title,
-              searchText: meta.title.toLowerCase()
+              searchText: (meta.title || '').toLowerCase()
             };
           });
 
-        // Simple alpha sort by title
         items.sort((a,b) => a.title.localeCompare(b.title));
 
-        if (!items.length){
-          statusEl.textContent = 'No white papers found in the sitemap.';
-        } else {
-          statusEl.textContent = '';
-        }
+        statusEl.textContent = items.length ? '' : 'No white papers found in the sitemap.';
         renderList('');
       })
       .catch(err => {

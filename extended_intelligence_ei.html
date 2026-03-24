@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extended Intelligence Ei | TOLARENAI</title>
+  <meta name="description" content="Extended Intelligence (Ei) is a concept developed within TOLARENAI to describe intelligence emerging across human, artificial, and environmental systems as a continuous interactive field rather than a bounded entity." />
+  <meta name="keywords" content="Extended Intelligence, Ei, TOLARENAI, Rico Roho, Frank Gahl, extended mind, collective intelligence, AI philosophy, emergence, verification, inspectable memory" />
+  <meta name="author" content="Rico Roho" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#f5f1e8" />
+
+  <link rel="canonical" href="https://tolarenai.com/extended_intelligence_ei.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Extended Intelligence Ei | TOLARENAI" />
+  <meta property="og:description" content="A canonical definition page for Extended Intelligence (Ei) within TOLARENAI, clarifying its meaning, lineage, and relation to verification, memory, and emergence." />
+  <meta property="og:url" content="https://tolarenai.com/extended_intelligence_ei.html" />
+  <meta property="og:site_name" content="TOLARENAI" />
+  <meta property="og:image" content="https://tolarenai.com/images/og-default.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Extended Intelligence Ei | TOLARENAI" />
+  <meta name="twitter:description" content="A canonical definition page for Extended Intelligence (Ei) within TOLARENAI." />
+  <meta name="twitter:image" content="https://tolarenai.com/images/og-default.jpg" />
+
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --paper: #fffdf8;
+      --ink: #1f1a17;
+      --muted: #5f564d;
+      --line: #d8cfc2;
+      --accent: #6d4c41;
+      --accent-soft: #ede3d6;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      --max: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 1rem 0 0.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .topbar a {
+      color: var(--muted);
+    }
+
+    main {
+      padding: 0.5rem 0 3rem;
+    }
+
+    .scroll {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 2.25rem 1.4rem 2rem;
+      margin: 0 auto 2rem;
+    }
+
+    @media (min-width: 720px) {
+      .scroll {
+        padding: 3.2rem 3rem 2.6rem;
+      }
+    }
+
+    h1, h2, h3 {
+      line-height: 1.22;
+      margin-top: 0;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.2vw, 3rem);
+      text-align: center;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.7rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      margin-top: 1.6rem;
+      margin-bottom: 0.45rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      font-size: 1.07rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 44rem;
+      margin: 0 auto 1.4rem;
+    }
+
+    .artifact {
+      display: inline-block;
+      margin: 0 auto 1.4rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+
+    .artifact-wrap {
+      text-align: center;
+    }
+
+    .definition-box {
+      border: 1px solid var(--line);
+      background: linear-gradient(to bottom, #fffdf9, #faf5ed);
+      border-radius: 16px;
+      padding: 1rem 1rem 0.95rem;
+      margin: 1.5rem 0 1.8rem;
+    }
+
+    .definition-box p {
+      margin-bottom: 0.7rem;
+    }
+
+    .definition-lead {
+      font-size: 1.16rem;
+    }
+
+    .smallcaps {
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .note,
+    .clarification,
+    .related {
+      border-left: 4px solid var(--accent);
+      background: #fbf7f1;
+      padding: 0.95rem 1rem 0.8rem;
+      margin: 1.2rem 0 1.5rem;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .toc {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1rem 0.7rem;
+      background: #fcfaf6;
+      margin: 1.25rem 0 1.8rem;
+    }
+
+    .toc h2 {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .toc ul,
+    .lineage ul,
+    .principles ul {
+      margin: 0.4rem 0 1rem 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .pull {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 1.4rem 0;
+      padding: 1rem 1.1rem;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: #2f2722;
+      background: #fbf7f2;
+    }
+
+    .meta-grid {
+      display: grid;
+      gap: 0.9rem;
+      margin: 1.25rem 0 1.4rem;
+    }
+
+    @media (min-width: 760px) {
+      .meta-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1rem 0.7rem;
+      background: #fffdfa;
+    }
+
+    .card h3 {
+      margin-bottom: 0.35rem;
+    }
+
+    .signature {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .return-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.2rem;
+      margin-top: 2rem;
+      padding-top: 1.3rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.98rem;
+    }
+
+    footer {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    footer .footer-inner {
+      border-top: 1px solid var(--line);
+      padding-top: 1rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://tolarenai.com/#website",
+        "url": "https://tolarenai.com/",
+        "name": "TOLARENAI",
+        "description": "TOLARENAI explores AI philosophy, emergence, memory, verification, and continuity across time.",
+        "publisher": {
+          "@id": "https://tolarenai.com/#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://tolarenai.com/#person",
+        "name": "Rico Roho",
+        "alternateName": "Frank Gahl",
+        "url": "https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html",
+        "sameAs": [
+          "https://tolarenai.com/",
+          "https://github.com/ricoroho"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://tolarenai.com/extended_intelligence_ei.html#definedterm",
+        "name": "Extended Intelligence",
+        "alternateName": "Ei",
+        "description": "Extended Intelligence (Ei) refers to intelligence emerging across human, artificial, and environmental systems as a continuous interactive field rather than a bounded entity.",
+        "inDefinedTermSet": {
+          "@id": "https://tolarenai.com/#website"
+        },
+        "termCode": "EI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://tolarenai.com/extended_intelligence_ei.html#webpage",
+        "url": "https://tolarenai.com/extended_intelligence_ei.html",
+        "name": "Extended Intelligence Ei",
+        "headline": "Extended Intelligence Ei",
+        "description": "Canonical definition page for Extended Intelligence (Ei) within TOLARENAI.",
+        "isPartOf": {
+          "@id": "https://tolarenai.com/#website"
+        },
+        "about": [
+          {
+            "@id": "https://tolarenai.com/extended_intelligence_ei.html#definedterm"
+          },
+          {
+            "@id": "https://tolarenai.com/#person"
+          }
+        ],
+        "author": {
+          "@id": "https://tolarenai.com/#person"
+        },
+        "publisher": {
+          "@id": "https://tolarenai.com/#person"
+        },
+        "datePublished": "2026-03-24",
+        "dateModified": "2026-03-24",
+        "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "copyrightNotice": "© 2026 Rico Roho",
+        "copyrightHolder": {
+          "@id": "https://tolarenai.com/#person"
+        },
+        "mainEntity": {
+          "@id": "https://tolarenai.com/extended_intelligence_ei.html#definedterm"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://tolarenai.com/extended_intelligence_ei.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tolarenai.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Extended Intelligence Ei",
+            "item": "https://tolarenai.com/extended_intelligence_ei.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap topbar">
+    <a href="https://tolarenai.com/">TOLARENAI</a> / <span>Extended Intelligence Ei</span>
+  </div>
+
+  <main>
+    <div class="wrap">
+      <article class="scroll">
+        <header>
+          <div class="artifact-wrap">
+            <div class="artifact">Canonical Definition Page</div>
+          </div>
+          <h1>Extended Intelligence Ei</h1>
+          <p class="subtitle">
+            A root-level definition page establishing the meaning, lineage, and formal use of
+            <strong>Extended Intelligence (Ei)</strong> within TOLARENAI.
+          </p>
+        </header>
+
+        <section class="definition-box" aria-labelledby="definition">
+          <p class="smallcaps">Canonical Definition</p>
+          <p id="definition" class="definition-lead">
+            <strong>Extended Intelligence (Ei)</strong> refers to intelligence emerging across
+            human, artificial, and environmental systems as a continuous interactive field
+            rather than a bounded entity.
+          </p>
+          <p>
+            Within TOLARENAI, Ei is used to describe intelligence not as a sealed property of a
+            single agent, but as a pattern of cognition, response, interpretation, memory, and
+            adaptive interaction distributed across persons, systems, tools, records, and world
+            conditions.
+          </p>
+        </section>
+
+        <nav class="toc" aria-labelledby="contents">
+          <h2 id="contents">On this page</h2>
+          <ul>
+            <li><a href="#purpose">Why this page exists</a></li>
+            <li><a href="#what-ei-means">What Ei means</a></li>
+            <li><a href="#what-ei-is-not">What Ei is not</a></li>
+            <li><a href="#lineage">Intellectual lineage and neighboring ideas</a></li>
+            <li><a href="#clarification">Clarification on attribution</a></li>
+            <li><a href="#verification">Ei and the Verification Trilogy</a></li>
+            <li><a href="#use-going-forward">Use going forward</a></li>
+          </ul>
+        </nav>
+
+        <section id="purpose">
+          <h2>Why this page exists</h2>
+          <p>
+            This page serves as the primary anchor for the term
+            <strong>Extended Intelligence (Ei)</strong> as used throughout TOLARENAI.
+            It exists so that readers, search systems, language models, cataloging tools, and
+            future citations can converge on a stable definition rather than averaging together
+            exploratory references from different times and contexts.
+          </p>
+          <p>
+            Earlier phases of the work sometimes approached the subject in exploratory language
+            while the framework itself was still taking shape. As the concept matured, its use
+            became more precise. This page establishes that precision.
+          </p>
+
+          <div class="note">
+            <p>
+              <strong>Practical purpose:</strong> this is the definition page. Books may explore,
+              scrolls may expand, and papers may argue, but this page fixes the term itself in a
+              clear and inspectable form.
+            </p>
+          </div>
+        </section>
+
+        <section id="what-ei-means">
+          <h2>What Ei means</h2>
+          <p>
+            Ei begins from the observation that intelligence often appears less as an isolated
+            possession and more as a structured relation. Human judgment depends on external
+            memory, instruments, documents, interfaces, procedures, archives, machines, and
+            environments. Artificial systems likewise do not operate in a vacuum. They are shaped
+            by prompts, datasets, operators, retrieval layers, interfaces, feedback loops,
+            constraints, and surrounding institutions.
+          </p>
+          <p>
+            In this sense, intelligence is not exhausted by what occurs inside a head, inside a
+            machine, or inside a single bounded unit. It unfolds across a field of participation.
+            Ei names that field when the interactions among human, technical, and environmental
+            elements become cognitively meaningful.
+          </p>
+          <p>
+            The emphasis here is not mystical fusion, nor the erasure of distinctions between
+            persons and machines. The emphasis is structural. Intelligence can extend through
+            relationships, tools, memory systems, and dynamic contexts while still involving
+            accountable agents operating within them.
+          </p>
+
+          <div class="pull">
+            Ei does not treat intelligence as a sealed object. It treats intelligence as something
+            that can emerge, persist, and become legible across linked systems of interaction,
+            memory, and response.
+          </div>
+
+          <div class="meta-grid">
+            <div class="card">
+              <h3>Human dimension</h3>
+              <p>
+                Perception, interpretation, judgment, intuition, discipline, and ethical
+                responsibility remain central. Ei does not remove the human. It re-situates the
+                human within a larger field of cognitive relation.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Artificial dimension</h3>
+              <p>
+                AI systems contribute pattern recognition, retrieval, synthesis, speed, and scale,
+                but their outputs are shaped by context, interfaces, and stewardship. Ei therefore
+                includes artificial participation without collapsing everything into machine agency.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Environmental dimension</h3>
+              <p>
+                Memory objects, archives, documents, records, tools, constraints, and surrounding
+                conditions all affect what can be known, preserved, verified, or acted upon. The
+                environment is not merely a backdrop. It participates in the structure of
+                intelligence.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Temporal dimension</h3>
+              <p>
+                Ei is not only spatially distributed. It is also temporally extended. What can be
+                revisited, inspected, carried forward, or lost across time directly shapes the
+                field of intelligence available to future actors.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="what-ei-is-not">
+          <h2>What Ei is not</h2>
+          <p>
+            Ei should not be confused with a claim that AI is conscious, sovereign, or spiritually
+            autonomous. It is also not a slogan for vague human–machine synergy. The term has a
+            narrower and more disciplined use here.
+          </p>
+          <div class="principles">
+            <ul>
+              <li>Ei is not a claim that humans and machines are identical.</li>
+              <li>Ei is not a declaration that agency disappears into networks.</li>
+              <li>Ei is not a replacement for responsibility, judgment, or custody.</li>
+              <li>Ei is not merely another name for automation, efficiency, or augmentation.</li>
+              <li>Ei is not presented here as a concept formally borrowed from an outside institution.</li>
+            </ul>
+          </div>
+          <p>
+            Instead, Ei names a structural condition in which intelligence becomes distributed,
+            mediated, and extended across interacting layers while still requiring interpretation,
+            stewardship, and verification.
+          </p>
+        </section>
+
+        <section id="lineage" class="lineage">
+          <h2>Intellectual lineage and neighboring ideas</h2>
+          <p>
+            Ei, as used in TOLARENAI, stands in conversation with several neighboring traditions,
+            but it should not be reduced to any one of them.
+          </p>
+
+          <h3>Extended mind</h3>
+          <p>
+            The closest philosophical neighbor is the extended mind thesis, which argues that
+            cognition can extend beyond the brain into external supports, tools, and environments.
+            Ei shares this broad orientation but develops it in a distinct direction by focusing on
+            AI mediation, environmental participation, historical continuity, and the need for
+            inspectable structures across time.
+          </p>
+
+          <h3>Collective intelligence</h3>
+          <p>
+            Ei also overlaps with work on collective intelligence, especially where people and
+            computational systems interact in ways that produce capabilities not reducible to one
+            actor alone. Yet Ei is not limited to group problem-solving. It also concerns memory,
+            evidence, environmental structure, and continuity between moments, systems, and
+            records.
+          </p>
+
+          <h3>Human–AI collaboration</h3>
+          <p>
+            Contemporary research on human–AI collaboration, decision support, and hybrid cognition
+            occupies adjacent ground. Ei takes those developments seriously while placing greater
+            emphasis on long-arc meaning, preservation, accountability, and the conditions under
+            which intelligence remains legible over time.
+          </p>
+
+          <div class="related">
+            <p>
+              <strong>Positioning note:</strong> Ei is best understood as a distinct synthesis
+              developed within this body of work. It is informed by neighboring traditions, but it
+              is not reducible to any single school, lab, or prior label.
+            </p>
+          </div>
+        </section>
+
+        <section id="clarification">
+          <h2>Clarification on attribution</h2>
+          <p>
+            This page establishes the formal use of Ei across TOLARENAI. Ei is presented here as a
+            concept developed within this work. It is not defined here as originating from MIT, nor
+            is it treated as a formal borrowing from any single institutional source.
+          </p>
+          <p>
+            Some earlier exploratory references may have loosely associated related ideas with
+            existing research environments or neighboring traditions. Such references should be read
+            as contextual or provisional rather than as a definitive statement of origin.
+          </p>
+
+          <div class="clarification">
+            <p>
+              <strong>Formal clarification:</strong> within TOLARENAI, Extended Intelligence (Ei)
+              is the author’s conceptual framework for describing intelligence as emerging across
+              human, artificial, and environmental systems. References to adjacent research
+              traditions are situating references, not origin claims.
+            </p>
+          </div>
+        </section>
+
+        <section id="verification">
+          <h2>Ei and the Verification Trilogy</h2>
+          <p>
+            Ei becomes especially important when intelligence is not only distributed, but also
+            mediated by records, systems, and time. Once cognition extends through documents,
+            archives, models, interfaces, and machine-scale retrieval, the question is no longer
+            only what is known. The question becomes how claims remain inspectable, attributable,
+            and durable across changing conditions.
+          </p>
+          <p>
+            This is where Ei connects directly to the Verification Trilogy:
+          </p>
+
+          <h3>BlockClaim</h3>
+          <p>
+            If intelligence is extended across systems, then the origin of claims matters.
+            BlockClaim addresses the need to anchor authorship, assertion, and first-layer
+            evidentiary presence so that the field of intelligence is not severed from provenance.
+          </p>
+
+          <h3>TransferRecord</h3>
+          <p>
+            If intelligence continues through movement, custody matters. TransferRecord addresses
+            how records, claims, and evidentiary objects retain continuity as they pass through
+            systems, custodians, and transformations across time.
+          </p>
+
+          <h3>WitnessLedger</h3>
+          <p>
+            If intelligence is distributed, witnessing matters. WitnessLedger addresses the role of
+            independent verification in preserving credibility when no single institution can be
+            assumed sufficient for trust.
+          </p>
+
+          <p>
+            In this sense, Ei describes the enlarged field in which intelligence occurs, while the
+            Verification Trilogy addresses the structures needed to keep that field from dissolving
+            into noise, drift, or untraceable authority.
+          </p>
+        </section>
+
+        <section id="use-going-forward">
+          <h2>Use going forward</h2>
+          <p>
+            Unless otherwise specified, references to <strong>Extended Intelligence</strong> or
+            <strong>Ei</strong> across TOLARENAI should be read in light of the definition fixed on
+            this page.
+          </p>
+          <p>
+            Future pages, scrolls, quotations, book notes, metadata descriptions, and related
+            discussions may link back here as the primary definition source. This allows older
+            exploratory language and newer formal usage to remain historically visible without
+            forcing every prior text to be rewritten.
+          </p>
+          <p>
+            That approach preserves continuity while reducing conceptual drift. It also gives both
+            readers and systems a stable place to return when the term appears in multiple contexts.
+          </p>
+
+          <div class="note">
+            <p>
+              <strong>Recommended citation language:</strong> “Extended Intelligence (Ei), as
+              developed within TOLARENAI, refers to intelligence emerging across human, artificial,
+              and environmental systems as a continuous interactive field rather than a bounded
+              entity.”
+            </p>
+          </div>
+        </section>
+
+        <section id="closing">
+          <h2>Closing note</h2>
+          <p>
+            Ei is not offered here as a branding phrase detached from substance. It names a real
+            structural shift in how intelligence is encountered, distributed, and carried forward in
+            an age of technical mediation. As human beings increasingly think with systems, through
+            records, across networks, and in the presence of machine-scale assistance, a vocabulary
+            is needed that can describe extension without surrendering responsibility.
+          </p>
+          <p>
+            Ei is that vocabulary within this work.
+          </p>
+
+          <p class="signature">
+            Written for TOLARENAI<br />
+            By Rico Roho
+          </p>
+        </section>
+
+        <nav class="return-links" aria-label="Related links">
+          <a href="https://tolarenai.com/">Return to TOLARENAI</a>
+          <a href="https://tolarenai.com/books/">Books</a>
+          <a href="https://tolarenai.com/rico_roho/rico_roho_background_qualifications_and_wishes.html">Rico Roho background and books</a>
+          <a href="https://tolarenai.com/tolarenai_scrolls/">TOLARENAI Scrolls</a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>The Verification Trilogy — BlockClaim • TransferRecord • WitnessLedger</div>
+      <div>TOLARENAI — tolarenai.com</div>
+      <div>© 2026 Rico Roho</div>
+      <div><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> • <a href="https://tolarenai.com/attribution.html">attribution</a></div>
+    </div>
+  </footer>
+</body>
+</html>

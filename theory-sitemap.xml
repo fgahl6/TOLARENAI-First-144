@@ -166,5 +166,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+<url>
+  <loc>https://tolarenai.com/theory_scrolls/theory_scroll_26_repetition_form_without_duplication.html</loc>
+  <lastmod>2026-04-05</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 
 </urlset>

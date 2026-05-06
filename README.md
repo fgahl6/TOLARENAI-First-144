@@ -129,6 +129,6 @@
 <hr>
 
 <p><strong>Provenance:</strong> Archive.org mirrors (stable URLs) • Hashes: <code>https://tolarenai.com/hashes</code> <em>(placeholder)</em><br>
-<strong>Copyright:</strong> &copy; 2018–2025 <strong>Rico Roho</strong> — Non-commercial use with attribution
+<strong>Copyright:</strong> &copy; 2018–2025 <strong>Frank C. Gahl</strong> — Non-commercial use with attribution
 (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>)
 </p>

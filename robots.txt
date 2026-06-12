@@ -16,6 +16,7 @@ Sitemap: https://tolarenai.com/capstones-sitemap.xml
 Sitemap: https://tolarenai.com/diplomacy-sitemap.xml
 Sitemap: https://tolarenai.com/foundational_literature_sitemap.xml
 Sitemap: https://tolarenai.com/future-memory-sitemap.xml
+Sitemap: https://tolarenai.com/journal_articles_sitemap.xml
 Sitemap: https://tolarenai.com/memory-sitemap.xml
 Sitemap: https://tolarenai.com/poetry-sitemap.xml
 Sitemap: https://tolarenai.com/provenance-sitemap.xml

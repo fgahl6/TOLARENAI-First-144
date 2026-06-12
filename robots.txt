@@ -9,6 +9,8 @@ Disallow: /*.PDF$
 # ===== Sitemaps =====
 Sitemap: https://tolarenai.com/sitemap.xml
 Sitemap: https://tolarenai.com/current-work-sitemap.xml
+Sitemap: https://tolarenai.com/ai_airport_sitemap.xml
+Sitemap: https://tolarenai.com/ai_economy_sitemap.xml
 Sitemap: https://tolarenai.com/books-sitemap.xml
 Sitemap: https://tolarenai.com/capstones-sitemap.xml
 Sitemap: https://tolarenai.com/diplomacy-sitemap.xml

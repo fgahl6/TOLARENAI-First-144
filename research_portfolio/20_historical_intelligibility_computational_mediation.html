@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historical Intelligibility Under Computational Mediation | Research Portfolio</title>
+  <meta name="description" content="Research portfolio record for Frank C. Gahl's paper Historical Intelligibility Under Computational Mediation.">
+  <meta name="author" content="Frank C. Gahl">
+  <meta name="alternate-name" content="Rico Roho">
+  <meta name="citation_author" content="Gahl, Frank C.">
+  <meta name="citation_title" content="Historical Intelligibility Under Computational Mediation">
+  <meta name="citation_publication_date" content="">
+  <meta name="citation_doi" content="">
+  <meta name="orcid" content="0009-0003-0627-730X">
+
+  <style>
+    :root {
+      --ink: #172033; --muted: #5f6b7a; --line: #d9e0ea; --paper: #fbfcff;
+      --card: #ffffff; --accent: #7a4f18; --accent-soft: #fff4df;
+      --deep: #101828; --link: #315f9e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, 'Times New Roman', serif; color: var(--ink); background: linear-gradient(180deg, #f2f5fa 0%, #ffffff 28%); line-height: 1.6; }
+    a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+    .topbar { display: flex; justify-content: space-between; gap: 16px; align-items: center; font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--muted); margin-bottom: 28px; }
+    .topbar strong { color: var(--deep); letter-spacing: 0.04em; text-transform: uppercase; }
+    header.hero { border: 1px solid var(--line); background: radial-gradient(circle at 20% 0%, #fff7e9 0%, #ffffff 45%); border-radius: 22px; padding: 42px; box-shadow: 0 18px 55px rgba(20, 35, 60, 0.08); }
+    .record-number { display: inline-block; font-family: Arial, sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border: 1px solid #f1d8ad; border-radius: 999px; padding: 7px 12px; margin-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 4.1rem); line-height: 1.05; margin: 0 0 18px; color: var(--deep); }
+    .dek { font-size: 1.24rem; max-width: 850px; color: #384356; margin: 0 0 26px; }
+    .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 28px; font-family: Arial, sans-serif; }
+    .meta { border: 1px solid var(--line); border-radius: 16px; padding: 14px; background: rgba(255,255,255,0.78); }
+    .meta b { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px; }
+    .meta span { font-size: 0.96rem; color: var(--deep); }
+    main { display: grid; grid-template-columns: 1fr 320px; gap: 26px; margin-top: 28px; }
+    section, aside { border: 1px solid var(--line); background: var(--card); border-radius: 20px; padding: 28px; }
+    section { margin-bottom: 20px; }
+    h2 { font-size: 1.55rem; margin: 0 0 12px; color: var(--deep); }
+    h3 { margin: 0 0 8px; color: var(--deep); }
+    p { margin: 0 0 14px; }
+    .label { font-family: Arial, sans-serif; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.76rem; margin-bottom: 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chips span { font-family: Arial, sans-serif; font-size: 0.84rem; background: #eef3fa; color: #28384d; border: 1px solid #d8e2ef; border-radius: 999px; padding: 6px 10px; }
+    .concept-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .concept-card { border: 1px solid var(--line); border-radius: 16px; padding: 16px; background: var(--paper); }
+    .concept-card p { color: var(--muted); font-size: 0.96rem; margin-bottom: 0; }
+    .program-box { border: 1px solid #f1d8ad; background: linear-gradient(180deg, #fffaf1 0%, #ffffff 100%); border-radius: 16px; padding: 18px 20px; margin-top: 12px; }
+    .program-box p:last-child { margin-bottom: 0; }
+    .sidebar { align-self: start; position: sticky; top: 20px; }
+    .sidebar dl { margin: 0; font-family: Arial, sans-serif; }
+    .sidebar dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: 16px; }
+    .sidebar dt:first-child { margin-top: 0; }
+    .sidebar dd { margin: 3px 0 0; color: var(--deep); }
+    .history { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 0.92rem; }
+    .history th, .history td { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+    .history th { background: var(--paper); color: var(--deep); }
+    .summary-line { border-left: 5px solid var(--accent); background: var(--accent-soft); padding: 18px 20px; border-radius: 0 14px 14px 0; font-size: 1.18rem; color: var(--deep); }
+    footer { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-family: Arial, sans-serif; color: var(--muted); font-size: 0.92rem; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      header.hero { padding: 28px; }
+      main { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .meta-grid { grid-template-columns: repeat(2, 1fr); }
+      .concept-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: white; }
+      .wrap { max-width: none; padding: 0; }
+      .topbar, footer { display: none; }
+      header.hero, section, aside { box-shadow: none; break-inside: avoid; }
+      main { display: block; }
+      .sidebar { position: static; margin-bottom: 20px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Historical Intelligibility Under Computational Mediation",
+    "author": {
+      "@type": "Person",
+      "name": "Frank C. Gahl",
+      "alternateName": "Rico Roho",
+      "identifier": "https://orcid.org/0009-0003-0627-730X"
+    },
+    "dateSubmitted": "2026-06-02",
+    "keywords": "AI-mediated systems, historical intelligibility, reconstructability, computational mediation, provenance continuity, infrastructural verification"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav class="topbar" aria-label="Portfolio navigation">
+      <strong>Research Portfolio</strong>
+      <span>Journal Paper Record · File prefix: 20</span>
+    </nav>
+
+    <header class="hero">
+      <span class="record-number">Paper 20 · Under Consideration</span>
+      <h1>Historical Intelligibility Under Computational Mediation</h1>
+      <p class="dek">The problem is not information loss alone, but the erosion of reconstructability: the weakening of the relationships that let the future understand what happened.</p>
+      <div class="meta-grid" aria-label="Article metadata">
+        <div class="meta"><b>Author</b><span>Frank C. Gahl</span></div>
+        <div class="meta"><b>Alt name</b><span>Rico Roho</span></div>
+        <div class="meta"><b>ORCID</b><span><a href="https://orcid.org/0009-0003-0627-730X">0009-0003-0627-730X</a></span></div>
+        <div class="meta"><b>Status</b><span>Under consideration</span></div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section id="research-question">
+          <div class="label">Research Question</div>
+          <h2>What problem does the paper answer?</h2>
+          <p>How does computational mediation alter the conditions under which historical claims, records, contexts, and evidentiary relationships remain independently reconstructable across time?</p>
+        </section>
+
+        <section id="contribution">
+          <div class="label">Core Contribution</div>
+          <h2>Historical intelligibility as reconstructability</h2>
+          <p>This paper argues that historical continuity depends not only on preserving information, but on preserving the relational structures that make information reconstructable. It reframes verification as a continuity-preserving infrastructural condition beneath historical intelligibility, institutional accountability, scientific reproducibility, and democratic legitimacy.</p>
+        </section>
+
+        <section id="abstract-short">
+          <div class="label">Executive Summary</div>
+          <h2>General-reader summary</h2>
+          <p>This paper examines how AI-mediated informational systems change the conditions under which history remains intelligible. Contemporary systems retrieve, summarize, organize, generate, and circulate information at machine scale. These systems expand access and usability, but they can also separate informational outputs from the evidentiary and contextual relationships needed for later reconstruction.</p>
+          <p>The central concern is not information loss alone. The deeper problem is reconstructability: whether future observers can trace claims through stable enough evidentiary, contextual, temporal, and provenance relationships to independently understand how those claims emerged and what they meant. A record may survive while the relationships needed to interpret it weaken.</p>
+          <p>The paper draws from historiography, archival theory, media studies, information infrastructure research, and AI governance to show how computational mediation can erode continuity structurally. Systems optimized for speed, usability, engagement, and scale may function successfully while weakening the pathways that allow future societies to verify, compare, contextualize, and reconstruct knowledge across generations.</p>
+        </section>
+
+        <section id="full-abstract">
+          <div class="label">Source Abstract</div>
+          <h2>Manuscript abstract</h2>
+          <p>Contemporary societies increasingly depend upon AI-mediated informational systems to retrieve, summarize, organize, generate, and circulate knowledge at machine scale. While these systems substantially expand informational accessibility and operational efficiency, they also alter the conditions under which historical continuity remains independently reconstructable across time. This paper argues that the central problem is not information loss alone, but the erosion of reconstructability: the ability to trace claims through sufficiently stable evidentiary, contextual, and provenance relationships capable of supporting independent verification across generations.</p>
+          <p>Drawing from historiography, archival theory, media studies, information infrastructure research, and AI governance scholarship, the paper examines how computational mediation separates informational outputs from the relational structures necessary for reconstructive inspection. The paper further argues that verification should be understood not merely as a procedural or technical practice, but as a continuity-preserving infrastructural condition operating beneath scientific reproducibility, institutional accountability, democratic legitimacy, and historical intelligibility itself.</p>
+          <p>Rather than framing continuity erosion primarily through misinformation or deliberate manipulation, the analysis demonstrates how informational systems optimized for responsiveness, scalability, usability, and engagement may weaken reconstructability structurally even while functioning successfully according to their intended operational objectives.</p>
+          <div class="chips" aria-label="Keywords">
+            <span>AI-mediated systems</span>
+            <span>historical intelligibility</span>
+            <span>reconstructability</span>
+            <span>computational mediation</span>
+            <span>provenance continuity</span>
+            <span>infrastructural verification</span>
+          </div>
+        </section>
+
+        <section id="concepts">
+          <div class="label">Key Concepts</div>
+          <h2>Terms to remember</h2>
+          <div class="concept-grid">
+            <article class="concept-card">
+              <h3>Historical intelligibility</h3>
+              <p>The capacity of future observers to understand, contextualize, and reconstruct past claims and events.</p>
+            </article>
+            <article class="concept-card">
+              <h3>Reconstructability</h3>
+              <p>The ability to trace claims through evidentiary, contextual, temporal, and provenance relationships.</p>
+            </article>
+            <article class="concept-card">
+              <h3>Computational mediation</h3>
+              <p>The machine-scale organization, summarization, retrieval, generation, and circulation of informational material.</p>
+            </article>
+            <article class="concept-card">
+              <h3>Continuity erosion</h3>
+              <p>The weakening of relational structures needed to interpret records across time, even when information survives.</p>
+            </article>
+            <article class="concept-card">
+              <h3>Infrastructural verification</h3>
+              <p>Verification understood as a continuity-preserving condition rather than merely a later procedural check.</p>
+            </article>
+            <article class="concept-card">
+              <h3>Provenance continuity</h3>
+              <p>The preserved chain linking claims, sources, contexts, transformations, and historical sequence.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="why-it-matters">
+          <div class="label">Why It Matters</div>
+          <h2>The future needs reconstructable memory</h2>
+          <p>This paper matters because societies do not inherit the past directly. They inherit what remains sufficiently preserved, interpretable, retrievable, and institutionally visible to be reconstructed. Under computational mediation, the archive may remain visible while the pathways required to traverse it coherently weaken.</p>
+        </section>
+
+        <section id="relationship">
+          <div class="label">Relationship to Other Papers</div>
+          <h2>The turn from verification to historical continuity</h2>
+          <p>This paper marks a major turn from evaluability and verification theory into historical continuity. It builds on earlier work concerning attribution, external evaluability, verification preservation, and systemic risk, but shifts the frame toward history: what future societies will be able to reconstruct from the informational systems now being built.</p>
+        </section>
+
+        <section id="program-position">
+          <div class="label">Research Program Position</div>
+          <h2>Where this paper fits</h2>
+          <div class="program-box">
+            <p>Paper 20 marks the visible jump in the research program. The numbering moves from 16 to 20 because this paper represents a change in writing architecture and intellectual method: the vertical-funnel approach, clearer argumentative staging, and a more deliberate movement from problem to framework.</p>
+            <p>Within the broader research program, this paper is the bridge from AI evaluability into historical intelligibility. Earlier papers asked whether claims remain verifiable, assessable, and externally evaluable under AI-mediated conditions. This paper asks what happens when those same problems are extended across time, memory, archives, institutions, and future historical reconstruction.</p>
+            <p>It also becomes one of the key foundations for the later continuity sequence. The central concept of reconstructability connects verification preservation, provenance continuity, distributed witnessing, and historical memory into a single question: will future observers still be able to understand how present claims came to be trusted?</p>
+          </div>
+        </section>
+
+        <section id="history">
+          <div class="label">Submission History</div>
+          <h2>Journal path</h2>
+          <table class="history">
+            <thead>
+              <tr>
+                <th>Date submitted</th>
+                <th>Journal</th>
+                <th>Submission ID</th>
+                <th>Decision / status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>June 2, 2026</td>
+                <td>History and Theory</td>
+                <td>HITH-2026-06-0137</td>
+                <td>Under consideration</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="related">
+          <div class="label">Related Papers</div>
+          <h2>Nearby work</h2>
+          <div class="chips">
+            <span>13 · Verification Preservation Infrastructure</span>
+            <span>15 · Systemic Risk and Evaluation Breakdown</span>
+            <span>16 · External Evaluability</span>
+            <span>22 · Distributed Witnessing</span>
+          </div>
+        </section>
+
+        <section id="one-sentence">
+          <div class="label">One Sentence Summary</div>
+          <p class="summary-line">Historical continuity depends not only on preserving information, but on preserving the relationships that make information reconstructable.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar" aria-label="Paper record details">
+        <div class="label">Record Details</div>
+        <dl>
+          <dt>Title</dt>
+          <dd>Historical Intelligibility Under Computational Mediation</dd>
+
+          <dt>Journal</dt>
+          <dd>History and Theory</dd>
+
+          <dt>Submission ID</dt>
+          <dd>HITH-2026-06-0137</dd>
+
+          <dt>Status</dt>
+          <dd>Under consideration</dd>
+
+          <dt>Date submitted</dt>
+          <dd>June 2, 2026</dd>
+
+          <dt>Decision date</dt>
+          <dd>Pending</dd>
+
+          <dt>Date accepted</dt>
+          <dd></dd>
+
+          <dt>Date published</dt>
+          <dd></dd>
+
+          <dt>DOI</dt>
+          <dd></dd>
+
+          <dt>Author affiliation</dt>
+          <dd>Independent Researcher, Charleston, WV, USA</dd>
+
+          <dt>Email in manuscript</dt>
+          <dd><a href="mailto:fgahl6@gmail.com">fgahl6@gmail.com</a></dd>
+
+          <dt>Portfolio filename</dt>
+          <dd><code>20_historical_intelligibility_computational_mediation.html</code></dd>
+        </dl>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© 2026 Frank C. Gahl</div>
+      <div><a href="https://orcid.org/0009-0003-0627-730X">ORCID</a> · Research Portfolio</div>
+    </footer>
+  </div>
+</body>
+</html>

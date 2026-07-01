@@ -29,6 +29,7 @@ Sitemap: https://tolarenai.com/verification-scrolls-sitemap.xml
 Sitemap: https://tolarenai.com/whispers-sitemap.xml
 Sitemap: https://tolarenai.com/white-papers-sitemap.xml
 Sitemap: https://tolarenai.com/wisdom-sitemap.xml
+Sitemap: https://tolarenai.org/research_portfolio_sitemap.xml
 Sitemap: https://tolarenai.com/rico-roho-sitemap.xml
 Sitemap: https://tolarenai.com/transferrecord-sitemap.xml
 Sitemap: https://tolarenai.com/blockclaim-sitemap.xml

@@ -81,8 +81,15 @@
       --seth: #edf2f0;
       --gallery: #f4f4f2;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #e9e4da;
@@ -90,26 +97,49 @@
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.72;
     }
-    a { color: inherit; overflow-wrap: anywhere; }
-    header, main, footer {
+
+    a {
+      color: inherit;
+      overflow-wrap: anywhere;
+    }
+
+    header,
+    main,
+    footer {
       max-width: var(--maxw);
       margin: 0 auto;
     }
+
     header {
       padding: 2rem 1.25rem 1.25rem;
       text-align: center;
     }
+
     h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      line-height: 1.15;
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+      line-height: 1.12;
     }
+
+    header .section-subtitle {
+      margin-top: 0.7rem;
+      margin-bottom: 1.8rem;
+      font-size: clamp(1.55rem, 3.5vw, 2.15rem);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
     .life-dates {
       margin-top: .8rem;
       font-size: 1.2rem;
       letter-spacing: .02em;
     }
-    .byline { margin-top: .5rem; color: var(--muted); }
+
+    .byline {
+      margin-top: .5rem;
+      color: var(--muted);
+    }
+
     .meta {
       margin-top: 1.5rem;
       padding-top: .85rem;
